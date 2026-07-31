@@ -6,10 +6,13 @@ Türkiye'ye özgü gerçek API şemalarından **execution-verified**, **policy-a
 **observation-grounded** ve **yeniden üretilebilir** Türkçe tool-calling veri
 setleri üreten açık kaynak bir veri mühendisliği platformu.
 
-> **Durum:** Mevcut 1.000 örneklik çıktı yeniden denetimde **smoke artefaktı**
-> olarak sınıflandırıldı; eğitim veya yayın verisi değildir. 384 tekrar, eksik
-> semantik/politika doğrulaması ve temsil etmeyen splitler giderilmeden release
-> üretilemez. Sıradaki eşik 100–200 örneklik insan denetimli ücretli pilottur.
+> **Durum: Pilot v0.1 yayımlandı.** 200 doğrulanmış örnek (`turkey-200-v3`),
+> 74 family, 15 sağlayıcı, 11 senaryo türünün hepsi, sıfır split sızıntısı.
+> **Bu bir pilottur, benchmark değildir** — hedeflenen 10.000–15.000 örneklik
+> tam sürüm henüz üretilmemiştir.
+>
+> 📦 **Veri seti:** [`bilalabic/toolcall-tr-pilot`](https://huggingface.co/datasets/bilalabic/toolcall-tr-pilot)
+> *(şu an özel; gözden geçirme sonrası herkese açılacak)*
 
 ---
 
@@ -194,37 +197,75 @@ uv run python scripts/record_ckan_cassettes.py
 
 ## Mevcut durum
 
-Varsayılan Türkiye geneli katalogda 35 kayıtlı tool ve üretimde etkin 74
-blueprint/family vardır. İzmir'e özgü 8 eski blueprint arşive taşınmıştır. Eski 1.000 kayıt,
-boru hattı ile cassette yürütmesini sınar; ancak 616 benzersiz soru, 384 tekrar,
-yalnız 19 çağrı planı ve 18 observation dizisi içerir. Semantik, politika ve
-doğal dil doğrulamaları bu koşuda yapılmamıştır. Bu nedenle çıktı
-`data/archive/invalid-canary-1000-20260729` altına karantinaya alınmıştır ve
-eğitim/yayın girdisi değildir. Ayrıntılı bulgular, kalite sözleşmesi ve uygulama
-sırası için [kalite kurtarma planına](docs/QUALITY_RECOVERY_PLAN.md) bakın.
+### ✅ Yayımlanan: Pilot v0.1 — `turkey-200-v3`
 
-İlk family genişletme aşamasındaki doğrulanmış çevrimdışı smoke koşusu
-`data/smoke/current-100-v4` altında
-100/100 kabul, 100 benzersiz soru ve sıfır duplicate ile tamamlanmıştır.
-Bu koşuda dört karar türü train, validation ve test'in her birinde
-bulunur; 35 no-call kaydının tamamında asistan hedefi vardır. Rapor açıkça
-`release_ready=false` yazar; ücretli hakem ve insan denetiminin yerine geçmez.
+**200 doğrulanmış örnek · 74 family · 15 sağlayıcı · 0 reddedilen.**
+Hugging Face: [`bilalabic/toolcall-tr-pilot`](https://huggingface.co/datasets/bilalabic/toolcall-tr-pilot)
 
-Pilot hazırlığı sonrasında katalog Türkiye geneli yer, takvim, hesaplama,
-bibliyografik metadata ve kamu verisi senaryolarıyla genişletilmiştir. Güncel
-varsayılan katalog 74 aktif family'dir.
+| Karar | Örnek | | Split | Örnek |
+|---|---|---|---|---|
+| `tool_call` | 143 (%71,5) | | train | 140 |
+| `direct_answer` | 28 (%14,0) | | validation | 20 |
+| `cannot_answer` | 21 (%10,5) | | test | 40 |
+| `clarification` | 8 (%4,0) | | | |
 
-Veritabanı/açık veri sorguları ile sipariş/fatura senaryoları aktif blueprint
-kapsamından çıkarılmıştır. Eski pilot, cache, trace ve SFT dosyaları da yeni
-release manifestine otomatik olarak dahil edilmemelidir.
+**%28,5'i tool çağrısı içermez.** 11 senaryo türünün hepsi temsil edilir
+(`successful` 68, `sequential` 30, `should_refuse` 21, `should_answer_directly` 17,
+`confirmation_required` 13, `expected_error` 13, `user_cancellation` 11,
+`parallel` 11, `clarification` 8, `empty_result` 4, `error_recovery` 4).
+30 örnek çok turludur. Split family düzeyinde, fan-out'tan **önce** atanır;
+sızıntı denetimi 0 ihlal verir.
+
+Beş eğitim görünümü halinde dışa aktarılmıştır: `openai`, `openai_call_only`,
+`openai_trajectory`, `sharegpt`, `xlam`.
+
+### ❌ Yayımlanmayan: 1.000 örneklik koşu
+
+`data/archive/invalid-canary-1000-20260729` altında karantinadadır. Kalite
+kapısından **geçmişti** — ihlal sıfırdı. Sorun kapıda değil bütçedeydi:
+`tool_call` için `minimum_ratio: 0.90` isteniyordu, yani bütçe %90+ mutlu yol
+*talep ediyordu*. Sonuç %94,3 `tool_call` ve 11 senaryo türünün 6'sında sıfır
+örnek oldu.
+
+Nedeni ölçek değil **fan-out oranıdır**: 20 family'den 1.000 örnek (50×)
+kompozisyonu çökertti; 74 family'den 200 örnek (2,7×) çökertmedi. Altyapı
+1.000 ölçeğinde çalıştığını kanıtladı — darboğaz throughput değil family
+sayısıdır.
+
+### 🚧 Sıradaki: 10.000–15.000 örnek
+
+Dengeli 10.000 örnek ~3.700 family gerektirir; bugün 74 elle yazılmış blueprint
+vardır. Bu, sentez motorunun (şablon + parametre ekseni + lockfile) çözmek için
+tasarlandığı problemdir ve henüz uygulanmamıştır. Ayrıntılı bulgular ve uygulama
+sırası: [kalite kurtarma planı](docs/QUALITY_RECOVERY_PLAN.md).
+
+### Kapsam notları
+
+Varsayılan Türkiye geneli katalogda 35 kayıtlı tool vardır. Veritabanı/açık veri
+sorguları ile sipariş/fatura senaryoları aktif blueprint kapsamından
+çıkarılmıştır.
+
+Lisansı **belirsiz** olan `openapi.izmir.bel.tr` kaynağı yayımlanan veriye
+**hiç girmemiştir** — İzmir sağlayıcıları kodda mevcuttur ancak lisans durumu
+netleşene kadar korpustan dışlanmıştır.
 
 ## Kişisel veri politikası
 
 Sentetik kimlik numaraları kasıtlı olarak **geçersiz** aralıklardan üretilir:
 TCKN'ler `0` ile başlar (gerçek bir TCKN başlayamaz), VKN'ler checksum-geçersiz,
-IBAN'lar mod-97-geçersizdir. `PIIScanner` validator'ı hem üretilen örnekleri hem
-de cassette'leri tarar; gerçek checksum'ı geçen herhangi bir tanımlayıcı CI'ı
-kırar.
+IBAN'lar mod-97-geçersizdir. `PIIValidator` **üretilen örnekleri** tarar; gerçek
+checksum'ı geçen herhangi bir tanımlayıcı CI'ı kırar.
+
+> **Bilinen açık:** `ValidationContext.cassette_payloads` alanı üretimde
+> doldurulmuyor, dolayısıyla cassette'ler bugün örnek doğrulaması sırasında
+> **taranmıyor**. Kapatılması planlanan yol çevrimdışı bir blob taramasıdır
+> (`scripts/scan_cassettes.py`); blob başına bir kez çalışır ve 10 bin ölçeğinde
+> örnek başına tekrar taramadan ucuzdur.
+>
+> VKN checksum'ı zayıftır: rastgele 10 haneli sayıların ~%10'u geçer. Pilot v0.1
+> üzerinde tarayıcı 12 bulgu üretti ve **hepsi yanlış pozitiftir** (GBIF
+> occurrence ID'leri ve SHA-256 hash'lerinin içindeki hane dizileri). Gerçek
+> TCKN/VKN/IBAN sayısı sıfırdır.
 
 ## Lisans
 
