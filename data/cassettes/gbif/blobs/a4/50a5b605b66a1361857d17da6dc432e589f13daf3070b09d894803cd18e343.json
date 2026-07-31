@@ -1,0 +1,36 @@
+{
+  "attribution": {
+    "attribution": "GBIF.org ve occurrence kayıtlarını yayımlayan veri sağlayıcıları",
+    "license": "GBIF-FILTERED-CC0-CC-BY-4.0",
+    "modified": "Canonical JSON'a normalize edildi; başlıklar beyaz listeye göre budandı.",
+    "upstream_url": "https://api.gbif.org/v1/species/match?name=Panthera+leo&verbose=false"
+  },
+  "body": {
+    "canonicalName": "Panthera leo",
+    "class": "Mammalia",
+    "classKey": 359,
+    "confidence": 99,
+    "family": "Felidae",
+    "familyKey": 9703,
+    "genus": "Panthera",
+    "genusKey": 2435194,
+    "kingdom": "Animalia",
+    "kingdomKey": 1,
+    "matchType": "EXACT",
+    "order": "Carnivora",
+    "orderKey": 732,
+    "phylum": "Chordata",
+    "phylumKey": 44,
+    "rank": "SPECIES",
+    "scientificName": "Panthera leo (Linnaeus, 1758)",
+    "species": "Panthera leo",
+    "speciesKey": 5219404,
+    "status": "ACCEPTED",
+    "usageKey": 5219404
+  },
+  "body_encoding": "json",
+  "headers": {
+    "content-type": "application/json"
+  },
+  "status": 200
+}

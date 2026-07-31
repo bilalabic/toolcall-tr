@@ -1,0 +1,53 @@
+{
+  "attribution": {
+    "attribution": "GBIF.org ve occurrence kayıtlarını yayımlayan veri sağlayıcıları",
+    "license": "GBIF-FILTERED-CC0-CC-BY-4.0",
+    "modified": "Canonical JSON'a normalize edildi; başlıklar beyaz listeye göre budandı.",
+    "upstream_url": "https://api.gbif.org/v1/species/2878688"
+  },
+  "body": {
+    "authorship": "L.",
+    "canonicalName": "Quercus robur",
+    "class": "Magnoliopsida",
+    "classKey": 220,
+    "constituentKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+    "datasetKey": "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c",
+    "family": "Fagaceae",
+    "familyKey": 4689,
+    "genus": "Quercus",
+    "genusKey": 2877951,
+    "issues": [],
+    "key": 2878688,
+    "kingdom": "Plantae",
+    "kingdomKey": 6,
+    "lastCrawled": "2023-08-22T23:20:59.545+00:00",
+    "lastInterpreted": "2023-08-22T23:04:45.267+00:00",
+    "nameKey": 9614407,
+    "nameType": "SCIENTIFIC",
+    "nomenclaturalStatus": [],
+    "nubKey": 2878688,
+    "numDescendants": 8,
+    "order": "Fagales",
+    "orderKey": 1354,
+    "origin": "SOURCE",
+    "parent": "Quercus",
+    "parentKey": 2877951,
+    "phylum": "Tracheophyta",
+    "phylumKey": 7707728,
+    "publishedIn": "Sp. Pl.: 996 (1753)",
+    "rank": "SPECIES",
+    "remarks": "",
+    "scientificName": "Quercus robur L.",
+    "species": "Quercus robur",
+    "speciesKey": 2878688,
+    "taxonID": "gbif:2878688",
+    "taxonomicStatus": "ACCEPTED",
+    "vernacularName": "Pedunculate Oak"
+  },
+  "body_encoding": "json",
+  "headers": {
+    "content-type": "application/json",
+    "expires": "0"
+  },
+  "status": 200
+}

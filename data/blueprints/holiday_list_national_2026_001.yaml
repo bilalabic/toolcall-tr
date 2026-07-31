@@ -1,0 +1,27 @@
+blueprint_id: holiday_list_national_2026_001
+family_id: holiday_list_national_2026
+split: train
+domain: calendar
+kind: successful_tool_call
+difficulty: easy
+interaction_type: multi_turn
+provider: tr_public_holidays
+user_goal: Türkiye'nin 2026 yılındaki milli bayramlarını listelemek
+known_information: { year: 2026 }
+context:
+  normalized_category: national
+conversation_prefix:
+  - role: user
+    content: "Türkiye'nin 2026 yılındaki resmî tatillerini görmek istiyorum."
+  - role: assistant
+    content: "Tüm tatilleri mi, yalnızca milli bayramları mı listeleyeyim?"
+available_tools: [calendar.list_public_holidays, calendar.is_public_holiday]
+utterances:
+  - "Yalnızca milli bayramları listele."
+  - "Sadece milli bayramları göster."
+expected_behavior: { decision: tool_call }
+expected_actions:
+  - tool: calendar.list_public_holidays
+    arguments:
+      year: { value: 2026, origin: user_message }
+      category: { value: national, origin: system_state }

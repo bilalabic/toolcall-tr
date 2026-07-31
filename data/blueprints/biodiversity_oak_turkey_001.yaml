@@ -1,0 +1,39 @@
+blueprint_id: biodiversity_oak_turkey_001
+family_id: biodiversity_species_occurrences
+split: train
+domain: biodiversity
+kind: sequential_tool_call
+difficulty: medium
+provider: gbif
+
+user_goal: Türkiye'de kaydedilmiş koordinatlı Quercus robur kayıtlarından beşini görmek
+known_information:
+  scientific_name: Quercus robur
+  limit: 5
+context:
+  normalized_country_code: TR
+
+available_tools:
+  - biodiversity.match_species_name
+  - biodiversity.search_occurrences
+  - biodiversity.get_species
+  - geo.search_places
+
+utterances:
+  - "Türkiye (TR) için kaydedilmiş, koordinat bilgisi bulunan 5 Quercus robur kaydı göster."
+  - "Quercus robur için Türkiye'den (TR) koordinatlı 5 GBIF kaydı bul."
+  - "Türkiye (TR) sınırları içindeki koordinatlı Quercus robur kayıtlarından 5 tanesini getir."
+
+expected_behavior:
+  decision: tool_call
+
+expected_actions:
+  - tool: biodiversity.match_species_name
+    arguments:
+      scientific_name: { value: Quercus robur, origin: user_message }
+
+  - tool: biodiversity.search_occurrences
+    arguments:
+      taxon_key: "$actions[0].usage_key"
+      country_code: { value: TR, origin: user_message }
+      limit: { value: 5, origin: user_message }

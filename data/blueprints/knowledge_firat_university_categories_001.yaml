@@ -1,0 +1,35 @@
+blueprint_id: knowledge_firat_university_categories_001
+family_id: knowledge_page_categories
+split: validation
+domain: knowledge
+kind: sequential_tool_call
+difficulty: medium
+provider: wikimedia_metadata
+
+user_goal: Fırat Üniversitesi'nin Türkçe Vikipedi sayfasında görünen ilk yirmi kategoriyi listelemek
+known_information:
+  query: Fırat Üniversitesi
+
+available_tools:
+  - knowledge.search_pages
+  - knowledge.list_page_categories
+  - knowledge.get_page_metadata
+  - statistics.search_indicator
+
+utterances:
+  - "Fırat Üniversitesi'nin Türkçe Vikipedi sayfasında görünen ilk 20 kategori başlığını listele."
+  - "Fırat Üniversitesi'nin Türkçe Vikipedi sayfasındaki gizli olmayan ilk 20 kategoriyi göster."
+
+expected_behavior:
+  decision: tool_call
+
+expected_actions:
+  - tool: knowledge.search_pages
+    arguments:
+      query: { value: Fırat Üniversitesi, origin: user_message }
+      limit: { value: 5, origin: pinned_fixture }
+
+  - tool: knowledge.list_page_categories
+    arguments:
+      page_id: "$actions[0].results[0].page_id"
+      limit: { value: 20, origin: user_message }

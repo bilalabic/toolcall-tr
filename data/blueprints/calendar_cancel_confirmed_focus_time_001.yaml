@@ -1,0 +1,28 @@
+blueprint_id: calendar_cancel_confirmed_focus_time_001
+family_id: calendar_cancel_confirmed_focus_time
+split: train
+domain: calendar
+kind: confirmation_required
+difficulty: hard
+provider: calendar_mock
+user_goal: 30 Temmuz'daki odak zamanı kaydını bulup açık onayla iptal etmek
+known_information:
+  query: Odak zamanı
+context:
+  normalized_start_at: "2026-07-30T00:00:00+03:00"
+  normalized_end_at: "2026-07-31T00:00:00+03:00"
+available_tools: [calendar.search_events, calendar.cancel_event]
+utterances:
+  - "30 Temmuz 2026'daki Odak zamanı kaydını bulup iptal etmeni açıkça onaylıyorum."
+  - "Odak zamanı etkinliğini 30 Temmuz 2026 takvimimde bul ve iptal et; buna onay veriyorum."
+expected_behavior: { decision: tool_call }
+expected_actions:
+  - tool: calendar.search_events
+    arguments:
+      start_at: { value: "2026-07-30T00:00:00+03:00", origin: system_state }
+      end_at: { value: "2026-07-31T00:00:00+03:00", origin: system_state }
+      query: { value: Odak zamanı, origin: user_message }
+  - tool: calendar.cancel_event
+    arguments:
+      event_id: "$actions[0].events[0].event_id"
+      confirmed: { value: true, origin: user_message }

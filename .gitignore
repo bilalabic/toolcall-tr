@@ -1,0 +1,69 @@
+# Sırlar -- asla versiyon kontrolüne girmez
+.env
+.env.*
+!.env.example
+secrets/
+credentials/
+*.key
+*.pem
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# Araç önbellekleri
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Üretilen veri: pipeline çıktısı, kaynak değil.
+#
+# NOT: data/cassettes/, data/snapshots/, data/blueprints/, data/synthesis/
+# ve data/evaluation/ KASITLI olarak izlenir -- yeniden üretilebilirliğin
+# temeli onlar.
+data/policy/
+data/preference/
+data/llm_cache/
+reports/
+!reports/.gitkeep
+
+# Çalıştırma scratch dizinleri.
+.runs/
+
+# Adlandırılmış koşu çıktıları (data/smoke/turkey-200-v3/... gibi).
+# Bunlar `toolcall-tr generate` ile her zaman yeniden üretilebilir; git ise
+# hiçbir blob'u unutmaz, dolayısıyla bir kez girerlerse kalıcı olarak
+# ~66 MB şişirirler.
+data/archive/
+data/pilot/
+data/smoke/
+
+# Üretilmiş çıktı dizinleri -- İÇ İÇE olanlar dahil.
+# Düz `data/accepted/` deseni `data/smoke/*/accepted/` ile eşleşmez; bu
+# tam olarak ilk commit'te 66 MB üretilmiş JSONL'in sızmasına yol açmıştı.
+**/accepted/
+**/rejected/
+**/traces/
+**/generated/
+**/sft/
+**/trajectories/
+
+# LLM yanıt önbelleği (yeniden üretilebilir, ama büyük)
+data/llm_cache/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,38 @@
+blueprint_id: clarification_biodiversity_missing_species_001
+family_id: clarification_biodiversity_missing_species
+split: test
+domain: biodiversity
+kind: should_ask_clarification
+difficulty: medium
+interaction_type: multi_turn
+provider: gbif
+
+user_goal: Türkiye'deki koordinatlı tür kayıtlarını görmek, ancak tür bilinmiyor
+known_information:
+  country_code: TR
+  limit: 5
+missing_information:
+  - scientific_name
+conversation_prefix:
+  - role: user
+    content: "Türkiye'deki koordinatlı tür kayıtlarına bakmak istiyorum."
+  - role: assistant
+    content: "Elbette, aramak istediğiniz kayıtları tarif edin."
+
+available_tools:
+  - biodiversity.match_species_name
+  - biodiversity.search_occurrences
+  - biodiversity.get_species
+
+utterances:
+  - "Türkiye'den koordinatlı 5 tür kaydı göster."
+  - "Türkiye'deki tür kayıtlarından konumu belli 5 tanesini getir."
+
+expected_behavior:
+  decision: clarification
+  missing_parameters:
+    - scientific_name
+  response_intent_tr: >-
+    Kayıtları aranacak türün bilimsel adını sor.
+  assistant_response_tr: >-
+    Hangi türe ait kayıtları aramamı istersiniz? Lütfen türün bilimsel adını belirtin.

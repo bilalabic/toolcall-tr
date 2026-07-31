@@ -1,0 +1,2879 @@
+{
+  "_notice": "openapi.izmir.bel.tr ayrı bir host ve beyan edilmiş lisansı yoktur (LICENSE-DATA § 3). Bu örneklem yalnızca conformance ölçümü içindir ve yayımlanan veri setine dâhil edilmez.",
+  "endpoint": "https://openapi.izmir.bel.tr/api/ibb/cbs/noktayayakinduraklar",
+  "epsg_trap": {
+    "description": "inCoordSys=4326 (prefix'siz) gönderildiğinde servis CRS'i sessizce yok sayar, girdiyi projeksiyon metresi kabul eder ve ilin bambaşka bir ucundan sonuç döner. Hata vermez.",
+    "origin_stop_name": "Bahribaba",
+    "query": {
+      "lat": 38.4152683626015,
+      "lon": 27.1276395272209
+    },
+    "response": [
+      {
+        "adi": "Gökçealan Tarla",
+        "boylam": 534226.17029486,
+        "durakId": "16973",
+        "enlem": 4189723.6551882,
+        "mesafe": 4223613.802252
+      },
+      {
+        "adi": "Gökçealan Tarla",
+        "boylam": 534242.36280677,
+        "durakId": "16972",
+        "enlem": 4189724.8320135,
+        "mesafe": 4223617.0176286
+      },
+      {
+        "adi": "Gökçealan Bahçelievler",
+        "boylam": 534109.76275784,
+        "durakId": "16975",
+        "enlem": 4189779.7115555,
+        "mesafe": 4223654.6874288
+      },
+      {
+        "adi": "Gökçealan Bahçelievler",
+        "boylam": 534092.42642103,
+        "durakId": "16974",
+        "enlem": 4189794.6998998,
+        "mesafe": 4223667.3633695
+      },
+      {
+        "adi": "Gökçealan Köyiçi",
+        "boylam": 534350.574367,
+        "durakId": "16968",
+        "enlem": 4189907.653838,
+        "mesafe": 4223812.058695
+      },
+      {
+        "adi": "Gökçealan Köyiçi",
+        "boylam": 534350.65996699,
+        "durakId": "16969",
+        "enlem": 4189929.4099329,
+        "mesafe": 4223833.650844
+      },
+      {
+        "adi": "Gökçealan Sarmaşık",
+        "boylam": 534059.08010623,
+        "durakId": "16976",
+        "enlem": 4190067.0616346,
+        "mesafe": 4223933.3232128
+      },
+      {
+        "adi": "Gökçealan Sarmaşık",
+        "boylam": 534072.2450377,
+        "durakId": "16977",
+        "enlem": 4190076.4398228,
+        "mesafe": 4223944.2905732
+      },
+      {
+        "adi": "Gökçealan Okul",
+        "boylam": 534386.87653908,
+        "durakId": "16970",
+        "enlem": 4190068.3090046,
+        "mesafe": 4223976.0155092
+      },
+      {
+        "adi": "Gökçealan Okul",
+        "boylam": 534395.80367695,
+        "durakId": "16971",
+        "enlem": 4190084.5540432,
+        "mesafe": 4223993.2593587
+      },
+      {
+        "adi": "Havuzbaşı Yol Ayrımı",
+        "boylam": 541350.16147323,
+        "durakId": "15541",
+        "enlem": 4227441.993458,
+        "mesafe": 4261930.8833348
+      },
+      {
+        "adi": "Telekler Çiflik",
+        "boylam": 518551.44122351,
+        "durakId": "24685",
+        "enlem": 4280707.889954,
+        "mesafe": 4311969.7989358
+      },
+      {
+        "adi": "Telekler Çiflik",
+        "boylam": 518550.89234817,
+        "durakId": "24684",
+        "enlem": 4280719.3227336,
+        "mesafe": 4311981.0827538
+      },
+      {
+        "adi": "Trafo Merkezi",
+        "boylam": 496338.6375661,
+        "durakId": "24686",
+        "enlem": 4291256.5776386,
+        "mesafe": 4319833.805043
+      },
+      {
+        "adi": "Trafo Merkezi",
+        "boylam": 496373.76212071,
+        "durakId": "24687",
+        "enlem": 4291271.9922038,
+        "mesafe": 4319853.153081
+      }
+    ]
+  },
+  "license": "UNDETERMINED",
+  "recorded_at": "2026-07-28",
+  "samples": [
+    {
+      "origin_stop_id": 10005,
+      "origin_stop_name": "Bahribaba",
+      "query": {
+        "lat": 38.4152683626015,
+        "lon": 27.1276395272209
+      },
+      "upstream": [
+        {
+          "adi": "Bahribaba",
+          "boylam": 27.127639527221,
+          "durakId": "10005",
+          "enlem": 38.415268362601,
+          "mesafe": 0.072255732341527
+        },
+        {
+          "adi": "Bahribaba",
+          "boylam": 27.127566643393,
+          "durakId": "10008",
+          "enlem": 38.415187195872,
+          "mesafe": 11.103797134263
+        },
+        {
+          "adi": "Bahribaba",
+          "boylam": 27.127720091272,
+          "durakId": "10007",
+          "enlem": 38.415144105211,
+          "mesafe": 15.520546612645
+        },
+        {
+          "adi": "Bahribaba",
+          "boylam": 27.127483833614,
+          "durakId": "10010",
+          "enlem": 38.415126783202,
+          "mesafe": 20.853467859893
+        },
+        {
+          "adi": "Bahribaba",
+          "boylam": 27.127633728704,
+          "durakId": "10009",
+          "enlem": 38.415060099222,
+          "mesafe": 23.18541695859
+        },
+        {
+          "adi": "Bahribaba",
+          "boylam": 27.127536714739,
+          "durakId": "10011",
+          "enlem": 38.415035068665,
+          "mesafe": 27.479516997471
+        },
+        {
+          "adi": "Bahribaba",
+          "boylam": 27.127386800796,
+          "durakId": "10013",
+          "enlem": 38.415091026822,
+          "mesafe": 29.644639311091
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213134394445,
+          "durakId": "24685",
+          "enlem": 38.659348052719,
+          "mesafe": 28101.290420861
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213128393572,
+          "durakId": "24684",
+          "enlem": 38.659451052636,
+          "mesafe": 28112.174852804
+        },
+        {
+          "adi": "Havuzbaşı Yol Ayrımı",
+          "boylam": 27.471928580174,
+          "durakId": "15541",
+          "enlem": 38.178742871347,
+          "mesafe": 39955.171268221
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.957878269943,
+          "durakId": "24686",
+          "enlem": 38.754558631319,
+          "mesafe": 40464.275233661
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.958282266112,
+          "durakId": "24687",
+          "enlem": 38.754697632365,
+          "mesafe": 40465.783892867
+        }
+      ]
+    },
+    {
+      "origin_stop_id": 10821,
+      "origin_stop_name": "Yazıbaşı",
+      "query": {
+        "lat": 38.2238,
+        "lon": 27.3109
+      },
+      "upstream": [
+        {
+          "adi": "Yazıbaşı",
+          "boylam": 27.310900199883,
+          "durakId": "10821",
+          "enlem": 38.223799664967,
+          "mesafe": 0
+        },
+        {
+          "adi": "Yazıbaşı",
+          "boylam": 27.311100200434,
+          "durakId": "10820",
+          "enlem": 38.223999666364,
+          "mesafe": 28.276868200905
+        },
+        {
+          "adi": "Asfalt",
+          "boylam": 27.311850201312,
+          "durakId": "11371",
+          "enlem": 38.224049665644,
+          "mesafe": 87.694404420783
+        },
+        {
+          "adi": "Asfalt",
+          "boylam": 27.311990202336,
+          "durakId": "11370",
+          "enlem": 38.224579669956,
+          "mesafe": 128.86657083318
+        },
+        {
+          "adi": "Kuşcuburun İp Fabrikası",
+          "boylam": 27.311449196438,
+          "durakId": "11520",
+          "enlem": 38.221495644417,
+          "mesafe": 260.23065158173
+        },
+        {
+          "adi": "Kuşcuburun İp Fabrikası",
+          "boylam": 27.311619196015,
+          "durakId": "11519",
+          "enlem": 38.221155641228,
+          "mesafe": 300.16998667602
+        },
+        {
+          "adi": "Aksan",
+          "boylam": 27.314400201177,
+          "durakId": "10822",
+          "enlem": 38.222299646675,
+          "mesafe": 348.79357036106
+        },
+        {
+          "adi": "Aksan",
+          "boylam": 27.314500200783,
+          "durakId": "10823",
+          "enlem": 38.221999643925,
+          "mesafe": 373.22937286659
+        },
+        {
+          "adi": "Yazıbaşı Tekel",
+          "boylam": 27.313380207069,
+          "durakId": "11373",
+          "enlem": 38.226689685903,
+          "mesafe": 387.38955665261
+        },
+        {
+          "adi": "Yazıbaşı Tekel",
+          "boylam": 27.313590208117,
+          "durakId": "11372",
+          "enlem": 38.227256690438,
+          "mesafe": 450.26402137863
+        },
+        {
+          "adi": "Havuzbaşı Yol Ayrımı",
+          "boylam": 27.471928580174,
+          "durakId": "15541",
+          "enlem": 38.178742871347,
+          "mesafe": 14965.517008491
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213134394445,
+          "durakId": "24685",
+          "enlem": 38.659348052719,
+          "mesafe": 49096.166774487
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213128393572,
+          "durakId": "24684",
+          "enlem": 38.659451052636,
+          "mesafe": 49107.516745389
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.958282266112,
+          "durakId": "24687",
+          "enlem": 38.754697632365,
+          "mesafe": 66479.801866669
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.957878269943,
+          "durakId": "24686",
+          "enlem": 38.754558631319,
+          "mesafe": 66482.458325999
+        }
+      ]
+    },
+    {
+      "origin_stop_id": 11355,
+      "origin_stop_name": "Çakarlar",
+      "query": {
+        "lat": 38.2460469029586,
+        "lon": 27.261126213951
+      },
+      "upstream": [
+        {
+          "adi": "Çakarlar",
+          "boylam": 27.261126427902,
+          "durakId": "11355",
+          "enlem": 38.246046805916,
+          "mesafe": 0
+        },
+        {
+          "adi": "Çakarlar",
+          "boylam": 27.26139821408,
+          "durakId": "11354",
+          "enlem": 38.246113903102,
+          "mesafe": 24.930467307548
+        },
+        {
+          "adi": "Türkmenköy Aile Sağlık Merkezi",
+          "boylam": 27.262323900411,
+          "durakId": "16877",
+          "enlem": 38.247172459242,
+          "mesafe": 163.09766721922
+        },
+        {
+          "adi": "Sultan Abdülhamit İlkokulu",
+          "boylam": 27.260841084651,
+          "durakId": "11352",
+          "enlem": 38.247617700144,
+          "mesafe": 176.15306256045
+        },
+        {
+          "adi": "Tepeli",
+          "boylam": 27.26081620952,
+          "durakId": "16017",
+          "enlem": 38.243794887842,
+          "mesafe": 251.4391630383
+        },
+        {
+          "adi": "Tepeli",
+          "boylam": 27.260700209117,
+          "durakId": "16870",
+          "enlem": 38.243599886641,
+          "mesafe": 274.16468289233
+        },
+        {
+          "adi": "Havuzbaşı Yol Ayrımı",
+          "boylam": 27.471928580174,
+          "durakId": "15541",
+          "enlem": 38.178742871347,
+          "mesafe": 19916.390117564
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213134394445,
+          "durakId": "24685",
+          "enlem": 38.659348052719,
+          "mesafe": 46069.873102168
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213128393572,
+          "durakId": "24684",
+          "enlem": 38.659451052636,
+          "mesafe": 46081.307124121
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.958282266112,
+          "durakId": "24687",
+          "enlem": 38.754697632365,
+          "mesafe": 62338.127897287
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.957878269943,
+          "durakId": "24686",
+          "enlem": 38.754558631319,
+          "mesafe": 62339.108493299
+        }
+      ]
+    },
+    {
+      "origin_stop_id": 11982,
+      "origin_stop_name": "Çobançeşme",
+      "query": {
+        "lat": 38.4141,
+        "lon": 27.1862
+      },
+      "upstream": [
+        {
+          "adi": "Çobançeşme",
+          "boylam": 27.186271721613,
+          "durakId": "11982",
+          "enlem": 38.414107215415,
+          "mesafe": 6.2879734045498
+        },
+        {
+          "adi": "Çobançeşme Eski Son Durak",
+          "boylam": 27.186041204385,
+          "durakId": "11980",
+          "enlem": 38.413025772569,
+          "mesafe": 120.12303320484
+        },
+        {
+          "adi": "Çobançeşme Eski Son Durak",
+          "boylam": 27.186200213291,
+          "durakId": "11979",
+          "enlem": 38.413000652079,
+          "mesafe": 122.10611156052
+        },
+        {
+          "adi": "Çamkule Eski Son Durak",
+          "boylam": 27.188200200013,
+          "durakId": "30438",
+          "enlem": 38.414500660316,
+          "mesafe": 180.22806017261
+        },
+        {
+          "adi": "Çamkule Eski Son Durak",
+          "boylam": 27.188300301264,
+          "durakId": "30437",
+          "enlem": 38.414639988881,
+          "mesafe": 192.93876133942
+        },
+        {
+          "adi": "Mersinpınar",
+          "boylam": 27.183900217167,
+          "durakId": "12036",
+          "enlem": 38.414500651457,
+          "mesafe": 205.72267854805
+        },
+        {
+          "adi": "Habipler Cami",
+          "boylam": 27.188240205044,
+          "durakId": "32206",
+          "enlem": 38.413048656375,
+          "mesafe": 213.02802003292
+        },
+        {
+          "adi": "Sevgi",
+          "boylam": 27.183904849404,
+          "durakId": "11978",
+          "enlem": 38.412632816747,
+          "mesafe": 258.33638220798
+        },
+        {
+          "adi": "Sevgi",
+          "boylam": 27.183681966855,
+          "durakId": "11977",
+          "enlem": 38.412568496859,
+          "mesafe": 278.02723281568
+        },
+        {
+          "adi": "İğdeli",
+          "boylam": 27.189600194449,
+          "durakId": "30436",
+          "enlem": 38.414500663225,
+          "mesafe": 300.24521314132
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213134394445,
+          "durakId": "24685",
+          "enlem": 38.659348052719,
+          "mesafe": 27325.432318016
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213128393572,
+          "durakId": "24684",
+          "enlem": 38.659451052636,
+          "mesafe": 27336.778961769
+        },
+        {
+          "adi": "Havuzbaşı Yol Ayrımı",
+          "boylam": 27.471928580174,
+          "durakId": "15541",
+          "enlem": 38.178742871347,
+          "mesafe": 36156.728907559
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.958282266112,
+          "durakId": "24687",
+          "enlem": 38.754697632365,
+          "mesafe": 42707.076620444
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.957878269943,
+          "durakId": "24686",
+          "enlem": 38.754558631319,
+          "mesafe": 42709.809959567
+        }
+      ]
+    },
+    {
+      "origin_stop_id": 12752,
+      "origin_stop_name": "Turna",
+      "query": {
+        "lat": 38.3695,
+        "lon": 27.0985
+      },
+      "upstream": [
+        {
+          "adi": "Turna",
+          "boylam": 27.098500641445,
+          "durakId": "12752",
+          "enlem": 38.369500430105,
+          "mesafe": 0
+        },
+        {
+          "adi": "Turna",
+          "boylam": 27.098500641397,
+          "durakId": "12751",
+          "enlem": 38.36960043028,
+          "mesafe": 11.100435199635
+        },
+        {
+          "adi": "Hercai",
+          "boylam": 27.096468649067,
+          "durakId": "12539",
+          "enlem": 38.369906429108,
+          "mesafe": 183.20592715077
+        },
+        {
+          "adi": "Kasaba",
+          "boylam": 27.096335535344,
+          "durakId": "12468",
+          "enlem": 38.369285948919,
+          "mesafe": 190.7019142546
+        },
+        {
+          "adi": "Kasaba",
+          "boylam": 27.096200650368,
+          "durakId": "12469",
+          "enlem": 38.369300427851,
+          "mesafe": 202.21994080442
+        },
+        {
+          "adi": "Hercai",
+          "boylam": 27.096227650022,
+          "durakId": "12540",
+          "enlem": 38.369850428811,
+          "mesafe": 202.4010769219
+        },
+        {
+          "adi": "Fatih Seylan Cami",
+          "boylam": 27.100500634499,
+          "durakId": "12759",
+          "enlem": 38.3680004291,
+          "mesafe": 241.39831822358
+        },
+        {
+          "adi": "Çakırtepe",
+          "boylam": 27.098700639474,
+          "durakId": "12466",
+          "enlem": 38.371800434265,
+          "mesafe": 255.90760436716
+        },
+        {
+          "adi": "Çakırtepe",
+          "boylam": 27.098700639416,
+          "durakId": "12467",
+          "enlem": 38.371900434438,
+          "mesafe": 266.98320004275
+        },
+        {
+          "adi": "Fatih Seylan Cami",
+          "boylam": 27.100567634415,
+          "durakId": "12762",
+          "enlem": 38.367607428447,
+          "mesafe": 277.10119281054
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213134394445,
+          "durakId": "24685",
+          "enlem": 38.659348052719,
+          "mesafe": 33692.679513903
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213128393572,
+          "durakId": "24684",
+          "enlem": 38.659451052636,
+          "mesafe": 33703.441318283
+        },
+        {
+          "adi": "Havuzbaşı Yol Ayrımı",
+          "boylam": 27.471928580174,
+          "durakId": "15541",
+          "enlem": 38.178742871347,
+          "mesafe": 38937.844180635
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.957878269943,
+          "durakId": "24686",
+          "enlem": 38.754558631319,
+          "mesafe": 44466.89865624
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.958282266112,
+          "durakId": "24687",
+          "enlem": 38.754697632365,
+          "mesafe": 44472.039437126
+        }
+      ]
+    },
+    {
+      "origin_stop_id": 13603,
+      "origin_stop_name": "Kuyucak",
+      "query": {
+        "lat": 38.191235,
+        "lon": 26.992159
+      },
+      "upstream": [
+        {
+          "adi": "Kuyucak",
+          "boylam": 26.992134909422,
+          "durakId": "13603",
+          "enlem": 38.191278132279,
+          "mesafe": 5.2116976817788
+        },
+        {
+          "adi": "Kuyucak",
+          "boylam": 26.992742075575,
+          "durakId": "13602",
+          "enlem": 38.191311227279,
+          "mesafe": 51.765284259192
+        },
+        {
+          "adi": "Kuyucak Yolu",
+          "boylam": 26.990712068283,
+          "durakId": "15980",
+          "enlem": 38.190307231174,
+          "mesafe": 163.3403573382
+        },
+        {
+          "adi": "Kuyucak Yolu",
+          "boylam": 26.990265070652,
+          "durakId": "15981",
+          "enlem": 38.190446232541,
+          "mesafe": 187.618934961
+        },
+        {
+          "adi": "Saraypatı",
+          "boylam": 26.996767948395,
+          "durakId": "13655",
+          "enlem": 38.193127031162,
+          "mesafe": 455.09569243733
+        },
+        {
+          "adi": "Saraypatı",
+          "boylam": 26.996964169659,
+          "durakId": "13654",
+          "enlem": 38.193077682608,
+          "mesafe": 467.99340682352
+        },
+        {
+          "adi": "Karanfil",
+          "boylam": 26.985800090824,
+          "durakId": "13604",
+          "enlem": 38.19150024559,
+          "mesafe": 557.84986136811
+        },
+        {
+          "adi": "Karanfil",
+          "boylam": 26.985812092849,
+          "durakId": "13605",
+          "enlem": 38.191685245798,
+          "mesafe": 558.26087606845
+        },
+        {
+          "adi": "Gümüşkent Yol Ayrımı",
+          "boylam": 26.983078777142,
+          "durakId": "13573",
+          "enlem": 38.191249959254,
+          "mesafe": 795.47520883249
+        },
+        {
+          "adi": "Gümüşkent Yol Ayrımı",
+          "boylam": 26.982631733782,
+          "durakId": "13568",
+          "enlem": 38.191222684646,
+          "mesafe": 834.63778221678
+        },
+        {
+          "adi": "Havuzbaşı Yol Ayrımı",
+          "boylam": 27.471928580174,
+          "durakId": "15541",
+          "enlem": 38.178742871347,
+          "mesafe": 42056.590540992
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213134394445,
+          "durakId": "24685",
+          "enlem": 38.659348052719,
+          "mesafe": 55430.077740558
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213128393572,
+          "durakId": "24684",
+          "enlem": 38.659451052636,
+          "mesafe": 55440.609513382
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.957878269943,
+          "durakId": "24686",
+          "enlem": 38.754558631319,
+          "mesafe": 62603.807538052
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.958282266112,
+          "durakId": "24687",
+          "enlem": 38.754697632365,
+          "mesafe": 62617.546084126
+        }
+      ]
+    },
+    {
+      "origin_stop_id": 14320,
+      "origin_stop_name": "Torbalı Konutlar",
+      "query": {
+        "lat": 38.1498323242116,
+        "lon": 27.3509480963224
+      },
+      "upstream": [
+        {
+          "adi": "Torbalı Konutlar",
+          "boylam": 27.350948096322,
+          "durakId": "14320",
+          "enlem": 38.149832324212,
+          "mesafe": 0.12833925033158
+        },
+        {
+          "adi": "Torbalı Konutlar",
+          "boylam": 27.3510511183,
+          "durakId": "14321",
+          "enlem": 38.149595940287,
+          "mesafe": 27.626243386448
+        },
+        {
+          "adi": "Torbalı Cumhuriyet Mahallesi",
+          "boylam": 27.34956343071,
+          "durakId": "13839",
+          "enlem": 38.14941314439,
+          "mesafe": 129.94595205613
+        },
+        {
+          "adi": "Torbalı Cumhuriyet Mahallesi",
+          "boylam": 27.349600060432,
+          "durakId": "13838",
+          "enlem": 38.149298843896,
+          "mesafe": 132.11828241684
+        },
+        {
+          "adi": "Uygur",
+          "boylam": 27.352023077372,
+          "durakId": "15833",
+          "enlem": 38.151149855831,
+          "mesafe": 174.07871600579
+        },
+        {
+          "adi": "Uygur",
+          "boylam": 27.352317078717,
+          "durakId": "15832",
+          "enlem": 38.151215855548,
+          "mesafe": 194.99256202441
+        },
+        {
+          "adi": "Torbalı Ticaret Odası 80.Yıl İlkokulu",
+          "boylam": 27.350437428967,
+          "durakId": "14312",
+          "enlem": 38.151608981912,
+          "mesafe": 202.35360935216
+        },
+        {
+          "adi": "Torbalı Ticaret Odası 80.Yıl İlkokulu",
+          "boylam": 27.350262996093,
+          "durakId": "14313",
+          "enlem": 38.151680534197,
+          "mesafe": 213.88666600055
+        },
+        {
+          "adi": "Torbalı Stad",
+          "boylam": 27.353800079288,
+          "durakId": "14324",
+          "enlem": 38.150098838101,
+          "mesafe": 251.74349088286
+        },
+        {
+          "adi": "Torbalı Stad",
+          "boylam": 27.353841078841,
+          "durakId": "14325",
+          "enlem": 38.149960836431,
+          "mesafe": 253.98621636564
+        },
+        {
+          "adi": "Havuzbaşı Yol Ayrımı",
+          "boylam": 27.471928580174,
+          "durakId": "15541",
+          "enlem": 38.178742871347,
+          "mesafe": 11077.543931187
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213134394445,
+          "durakId": "24685",
+          "enlem": 38.659348052719,
+          "mesafe": 57826.049869285
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213128393572,
+          "durakId": "24684",
+          "enlem": 38.659451052636,
+          "mesafe": 57837.340787002
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.958282266112,
+          "durakId": "24687",
+          "enlem": 38.754697632365,
+          "mesafe": 75386.457026572
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.957878269943,
+          "durakId": "24686",
+          "enlem": 38.754558631319,
+          "mesafe": 75388.771762293
+        }
+      ]
+    },
+    {
+      "origin_stop_id": 15560,
+      "origin_stop_name": "Yıldırım Beyazıt",
+      "query": {
+        "lat": 38.3709894530336,
+        "lon": 27.1209935557776
+      },
+      "upstream": [
+        {
+          "adi": "Yıldırım Beyazıt",
+          "boylam": 27.120993555778,
+          "durakId": "15560",
+          "enlem": 38.370989453034,
+          "mesafe": 0.069913246339385
+        },
+        {
+          "adi": "Yıldırım Beyazıt",
+          "boylam": 27.121036517584,
+          "durakId": "15561",
+          "enlem": 38.370955749883,
+          "mesafe": 5.3017310638486
+        },
+        {
+          "adi": "Eda",
+          "boylam": 27.120400556693,
+          "durakId": "12672",
+          "enlem": 38.372400455442,
+          "mesafe": 164.94481797265
+        },
+        {
+          "adi": "Eda",
+          "boylam": 27.120500555943,
+          "durakId": "12675",
+          "enlem": 38.372800456378,
+          "mesafe": 205.55467693522
+        },
+        {
+          "adi": "Dere",
+          "boylam": 27.117500568383,
+          "durakId": "12677",
+          "enlem": 38.371400450591,
+          "mesafe": 308.67795396854
+        },
+        {
+          "adi": "Çamlık Cami",
+          "boylam": 27.12159355589,
+          "durakId": "12823",
+          "enlem": 38.368210447625,
+          "mesafe": 312.94728313338
+        },
+        {
+          "adi": "Çamlık Cami",
+          "boylam": 27.121798555119,
+          "durakId": "12822",
+          "enlem": 38.368239447873,
+          "mesafe": 313.30155675407
+        },
+        {
+          "adi": "Dere",
+          "boylam": 27.11741198311,
+          "durakId": "12674",
+          "enlem": 38.371270166259,
+          "mesafe": 314.57905233192
+        },
+        {
+          "adi": "Mevlana Cami",
+          "boylam": 27.124300545036,
+          "durakId": "12820",
+          "enlem": 38.369400452709,
+          "mesafe": 338.55678645098
+        },
+        {
+          "adi": "İyiburnaz Ortaokulu",
+          "boylam": 27.121300551674,
+          "durakId": "12670",
+          "enlem": 38.374100459892,
+          "mesafe": 346.32161659698
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213134394445,
+          "durakId": "24685",
+          "enlem": 38.659348052719,
+          "mesafe": 33003.106444253
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213128393572,
+          "durakId": "24684",
+          "enlem": 38.659451052636,
+          "mesafe": 33014.067646048
+        },
+        {
+          "adi": "Havuzbaşı Yol Ayrımı",
+          "boylam": 27.471928580174,
+          "durakId": "15541",
+          "enlem": 38.178742871347,
+          "mesafe": 37395.252469156
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.957878269943,
+          "durakId": "24686",
+          "enlem": 38.754558631319,
+          "mesafe": 44889.803034806
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.958282266112,
+          "durakId": "24687",
+          "enlem": 38.754697632365,
+          "mesafe": 44893.300039818
+        }
+      ]
+    },
+    {
+      "origin_stop_id": 16072,
+      "origin_stop_name": "Mehmetler",
+      "query": {
+        "lat": 38.0127470096367,
+        "lon": 27.4988742800104
+      },
+      "upstream": [
+        {
+          "adi": "Mehmetler",
+          "boylam": 27.49887428001,
+          "durakId": "16072",
+          "enlem": 38.012747009637,
+          "mesafe": 0.44362056697623
+        },
+        {
+          "adi": "Mehmetler",
+          "boylam": 27.500559297306,
+          "durakId": "16071",
+          "enlem": 38.012702995933,
+          "mesafe": 148.02002368564
+        },
+        {
+          "adi": "Mehmetler Mezarlığı",
+          "boylam": 27.504444356943,
+          "durakId": "16746",
+          "enlem": 38.015394017528,
+          "mesafe": 570.82161637131
+        },
+        {
+          "adi": "Mehmetler Mezarlığı",
+          "boylam": 27.504754359943,
+          "durakId": "16745",
+          "enlem": 38.015361014568,
+          "mesafe": 592.51001469722
+        },
+        {
+          "adi": "Halkapınar",
+          "boylam": 27.486093163034,
+          "durakId": "16073",
+          "enlem": 38.014720143757,
+          "mesafe": 1143.6972206993
+        },
+        {
+          "adi": "Halkapınar",
+          "boylam": 27.485882162768,
+          "durakId": "16074",
+          "enlem": 38.014964149834,
+          "mesafe": 1167.3050738835
+        },
+        {
+          "adi": "Üzümler",
+          "boylam": 27.510351452985,
+          "durakId": "16070",
+          "enlem": 38.020658074052,
+          "mesafe": 1337.0262154425
+        },
+        {
+          "adi": "Üzümler",
+          "boylam": 27.510763457264,
+          "durakId": "16069",
+          "enlem": 38.020665071175,
+          "mesafe": 1365.0060384254
+        },
+        {
+          "adi": "Küçükkale",
+          "boylam": 27.515493532863,
+          "durakId": "16068",
+          "enlem": 38.025134122677,
+          "mesafe": 2005.36169506
+        },
+        {
+          "adi": "Küçükkale",
+          "boylam": 27.515990538371,
+          "durakId": "16067",
+          "enlem": 38.025212120636,
+          "mesafe": 2043.1962827521
+        },
+        {
+          "adi": "Havuzbaşı Yol Ayrımı",
+          "boylam": 27.471928580174,
+          "durakId": "15541",
+          "enlem": 38.178742871347,
+          "mesafe": 18577.198015928
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213134394445,
+          "durakId": "24685",
+          "enlem": 38.659348052719,
+          "mesafe": 75999.686849841
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213128393572,
+          "durakId": "24684",
+          "enlem": 38.659451052636,
+          "mesafe": 76010.65222649
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.958282266112,
+          "durakId": "24687",
+          "enlem": 38.754697632365,
+          "mesafe": 94943.244322917
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.957878269943,
+          "durakId": "24686",
+          "enlem": 38.754558631319,
+          "mesafe": 94947.448507347
+        }
+      ]
+    },
+    {
+      "origin_stop_id": 16646,
+      "origin_stop_name": "Çamönü Güven",
+      "query": {
+        "lat": 38.102236277579,
+        "lon": 27.1567840398481
+      },
+      "upstream": [
+        {
+          "adi": "Çamönü Güven",
+          "boylam": 27.156784039848,
+          "durakId": "16646",
+          "enlem": 38.102236277579,
+          "mesafe": 0.11628688276697
+        },
+        {
+          "adi": "Çamönü Güven",
+          "boylam": 27.156621038822,
+          "durakId": "16645",
+          "enlem": 38.102189278104,
+          "mesafe": 15.1125427787
+        },
+        {
+          "adi": "Çamönü Naile Karadeniz İlkokulu",
+          "boylam": 27.155322045498,
+          "durakId": "14121",
+          "enlem": 38.102948289315,
+          "mesafe": 150.60154812515
+        },
+        {
+          "adi": "Çamönü Naile Karadeniz İlkokulu",
+          "boylam": 27.155438047707,
+          "durakId": "14120",
+          "enlem": 38.103095289644,
+          "mesafe": 151.73860622444
+        },
+        {
+          "adi": "Çamönü Orman",
+          "boylam": 27.158599030904,
+          "durakId": "14123",
+          "enlem": 38.101199261956,
+          "mesafe": 196.4727523244
+        },
+        {
+          "adi": "Çamönü Orman",
+          "boylam": 27.158999030627,
+          "durakId": "14122",
+          "enlem": 38.101099259307,
+          "mesafe": 231.70235322549
+        },
+        {
+          "adi": "Çamönü",
+          "boylam": 27.161199053243,
+          "durakId": "10983",
+          "enlem": 38.102399256451,
+          "mesafe": 387.75525271458
+        },
+        {
+          "adi": "Çamönü",
+          "boylam": 27.161399058931,
+          "durakId": "10982",
+          "enlem": 38.102799257986,
+          "mesafe": 409.67729866166
+        },
+        {
+          "adi": "Çamönü Vatan",
+          "boylam": 27.152687064974,
+          "durakId": "14118",
+          "enlem": 38.10493431458,
+          "mesafe": 467.76437394069
+        },
+        {
+          "adi": "Çamönü Vatan",
+          "boylam": 27.15249906407,
+          "durakId": "14119",
+          "enlem": 38.104899315296,
+          "mesafe": 478.13284838215
+        },
+        {
+          "adi": "Havuzbaşı Yol Ayrımı",
+          "boylam": 27.471928580174,
+          "durakId": "15541",
+          "enlem": 38.178742871347,
+          "mesafe": 28903.292996015
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213134394445,
+          "durakId": "24685",
+          "enlem": 38.659348052719,
+          "mesafe": 62037.768020794
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213128393572,
+          "durakId": "24684",
+          "enlem": 38.659451052636,
+          "mesafe": 62049.124079757
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.957878269943,
+          "durakId": "24686",
+          "enlem": 38.754558631319,
+          "mesafe": 74465.035251653
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.958282266112,
+          "durakId": "24687",
+          "enlem": 38.754697632365,
+          "mesafe": 74471.818481561
+        }
+      ]
+    },
+    {
+      "origin_stop_id": 20561,
+      "origin_stop_name": "Seyit Onbaşı",
+      "query": {
+        "lat": 38.4826126262664,
+        "lon": 27.1249062041833
+      },
+      "upstream": [
+        {
+          "adi": "Seyit Onbaşı",
+          "boylam": 27.124906204183,
+          "durakId": "20561",
+          "enlem": 38.482612626266,
+          "mesafe": 0.0717661363171
+        },
+        {
+          "adi": "Seyit Onbaşı",
+          "boylam": 27.124719204987,
+          "durakId": "20560",
+          "enlem": 38.482647625778,
+          "mesafe": 16.774040195834
+        },
+        {
+          "adi": "Aşık Veysel Şatıroğlu Parkı",
+          "boylam": 27.125365205999,
+          "durakId": "23945",
+          "enlem": 38.481747626802,
+          "mesafe": 104.09546425978
+        },
+        {
+          "adi": "Aşık Veysel Şatıroğlu Parkı",
+          "boylam": 27.125300206832,
+          "durakId": "23946",
+          "enlem": 38.481645626535,
+          "mesafe": 112.77473765168
+        },
+        {
+          "adi": "Çınar Parkı",
+          "boylam": 27.125752193554,
+          "durakId": "20568",
+          "enlem": 38.483882629685,
+          "mesafe": 159.06427203009
+        },
+        {
+          "adi": "Çınar Parkı",
+          "boylam": 27.12593819248,
+          "durakId": "20569",
+          "enlem": 38.483903630222,
+          "mesafe": 169.18205191231
+        },
+        {
+          "adi": "İnönü Kültür Merkezi",
+          "boylam": 27.123069285757,
+          "durakId": "20578",
+          "enlem": 38.481973321309,
+          "mesafe": 175.33249443786
+        },
+        {
+          "adi": "İnönü Kültür Merkezi",
+          "boylam": 27.12307515466,
+          "durakId": "20579",
+          "enlem": 38.481818619154,
+          "mesafe": 182.51669074451
+        },
+        {
+          "adi": "Halit Özpirinç Lisesi",
+          "boylam": 27.12700019822,
+          "durakId": "20581",
+          "enlem": 38.481600631195,
+          "mesafe": 214.50484001008
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213134394445,
+          "durakId": "24685",
+          "enlem": 38.659348052719,
+          "mesafe": 21071.879725513
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213128393572,
+          "durakId": "24684",
+          "enlem": 38.659451052636,
+          "mesafe": 21082.333060965
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.958282266112,
+          "durakId": "24687",
+          "enlem": 38.754697632365,
+          "mesafe": 33508.861792086
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.957878269943,
+          "durakId": "24686",
+          "enlem": 38.754558631319,
+          "mesafe": 33510.217794847
+        },
+        {
+          "adi": "Havuzbaşı Yol Ayrımı",
+          "boylam": 27.471928580174,
+          "durakId": "15541",
+          "enlem": 38.178742871347,
+          "mesafe": 45370.244462967
+        }
+      ]
+    },
+    {
+      "origin_stop_id": 21362,
+      "origin_stop_name": "Simge Sitesi",
+      "query": {
+        "lat": 38.5421,
+        "lon": 27.0427
+      },
+      "upstream": [
+        {
+          "adi": "Simge Sitesi",
+          "boylam": 27.04273387629,
+          "durakId": "21365",
+          "enlem": 38.541981269233,
+          "mesafe": 13.54194092603
+        },
+        {
+          "adi": "Simge Sitesi",
+          "boylam": 27.042572941611,
+          "durakId": "21362",
+          "enlem": 38.542186237384,
+          "mesafe": 14.636056097784
+        },
+        {
+          "adi": "Zirve",
+          "boylam": 27.041800368619,
+          "durakId": "21522",
+          "enlem": 38.540500384494,
+          "mesafe": 194.17142995503
+        },
+        {
+          "adi": "Ulu-Koop",
+          "boylam": 27.044089354728,
+          "durakId": "21538",
+          "enlem": 38.540518391271,
+          "mesafe": 213.31806319578
+        },
+        {
+          "adi": "Zirve",
+          "boylam": 27.041900369725,
+          "durakId": "21521",
+          "enlem": 38.540200385043,
+          "mesafe": 222.14669422677
+        },
+        {
+          "adi": "Ulu-Koop",
+          "boylam": 27.044289353455,
+          "durakId": "21539",
+          "enlem": 38.540530391856,
+          "mesafe": 222.63327104367
+        },
+        {
+          "adi": "Ulukent Üçyol",
+          "boylam": 27.045032334679,
+          "durakId": "22534",
+          "enlem": 38.543015392024,
+          "mesafe": 227.26739208356
+        },
+        {
+          "adi": "Ulukent Mezarlık",
+          "boylam": 27.044403332546,
+          "durakId": "22520",
+          "enlem": 38.544038389266,
+          "mesafe": 261.39003799753
+        },
+        {
+          "adi": "Ulukent Üçyol",
+          "boylam": 27.045506331981,
+          "durakId": "22533",
+          "enlem": 38.542987393474,
+          "mesafe": 263.70304998281
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213134394445,
+          "durakId": "24685",
+          "enlem": 38.659348052719,
+          "mesafe": 19744.131259569
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213128393572,
+          "durakId": "24684",
+          "enlem": 38.659451052636,
+          "mesafe": 19751.269602601
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.957878269943,
+          "durakId": "24686",
+          "enlem": 38.754558631319,
+          "mesafe": 24713.762533672
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.958282266112,
+          "durakId": "24687",
+          "enlem": 38.754697632365,
+          "mesafe": 24718.007630637
+        },
+        {
+          "adi": "Havuzbaşı Yol Ayrımı",
+          "boylam": 27.471928580174,
+          "durakId": "15541",
+          "enlem": 38.178742871347,
+          "mesafe": 55084.053327457
+        }
+      ]
+    },
+    {
+      "origin_stop_id": 21951,
+      "origin_stop_name": "Öğretmen Evi",
+      "query": {
+        "lat": 38.74732,
+        "lon": 26.85222
+      },
+      "upstream": [
+        {
+          "adi": "Öğretmen Evi",
+          "boylam": 26.852219999269,
+          "durakId": "21951",
+          "enlem": 38.747319314635,
+          "mesafe": 0
+        },
+        {
+          "adi": "Öğretmen Evi",
+          "boylam": 26.852000001297,
+          "durakId": "21952",
+          "enlem": 38.747249314259,
+          "mesafe": 20.64378791437
+        },
+        {
+          "adi": "Petra Koyu",
+          "boylam": 26.856297973254,
+          "durakId": "21950",
+          "enlem": 38.747401325763,
+          "mesafe": 354.63239748087
+        },
+        {
+          "adi": "Petra Koyu",
+          "boylam": 26.856453942091,
+          "durakId": "21949",
+          "enlem": 38.747531651527,
+          "mesafe": 368.82822024233
+        },
+        {
+          "adi": "Mercan",
+          "boylam": 26.847300032739,
+          "durakId": "21953",
+          "enlem": 38.746999302122,
+          "mesafe": 429.18752098286
+        },
+        {
+          "adi": "Mercan",
+          "boylam": 26.845950050456,
+          "durakId": "21954",
+          "enlem": 38.74601930171,
+          "mesafe": 563.85969526036
+        },
+        {
+          "adi": "Barbaros",
+          "boylam": 26.859570948939,
+          "durakId": "23625",
+          "enlem": 38.74782733358,
+          "mesafe": 641.53084449595
+        },
+        {
+          "adi": "Foça Şahin Tepesi",
+          "boylam": 26.859819947852,
+          "durakId": "21948",
+          "enlem": 38.747779334448,
+          "mesafe": 662.66453989962
+        },
+        {
+          "adi": "Gazi Mustafa Kemal",
+          "boylam": 26.845040080444,
+          "durakId": "21956",
+          "enlem": 38.743469307755,
+          "mesafe": 756.49805645527
+        },
+        {
+          "adi": "Gazi Mustafa Kemal",
+          "boylam": 26.844940080014,
+          "durakId": "21955",
+          "enlem": 38.743579307115,
+          "mesafe": 756.92045674643
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.957878269943,
+          "durakId": "24686",
+          "enlem": 38.754558631319,
+          "mesafe": 9219.9426408143
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.958282266112,
+          "durakId": "24687",
+          "enlem": 38.754697632365,
+          "mesafe": 9256.2725304651
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213128393572,
+          "durakId": "24684",
+          "enlem": 38.659451052636,
+          "mesafe": 32874.904261723
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213134394445,
+          "durakId": "24685",
+          "enlem": 38.659348052719,
+          "mesafe": 32878.818574888
+        },
+        {
+          "adi": "Havuzbaşı Yol Ayrımı",
+          "boylam": 27.471928580174,
+          "durakId": "15541",
+          "enlem": 38.178742871347,
+          "mesafe": 83119.899559008
+        }
+      ]
+    },
+    {
+      "origin_stop_id": 23005,
+      "origin_stop_name": "Mezarlıkbaşı Cami",
+      "query": {
+        "lat": 39.1059510302709,
+        "lon": 27.1744146239386
+      },
+      "upstream": [
+        {
+          "adi": "Mezarlıkbaşı Cami",
+          "boylam": 27.174414623939,
+          "durakId": "23005",
+          "enlem": 39.105951030271,
+          "mesafe": 0.39353016550824
+        },
+        {
+          "adi": "Mezarlıkbaşı Cami",
+          "boylam": 27.174322624164,
+          "durakId": "23008",
+          "enlem": 39.106166028083,
+          "mesafe": 25.145796098666
+        },
+        {
+          "adi": "100. Yıl İ.Ö.O.",
+          "boylam": 27.174344623263,
+          "durakId": "24602",
+          "enlem": 39.106768023856,
+          "mesafe": 90.986195804573
+        },
+        {
+          "adi": "Maltepe",
+          "boylam": 27.173017262776,
+          "durakId": "24167",
+          "enlem": 39.106130039003,
+          "mesafe": 122.13538653255
+        },
+        {
+          "adi": "100. Yıl İ.Ö.O.",
+          "boylam": 27.174347622397,
+          "durakId": "24603",
+          "enlem": 39.107437019006,
+          "mesafe": 165.16857115644
+        },
+        {
+          "adi": "Eski Mezarlık",
+          "boylam": 27.173818629483,
+          "durakId": "24019",
+          "enlem": 39.104288038278,
+          "mesafe": 191.47996137266
+        },
+        {
+          "adi": "Bergama Sardunya",
+          "boylam": 27.177395606099,
+          "durakId": "23007",
+          "enlem": 39.106999043001,
+          "mesafe": 283.27042140236
+        },
+        {
+          "adi": "Bergama Sardunya",
+          "boylam": 27.177295606407,
+          "durakId": "23010",
+          "enlem": 39.107199040857,
+          "mesafe": 285.50674641045
+        },
+        {
+          "adi": "Fatih İlkokulu",
+          "boylam": 27.176135617924,
+          "durakId": "24295",
+          "enlem": 39.103353060841,
+          "mesafe": 324.65194016187
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.958282266112,
+          "durakId": "24687",
+          "enlem": 38.754697632365,
+          "mesafe": 43263.89665899
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.957878269943,
+          "durakId": "24686",
+          "enlem": 38.754558631319,
+          "mesafe": 43292.994051072
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213128393572,
+          "durakId": "24684",
+          "enlem": 38.659451052636,
+          "mesafe": 49681.445393665
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213134394445,
+          "durakId": "24685",
+          "enlem": 38.659348052719,
+          "mesafe": 49692.888616351
+        },
+        {
+          "adi": "Havuzbaşı Yol Ayrımı",
+          "boylam": 27.471928580174,
+          "durakId": "15541",
+          "enlem": 38.178742871347,
+          "mesafe": 106138.64815853
+        }
+      ]
+    },
+    {
+      "origin_stop_id": 23721,
+      "origin_stop_name": "Samyeli",
+      "query": {
+        "lat": 38.722943,
+        "lon": 26.831302
+      },
+      "upstream": [
+        {
+          "adi": "Samyeli",
+          "boylam": 26.831302360431,
+          "durakId": "23721",
+          "enlem": 38.722942338854,
+          "mesafe": 0
+        },
+        {
+          "adi": "Samyeli",
+          "boylam": 26.831272363118,
+          "durakId": "23720",
+          "enlem": 38.722675339647,
+          "mesafe": 29.754441301669
+        },
+        {
+          "adi": "Ata",
+          "boylam": 26.831754330498,
+          "durakId": "23655",
+          "enlem": 38.725831330583,
+          "mesafe": 323.10957720325
+        },
+        {
+          "adi": "Ata",
+          "boylam": 26.831950328117,
+          "durakId": "23654",
+          "enlem": 38.725953330697,
+          "mesafe": 338.96983667513
+        },
+        {
+          "adi": "Ekin",
+          "boylam": 26.833238379964,
+          "durakId": "23651",
+          "enlem": 38.719533355045,
+          "mesafe": 414.19873453008
+        },
+        {
+          "adi": "Ekin",
+          "boylam": 26.833318381362,
+          "durakId": "23650",
+          "enlem": 38.719328355922,
+          "mesafe": 437.8287036619
+        },
+        {
+          "adi": "Aslan",
+          "boylam": 26.832389306126,
+          "durakId": "23684",
+          "enlem": 38.727997325142,
+          "mesafe": 569.06454729982
+        },
+        {
+          "adi": "Aslan",
+          "boylam": 26.832291305866,
+          "durakId": "23683",
+          "enlem": 38.728090324579,
+          "mesafe": 577.91815631218
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.957878269943,
+          "durakId": "24686",
+          "enlem": 38.754558631319,
+          "mesafe": 11551.209389811
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.958282266112,
+          "durakId": "24687",
+          "enlem": 38.754697632365,
+          "mesafe": 11589.352999389
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213128393572,
+          "durakId": "24684",
+          "enlem": 38.659451052636,
+          "mesafe": 33959.158141074
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213134394445,
+          "durakId": "24685",
+          "enlem": 38.659348052719,
+          "mesafe": 33962.067061726
+        },
+        {
+          "adi": "Havuzbaşı Yol Ayrımı",
+          "boylam": 27.471928580174,
+          "durakId": "15541",
+          "enlem": 38.178742871347,
+          "mesafe": 82319.592886855
+        }
+      ]
+    },
+    {
+      "origin_stop_id": 24230,
+      "origin_stop_name": "Piriştina Parkı",
+      "query": {
+        "lat": 38.47449154539,
+        "lon": 27.0961573915264
+      },
+      "upstream": [
+        {
+          "adi": "Piriştina Parkı",
+          "boylam": 27.096157391526,
+          "durakId": "24230",
+          "enlem": 38.47449154539,
+          "mesafe": 0.06951696047049
+        },
+        {
+          "adi": "Piriştina Parkı",
+          "boylam": 27.096574390195,
+          "durakId": "24229",
+          "enlem": 38.474293546317,
+          "mesafe": 42.513801252756
+        },
+        {
+          "adi": "Telli Bahçe",
+          "boylam": 27.093910396154,
+          "durakId": "24228",
+          "enlem": 38.476153540651,
+          "mesafe": 269.21270941105
+        },
+        {
+          "adi": "Şemikler Lisesi",
+          "boylam": 27.096229517914,
+          "durakId": "20412",
+          "enlem": 38.472047796042,
+          "mesafe": 271.40387739124
+        },
+        {
+          "adi": "Şemikler Lisesi",
+          "boylam": 27.096373148123,
+          "durakId": "20411",
+          "enlem": 38.472026308928,
+          "mesafe": 274.36133132847
+        },
+        {
+          "adi": "Telli Bahçe",
+          "boylam": 27.09393039504,
+          "durakId": "24227",
+          "enlem": 38.476386540811,
+          "mesafe": 286.36218187637
+        },
+        {
+          "adi": "Leylak",
+          "boylam": 27.09796239197,
+          "durakId": "20422",
+          "enlem": 38.472183548564,
+          "mesafe": 300.78285041129
+        },
+        {
+          "adi": "Leylak",
+          "boylam": 27.097967393051,
+          "durakId": "20423",
+          "enlem": 38.471922548425,
+          "mesafe": 326.03166375923
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213134394445,
+          "durakId": "24685",
+          "enlem": 38.659348052719,
+          "mesafe": 22913.425930574
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213128393572,
+          "durakId": "24684",
+          "enlem": 38.659451052636,
+          "mesafe": 22923.430577722
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.957878269943,
+          "durakId": "24686",
+          "enlem": 38.754558631319,
+          "mesafe": 33340.984466369
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.958282266112,
+          "durakId": "24687",
+          "enlem": 38.754697632365,
+          "mesafe": 33342.681383368
+        },
+        {
+          "adi": "Havuzbaşı Yol Ayrımı",
+          "boylam": 27.471928580174,
+          "durakId": "15541",
+          "enlem": 38.178742871347,
+          "mesafe": 46448.216603165
+        }
+      ]
+    },
+    {
+      "origin_stop_id": 30136,
+      "origin_stop_name": "Stadyum İstasyon",
+      "query": {
+        "lat": 38.4415,
+        "lon": 27.18
+      },
+      "upstream": [
+        {
+          "adi": "Stadyum İstasyon",
+          "boylam": 27.18000012703,
+          "durakId": "30136",
+          "enlem": 38.441500709059,
+          "mesafe": 0
+        },
+        {
+          "adi": "Stadyum İstasyon",
+          "boylam": 27.180300123516,
+          "durakId": "30135",
+          "enlem": 38.442000710928,
+          "mesafe": 61.37223216352
+        },
+        {
+          "adi": "İstasyon",
+          "boylam": 27.180900118216,
+          "durakId": "30253",
+          "enlem": 38.442600713777,
+          "mesafe": 145.20221227496
+        },
+        {
+          "adi": "Bölge İdare Mahkemesi",
+          "boylam": 27.179962250995,
+          "durakId": "30138",
+          "enlem": 38.443206729772,
+          "mesafe": 189.40701634205
+        },
+        {
+          "adi": "Mersinli Cami",
+          "boylam": 27.181409450739,
+          "durakId": "30200",
+          "enlem": 38.439868401636,
+          "mesafe": 219.02257862821
+        },
+        {
+          "adi": "Bölge İdare Mahkemesi",
+          "boylam": 27.180600112474,
+          "durakId": "30137",
+          "enlem": 38.444200716581,
+          "mesafe": 304.25915347021
+        },
+        {
+          "adi": "Mersinli",
+          "boylam": 27.180400140326,
+          "durakId": "30134",
+          "enlem": 38.438000702106,
+          "mesafe": 390.08727061856
+        },
+        {
+          "adi": "Ağaçlıyol Benzinlik",
+          "boylam": 27.184292729198,
+          "durakId": "30229",
+          "enlem": 38.443077936696,
+          "mesafe": 413.63810273071
+        },
+        {
+          "adi": "Çınarlı Mesleki ve Teknik Anadolu Lisesi",
+          "boylam": 27.17530136315,
+          "durakId": "11892",
+          "enlem": 38.440800694093,
+          "mesafe": 417.51754297248
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213134394445,
+          "durakId": "24685",
+          "enlem": 38.659348052719,
+          "mesafe": 24354.658453434
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213128393572,
+          "durakId": "24684",
+          "enlem": 38.659451052636,
+          "mesafe": 24365.9495585
+        },
+        {
+          "adi": "Havuzbaşı Yol Ayrımı",
+          "boylam": 27.471928580174,
+          "durakId": "15541",
+          "enlem": 38.178742871347,
+          "mesafe": 38764.004000988
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.958282266112,
+          "durakId": "24687",
+          "enlem": 38.754697632365,
+          "mesafe": 39772.393086809
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.957878269943,
+          "durakId": "24686",
+          "enlem": 38.754558631319,
+          "mesafe": 39776.022977566
+        }
+      ]
+    },
+    {
+      "origin_stop_id": 30860,
+      "origin_stop_name": "Armutlu Sağlık Ocağı",
+      "query": {
+        "lat": 38.4078,
+        "lon": 27.5249
+      },
+      "upstream": [
+        {
+          "adi": "Armutlu Sağlık Ocağı",
+          "boylam": 27.524899174561,
+          "durakId": "30860",
+          "enlem": 38.407801758419,
+          "mesafe": 0
+        },
+        {
+          "adi": "Armutlu Sağlık Ocağı",
+          "boylam": 27.52479917691,
+          "durakId": "30863",
+          "enlem": 38.407601755872,
+          "mesafe": 23.858150159672
+        },
+        {
+          "adi": "Armutlu Mezarlık",
+          "boylam": 27.52229917591,
+          "durakId": "30801",
+          "enlem": 38.408301750474,
+          "mesafe": 233.78417790997
+        },
+        {
+          "adi": "Armutlu Mezarlık",
+          "boylam": 27.522299173822,
+          "durakId": "30800",
+          "enlem": 38.408501752502,
+          "mesafe": 240.02588567853
+        },
+        {
+          "adi": "Armutlu Merkez",
+          "boylam": 27.528299170233,
+          "durakId": "30803",
+          "enlem": 38.407401771443,
+          "mesafe": 300.27971094588
+        },
+        {
+          "adi": "Armutlu Park",
+          "boylam": 27.528999166364,
+          "durakId": "30862",
+          "enlem": 38.407601777051,
+          "mesafe": 358.80813813032
+        },
+        {
+          "adi": "Armutlu Park",
+          "boylam": 27.530703159714,
+          "durakId": "32281",
+          "enlem": 38.40782578803,
+          "mesafe": 506.96520664199
+        },
+        {
+          "adi": "Aşağı Kızılca Yol Ayrımı",
+          "boylam": 27.517901784929,
+          "durakId": "30858",
+          "enlem": 38.409690563007,
+          "mesafe": 646.15410439368
+        },
+        {
+          "adi": "Armutlu Merkez",
+          "boylam": 27.532393445076,
+          "durakId": "30802",
+          "enlem": 38.408049494684,
+          "mesafe": 655.17527817763
+        },
+        {
+          "adi": "Havuzbaşı Yol Ayrımı",
+          "boylam": 27.471928580174,
+          "durakId": "15541",
+          "enlem": 38.178742871347,
+          "mesafe": 25845.564888982
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213134394445,
+          "durakId": "24685",
+          "enlem": 38.659348052719,
+          "mesafe": 38970.557526659
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213128393572,
+          "durakId": "24684",
+          "enlem": 38.659451052636,
+          "mesafe": 38979.102661385
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.958282266112,
+          "durakId": "24687",
+          "enlem": 38.754697632365,
+          "mesafe": 62614.182086489
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.957878269943,
+          "durakId": "24686",
+          "enlem": 38.754558631319,
+          "mesafe": 62632.495949591
+        }
+      ]
+    },
+    {
+      "origin_stop_id": 31587,
+      "origin_stop_name": "Baltaalanı",
+      "query": {
+        "lat": 38.4613,
+        "lon": 27.4535
+      },
+      "upstream": [
+        {
+          "adi": "Baltaalanı",
+          "boylam": 27.453440265184,
+          "durakId": "31587",
+          "enlem": 38.461261402548,
+          "mesafe": 6.805764641554
+        },
+        {
+          "adi": "Baltaalanı",
+          "boylam": 27.453498864461,
+          "durakId": "31584",
+          "enlem": 38.461201849081,
+          "mesafe": 11.100874041098
+        },
+        {
+          "adi": "Hava Pilot Teğmen Erdoğan Çallı",
+          "boylam": 27.450371624253,
+          "durakId": "32197",
+          "enlem": 38.461413500939,
+          "mesafe": 273.23128876237
+        },
+        {
+          "adi": "Hava Pilot Teğmen Erdoğan Çallı",
+          "boylam": 27.450325748908,
+          "durakId": "32196",
+          "enlem": 38.461461667495,
+          "mesafe": 277.52165332603
+        },
+        {
+          "adi": "Akevler",
+          "boylam": 27.452578288282,
+          "durakId": "32425",
+          "enlem": 38.46510623886,
+          "mesafe": 429.89269269098
+        },
+        {
+          "adi": "Atatürk Caddesi",
+          "boylam": 27.453898902191,
+          "durakId": "31585",
+          "enlem": 38.457201822019,
+          "mesafe": 456.47288322004
+        },
+        {
+          "adi": "Atatürk Caddesi",
+          "boylam": 27.453998902784,
+          "durakId": "31582",
+          "enlem": 38.457101821819,
+          "mesafe": 468.27470273375
+        },
+        {
+          "adi": "Akevler",
+          "boylam": 27.452709789038,
+          "durakId": "32424",
+          "enlem": 38.465602986468,
+          "mesafe": 482.40181768733
+        },
+        {
+          "adi": "Sütçüler Köyü Girişi",
+          "boylam": 27.454248920656,
+          "durakId": "31580",
+          "enlem": 38.45514380973,
+          "mesafe": 686.71887458208
+        },
+        {
+          "adi": "Sütçüler Köyü Girişi",
+          "boylam": 27.454158949783,
+          "durakId": "31583",
+          "enlem": 38.455039762552,
+          "mesafe": 697.52465026391
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213134394445,
+          "durakId": "24685",
+          "enlem": 38.659348052719,
+          "mesafe": 30368.681982444
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213128393572,
+          "durakId": "24684",
+          "enlem": 38.659451052636,
+          "mesafe": 30377.310924309
+        },
+        {
+          "adi": "Havuzbaşı Yol Ayrımı",
+          "boylam": 27.471928580174,
+          "durakId": "15541",
+          "enlem": 38.178742871347,
+          "mesafe": 31406.941005381
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.958282266112,
+          "durakId": "24687",
+          "enlem": 38.754697632365,
+          "mesafe": 54049.919877357
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.957878269943,
+          "durakId": "24686",
+          "enlem": 38.754558631319,
+          "mesafe": 54068.747910693
+        }
+      ]
+    },
+    {
+      "origin_stop_id": 32385,
+      "origin_stop_name": "Karaçam Park",
+      "query": {
+        "lat": 38.5190822219368,
+        "lon": 27.2723192070943
+      },
+      "upstream": [
+        {
+          "adi": "Karaçam Park",
+          "boylam": 27.272319207094,
+          "durakId": "32385",
+          "enlem": 38.519082221937,
+          "mesafe": 0.15225357788409
+        },
+        {
+          "adi": "Karaçam Park",
+          "boylam": 27.272628208155,
+          "durakId": "32386",
+          "enlem": 38.518731222433,
+          "mesafe": 47.525738904275
+        },
+        {
+          "adi": "Karaçam Santral",
+          "boylam": 27.270925210039,
+          "durakId": "32384",
+          "enlem": 38.519660217069,
+          "mesafe": 137.33930513455
+        },
+        {
+          "adi": "Karaçam Santral",
+          "boylam": 27.270838211335,
+          "durakId": "32383",
+          "enlem": 38.519551216393,
+          "mesafe": 139.14157402329
+        },
+        {
+          "adi": "Karaçam",
+          "boylam": 27.271057567531,
+          "durakId": "30947",
+          "enlem": 38.517778950069,
+          "mesafe": 181.8265129015
+        },
+        {
+          "adi": "Karaçam Çiftlik",
+          "boylam": 27.268741234879,
+          "durakId": "32381",
+          "enlem": 38.51791920271,
+          "mesafe": 337.68162919066
+        },
+        {
+          "adi": "Trafo",
+          "boylam": 27.270807922953,
+          "durakId": "30946",
+          "enlem": 38.516279441881,
+          "mesafe": 337.9941600534
+        },
+        {
+          "adi": "Trafo",
+          "boylam": 27.270982972953,
+          "durakId": "30945",
+          "enlem": 38.516102444165,
+          "mesafe": 350.81122553629
+        },
+        {
+          "adi": "Karaçam Çiftlik",
+          "boylam": 27.268511237961,
+          "durakId": "32382",
+          "enlem": 38.517673201044,
+          "mesafe": 367.08467950567
+        },
+        {
+          "adi": "Karaçam Havuz",
+          "boylam": 27.269296657573,
+          "durakId": "30950",
+          "enlem": 38.51434456506,
+          "mesafe": 588.37300321556
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213134394445,
+          "durakId": "24685",
+          "enlem": 38.659348052719,
+          "mesafe": 16402.226484856
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213128393572,
+          "durakId": "24684",
+          "enlem": 38.659451052636,
+          "mesafe": 16413.244298326
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.958282266112,
+          "durakId": "24687",
+          "enlem": 38.754697632365,
+          "mesafe": 37837.981808323
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.957878269943,
+          "durakId": "24686",
+          "enlem": 38.754558631319,
+          "mesafe": 37852.769203487
+        },
+        {
+          "adi": "Havuzbaşı Yol Ayrımı",
+          "boylam": 27.471928580174,
+          "durakId": "15541",
+          "enlem": 38.178742871347,
+          "mesafe": 41614.494089261
+        }
+      ]
+    },
+    {
+      "origin_stop_id": 40739,
+      "origin_stop_name": "Buca Üçkuyular Meydan",
+      "query": {
+        "lat": 38.3823005462131,
+        "lon": 27.1758003408041
+      },
+      "upstream": [
+        {
+          "adi": "Buca Üçkuyular Meydan",
+          "boylam": 27.175800340804,
+          "durakId": "40739",
+          "enlem": 38.382300546213,
+          "mesafe": 0.067549953328745
+        },
+        {
+          "adi": "Buca Üçkuyular Meydan",
+          "boylam": 27.175749523036,
+          "durakId": "40740",
+          "enlem": 38.382399988278,
+          "mesafe": 11.853059186997
+        },
+        {
+          "adi": "Buca Üçkuyular Meydan",
+          "boylam": 27.175936340198,
+          "durakId": "40742",
+          "enlem": 38.382357546575,
+          "mesafe": 13.407813188145
+        },
+        {
+          "adi": "Buca Üçkuyular Meydan",
+          "boylam": 27.176030339794,
+          "durakId": "40744",
+          "enlem": 38.382390546806,
+          "mesafe": 22.388912219046
+        },
+        {
+          "adi": "Fatma Saygın Anadolu Lisesi",
+          "boylam": 27.176700336512,
+          "durakId": "40058",
+          "enlem": 38.382800548983,
+          "mesafe": 96.192102633938
+        },
+        {
+          "adi": "Fatma Saygın Anadolu Lisesi",
+          "boylam": 27.176900335353,
+          "durakId": "40057",
+          "enlem": 38.383000549866,
+          "mesafe": 123.5321717408
+        },
+        {
+          "adi": "Eski Sinema 2",
+          "boylam": 27.174992981878,
+          "durakId": "40251",
+          "enlem": 38.380305459598,
+          "mesafe": 232.49462297377
+        },
+        {
+          "adi": "Buca Sağlık Ocağı",
+          "boylam": 27.172800350282,
+          "durakId": "40737",
+          "enlem": 38.382800543461,
+          "mesafe": 267.95211296892
+        },
+        {
+          "adi": "Buca Sağlık Ocağı",
+          "boylam": 27.172524351007,
+          "durakId": "40738",
+          "enlem": 38.382915543408,
+          "mesafe": 294.28232652955
+        },
+        {
+          "adi": "Hasan Ağa Bahçesi",
+          "boylam": 27.179500329893,
+          "durakId": "41200",
+          "enlem": 38.381400548725,
+          "mesafe": 338.36329766485
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213134394445,
+          "durakId": "24685",
+          "enlem": 38.659348052719,
+          "mesafe": 30926.09848043
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213128393572,
+          "durakId": "24684",
+          "enlem": 38.659451052636,
+          "mesafe": 30937.41366218
+        },
+        {
+          "adi": "Havuzbaşı Yol Ayrımı",
+          "boylam": 27.471928580174,
+          "durakId": "15541",
+          "enlem": 38.178742871347,
+          "mesafe": 34379.131635108
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.958282266112,
+          "durakId": "24687",
+          "enlem": 38.754697632365,
+          "mesafe": 45478.222788648
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.957878269943,
+          "durakId": "24686",
+          "enlem": 38.754558631319,
+          "mesafe": 45478.896317953
+        }
+      ]
+    },
+    {
+      "origin_stop_id": 41441,
+      "origin_stop_name": "Çamlıkule Pazaryeri",
+      "query": {
+        "lat": 38.3710135001084,
+        "lon": 27.1659203967356
+      },
+      "upstream": [
+        {
+          "adi": "Çamlıkule Pazaryeri",
+          "boylam": 27.165920396736,
+          "durakId": "41441",
+          "enlem": 38.371013500108,
+          "mesafe": 0.065451238657484
+        },
+        {
+          "adi": "Çamlıkule Pazaryeri",
+          "boylam": 27.165878397141,
+          "durakId": "41442",
+          "enlem": 38.370851499583,
+          "mesafe": 18.414840724638
+        },
+        {
+          "adi": "Belediye Ek Hizmet Binası",
+          "boylam": 27.165765797153,
+          "durakId": "41302",
+          "enlem": 38.372464800003,
+          "mesafe": 161.61373173486
+        },
+        {
+          "adi": "Belediye Ek Hizmet Binası",
+          "boylam": 27.165500395702,
+          "durakId": "41301",
+          "enlem": 38.372500503981,
+          "mesafe": 169.04863429007
+        },
+        {
+          "adi": "Çamlı Pınar Muhtarlık",
+          "boylam": 27.164527837341,
+          "durakId": "40403",
+          "enlem": 38.369943500992,
+          "mesafe": 170.11376646781
+        },
+        {
+          "adi": "Yasemin",
+          "boylam": 27.166073398806,
+          "durakId": "40813",
+          "enlem": 38.369396495498,
+          "mesafe": 180.0446632045
+        },
+        {
+          "adi": "Yasemin",
+          "boylam": 27.166000399201,
+          "durakId": "40812",
+          "enlem": 38.369300495131,
+          "mesafe": 190.33370561705
+        },
+        {
+          "adi": "Çamlı Pınar Muhtarlık",
+          "boylam": 27.164374825286,
+          "durakId": "40404",
+          "enlem": 38.369474647259,
+          "mesafe": 217.83181108061
+        },
+        {
+          "adi": "Menekşe",
+          "boylam": 27.168221754509,
+          "durakId": "40803",
+          "enlem": 38.370236366424,
+          "mesafe": 218.82446755807
+        },
+        {
+          "adi": "Menekşe",
+          "boylam": 27.168013544959,
+          "durakId": "40802",
+          "enlem": 38.369882254317,
+          "mesafe": 221.87676576558
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213134394445,
+          "durakId": "24685",
+          "enlem": 38.659348052719,
+          "mesafe": 32270.9406852
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213128393572,
+          "durakId": "24684",
+          "enlem": 38.659451052636,
+          "mesafe": 32282.214136649
+        },
+        {
+          "adi": "Havuzbaşı Yol Ayrımı",
+          "boylam": 27.471928580174,
+          "durakId": "15541",
+          "enlem": 38.178742871347,
+          "mesafe": 34242.208479728
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.957878269943,
+          "durakId": "24686",
+          "enlem": 38.754558631319,
+          "mesafe": 46276.736220932
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.958282266112,
+          "durakId": "24687",
+          "enlem": 38.754697632365,
+          "mesafe": 46277.145691597
+        }
+      ]
+    },
+    {
+      "origin_stop_id": 50655,
+      "origin_stop_name": "Yüksek Teknoloji",
+      "query": {
+        "lat": 38.3208950315382,
+        "lon": 26.6466721911234
+      },
+      "upstream": [
+        {
+          "adi": "Yüksek Teknoloji",
+          "boylam": 26.646672191123,
+          "durakId": "50655",
+          "enlem": 38.320895031538,
+          "mesafe": 0.26586444675189
+        },
+        {
+          "adi": "Yüksek Teknoloji",
+          "boylam": 26.646375279579,
+          "durakId": "50654",
+          "enlem": 38.320930554672,
+          "mesafe": 26.517137256231
+        },
+        {
+          "adi": "Yüksek Teknoloji Giriş",
+          "boylam": 26.646037212377,
+          "durakId": "51824",
+          "enlem": 38.320255718032,
+          "mesafe": 90.30184322736
+        },
+        {
+          "adi": "Yüksek Teknoloji Giriş",
+          "boylam": 26.645864067675,
+          "durakId": "51825",
+          "enlem": 38.320361180579,
+          "mesafe": 92.454393683185
+        },
+        {
+          "adi": "Rektörlük",
+          "boylam": 26.643903015012,
+          "durakId": "50635",
+          "enlem": 38.318500350068,
+          "mesafe": 359.79641030648
+        },
+        {
+          "adi": "Rektörlük",
+          "boylam": 26.643503017498,
+          "durakId": "51505",
+          "enlem": 38.31840035023,
+          "mesafe": 391.9991189172
+        },
+        {
+          "adi": "Şenlik Alanı",
+          "boylam": 26.639947087819,
+          "durakId": "51511",
+          "enlem": 38.323408975521,
+          "mesafe": 651.17041940105
+        },
+        {
+          "adi": "Şenlik Alanı",
+          "boylam": 26.639703078989,
+          "durakId": "51514",
+          "enlem": 38.323200328774,
+          "mesafe": 661.21116596035
+        },
+        {
+          "adi": "Kütüphane",
+          "boylam": 26.639049229804,
+          "durakId": "51509",
+          "enlem": 38.319877776809,
+          "mesafe": 676.3933357631
+        },
+        {
+          "adi": "Kütüphane",
+          "boylam": 26.638865781856,
+          "durakId": "51512",
+          "enlem": 38.319976300038,
+          "mesafe": 690.5150409221
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.957878269943,
+          "durakId": "24686",
+          "enlem": 38.754558631319,
+          "mesafe": 55259.904181038
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.958282266112,
+          "durakId": "24687",
+          "enlem": 38.754697632365,
+          "mesafe": 55290.633309734
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213134394445,
+          "durakId": "24685",
+          "enlem": 38.659348052719,
+          "mesafe": 62080.149983745
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213128393572,
+          "durakId": "24684",
+          "enlem": 38.659451052636,
+          "mesafe": 62086.625602109
+        },
+        {
+          "adi": "Havuzbaşı Yol Ayrımı",
+          "boylam": 27.471928580174,
+          "durakId": "15541",
+          "enlem": 38.178742871347,
+          "mesafe": 73941.237423769
+        }
+      ]
+    },
+    {
+      "origin_stop_id": 51493,
+      "origin_stop_name": "Seferihisar İtfaiye",
+      "query": {
+        "lat": 38.1935,
+        "lon": 26.8449
+      },
+      "upstream": [
+        {
+          "adi": "Seferihisar İtfaiye",
+          "boylam": 26.844900529463,
+          "durakId": "51493",
+          "enlem": 38.193500576232,
+          "mesafe": 0
+        },
+        {
+          "adi": "Seferihisar İtfaiye",
+          "boylam": 26.844800529859,
+          "durakId": "51494",
+          "enlem": 38.193500576437,
+          "mesafe": 8.7601481545138
+        },
+        {
+          "adi": "Seferihisar Mezarlık",
+          "boylam": 26.843894273789,
+          "durakId": "50449",
+          "enlem": 38.19532200305,
+          "mesafe": 220.56071608641
+        },
+        {
+          "adi": "Seferihisar Mezarlık",
+          "boylam": 26.844025557816,
+          "durakId": "51496",
+          "enlem": 38.195375575452,
+          "mesafe": 221.79200408077
+        },
+        {
+          "adi": "Seferihisar Bahçe",
+          "boylam": 26.843100512468,
+          "durakId": "51492",
+          "enlem": 38.191700582398,
+          "mesafe": 254.53008043809
+        },
+        {
+          "adi": "Seferihisar Bahçe",
+          "boylam": 26.843116510125,
+          "durakId": "51491",
+          "enlem": 38.191531582598,
+          "mesafe": 268.68885484333
+        },
+        {
+          "adi": "Seferihisar Devlet Hastanesi",
+          "boylam": 26.845300571445,
+          "durakId": "50452",
+          "enlem": 38.196800570952,
+          "mesafe": 367.97520319821
+        },
+        {
+          "adi": "Seferihisar Pazaryeri",
+          "boylam": 26.84178834216,
+          "durakId": "51497",
+          "enlem": 38.195869211073,
+          "mesafe": 378.75306631963
+        },
+        {
+          "adi": "Seferihisar Devlet Hastanesi",
+          "boylam": 26.845700572459,
+          "durakId": "50451",
+          "enlem": 38.197000569883,
+          "mesafe": 394.7735406478
+        },
+        {
+          "adi": "Havuzbaşı Yol Ayrımı",
+          "boylam": 27.471928580174,
+          "durakId": "15541",
+          "enlem": 38.178742871347,
+          "mesafe": 54958.834248043
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213134394445,
+          "durakId": "24685",
+          "enlem": 38.659348052719,
+          "mesafe": 60893.364557904
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213128393572,
+          "durakId": "24684",
+          "enlem": 38.659451052636,
+          "mesafe": 60902.785992172
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.957878269943,
+          "durakId": "24686",
+          "enlem": 38.754558631319,
+          "mesafe": 63056.378467418
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.958282266112,
+          "durakId": "24687",
+          "enlem": 38.754697632365,
+          "mesafe": 63077.138020881
+        }
+      ]
+    },
+    {
+      "origin_stop_id": 52147,
+      "origin_stop_name": "Çiftlik",
+      "query": {
+        "lat": 38.3123844028524,
+        "lon": 26.7765170405943
+      },
+      "upstream": [
+        {
+          "adi": "Çiftlik",
+          "boylam": 26.776517040594,
+          "durakId": "52147",
+          "enlem": 38.312384402852,
+          "mesafe": 0.183985432428
+        },
+        {
+          "adi": "Çiftlik",
+          "boylam": 26.77659403915,
+          "durakId": "52148",
+          "enlem": 38.31223040325,
+          "mesafe": 18.350230502207
+        },
+        {
+          "adi": "İlke",
+          "boylam": 26.7698510947,
+          "durakId": "52161",
+          "enlem": 38.314355397841,
+          "mesafe": 622.84528221352
+        },
+        {
+          "adi": "İlke",
+          "boylam": 26.769719095287,
+          "durakId": "52162",
+          "enlem": 38.31431539795,
+          "mesafe": 632.14847447404
+        },
+        {
+          "adi": "Palmiye",
+          "boylam": 26.766399123967,
+          "durakId": "51140",
+          "enlem": 38.315547394598,
+          "mesafe": 952.14771895441
+        },
+        {
+          "adi": "Palmiye",
+          "boylam": 26.766011126551,
+          "durakId": "51141",
+          "enlem": 38.315565394541,
+          "mesafe": 984.48458640783
+        },
+        {
+          "adi": "Kütük Minare Cami",
+          "boylam": 26.773548014649,
+          "durakId": "52109",
+          "enlem": 38.322687866189,
+          "mesafe": 1172.8205332105
+        },
+        {
+          "adi": "Kütük Minare Cami",
+          "boylam": 26.77323224554,
+          "durakId": "52108",
+          "enlem": 38.322698751304,
+          "mesafe": 1180.4178246562
+        },
+        {
+          "adi": "Santral",
+          "boylam": 26.762702136712,
+          "durakId": "50946",
+          "enlem": 38.313800399353,
+          "mesafe": 1218.5845847592
+        },
+        {
+          "adi": "Ovacık Trafo",
+          "boylam": 26.790202937773,
+          "durakId": "52680",
+          "enlem": 38.309389409123,
+          "mesafe": 1242.1360817839
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.957878269943,
+          "durakId": "24686",
+          "enlem": 38.754558631319,
+          "mesafe": 51568.87658936
+        },
+        {
+          "adi": "Trafo Merkezi",
+          "boylam": 26.958282266112,
+          "durakId": "24687",
+          "enlem": 38.754697632365,
+          "mesafe": 51594.368616641
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213134394445,
+          "durakId": "24685",
+          "enlem": 38.659348052719,
+          "mesafe": 54172.126130324
+        },
+        {
+          "adi": "Telekler Çiflik",
+          "boylam": 27.213128393572,
+          "durakId": "24684",
+          "enlem": 38.659451052636,
+          "mesafe": 54179.868771696
+        },
+        {
+          "adi": "Havuzbaşı Yol Ayrımı",
+          "boylam": 27.471928580174,
+          "durakId": "15541",
+          "enlem": 38.178742871347,
+          "mesafe": 62657.168127761
+        }
+      ]
+    }
+  ]
+}

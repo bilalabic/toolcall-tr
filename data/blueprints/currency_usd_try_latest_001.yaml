@@ -1,0 +1,23 @@
+blueprint_id: currency_usd_try_latest_001
+family_id: currency_usd_try_latest
+split: train
+domain: currency
+kind: successful_tool_call
+difficulty: easy
+provider: frankfurter_ecb
+
+user_goal: En güncel ECB referansına göre USD/TRY kurunu öğrenmek
+known_information: {base: USD, quote: TRY}
+available_tools:
+  - currency.get_exchange_rate
+  - currency.get_historical_exchange_rate
+  - currency.list_supported_currencies
+utterances:
+  - "En güncel ECB referansına göre USD/TRY kuru nedir?"
+  - "USD/TRY için son yayımlanan ECB referans kurunu göster."
+expected_behavior: {decision: tool_call}
+expected_actions:
+  - tool: currency.get_exchange_rate
+    arguments:
+      base: {value: USD, origin: user_message}
+      quote: {value: TRY, origin: user_message}

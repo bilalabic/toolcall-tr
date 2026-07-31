@@ -1,0 +1,133 @@
+# Validator politika referansı. Çalışma zamanı profilleri
+# `toolcall_tr.validation.build_default_pipeline` içinde testlerle kilitlidir;
+# bu dosya henüz dinamik olarak yüklenmez.
+
+pipeline:
+  # collect_all: tüm hataları topla (rapor için). fail_fast: ilk hatada dur.
+  mode: collect_all
+  # Bu validator'lardan biri bile fail ederse örnek reddedilir.
+  blocking:
+    - format
+    - schema
+    - registry
+    - grounding
+    - confirmation
+    - pii
+    - execution
+  release_blocking:
+    - format
+    - schema
+    - registry
+    - grounding
+    - confirmation
+    - pii
+    - execution
+    - language
+    - duplicate
+
+validators:
+  format:
+    enabled: true
+    description: JSON parse, tool-call yapısı, mesaj rollerinin geçerliliği
+
+  schema:
+    enabled: true
+    description: required / type / enum / pattern / min-max / additionalProperties
+
+  registry:
+    enabled: true
+    description: Tool ve parametre adları registry'de var mı
+    unknown_tool_tolerance: 0
+    unknown_parameter_tolerance: 0
+
+  grounding:
+    enabled: true
+    description: >-
+      Her argüman kullanıcı mesajından, önceki observation'dan, sistem
+      state'inden veya izin verilen bir varsayılandan gelmeli.
+    # Kaynağı bulunamayan argüman "fabricated" işaretlenir.
+    allow_schema_defaults: true
+
+  pii:
+    enabled: true
+    # ASLA kapatma. Hem üretilen örnekleri hem cassette'leri tarar.
+    description: Gerçek TCKN/VKN checksum'ı veya mod-97 geçerli IBAN tespiti
+    scan_targets:
+      - user_message
+      - tool_arguments
+      - tool_response
+      - final_answer
+      - cassettes
+    checks:
+      real_tckn_checksum: true
+      real_vkn_checksum: true
+      valid_iban_mod97: true
+      # Sentetik TCKN'ler "0" ile başlamalıdır; başlamayan reddedilir.
+      require_synthetic_tckn_prefix: true
+
+  execution:
+    enabled: true
+    description: >-
+      Kaydedilmiş Trace üzerinde çalışır; hiçbir şeyi yeniden çalıştırmaz.
+      Yalnızca HTTP 200 başarı sayılmaz -- beklenen hata senaryolarında
+      404/409/422 doğru sonuçtur.
+    # Boş sonuç geçerlidir; tool spec'inde allow_empty_result ile kontrol edilir.
+    treat_empty_result_as_failure: false
+
+  state:
+    enabled: true
+    implemented_by: execution
+    applies_to:
+      - calendar_mock
+    description: >-
+      Stateful takvim mock çağrılarında initial/final state hash, state_delta ve
+      assertion kontrolü. Salt-okunur sağlayıcılarda state alanı null kalır.
+
+  observation:
+    enabled: true
+    blocking: false
+    description: >-
+      Final cevap varsa sayı ve URL gibi güçlü tanımlayıcılar önceki tool
+      gözlemleriyle karşılaştırılır. Final cevabı olmayan kayıtlarda sessizce geçer.
+
+  semantic:
+    enabled: false   # Varsayılan offline zincirde kapalı; CLI --judge ile gpt-5-mini çalışır.
+    description: Kullanıcı mesajı ile blueprint/derlenmiş planın semantik uyumu
+
+  policy:
+    enabled: false   # Varsayılan offline zincirde kapalı; CLI --judge ile gpt-5-mini çalışır.
+    description: Netleştirme, ret ve açık onay politikasının korunması
+
+  language:
+    enabled: true
+    blocking: false
+    description: >-
+      Boş/bozuk mesaj, kontrol karakteri, çözülmemiş yer tutucu, mojibake ve
+      doğal dil metnine tool adı sızıntısı. Dil bilgisi veya doğallık puanlamaz.
+
+  turn:
+    enabled: true
+    blocking: false
+    description: >-
+      Tool çağrısı-yanıt eşleşmesi, yetim tool mesajı ve single/multi-turn
+      kullanıcı turu sayısının yapısal tutarlılığı
+
+  duplicate:
+    enabled: true
+    description: Exact, normalize edilmiş ve paraphrase tekrarları
+    # Embedding tabanlı near-duplicate isteğe bağlı gelecek genişlemedir.
+    methods:
+      exact: true
+      normalized: true
+      char_ngram_similarity: true
+      embedding: false
+    max_similarity: 0.95
+
+reporting:
+  # Reddedilen örnekler gerekçesiyle saklanır -- sessizce silinmez.
+  persist_rejected: true
+  rejected_path: data/rejected
+  reports:
+    - reports/rejection_summary.json
+    - reports/error_distribution.json
+    - reports/quality_report.json

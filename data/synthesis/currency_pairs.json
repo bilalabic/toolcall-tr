@@ -1,0 +1,4 @@
+{
+  "base": ["TRY"],
+  "quote": ["EUR", "USD", "GBP"]
+}

@@ -1,0 +1,19 @@
+blueprint_id: calculator_unknown_symbol_error_001
+family_id: calculator_unknown_symbol_error
+split: validation
+domain: calculation
+kind: expected_error
+difficulty: medium
+provider: general_local
+user_goal: Sayısal değeri bilinmeyen bir simge içeren ifadeyi hesaplamayı denemek
+known_information: { expression: "2 + unknown" }
+available_tools: [calculator.evaluate, time.get_local_time]
+utterances:
+  - "2 + unknown ifadesini hesaplamayı dene."
+  - "2 + unknown işleminin sonucunu bulabilir misin?"
+expected_behavior: { decision: tool_call }
+expected_actions:
+  - tool: calculator.evaluate
+    arguments:
+      expression: { value: "2 + unknown", origin: user_message }
+    expect: { outcome: error, status_code: 422 }

@@ -1,0 +1,75 @@
+{
+  "attribution": {
+    "attribution": "Wikidata contributors, structured data under CC0 1.0",
+    "license": "CC0-1.0",
+    "modified": "Canonical JSON'a normalize edildi; başlıklar beyaz listeye göre budandı.",
+    "upstream_url": "https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&formatversion=2&ids=Q615404&languages=tr%7Cen&props=labels%7Cdescriptions%7Caliases%7Csitelinks&sitefilter=trwiki%7Cenwiki"
+  },
+  "body": {
+    "entities": {
+      "Q615404": {
+        "aliases": {
+          "en": [
+            {
+              "language": "en",
+              "value": "Anitkabir, Mausoleum of Atatürk"
+            }
+          ],
+          "tr": [
+            {
+              "language": "tr",
+              "value": "Atatürk'ün ebedi istirahatgâhı"
+            },
+            {
+              "language": "tr",
+              "value": "Anıttepe"
+            },
+            {
+              "language": "tr",
+              "value": "Rasattepe"
+            }
+          ]
+        },
+        "descriptions": {
+          "en": {
+            "language": "en",
+            "value": "Atatürk's mausoleum in Ankara, Turkey"
+          },
+          "tr": {
+            "language": "tr",
+            "value": "Ankara'da Türkiye Cumhuriyeti'nin kurucusu Atatürk'ün anıt mezarı"
+          }
+        },
+        "id": "Q615404",
+        "labels": {
+          "en": {
+            "language": "en",
+            "value": "Anıtkabir"
+          },
+          "tr": {
+            "language": "tr",
+            "value": "Anıtkabir"
+          }
+        },
+        "lastrevid": 0,
+        "modified": "",
+        "sitelinks": {
+          "enwiki": {
+            "site": "enwiki",
+            "title": "Anıtkabir"
+          },
+          "trwiki": {
+            "site": "trwiki",
+            "title": "Anıtkabir"
+          }
+        },
+        "type": "item"
+      }
+    }
+  },
+  "body_encoding": "json",
+  "headers": {
+    "content-type": "application/json; charset=utf-8"
+  },
+  "status": 200
+}

@@ -1,0 +1,267 @@
+{
+  "attribution": {
+    "attribution": "World Bank, World Development Indicators",
+    "license": "CC-BY-4.0-WORLD-BANK-TERMS",
+    "modified": "Canonical JSON'a normalize edildi; başlıklar beyaz listeye göre budandı.",
+    "upstream_url": "https://api.worldbank.org/v2/country/TUR/indicator/SP.POP.TOTL?format=json&source=2&date=2010%3A2024&per_page=1000"
+  },
+  "body": [
+    {
+      "lastupdated": "2026-07-13",
+      "page": 1,
+      "pages": 1,
+      "per_page": 1000,
+      "sourceid": "2",
+      "total": 15
+    },
+    [
+      {
+        "country": {
+          "id": "TR",
+          "value": "Turkiye"
+        },
+        "countryiso3code": "TUR",
+        "date": "2024",
+        "decimal": 0,
+        "indicator": {
+          "id": "SP.POP.TOTL",
+          "value": "Population, total"
+        },
+        "obs_status": "",
+        "unit": "",
+        "value": 85518661
+      },
+      {
+        "country": {
+          "id": "TR",
+          "value": "Turkiye"
+        },
+        "countryiso3code": "TUR",
+        "date": "2023",
+        "decimal": 0,
+        "indicator": {
+          "id": "SP.POP.TOTL",
+          "value": "Population, total"
+        },
+        "obs_status": "",
+        "unit": "",
+        "value": 85325965
+      },
+      {
+        "country": {
+          "id": "TR",
+          "value": "Turkiye"
+        },
+        "countryiso3code": "TUR",
+        "date": "2022",
+        "decimal": 0,
+        "indicator": {
+          "id": "SP.POP.TOTL",
+          "value": "Population, total"
+        },
+        "obs_status": "",
+        "unit": "",
+        "value": 84979913
+      },
+      {
+        "country": {
+          "id": "TR",
+          "value": "Turkiye"
+        },
+        "countryiso3code": "TUR",
+        "date": "2021",
+        "decimal": 0,
+        "indicator": {
+          "id": "SP.POP.TOTL",
+          "value": "Population, total"
+        },
+        "obs_status": "",
+        "unit": "",
+        "value": 84147318
+      },
+      {
+        "country": {
+          "id": "TR",
+          "value": "Turkiye"
+        },
+        "countryiso3code": "TUR",
+        "date": "2020",
+        "decimal": 0,
+        "indicator": {
+          "id": "SP.POP.TOTL",
+          "value": "Population, total"
+        },
+        "obs_status": "",
+        "unit": "",
+        "value": 83384680
+      },
+      {
+        "country": {
+          "id": "TR",
+          "value": "Turkiye"
+        },
+        "countryiso3code": "TUR",
+        "date": "2019",
+        "decimal": 0,
+        "indicator": {
+          "id": "SP.POP.TOTL",
+          "value": "Population, total"
+        },
+        "obs_status": "",
+        "unit": "",
+        "value": 82579440
+      },
+      {
+        "country": {
+          "id": "TR",
+          "value": "Turkiye"
+        },
+        "countryiso3code": "TUR",
+        "date": "2018",
+        "decimal": 0,
+        "indicator": {
+          "id": "SP.POP.TOTL",
+          "value": "Population, total"
+        },
+        "obs_status": "",
+        "unit": "",
+        "value": 81407204
+      },
+      {
+        "country": {
+          "id": "TR",
+          "value": "Turkiye"
+        },
+        "countryiso3code": "TUR",
+        "date": "2017",
+        "decimal": 0,
+        "indicator": {
+          "id": "SP.POP.TOTL",
+          "value": "Population, total"
+        },
+        "obs_status": "",
+        "unit": "",
+        "value": 80312698
+      },
+      {
+        "country": {
+          "id": "TR",
+          "value": "Turkiye"
+        },
+        "countryiso3code": "TUR",
+        "date": "2016",
+        "decimal": 0,
+        "indicator": {
+          "id": "SP.POP.TOTL",
+          "value": "Population, total"
+        },
+        "obs_status": "",
+        "unit": "",
+        "value": 79277962
+      },
+      {
+        "country": {
+          "id": "TR",
+          "value": "Turkiye"
+        },
+        "countryiso3code": "TUR",
+        "date": "2015",
+        "decimal": 0,
+        "indicator": {
+          "id": "SP.POP.TOTL",
+          "value": "Population, total"
+        },
+        "obs_status": "",
+        "unit": "",
+        "value": 78218479
+      },
+      {
+        "country": {
+          "id": "TR",
+          "value": "Turkiye"
+        },
+        "countryiso3code": "TUR",
+        "date": "2014",
+        "decimal": 0,
+        "indicator": {
+          "id": "SP.POP.TOTL",
+          "value": "Population, total"
+        },
+        "obs_status": "",
+        "unit": "",
+        "value": 77181884
+      },
+      {
+        "country": {
+          "id": "TR",
+          "value": "Turkiye"
+        },
+        "countryiso3code": "TUR",
+        "date": "2013",
+        "decimal": 0,
+        "indicator": {
+          "id": "SP.POP.TOTL",
+          "value": "Population, total"
+        },
+        "obs_status": "",
+        "unit": "",
+        "value": 76147624
+      },
+      {
+        "country": {
+          "id": "TR",
+          "value": "Turkiye"
+        },
+        "countryiso3code": "TUR",
+        "date": "2012",
+        "decimal": 0,
+        "indicator": {
+          "id": "SP.POP.TOTL",
+          "value": "Population, total"
+        },
+        "obs_status": "",
+        "unit": "",
+        "value": 75175827
+      },
+      {
+        "country": {
+          "id": "TR",
+          "value": "Turkiye"
+        },
+        "countryiso3code": "TUR",
+        "date": "2011",
+        "decimal": 0,
+        "indicator": {
+          "id": "SP.POP.TOTL",
+          "value": "Population, total"
+        },
+        "obs_status": "",
+        "unit": "",
+        "value": 74223629
+      },
+      {
+        "country": {
+          "id": "TR",
+          "value": "Turkiye"
+        },
+        "countryiso3code": "TUR",
+        "date": "2010",
+        "decimal": 0,
+        "indicator": {
+          "id": "SP.POP.TOTL",
+          "value": "Population, total"
+        },
+        "obs_status": "",
+        "unit": "",
+        "value": 73142150
+      }
+    ]
+  ],
+  "body_encoding": "json",
+  "headers": {
+    "content-type": "application/json;charset=utf-8",
+    "expires": "Thu, 30 Jul 2026 07:42:11 GMT",
+    "last-modified": "Wed, 29 Jul 2026 07:41:50 GMT"
+  },
+  "status": 200
+}

@@ -1,0 +1,385 @@
+{
+  "attribution": {
+    "attribution": "Wikidata contributors, structured data under CC0 1.0",
+    "license": "CC0-1.0",
+    "modified": "Canonical JSON'a normalize edildi; başlıklar beyaz listeye göre budandı.",
+    "upstream_url": "https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&formatversion=2&ids=Q615404&props=claims"
+  },
+  "body": {
+    "entities": {
+      "Q615404": {
+        "claims": {
+          "P131": [
+            {
+              "mainsnak": {
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 1020646
+                  }
+                }
+              },
+              "rank": "normal"
+            },
+            {
+              "mainsnak": {
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 3640
+                  }
+                }
+              },
+              "rank": "normal"
+            }
+          ],
+          "P137": [
+            {
+              "mainsnak": {
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 12808534
+                  }
+                }
+              },
+              "rank": "normal"
+            }
+          ],
+          "P149": [
+            {
+              "mainsnak": {
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 6101949
+                  }
+                }
+              },
+              "rank": "normal"
+            }
+          ],
+          "P17": [
+            {
+              "mainsnak": {
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 43
+                  }
+                }
+              },
+              "rank": "normal"
+            }
+          ],
+          "P186": [
+            {
+              "mainsnak": {
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 187156
+                  }
+                }
+              },
+              "rank": "normal"
+            },
+            {
+              "mainsnak": {
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 22657
+                  }
+                }
+              },
+              "rank": "normal"
+            },
+            {
+              "mainsnak": {
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 40861
+                  }
+                }
+              },
+              "rank": "normal"
+            }
+          ],
+          "P2184": [
+            {
+              "mainsnak": {
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 6027786
+                  }
+                }
+              },
+              "rank": "normal"
+            }
+          ],
+          "P276": [
+            {
+              "mainsnak": {
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 3640
+                  }
+                }
+              },
+              "rank": "normal"
+            }
+          ],
+          "P31": [
+            {
+              "mainsnak": {
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 162875
+                  }
+                }
+              },
+              "rank": "normal"
+            },
+            {
+              "mainsnak": {
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 17431399
+                  }
+                }
+              },
+              "rank": "normal"
+            },
+            {
+              "mainsnak": {
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 5003624
+                  }
+                }
+              },
+              "rank": "normal"
+            }
+          ],
+          "P4330": [
+            {
+              "mainsnak": {
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 5152
+                  }
+                }
+              },
+              "rank": "normal"
+            }
+          ],
+          "P462": [
+            {
+              "mainsnak": {
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 943
+                  }
+                }
+              },
+              "rank": "normal"
+            }
+          ],
+          "P547": [
+            {
+              "mainsnak": {
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 234738
+                  }
+                }
+              },
+              "rank": "normal"
+            },
+            {
+              "mainsnak": {
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 5152
+                  }
+                }
+              },
+              "rank": "normal"
+            }
+          ],
+          "P5816": [
+            {
+              "mainsnak": {
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 56557591
+                  }
+                }
+              },
+              "rank": "normal"
+            }
+          ],
+          "P706": [
+            {
+              "mainsnak": {
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 155526
+                  }
+                }
+              },
+              "rank": "normal"
+            }
+          ],
+          "P7561": [
+            {
+              "mainsnak": {
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 104554632
+                  }
+                }
+              },
+              "rank": "normal"
+            }
+          ],
+          "P793": [
+            {
+              "mainsnak": {
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 385378
+                  }
+                }
+              },
+              "rank": "normal"
+            }
+          ],
+          "P825": [
+            {
+              "mainsnak": {
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 5152
+                  }
+                }
+              },
+              "rank": "normal"
+            }
+          ],
+          "P84": [
+            {
+              "mainsnak": {
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 5372464
+                  }
+                }
+              },
+              "rank": "normal"
+            },
+            {
+              "mainsnak": {
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 6065347
+                  }
+                }
+              },
+              "rank": "normal"
+            }
+          ],
+          "P8596": [
+            {
+              "mainsnak": {
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 104549330
+                  }
+                }
+              },
+              "rank": "normal"
+            }
+          ],
+          "P8933": [
+            {
+              "mainsnak": {
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 104437890
+                  }
+                }
+              },
+              "rank": "normal"
+            }
+          ],
+          "P8989": [
+            {
+              "mainsnak": {
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 104597546
+                  }
+                }
+              },
+              "rank": "normal"
+            }
+          ],
+          "P910": [
+            {
+              "mainsnak": {
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 32723041
+                  }
+                }
+              },
+              "rank": "normal"
+            }
+          ],
+          "P921": [
+            {
+              "mainsnak": {
+                "datavalue": {
+                  "value": {
+                    "entity-type": "item",
+                    "numeric-id": 234738
+                  }
+                }
+              },
+              "rank": "normal"
+            }
+          ]
+        },
+        "id": "Q615404"
+      }
+    }
+  },
+  "body_encoding": "json",
+  "headers": {
+    "content-type": "application/json; charset=utf-8"
+  },
+  "status": 200
+}

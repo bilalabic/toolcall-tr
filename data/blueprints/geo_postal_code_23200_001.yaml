@@ -1,0 +1,18 @@
+blueprint_id: geo_postal_code_23200_001
+family_id: geo_postal_code_23200
+split: validation
+domain: geography
+kind: successful_tool_call
+difficulty: easy
+provider: geonames_tr
+user_goal: 23200 posta kodunun il ve ilçe bilgisini öğrenmek
+known_information: { postal_code: "23200" }
+available_tools: [geo.search_places, geo.lookup_postal_code]
+utterances:
+  - "23200 posta kodu hangi il ve ilçeye ait?"
+  - "23200 için il ve ilçe bilgisini getir."
+expected_behavior: { decision: tool_call }
+expected_actions:
+  - tool: geo.lookup_postal_code
+    arguments:
+      postal_code: { value: "23200", origin: user_message }

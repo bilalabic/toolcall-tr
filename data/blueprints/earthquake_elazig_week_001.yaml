@@ -1,0 +1,43 @@
+blueprint_id: earthquake_elazig_week_001
+family_id: earthquake_near_location
+split: train
+domain: earthquake
+kind: empty_result
+difficulty: medium
+provider: usgs_earthquake
+
+user_goal: Elazığ çevresinde belirtilen tarih aralığında gerçekleşen depremleri bulmak
+known_information:
+  start_date: "2026-07-20"
+  end_date: "2026-07-28"
+  minimum_magnitude: 3
+context:
+  elazig_latitude: 38.6743
+  elazig_longitude: 39.2232
+
+available_tools:
+  - earthquake.search_earthquakes
+  - geo.search_places
+  - weather.get_weather_forecast
+  - currency.get_exchange_rate
+
+utterances:
+  - "2026-07-20 ile 2026-07-28 arasında Elazığ'ın 300 km çevresindeki 3 ve üzeri depremleri bul."
+  - "Elazığ'ın 300 km çevresinde 2026-07-20–2026-07-28 arasındaki en az 3 büyüklüğündeki depremler neler?"
+
+expected_behavior:
+  decision: tool_call
+
+expected_actions:
+  - tool: geo.search_places
+    arguments:
+      query: { value: Elazığ, origin: user_message }
+
+  - tool: earthquake.search_earthquakes
+    arguments:
+      start_date: { value: "2026-07-20", origin: user_message }
+      end_date: { value: "2026-07-28", origin: user_message }
+      minimum_magnitude: { value: 3, origin: user_message }
+      latitude: "$actions[0].results[0].latitude"
+      longitude: "$actions[0].results[0].longitude"
+      radius_km: { value: 300, origin: user_message }

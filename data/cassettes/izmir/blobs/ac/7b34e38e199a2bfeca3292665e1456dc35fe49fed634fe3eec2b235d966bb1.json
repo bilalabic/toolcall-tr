@@ -1,0 +1,193 @@
+{
+  "attribution": {
+    "attribution": "Atıf 4.0 Uluslararası (CC BY 4.0) kapsamında lisanslanan kamu sektörü bilgilerini içerir. Kaynak: İzmir Büyükşehir Belediyesi Açık Veri Portalı.",
+    "license": "CC-BY-4.0",
+    "modified": "Canonical JSON'a normalize edildi; başlıklar beyaz listeye göre budandı.",
+    "upstream_url": "https://acikveri.bizizmir.com/api/3/action/datastore_search?resource_id=64a72577-5f4c-404c-8842-780d88f351df&limit=5&offset=0&sort=_id+asc"
+  },
+  "body": {
+    "help": "https://acikveri.bizizmir.com/api/3/action/help_show?name=datastore_search",
+    "result": {
+      "_links": {
+        "next": "/api/3/action/datastore_search?sort=_id+asc&resource_id=64a72577-5f4c-404c-8842-780d88f351df&limit=5&offset=5",
+        "start": "/api/3/action/datastore_search?sort=_id+asc&resource_id=64a72577-5f4c-404c-8842-780d88f351df&limit=5"
+      },
+      "fields": [
+        {
+          "id": "_id",
+          "type": "int"
+        },
+        {
+          "id": "ILCE",
+          "info": {
+            "label": "",
+            "notes": "Taksi durağının bulunduğu ilçe bilgisi",
+            "type_override": ""
+          },
+          "type": "text"
+        },
+        {
+          "id": "KAPINO",
+          "info": {
+            "label": "",
+            "notes": "Taksi durağının kapı numarası bilgisi",
+            "type_override": ""
+          },
+          "type": "text"
+        },
+        {
+          "id": "ENLEM",
+          "info": {
+            "label": "",
+            "notes": "Enlem bilgisi",
+            "type_override": ""
+          },
+          "type": "numeric"
+        },
+        {
+          "id": "ACIKLAMA",
+          "info": {
+            "label": "",
+            "notes": "Taksi durağı hakkında açıklama bilgisi",
+            "type_override": ""
+          },
+          "type": "text"
+        },
+        {
+          "id": "ILCEID",
+          "info": {
+            "label": "",
+            "notes": "Taksi durağının bulunduğu ilçe numarası bilgisi",
+            "type_override": ""
+          },
+          "type": "numeric"
+        },
+        {
+          "id": "MAHALLE",
+          "info": {
+            "label": "",
+            "notes": "Taksi durağının bulunduğu mahalle bilgisi",
+            "type_override": ""
+          },
+          "type": "text"
+        },
+        {
+          "id": "MAHALLEID",
+          "info": {
+            "label": "",
+            "notes": "Taksi durağının bulunduğu mahalle numarası bilgisi",
+            "type_override": ""
+          },
+          "type": "text"
+        },
+        {
+          "id": "ADI",
+          "info": {
+            "label": "",
+            "notes": "Taksi durağının adı bilgisi",
+            "type_override": ""
+          },
+          "type": "text"
+        },
+        {
+          "id": "BOYLAM",
+          "info": {
+            "label": "",
+            "notes": "Boylam bilgisi",
+            "type_override": ""
+          },
+          "type": "numeric"
+        },
+        {
+          "id": "YOL",
+          "info": {
+            "label": "",
+            "notes": "Taksi durağının bulunduğu cadde veya sokak bilgisi",
+            "type_override": ""
+          },
+          "type": "text"
+        }
+      ],
+      "include_total": true,
+      "limit": 5,
+      "offset": 0,
+      "records": [
+        {
+          "ACIKLAMA": "",
+          "ADI": "Adliye Taksi Durağı",
+          "BOYLAM": 27.178372372067,
+          "ENLEM": 38.448689398952,
+          "ILCE": "BAYRAKLI",
+          "ILCEID": 11,
+          "KAPINO": "2/1",
+          "MAHALLE": "ÇINARLI",
+          "MAHALLEID": "",
+          "YOL": "ŞAPAR MURAT T.BAŞI",
+          "_id": 1
+        },
+        {
+          "ACIKLAMA": "",
+          "ADI": "Adliye Taksi Durağı",
+          "BOYLAM": 27.114803608844,
+          "ENLEM": 38.459775000974,
+          "ILCE": "KARŞIYAKA",
+          "ILCEID": 20,
+          "KAPINO": "9",
+          "MAHALLE": "BAHARİYE",
+          "MAHALLEID": "",
+          "YOL": "BERİN TAŞAN",
+          "_id": 2
+        },
+        {
+          "ACIKLAMA": "",
+          "ADI": "Akıncılar Taksi Durağı",
+          "BOYLAM": 27.149724599586,
+          "ENLEM": 38.373890440096,
+          "ILCE": "BUCA",
+          "ILCEID": 8,
+          "KAPINO": "1",
+          "MAHALLE": "FIRAT",
+          "MAHALLEID": "",
+          "YOL": "647/12",
+          "_id": 3
+        },
+        {
+          "ACIKLAMA": "",
+          "ADI": "Aksoy Çamlık Taksi Durağı",
+          "BOYLAM": 27.107210004305,
+          "ENLEM": 38.455024741341,
+          "ILCE": "KARŞIYAKA",
+          "ILCEID": 20,
+          "KAPINO": "18",
+          "MAHALLE": "AKSOY",
+          "MAHALLEID": "",
+          "YOL": "FAZIL BEY",
+          "_id": 4
+        },
+        {
+          "ACIKLAMA": "",
+          "ADI": "Aksoy Taksi Durağı",
+          "BOYLAM": 27.10861282522,
+          "ENLEM": 38.455109525609,
+          "ILCE": "KARŞIYAKA",
+          "ILCEID": 20,
+          "KAPINO": "84",
+          "MAHALLE": "AKSOY",
+          "MAHALLEID": "",
+          "YOL": "FAZIL BEY",
+          "_id": 5
+        }
+      ],
+      "records_format": "objects",
+      "resource_id": "64a72577-5f4c-404c-8842-780d88f351df",
+      "sort": "_id asc",
+      "total": 406
+    },
+    "success": true
+  },
+  "body_encoding": "json",
+  "headers": {
+    "content-type": "application/json;charset=utf-8"
+  },
+  "status": 200
+}

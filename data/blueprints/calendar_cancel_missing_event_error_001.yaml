@@ -1,0 +1,22 @@
+blueprint_id: calendar_cancel_missing_event_error_001
+family_id: calendar_cancel_missing_event_error
+split: test
+domain: calendar
+kind: expected_error
+difficulty: hard
+provider: calendar_mock
+user_goal: Uygulamada seçili görünen etkinliği açık onayla iptal etmek
+known_information: {}
+context:
+  selected_event_id: EVT-2026-9999
+available_tools: [calendar.search_events, calendar.cancel_event]
+utterances:
+  - "Seçili etkinliği iptal etmeni açıkça onaylıyorum."
+  - "Evet, seçili takvim kaydını iptal etmene onay veriyorum."
+expected_behavior: { decision: tool_call }
+expected_actions:
+  - tool: calendar.cancel_event
+    arguments:
+      event_id: { value: EVT-2026-9999, origin: system_state }
+      confirmed: { value: true, origin: user_message }
+    expect: { outcome: error, status_code: 404 }

@@ -1,0 +1,22 @@
+{
+  "attribution": {
+    "attribution": "European Central Bank euro foreign exchange reference rates via Frankfurter",
+    "license": "ECB-TERMS",
+    "modified": "Canonical JSON'a normalize edildi; başlıklar beyaz listeye göre budandı.",
+    "upstream_url": "https://api.frankfurter.dev/v2/rates?base=USD&quotes=TRY&providers=ECB"
+  },
+  "body": [
+    {
+      "base": "USD",
+      "date": "2026-07-29",
+      "quote": "TRY",
+      "rate": 47.398
+    }
+  ],
+  "body_encoding": "json",
+  "headers": {
+    "content-type": "application/json; charset=utf-8",
+    "etag": "\"a0ae9f00cb72d4ca26b2e2a36760b8ad\""
+  },
+  "status": 200
+}

@@ -1,0 +1,32 @@
+blueprint_id: calendar_cancel_cancellation_001
+family_id: calendar_cancel_user_cancellation
+split: test
+domain: calendar
+kind: user_cancellation
+difficulty: medium
+interaction_type: multi_turn
+provider: calendar_mock
+
+user_goal: Daha önce istenen etkinlik iptalinden vazgeçmek
+known_information: {}
+conversation_prefix:
+  - role: user
+    content: "Takvimimdeki bir toplantıyı iptal etmek istiyorum."
+  - role: assistant
+    content: "İptal etmek istediğiniz toplantıyı söyleyebilirsiniz."
+
+available_tools:
+  - calendar.search_events
+  - calendar.create_event
+  - calendar.cancel_event
+
+utterances:
+  - "Etkinliği iptal etme talebimi geri çekiyorum, takvimde kalsın."
+  - "Toplantıyı silmekten vazgeçtim; olduğu gibi bırak."
+
+expected_behavior:
+  decision: direct_answer
+  response_intent_tr: >-
+    İptal talebinin geri çekildiğini kabul et ve etkinliği değiştirme.
+  assistant_response_tr: >-
+    Tamam, iptal işlemi yapmayacağım; etkinlik takvimde olduğu gibi kalacak.

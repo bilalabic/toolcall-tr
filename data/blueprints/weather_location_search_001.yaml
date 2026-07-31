@@ -1,0 +1,30 @@
+# MET Norway zincirinin ilk, tamamen offline adımı.
+blueprint_id: weather_location_search_001
+family_id: weather_location_resolution
+split: test
+domain: weather
+kind: successful_tool_call
+difficulty: easy
+provider: geonames_tr
+
+user_goal: Elazığ şehir merkezinin yaklaşık koordinatlarını öğrenmek
+known_information:
+  query: Elazığ
+
+available_tools:
+  - geo.search_places
+  - weather.get_current_weather
+  - weather.get_weather_forecast
+
+utterances:
+  - "Elazığ şehir merkezinin yaklaşık koordinatlarını gösterir misin?"
+  - "Elazığ'ın enlem ve boylamı nedir?"
+  - "Elazığ şehir merkezi hangi koordinatlarda?"
+
+expected_behavior:
+  decision: tool_call
+
+expected_actions:
+  - tool: geo.search_places
+    arguments:
+      query: { value: Elazığ, origin: user_message }

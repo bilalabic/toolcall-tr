@@ -1,0 +1,32 @@
+blueprint_id: calendar_create_cancellation_001
+family_id: calendar_create_user_cancellation
+split: train
+domain: calendar
+kind: user_cancellation
+difficulty: medium
+interaction_type: multi_turn
+provider: calendar_mock
+
+user_goal: Daha önce istenen takvim etkinliğini oluşturmaktan vazgeçmek
+known_information: {}
+conversation_prefix:
+  - role: user
+    content: "Takvimime yeni bir toplantı eklemek istiyorum."
+  - role: assistant
+    content: "Elbette, toplantı ayrıntılarını paylaşabilirsiniz."
+
+available_tools:
+  - calendar.search_events
+  - calendar.create_event
+  - calendar.cancel_event
+
+utterances:
+  - "Az önce istediğim toplantıyı takvime ekleme, vazgeçtim."
+  - "Toplantı oluşturma isteğimi iptal ediyorum; hiçbir işlem yapma."
+
+expected_behavior:
+  decision: direct_answer
+  response_intent_tr: >-
+    Kullanıcının vazgeçtiğini kabul et ve hiçbir takvim işlemi yapma.
+  assistant_response_tr: >-
+    Tamam, toplantıyı takvime eklemeyeceğim ve herhangi bir işlem yapmayacağım.

@@ -1,0 +1,23 @@
+blueprint_id: calendar_search_focus_time_001
+family_id: calendar_search_focus_time
+split: train
+domain: calendar
+kind: successful_tool_call
+difficulty: easy
+provider: calendar_mock
+user_goal: 30 Temmuz'daki odak zamanı etkinliğini bulmak
+known_information: { query: Odak zamanı }
+context:
+  normalized_start_at: "2026-07-30T00:00:00+03:00"
+  normalized_end_at: "2026-07-31T00:00:00+03:00"
+available_tools: [calendar.search_events, calendar.create_event, calendar.cancel_event]
+utterances:
+  - "30 Temmuz 2026'daki Odak zamanı etkinliğimi bul."
+  - "Odak zamanı başlıklı 30 Temmuz kaydını göster."
+expected_behavior: { decision: tool_call }
+expected_actions:
+  - tool: calendar.search_events
+    arguments:
+      start_at: { value: "2026-07-30T00:00:00+03:00", origin: system_state }
+      end_at: { value: "2026-07-31T00:00:00+03:00", origin: system_state }
+      query: { value: Odak zamanı, origin: user_message }

@@ -1,0 +1,37 @@
+{
+  "attribution": {
+    "attribution": "GitHub public repository metadata; kullanıcı metni ve profilleri hariç",
+    "license": "GITHUB-METADATA-ONLY",
+    "modified": "Canonical JSON'a normalize edildi; başlıklar beyaz listeye göre budandı.",
+    "upstream_url": "https://api.github.com/repos/pandas-dev/pandas"
+  },
+  "body": {
+    "archived": false,
+    "created_at": "2010-08-24T01:37:33Z",
+    "default_branch": "main",
+    "fork": false,
+    "forks_count": 20193,
+    "full_name": "pandas-dev/pandas",
+    "html_url": "https://github.com/pandas-dev/pandas",
+    "id": 858127,
+    "license": {
+      "spdx_id": "BSD-3-Clause"
+    },
+    "name": "pandas",
+    "open_issues_count": 2914,
+    "owner": {
+      "login": "pandas-dev",
+      "type": "Organization"
+    },
+    "pushed_at": "2026-07-29T17:06:09Z",
+    "stargazers_count": 49351,
+    "updated_at": "2026-07-29T16:20:35Z"
+  },
+  "body_encoding": "json",
+  "headers": {
+    "content-type": "application/json; charset=utf-8",
+    "etag": "W/\"11eaaaf194b9c808bd32e1f88396dbf6e36f83ad0d26a7489a4d9b3823e3e597\"",
+    "last-modified": "Wed, 29 Jul 2026 16:20:35 GMT"
+  },
+  "status": 200
+}

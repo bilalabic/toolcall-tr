@@ -1,0 +1,25 @@
+axis_snapshot: weather_locations.json
+template:
+  blueprint_id: "synth_weather_location_{location.slug}"
+  family_id: "synth_weather_location_{location.slug}"
+  domain: weather
+  kind: successful_tool_call
+  difficulty: easy
+  provider: location_snapshot
+  user_goal: "{location.name} şehrini hava durumu sorgusu için koordinatla eşleştirmek"
+  known_information:
+    query: "{location.name}"
+  available_tools:
+    - weather.search_location
+    - weather.get_current_weather
+    - weather.get_weather_forecast
+    - izmir.search_datasets
+  utterances:
+    - "{location.name} şehrinin konumunu bul."
+    - "Hava durumuna bakmak için {location.name} konumunu eşleştir."
+  expected_behavior:
+    decision: tool_call
+  expected_actions:
+    - tool: weather.search_location
+      arguments:
+        query: { value: "{location.name}", origin: user_message }

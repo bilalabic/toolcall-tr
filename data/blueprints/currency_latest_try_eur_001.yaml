@@ -1,0 +1,32 @@
+blueprint_id: currency_latest_try_eur_001
+family_id: currency_latest_rate
+split: train
+domain: currency
+kind: successful_tool_call
+difficulty: easy
+provider: frankfurter_ecb
+
+user_goal: Bir Türk lirasının avro karşısındaki son ECB referans kurunu öğrenmek
+known_information:
+  base: TRY
+  quote: EUR
+
+available_tools:
+  - currency.get_exchange_rate
+  - currency.get_historical_exchange_rate
+  - currency.list_supported_currencies
+  - weather.get_current_weather
+
+utterances:
+  - "ECB'nin yayımladığı son referans kura göre 1 Türk lirası (TRY) kaç avro (EUR) ediyor?"
+  - "1 TL'nin (TRY) avro (EUR) karşısındaki son ECB referans kurunu göster."
+  - "TRY'nin EUR karşısındaki en son ECB referans kurunu getir."
+
+expected_behavior:
+  decision: tool_call
+
+expected_actions:
+  - tool: currency.get_exchange_rate
+    arguments:
+      base: { value: TRY, origin: user_message }
+      quote: { value: EUR, origin: user_message }

@@ -1,0 +1,131 @@
+ToolCall-TR — VERİ LİSANSI VE KAYNAK BİLDİRİMİ
+==============================================
+
+Bu depo kaynak kod ile veri bileşenlerini ayırır.
+
+  * KAYNAK KOD -> Apache License 2.0 (bkz. ./LICENSE)
+  * TOOLCALL-TR TARAFINDAN YAZILAN BLUEPRINT/ANNOTATION -> CC BY 4.0
+  * ÜÇÜNCÜ TARAF SNAPSHOT/CASSETTE METADATA'SI -> Kaynak dosyada beyan edilen
+    özgün lisans ve koşullar
+
+Bu nedenle depodaki bütün veri dosyalarının tek ve kayıtsız biçimde CC BY 4.0
+olduğu iddia edilmez. Her ToolSpec, cassette ve snapshot kendi kaynak/lisans
+metadata'sını taşır.
+
+
+1. KAPSAM
+---------
+
+ToolCall-TR tarafından CC BY 4.0 altında lisanslanan bileşenler:
+
+    data/blueprints/**       Görev şablonları
+    data/evaluation/**       ToolCall-TR tarafından yazılan sentetik eval tanımları
+    ToolCall-TR özgün doğrulama/karar etiketleri
+
+Kaynağa özgü lisans taşıyan bileşenler:
+
+    data/cassettes/**        Kaydedilmiş ve filtrelenmiş üçüncü taraf metadata
+    data/snapshots/**        Dondurulmuş kaynak metadata'sı
+    registry/**              Kaynak şeması + ToolCall-TR normalizasyonu
+
+Lisansın tam metni:
+    https://creativecommons.org/licenses/by/4.0/legalcode
+Özet (bağlayıcı değildir):
+    https://creativecommons.org/licenses/by/4.0/deed.tr
+
+
+2. TÜRETİLMİŞ ESER VE KAYNAK BİLDİRİMLERİ
+-----------------------------------------
+
+Bu depodaki veri, aşağıda listelenen CC BY 4.0 lisanslı kaynaklardan TÜRETİLMİŞTİR
+ve DEĞİŞTİRİLMİŞTİR.
+
+Kaynak:
+    İzmir Büyükşehir Belediyesi Açık Veri Portalı
+    https://acikveri.bizizmir.com
+    Lisans: İzmir Büyükşehir Belediyesi Açık Veri Lisansı (CC BY 4.0)
+    https://acikveri.bizizmir.com/tr/license
+
+Yapılan değişiklikler (CC BY 4.0 uyarınca beyanı zorunludur):
+    * HTTP yanıtları canonical JSON biçimine normalize edildi.
+    * Yanıt başlıkları (header) bir allowlist'e göre budandı.
+    * Alan adları ve koordinat sırası düzeltildi (ESHOT `KoorX`/`KoorY`
+      alanları kaynakta enlem/boylam ile ters adlandırılmıştır).
+    * Virgüllü ondalık ayraçlı string koordinatlar float'a çevrildi.
+    * Kaynak tabloların alt kümeleri seçildi ve dondurularak saklandı.
+
+Kaynak portalın önerdiği yedek atıf metni:
+
+    "Atıf 4.0 Uluslararası (CC BY 4.0) kapsamında lisanslanan kamu sektörü
+     bilgilerini içerir."
+
+Makine okunur atıf kayıtları: legal/DATA_SOURCES.md ve her cassette dosyasının
+içindeki `attribution` alanı. Tek bir cassette dosyası depodan çıkarıldığında
+dahi atıf bilgisini taşıması kasıtlıdır.
+
+Production katalogdaki diğer başlıca kaynaklar:
+
+    GeoNames Türkiye
+    https://www.geonames.org/
+    Lisans: CC BY 4.0
+
+    Wikidata structured data
+    https://www.wikidata.org/
+    Lisans: CC0 1.0
+
+    World Bank, World Development Indicators
+    https://data.worldbank.org/
+    Lisans: CC BY 4.0 + World Bank veri kullanım koşulları
+
+    Crossref bibliyografik metadata
+    https://www.crossref.org/documentation/retrieve-metadata/
+    Not: abstract ve tam metin release verisine alınmaz
+
+    Türkiye resmî tatil metadata'sı
+    2429 sayılı kanun + Diyanet İşleri Başkanlığı 2026 dinî günler listesi
+
+Ayrıntılı alan sınırları, değişiklik bildirimleri ve URL'ler:
+`legal/DATA_SOURCES.md`.
+
+
+3. PRODUCTION DIŞI BELİRSİZ LİSANSLI ARŞİV
+------------------------------------------
+
+`openapi.izmir.bel.tr`, `acikveri.bizizmir.com` ile AYRI BİR HOST'tur.
+
+CC BY 4.0 teyidi CKAN portalı (`acikveri.bizizmir.com`) için doğrulanmıştır.
+Gerçek zamanlı ESHOT/İztek REST servisleri için BEYAN EDİLMİŞ BİR LİSANS
+BULUNAMAMIŞTIR. Bu servislerin veri setleri resmî portalda kayıtlı ve resmî bir
+kullanım dokümanı mevcut olsa da, yanıt gövdelerinin toplu olarak yeniden
+dağıtımına ilişkin açık bir izin metni tespit edilememiştir.
+
+Bu nedenle uygulanan kalıcı production politikası:
+
+    * İzmir gerçek zamanlı sağlayıcısı varsayılan registry'de etkin değildir.
+    * Bu kayıtlar training, benchmark ve release manifestine alınmaz.
+    * Eski kayıtlar yalnız geçmiş deneylerin yeniden incelenmesi için
+      `license: "UNDETERMINED"` olarak tutulabilir.
+    * Gelecekte yeniden etkinleştirme ancak yazılı lisans teyidiyle mümkündür.
+
+Durum: PRODUCTION'DAN ÇIKARILDI. Bkz. legal/DATA_SOURCES.md.
+
+
+4. GARANTİ REDDİ
+----------------
+
+Veri "OLDUĞU GİBİ" sağlanır. Kaynak veri sağlayıcılar verinin sürekliliğini,
+doğruluğunu veya güncelliğini garanti etmez. Kayıtlar belirli bir tarihte
+alınmış anlık görüntülerdir; her cassette kaydında `recorded_at` alanı bulunur.
+
+
+5. KİŞİSEL VERİ
+---------------
+
+Bu veri setinde gerçek kişilere ait veri bulunmaması hedeflenir. Tüm sentetik
+kimlik numaraları kasıtlı olarak geçersiz aralıklardan üretilir (bkz.
+`toolcall_tr.validation.pii`). `PIIScanner` validator'ı hem üretilen örnekleri
+hem de cassette'leri tarar ve gerçek TCKN/VKN checksum'ı geçen ya da mod-97
+geçerli IBAN içeren her kaydı reddeder.
+
+Buna rağmen bir kişisel veri sızıntısı tespit ederseniz lütfen issue açın;
+kayıt derhal kaldırılacaktır.

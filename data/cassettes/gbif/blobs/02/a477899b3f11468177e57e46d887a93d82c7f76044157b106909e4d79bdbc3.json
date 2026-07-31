@@ -1,0 +1,1587 @@
+{
+  "attribution": {
+    "attribution": "GBIF.org ve occurrence kayıtlarını yayımlayan veri sağlayıcıları",
+    "license": "GBIF-FILTERED-CC0-CC-BY-4.0",
+    "modified": "Canonical JSON'a normalize edildi; başlıklar beyaz listeye göre budandı.",
+    "upstream_url": "https://api.gbif.org/v1/occurrence/search?taxonKey=2878688&country=TR&license=CC0_1_0&license=CC_BY_4_0&hasCoordinate=true&limit=5&offset=0"
+  },
+  "body": {
+    "count": 131,
+    "endOfRecords": false,
+    "facets": [],
+    "limit": 5,
+    "offset": 0,
+    "results": [
+      {
+        "acceptedScientificName": "Quercus robur L.",
+        "acceptedTaxonKey": 2878688,
+        "basisOfRecord": "HUMAN_OBSERVATION",
+        "catalogNumber": "285473526",
+        "class": "Magnoliopsida",
+        "classKey": 220,
+        "classifications": {
+          "7ddf754f-d193-4cc9-b351-99906754a03b": {
+            "acceptedUsage": {
+              "authorship": "L.",
+              "code": "BOTANICAL",
+              "formattedName": "<i>Quercus</i> <i>robur</i> L.",
+              "genericName": "Quercus",
+              "key": "4R5YN",
+              "name": "Quercus robur L.",
+              "rank": "SPECIES",
+              "specificEpithet": "robur"
+            },
+            "classification": [
+              {
+                "key": "CS5HF",
+                "name": "Eukaryota",
+                "rank": "DOMAIN"
+              },
+              {
+                "key": "P",
+                "name": "Plantae",
+                "rank": "KINGDOM"
+              },
+              {
+                "key": "CMQ8S",
+                "name": "Pteridobiotina",
+                "rank": "SUBKINGDOM"
+              },
+              {
+                "key": "TP",
+                "name": "Tracheophyta",
+                "rank": "PHYLUM"
+              },
+              {
+                "key": "MG",
+                "name": "Magnoliopsida",
+                "rank": "CLASS"
+              },
+              {
+                "key": "384",
+                "name": "Fagales",
+                "rank": "ORDER"
+              },
+              {
+                "key": "NPBN9",
+                "name": "Fagaceae",
+                "rank": "FAMILY"
+              },
+              {
+                "key": "V58RW",
+                "name": "Quercoideae",
+                "rank": "SUBFAMILY"
+              },
+              {
+                "key": "8W2YL",
+                "name": "Quercus",
+                "rank": "GENUS"
+              },
+              {
+                "key": "4R5YN",
+                "name": "Quercus robur",
+                "rank": "SPECIES"
+              }
+            ],
+            "issues": [
+              "TAXON_ID_NOT_FOUND"
+            ],
+            "iucnRedListCategoryCode": "LC",
+            "taxonomicStatus": "ACCEPTED",
+            "usage": {
+              "authorship": "L.",
+              "code": "BOTANICAL",
+              "formattedName": "<i>Quercus</i> <i>robur</i> L.",
+              "genericName": "Quercus",
+              "key": "4R5YN",
+              "name": "Quercus robur L.",
+              "rank": "SPECIES",
+              "specificEpithet": "robur"
+            }
+          },
+          "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+            "acceptedUsage": {
+              "authorship": "L.",
+              "formattedName": "<i>Quercus</i> <i>robur</i> L.",
+              "genericName": "Quercus",
+              "key": "2878688",
+              "name": "Quercus robur L.",
+              "rank": "SPECIES",
+              "specificEpithet": "robur"
+            },
+            "classification": [
+              {
+                "key": "6",
+                "name": "Plantae",
+                "rank": "KINGDOM"
+              },
+              {
+                "key": "7707728",
+                "name": "Tracheophyta",
+                "rank": "PHYLUM"
+              },
+              {
+                "key": "220",
+                "name": "Magnoliopsida",
+                "rank": "CLASS"
+              },
+              {
+                "key": "1354",
+                "name": "Fagales",
+                "rank": "ORDER"
+              },
+              {
+                "key": "4689",
+                "name": "Fagaceae",
+                "rank": "FAMILY"
+              },
+              {
+                "key": "2877951",
+                "name": "Quercus",
+                "rank": "GENUS"
+              },
+              {
+                "key": "2878688",
+                "name": "Quercus robur",
+                "rank": "SPECIES"
+              }
+            ],
+            "issues": [
+              "TAXON_ID_NOT_FOUND"
+            ],
+            "iucnRedListCategoryCode": "LC",
+            "taxonomicStatus": "ACCEPTED",
+            "usage": {
+              "authorship": "L.",
+              "formattedName": "<i>Quercus</i> <i>robur</i> L.",
+              "genericName": "Quercus",
+              "key": "2878688",
+              "name": "Quercus robur L.",
+              "rank": "SPECIES",
+              "specificEpithet": "robur"
+            }
+          }
+        },
+        "collectionCode": "Observations",
+        "continent": "ASIA",
+        "country": "Türkiye",
+        "countryCode": "TR",
+        "crawlId": 601,
+        "datasetKey": "50c9509d-22c7-4a22-a47d-8c48425ef4a7",
+        "datasetName": "iNaturalist research-grade observations",
+        "dateIdentified": "2025-06-04T21:21:47",
+        "day": 17,
+        "decimalLatitude": 40.287362,
+        "decimalLongitude": 33.018785,
+        "dnaSequenceID": [],
+        "dynamicProperties": "{\"leaves\":\"green leaves\"}",
+        "endDayOfYear": 137,
+        "eventDate": "2025-05-17T17:21",
+        "eventTime": "17:21:00+03:00",
+        "extensions": {
+          "http://rs.gbif.org/terms/1.0/Multimedia": [
+            {
+              "http://purl.org/dc/terms/created": "2025-05-17T17:21:27-07:00",
+              "http://purl.org/dc/terms/creator": "Mehmet Baran",
+              "http://purl.org/dc/terms/format": "image/jpeg",
+              "http://purl.org/dc/terms/identifier": "https://inaturalist-open-data.s3.amazonaws.com/photos/513111591/original.jpg",
+              "http://purl.org/dc/terms/license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+              "http://purl.org/dc/terms/publisher": "iNaturalist",
+              "http://purl.org/dc/terms/references": "https://www.inaturalist.org/photos/513111591",
+              "http://purl.org/dc/terms/rightsHolder": "Mehmet Baran",
+              "http://purl.org/dc/terms/type": "StillImage",
+              "http://rs.tdwg.org/dwc/terms/catalogNumber": "513111591"
+            },
+            {
+              "http://purl.org/dc/terms/created": "2025-05-17T17:21:27-07:00",
+              "http://purl.org/dc/terms/creator": "Mehmet Baran",
+              "http://purl.org/dc/terms/format": "image/jpeg",
+              "http://purl.org/dc/terms/identifier": "https://inaturalist-open-data.s3.amazonaws.com/photos/513111556/original.jpg",
+              "http://purl.org/dc/terms/license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+              "http://purl.org/dc/terms/publisher": "iNaturalist",
+              "http://purl.org/dc/terms/references": "https://www.inaturalist.org/photos/513111556",
+              "http://purl.org/dc/terms/rightsHolder": "Mehmet Baran",
+              "http://purl.org/dc/terms/type": "StillImage",
+              "http://rs.tdwg.org/dwc/terms/catalogNumber": "513111556"
+            },
+            {
+              "http://purl.org/dc/terms/created": "2025-05-17T17:21:23-07:00",
+              "http://purl.org/dc/terms/creator": "Mehmet Baran",
+              "http://purl.org/dc/terms/format": "image/jpeg",
+              "http://purl.org/dc/terms/identifier": "https://inaturalist-open-data.s3.amazonaws.com/photos/513111593/original.jpg",
+              "http://purl.org/dc/terms/license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+              "http://purl.org/dc/terms/publisher": "iNaturalist",
+              "http://purl.org/dc/terms/references": "https://www.inaturalist.org/photos/513111593",
+              "http://purl.org/dc/terms/rightsHolder": "Mehmet Baran",
+              "http://purl.org/dc/terms/type": "StillImage",
+              "http://rs.tdwg.org/dwc/terms/catalogNumber": "513111593"
+            }
+          ]
+        },
+        "facts": [],
+        "family": "Fagaceae",
+        "familyKey": 4689,
+        "gadm": {
+          "level0": {
+            "gid": "TUR",
+            "name": "Turkey"
+          },
+          "level1": {
+            "gid": "TUR.7_1",
+            "name": "Ankara"
+          },
+          "level2": {
+            "gid": "TUR.7.8_1",
+            "name": "Çubuk"
+          }
+        },
+        "gbifID": "5897772802",
+        "gbifRegion": "EUROPE",
+        "genericName": "Quercus",
+        "genus": "Quercus",
+        "genusKey": 2877951,
+        "geodeticDatum": "WGS84",
+        "hostingOrganizationKey": "28eb1a3f-1c15-4a95-931a-4af90ecb574d",
+        "http://unknown.org/captive_cultivated": "wild",
+        "http://unknown.org/crawl_attempt": "601",
+        "http://unknown.org/nick": "salix-babylonica",
+        "http://unknown.org/status": "not_reviewed",
+        "identificationID": "643633974",
+        "identifiedBy": "Mehmet Baran",
+        "identifiedByIDs": [],
+        "identifier": "285473526",
+        "identifiers": [
+          {
+            "identifier": "285473526"
+          }
+        ],
+        "installationKey": "997448a8-f762-11e1-a439-00145eb45e9a",
+        "institutionCode": "iNaturalist",
+        "isInCluster": false,
+        "isSequenced": false,
+        "issues": [
+          "COORDINATE_ROUNDED",
+          "CONTINENT_DERIVED_FROM_COORDINATES",
+          "TAXON_ID_NOT_FOUND"
+        ],
+        "iucnRedListCategory": "LC",
+        "key": 5897772802,
+        "kingdom": "Plantae",
+        "kingdomKey": 6,
+        "lastCrawled": "2026-07-23T01:15:24.946+00:00",
+        "lastInterpreted": "2026-07-23T15:47:07.087+00:00",
+        "lastParsed": "2026-07-23T15:47:07.087+00:00",
+        "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+        "media": [
+          {
+            "created": "2025-05-18T00:21:27.000+00:00",
+            "creator": "Mehmet Baran",
+            "format": "image/jpeg",
+            "identifier": "https://inaturalist-open-data.s3.amazonaws.com/photos/513111591/original.jpg",
+            "license": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+            "publisher": "iNaturalist",
+            "references": "https://www.inaturalist.org/photos/513111591",
+            "rightsHolder": "Mehmet Baran",
+            "type": "StillImage"
+          },
+          {
+            "created": "2025-05-18T00:21:27.000+00:00",
+            "creator": "Mehmet Baran",
+            "format": "image/jpeg",
+            "identifier": "https://inaturalist-open-data.s3.amazonaws.com/photos/513111556/original.jpg",
+            "license": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+            "publisher": "iNaturalist",
+            "references": "https://www.inaturalist.org/photos/513111556",
+            "rightsHolder": "Mehmet Baran",
+            "type": "StillImage"
+          },
+          {
+            "created": "2025-05-18T00:21:23.000+00:00",
+            "creator": "Mehmet Baran",
+            "format": "image/jpeg",
+            "identifier": "https://inaturalist-open-data.s3.amazonaws.com/photos/513111593/original.jpg",
+            "license": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+            "publisher": "iNaturalist",
+            "references": "https://www.inaturalist.org/photos/513111593",
+            "rightsHolder": "Mehmet Baran",
+            "type": "StillImage"
+          }
+        ],
+        "modified": "2025-11-17T19:55:58.000+00:00",
+        "month": 5,
+        "nucleotideSequence": [],
+        "occurrenceID": "https://www.inaturalist.org/observations/285473526",
+        "occurrenceRemarks": "Location: Ankara, Türkiye Elevation (m): 1133 mAMSL Notes: Observed with <a href=\"https://www.inaturalist.org/projects/239910\">care</a>. During the observation period, no harm was inflicted upon the observed organism. Observational measures were conducted with minimal disturbance to the surrounding habitat. Media Usage Rights: CC BY-NC-ND 4.0 (Cannot be used for commercial purposes. Fotoğraflarım/videolarım hiçbir şekilde ticari amaçla kullanılamaz)",
+        "occurrenceStatus": "PRESENT",
+        "order": "Fagales",
+        "orderKey": 1354,
+        "phylum": "Tracheophyta",
+        "phylumKey": 7707728,
+        "projectId": "https://www.inaturalist.org/projects/naturalists-of-turkey-turkiye-nin-doga-gozlemcileri",
+        "protocol": "DWC_ARCHIVE",
+        "publishedByGbifRegion": "NORTH_AMERICA",
+        "publishingCountry": "US",
+        "publishingOrgKey": "28eb1a3f-1c15-4a95-931a-4af90ecb574d",
+        "recordedBy": "Mehmet Baran",
+        "recordedByIDs": [],
+        "references": "https://www.inaturalist.org/observations/285473526",
+        "relations": [],
+        "reproductiveCondition": "no flowers or fruits",
+        "rightsHolder": "Mehmet Baran",
+        "scientificName": "Quercus robur L.",
+        "scientificNameAuthorship": "L.",
+        "species": "Quercus robur",
+        "speciesKey": 2878688,
+        "specificEpithet": "robur",
+        "startDayOfYear": 137,
+        "stateProvince": "Ankara",
+        "taxonID": "56133",
+        "taxonKey": 2878688,
+        "taxonRank": "SPECIES",
+        "taxonomicStatus": "ACCEPTED",
+        "verbatimEventDate": "2025/05/17 17:21",
+        "verbatimLocality": "Çubuk/Ankara, Türkiye",
+        "year": 2025
+      },
+      {
+        "acceptedScientificName": "Quercus robur L.",
+        "acceptedTaxonKey": 2878688,
+        "basisOfRecord": "HUMAN_OBSERVATION",
+        "catalogNumber": "303479773",
+        "class": "Magnoliopsida",
+        "classKey": 220,
+        "classifications": {
+          "7ddf754f-d193-4cc9-b351-99906754a03b": {
+            "acceptedUsage": {
+              "authorship": "L.",
+              "code": "BOTANICAL",
+              "formattedName": "<i>Quercus</i> <i>robur</i> L.",
+              "genericName": "Quercus",
+              "key": "4R5YN",
+              "name": "Quercus robur L.",
+              "rank": "SPECIES",
+              "specificEpithet": "robur"
+            },
+            "classification": [
+              {
+                "key": "CS5HF",
+                "name": "Eukaryota",
+                "rank": "DOMAIN"
+              },
+              {
+                "key": "P",
+                "name": "Plantae",
+                "rank": "KINGDOM"
+              },
+              {
+                "key": "CMQ8S",
+                "name": "Pteridobiotina",
+                "rank": "SUBKINGDOM"
+              },
+              {
+                "key": "TP",
+                "name": "Tracheophyta",
+                "rank": "PHYLUM"
+              },
+              {
+                "key": "MG",
+                "name": "Magnoliopsida",
+                "rank": "CLASS"
+              },
+              {
+                "key": "384",
+                "name": "Fagales",
+                "rank": "ORDER"
+              },
+              {
+                "key": "NPBN9",
+                "name": "Fagaceae",
+                "rank": "FAMILY"
+              },
+              {
+                "key": "V58RW",
+                "name": "Quercoideae",
+                "rank": "SUBFAMILY"
+              },
+              {
+                "key": "8W2YL",
+                "name": "Quercus",
+                "rank": "GENUS"
+              },
+              {
+                "key": "4R5YN",
+                "name": "Quercus robur",
+                "rank": "SPECIES"
+              }
+            ],
+            "issues": [
+              "TAXON_ID_NOT_FOUND"
+            ],
+            "iucnRedListCategoryCode": "LC",
+            "taxonomicStatus": "ACCEPTED",
+            "usage": {
+              "authorship": "L.",
+              "code": "BOTANICAL",
+              "formattedName": "<i>Quercus</i> <i>robur</i> L.",
+              "genericName": "Quercus",
+              "key": "4R5YN",
+              "name": "Quercus robur L.",
+              "rank": "SPECIES",
+              "specificEpithet": "robur"
+            }
+          },
+          "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+            "acceptedUsage": {
+              "authorship": "L.",
+              "formattedName": "<i>Quercus</i> <i>robur</i> L.",
+              "genericName": "Quercus",
+              "key": "2878688",
+              "name": "Quercus robur L.",
+              "rank": "SPECIES",
+              "specificEpithet": "robur"
+            },
+            "classification": [
+              {
+                "key": "6",
+                "name": "Plantae",
+                "rank": "KINGDOM"
+              },
+              {
+                "key": "7707728",
+                "name": "Tracheophyta",
+                "rank": "PHYLUM"
+              },
+              {
+                "key": "220",
+                "name": "Magnoliopsida",
+                "rank": "CLASS"
+              },
+              {
+                "key": "1354",
+                "name": "Fagales",
+                "rank": "ORDER"
+              },
+              {
+                "key": "4689",
+                "name": "Fagaceae",
+                "rank": "FAMILY"
+              },
+              {
+                "key": "2877951",
+                "name": "Quercus",
+                "rank": "GENUS"
+              },
+              {
+                "key": "2878688",
+                "name": "Quercus robur",
+                "rank": "SPECIES"
+              }
+            ],
+            "issues": [
+              "TAXON_ID_NOT_FOUND"
+            ],
+            "iucnRedListCategoryCode": "LC",
+            "taxonomicStatus": "ACCEPTED",
+            "usage": {
+              "authorship": "L.",
+              "formattedName": "<i>Quercus</i> <i>robur</i> L.",
+              "genericName": "Quercus",
+              "key": "2878688",
+              "name": "Quercus robur L.",
+              "rank": "SPECIES",
+              "specificEpithet": "robur"
+            }
+          }
+        },
+        "collectionCode": "Observations",
+        "continent": "ASIA",
+        "coordinateUncertaintyInMeters": 108.0,
+        "country": "Türkiye",
+        "countryCode": "TR",
+        "crawlId": 601,
+        "datasetKey": "50c9509d-22c7-4a22-a47d-8c48425ef4a7",
+        "datasetName": "iNaturalist research-grade observations",
+        "dateIdentified": "2025-08-03T23:11:03",
+        "day": 23,
+        "decimalLatitude": 39.816522,
+        "decimalLongitude": 32.820789,
+        "dnaSequenceID": [],
+        "dynamicProperties": "{\"leaves\":\"green leaves\"}",
+        "endDayOfYear": 204,
+        "eventDate": "2025-07-23T07:18",
+        "eventTime": "07:18:00+03:00",
+        "extensions": {
+          "http://rs.gbif.org/terms/1.0/Multimedia": [
+            {
+              "http://purl.org/dc/terms/created": "2025-07-23T07:18:37-07:00",
+              "http://purl.org/dc/terms/creator": "Mehmet Baran",
+              "http://purl.org/dc/terms/format": "image/jpeg",
+              "http://purl.org/dc/terms/identifier": "https://inaturalist-open-data.s3.amazonaws.com/photos/546970233/original.jpg",
+              "http://purl.org/dc/terms/license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+              "http://purl.org/dc/terms/publisher": "iNaturalist",
+              "http://purl.org/dc/terms/references": "https://www.inaturalist.org/photos/546970233",
+              "http://purl.org/dc/terms/rightsHolder": "Mehmet Baran",
+              "http://purl.org/dc/terms/type": "StillImage",
+              "http://rs.tdwg.org/dwc/terms/catalogNumber": "546970233"
+            },
+            {
+              "http://purl.org/dc/terms/created": "2025-07-23T07:18:35-07:00",
+              "http://purl.org/dc/terms/creator": "Mehmet Baran",
+              "http://purl.org/dc/terms/format": "image/jpeg",
+              "http://purl.org/dc/terms/identifier": "https://inaturalist-open-data.s3.amazonaws.com/photos/546970185/original.jpg",
+              "http://purl.org/dc/terms/license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+              "http://purl.org/dc/terms/publisher": "iNaturalist",
+              "http://purl.org/dc/terms/references": "https://www.inaturalist.org/photos/546970185",
+              "http://purl.org/dc/terms/rightsHolder": "Mehmet Baran",
+              "http://purl.org/dc/terms/type": "StillImage",
+              "http://rs.tdwg.org/dwc/terms/catalogNumber": "546970185"
+            },
+            {
+              "http://purl.org/dc/terms/created": "2025-07-23T07:18:35-07:00",
+              "http://purl.org/dc/terms/creator": "Mehmet Baran",
+              "http://purl.org/dc/terms/format": "image/jpeg",
+              "http://purl.org/dc/terms/identifier": "https://inaturalist-open-data.s3.amazonaws.com/photos/546970240/original.jpg",
+              "http://purl.org/dc/terms/license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+              "http://purl.org/dc/terms/publisher": "iNaturalist",
+              "http://purl.org/dc/terms/references": "https://www.inaturalist.org/photos/546970240",
+              "http://purl.org/dc/terms/rightsHolder": "Mehmet Baran",
+              "http://purl.org/dc/terms/type": "StillImage",
+              "http://rs.tdwg.org/dwc/terms/catalogNumber": "546970240"
+            }
+          ]
+        },
+        "facts": [],
+        "family": "Fagaceae",
+        "familyKey": 4689,
+        "gadm": {
+          "level0": {
+            "gid": "TUR",
+            "name": "Turkey"
+          },
+          "level1": {
+            "gid": "TUR.7_1",
+            "name": "Ankara"
+          },
+          "level2": {
+            "gid": "TUR.7.12_1",
+            "name": "Gölbaşı"
+          }
+        },
+        "gbifID": "5282433690",
+        "gbifRegion": "EUROPE",
+        "genericName": "Quercus",
+        "genus": "Quercus",
+        "genusKey": 2877951,
+        "geodeticDatum": "WGS84",
+        "hostingOrganizationKey": "28eb1a3f-1c15-4a95-931a-4af90ecb574d",
+        "http://unknown.org/captive_cultivated": "wild",
+        "http://unknown.org/crawl_attempt": "601",
+        "http://unknown.org/nick": "salix-babylonica",
+        "http://unknown.org/status": "not_reviewed",
+        "identificationID": "676028761",
+        "identifiedBy": "Lars",
+        "identifiedByIDs": [],
+        "identifier": "303479773",
+        "identifiers": [
+          {
+            "identifier": "303479773"
+          }
+        ],
+        "installationKey": "997448a8-f762-11e1-a439-00145eb45e9a",
+        "institutionCode": "iNaturalist",
+        "isInCluster": false,
+        "isSequenced": false,
+        "issues": [
+          "COORDINATE_ROUNDED",
+          "CONTINENT_DERIVED_FROM_COORDINATES",
+          "TAXON_ID_NOT_FOUND"
+        ],
+        "iucnRedListCategory": "LC",
+        "key": 5282433690,
+        "kingdom": "Plantae",
+        "kingdomKey": 6,
+        "lastCrawled": "2026-07-23T01:15:24.946+00:00",
+        "lastInterpreted": "2026-07-23T15:55:59.878+00:00",
+        "lastParsed": "2026-07-23T15:55:59.878+00:00",
+        "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+        "media": [
+          {
+            "created": "2025-07-23T14:18:37.000+00:00",
+            "creator": "Mehmet Baran",
+            "format": "image/jpeg",
+            "identifier": "https://inaturalist-open-data.s3.amazonaws.com/photos/546970233/original.jpg",
+            "license": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+            "publisher": "iNaturalist",
+            "references": "https://www.inaturalist.org/photos/546970233",
+            "rightsHolder": "Mehmet Baran",
+            "type": "StillImage"
+          },
+          {
+            "created": "2025-07-23T14:18:35.000+00:00",
+            "creator": "Mehmet Baran",
+            "format": "image/jpeg",
+            "identifier": "https://inaturalist-open-data.s3.amazonaws.com/photos/546970185/original.jpg",
+            "license": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+            "publisher": "iNaturalist",
+            "references": "https://www.inaturalist.org/photos/546970185",
+            "rightsHolder": "Mehmet Baran",
+            "type": "StillImage"
+          },
+          {
+            "created": "2025-07-23T14:18:35.000+00:00",
+            "creator": "Mehmet Baran",
+            "format": "image/jpeg",
+            "identifier": "https://inaturalist-open-data.s3.amazonaws.com/photos/546970240/original.jpg",
+            "license": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+            "publisher": "iNaturalist",
+            "references": "https://www.inaturalist.org/photos/546970240",
+            "rightsHolder": "Mehmet Baran",
+            "type": "StillImage"
+          }
+        ],
+        "modified": "2026-05-17T09:29:45.000+00:00",
+        "month": 7,
+        "nucleotideSequence": [],
+        "occurrenceID": "https://www.inaturalist.org/observations/303479773",
+        "occurrenceRemarks": "Location: Eymir, Ankara, Türkiye Elevation (m): 979 Notes: Observed with <a href=\"https://www.inaturalist.org/projects/239910\">care</a>. During the observation period, no harm was inflicted upon the observed organism. Observational measures were conducted with minimal disturbance to the surrounding habitat. Media Usage Rights: CC BY-NC-ND 4.0 — Non-commercial use only, with attribution required.",
+        "occurrenceStatus": "PRESENT",
+        "order": "Fagales",
+        "orderKey": 1354,
+        "phylum": "Tracheophyta",
+        "phylumKey": 7707728,
+        "projectId": "https://www.inaturalist.org/projects/naturalists-of-turkey-turkiye-nin-doga-gozlemcileri",
+        "protocol": "DWC_ARCHIVE",
+        "publishedByGbifRegion": "NORTH_AMERICA",
+        "publishingCountry": "US",
+        "publishingOrgKey": "28eb1a3f-1c15-4a95-931a-4af90ecb574d",
+        "recordedBy": "Mehmet Baran",
+        "recordedByIDs": [],
+        "references": "https://www.inaturalist.org/observations/303479773",
+        "relations": [],
+        "reproductiveCondition": "no flowers or fruits",
+        "rightsHolder": "Mehmet Baran",
+        "scientificName": "Quercus robur L.",
+        "scientificNameAuthorship": "L.",
+        "species": "Quercus robur",
+        "speciesKey": 2878688,
+        "specificEpithet": "robur",
+        "startDayOfYear": 204,
+        "stateProvince": "Ankara",
+        "taxonID": "56133",
+        "taxonKey": 2878688,
+        "taxonRank": "SPECIES",
+        "taxonomicStatus": "ACCEPTED",
+        "verbatimEventDate": "2025/07/23 07:18",
+        "verbatimLocality": "Çankaya/Ankara, Türkiye",
+        "year": 2025
+      },
+      {
+        "acceptedScientificName": "Quercus robur L.",
+        "acceptedTaxonKey": 2878688,
+        "basisOfRecord": "HUMAN_OBSERVATION",
+        "catalogNumber": "317256607",
+        "class": "Magnoliopsida",
+        "classKey": 220,
+        "classifications": {
+          "7ddf754f-d193-4cc9-b351-99906754a03b": {
+            "acceptedUsage": {
+              "authorship": "L.",
+              "code": "BOTANICAL",
+              "formattedName": "<i>Quercus</i> <i>robur</i> L.",
+              "genericName": "Quercus",
+              "key": "4R5YN",
+              "name": "Quercus robur L.",
+              "rank": "SPECIES",
+              "specificEpithet": "robur"
+            },
+            "classification": [
+              {
+                "key": "CS5HF",
+                "name": "Eukaryota",
+                "rank": "DOMAIN"
+              },
+              {
+                "key": "P",
+                "name": "Plantae",
+                "rank": "KINGDOM"
+              },
+              {
+                "key": "CMQ8S",
+                "name": "Pteridobiotina",
+                "rank": "SUBKINGDOM"
+              },
+              {
+                "key": "TP",
+                "name": "Tracheophyta",
+                "rank": "PHYLUM"
+              },
+              {
+                "key": "MG",
+                "name": "Magnoliopsida",
+                "rank": "CLASS"
+              },
+              {
+                "key": "384",
+                "name": "Fagales",
+                "rank": "ORDER"
+              },
+              {
+                "key": "NPBN9",
+                "name": "Fagaceae",
+                "rank": "FAMILY"
+              },
+              {
+                "key": "V58RW",
+                "name": "Quercoideae",
+                "rank": "SUBFAMILY"
+              },
+              {
+                "key": "8W2YL",
+                "name": "Quercus",
+                "rank": "GENUS"
+              },
+              {
+                "key": "4R5YN",
+                "name": "Quercus robur",
+                "rank": "SPECIES"
+              }
+            ],
+            "issues": [
+              "TAXON_ID_NOT_FOUND"
+            ],
+            "iucnRedListCategoryCode": "LC",
+            "taxonomicStatus": "ACCEPTED",
+            "usage": {
+              "authorship": "L.",
+              "code": "BOTANICAL",
+              "formattedName": "<i>Quercus</i> <i>robur</i> L.",
+              "genericName": "Quercus",
+              "key": "4R5YN",
+              "name": "Quercus robur L.",
+              "rank": "SPECIES",
+              "specificEpithet": "robur"
+            }
+          },
+          "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+            "acceptedUsage": {
+              "authorship": "L.",
+              "formattedName": "<i>Quercus</i> <i>robur</i> L.",
+              "genericName": "Quercus",
+              "key": "2878688",
+              "name": "Quercus robur L.",
+              "rank": "SPECIES",
+              "specificEpithet": "robur"
+            },
+            "classification": [
+              {
+                "key": "6",
+                "name": "Plantae",
+                "rank": "KINGDOM"
+              },
+              {
+                "key": "7707728",
+                "name": "Tracheophyta",
+                "rank": "PHYLUM"
+              },
+              {
+                "key": "220",
+                "name": "Magnoliopsida",
+                "rank": "CLASS"
+              },
+              {
+                "key": "1354",
+                "name": "Fagales",
+                "rank": "ORDER"
+              },
+              {
+                "key": "4689",
+                "name": "Fagaceae",
+                "rank": "FAMILY"
+              },
+              {
+                "key": "2877951",
+                "name": "Quercus",
+                "rank": "GENUS"
+              },
+              {
+                "key": "2878688",
+                "name": "Quercus robur",
+                "rank": "SPECIES"
+              }
+            ],
+            "issues": [
+              "TAXON_ID_NOT_FOUND"
+            ],
+            "iucnRedListCategoryCode": "LC",
+            "taxonomicStatus": "ACCEPTED",
+            "usage": {
+              "authorship": "L.",
+              "formattedName": "<i>Quercus</i> <i>robur</i> L.",
+              "genericName": "Quercus",
+              "key": "2878688",
+              "name": "Quercus robur L.",
+              "rank": "SPECIES",
+              "specificEpithet": "robur"
+            }
+          }
+        },
+        "collectionCode": "Observations",
+        "continent": "ASIA",
+        "country": "Türkiye",
+        "countryCode": "TR",
+        "crawlId": 601,
+        "datasetKey": "50c9509d-22c7-4a22-a47d-8c48425ef4a7",
+        "datasetName": "iNaturalist research-grade observations",
+        "dateIdentified": "2025-09-28T20:13:44",
+        "day": 18,
+        "decimalLatitude": 39.830728,
+        "decimalLongitude": 32.838456,
+        "dnaSequenceID": [],
+        "dynamicProperties": "{\"leaves\":\"green leaves\"}",
+        "endDayOfYear": 261,
+        "eventDate": "2025-09-18T08:44",
+        "eventTime": "08:44:00+03:00",
+        "extensions": {
+          "http://rs.gbif.org/terms/1.0/Multimedia": [
+            {
+              "http://purl.org/dc/terms/created": "2025-09-18T08:44:46-07:00",
+              "http://purl.org/dc/terms/creator": "Mehmet Baran",
+              "http://purl.org/dc/terms/format": "image/jpeg",
+              "http://purl.org/dc/terms/identifier": "https://inaturalist-open-data.s3.amazonaws.com/photos/573163712/original.jpg",
+              "http://purl.org/dc/terms/license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+              "http://purl.org/dc/terms/publisher": "iNaturalist",
+              "http://purl.org/dc/terms/references": "https://www.inaturalist.org/photos/573163712",
+              "http://purl.org/dc/terms/rightsHolder": "Mehmet Baran",
+              "http://purl.org/dc/terms/type": "StillImage",
+              "http://rs.tdwg.org/dwc/terms/catalogNumber": "573163712"
+            },
+            {
+              "http://purl.org/dc/terms/created": "2025-09-18T08:44:47-07:00",
+              "http://purl.org/dc/terms/creator": "Mehmet Baran",
+              "http://purl.org/dc/terms/format": "image/jpeg",
+              "http://purl.org/dc/terms/identifier": "https://inaturalist-open-data.s3.amazonaws.com/photos/573164476/original.jpg",
+              "http://purl.org/dc/terms/license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+              "http://purl.org/dc/terms/publisher": "iNaturalist",
+              "http://purl.org/dc/terms/references": "https://www.inaturalist.org/photos/573164476",
+              "http://purl.org/dc/terms/rightsHolder": "Mehmet Baran",
+              "http://purl.org/dc/terms/type": "StillImage",
+              "http://rs.tdwg.org/dwc/terms/catalogNumber": "573164476"
+            }
+          ]
+        },
+        "facts": [],
+        "family": "Fagaceae",
+        "familyKey": 4689,
+        "gadm": {
+          "level0": {
+            "gid": "TUR",
+            "name": "Turkey"
+          },
+          "level1": {
+            "gid": "TUR.7_1",
+            "name": "Ankara"
+          },
+          "level2": {
+            "gid": "TUR.7.7_1",
+            "name": "Çankaya"
+          }
+        },
+        "gbifID": "5908731977",
+        "gbifRegion": "EUROPE",
+        "genericName": "Quercus",
+        "genus": "Quercus",
+        "genusKey": 2877951,
+        "geodeticDatum": "WGS84",
+        "hostingOrganizationKey": "28eb1a3f-1c15-4a95-931a-4af90ecb574d",
+        "http://unknown.org/captive_cultivated": "wild",
+        "http://unknown.org/crawl_attempt": "601",
+        "http://unknown.org/nick": "salix-babylonica",
+        "http://unknown.org/status": "not_reviewed",
+        "identificationID": "704758206",
+        "identifiedBy": "mustafa gökmen",
+        "identifiedByIDs": [],
+        "identifier": "317256607",
+        "identifiers": [
+          {
+            "identifier": "317256607"
+          }
+        ],
+        "installationKey": "997448a8-f762-11e1-a439-00145eb45e9a",
+        "institutionCode": "iNaturalist",
+        "isInCluster": false,
+        "isSequenced": false,
+        "issues": [
+          "COORDINATE_ROUNDED",
+          "CONTINENT_DERIVED_FROM_COORDINATES",
+          "TAXON_ID_NOT_FOUND"
+        ],
+        "iucnRedListCategory": "LC",
+        "key": 5908731977,
+        "kingdom": "Plantae",
+        "kingdomKey": 6,
+        "lastCrawled": "2026-07-23T01:15:24.946+00:00",
+        "lastInterpreted": "2026-07-23T16:09:17.703+00:00",
+        "lastParsed": "2026-07-23T16:09:17.703+00:00",
+        "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+        "media": [
+          {
+            "created": "2025-09-18T15:44:46.000+00:00",
+            "creator": "Mehmet Baran",
+            "format": "image/jpeg",
+            "identifier": "https://inaturalist-open-data.s3.amazonaws.com/photos/573163712/original.jpg",
+            "license": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+            "publisher": "iNaturalist",
+            "references": "https://www.inaturalist.org/photos/573163712",
+            "rightsHolder": "Mehmet Baran",
+            "type": "StillImage"
+          },
+          {
+            "created": "2025-09-18T15:44:47.000+00:00",
+            "creator": "Mehmet Baran",
+            "format": "image/jpeg",
+            "identifier": "https://inaturalist-open-data.s3.amazonaws.com/photos/573164476/original.jpg",
+            "license": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+            "publisher": "iNaturalist",
+            "references": "https://www.inaturalist.org/photos/573164476",
+            "rightsHolder": "Mehmet Baran",
+            "type": "StillImage"
+          }
+        ],
+        "modified": "2025-12-02T10:03:57.000+00:00",
+        "month": 9,
+        "nucleotideSequence": [],
+        "occurrenceID": "https://www.inaturalist.org/observations/317256607",
+        "occurrenceRemarks": "Location: Ankara, Türkiye Elevation (m): 1036 Notes: Observed with <a href=\"https://www.inaturalist.org/projects/239910\">care</a>. During the observation period, no harm was inflicted upon the observed organism. Observational measures were conducted with minimal disturbance to the surrounding habitat. Media Usage Rights: CC BY-NC-ND 4.0 — Non-commercial use. Attribution required.",
+        "occurrenceStatus": "PRESENT",
+        "order": "Fagales",
+        "orderKey": 1354,
+        "phylum": "Tracheophyta",
+        "phylumKey": 7707728,
+        "projectId": "https://www.inaturalist.org/projects/naturalists-of-turkey-turkiye-nin-doga-gozlemcileri",
+        "protocol": "DWC_ARCHIVE",
+        "publishedByGbifRegion": "NORTH_AMERICA",
+        "publishingCountry": "US",
+        "publishingOrgKey": "28eb1a3f-1c15-4a95-931a-4af90ecb574d",
+        "recordedBy": "Mehmet Baran",
+        "recordedByIDs": [],
+        "references": "https://www.inaturalist.org/observations/317256607",
+        "relations": [],
+        "reproductiveCondition": "no flowers or fruits",
+        "rightsHolder": "Mehmet Baran",
+        "scientificName": "Quercus robur L.",
+        "scientificNameAuthorship": "L.",
+        "species": "Quercus robur",
+        "speciesKey": 2878688,
+        "specificEpithet": "robur",
+        "startDayOfYear": 261,
+        "stateProvince": "Ankara",
+        "taxonID": "56133",
+        "taxonKey": 2878688,
+        "taxonRank": "SPECIES",
+        "taxonomicStatus": "ACCEPTED",
+        "verbatimEventDate": "2025/09/18 08:44",
+        "verbatimLocality": "Çankaya/Ankara, Türkiye",
+        "year": 2025
+      },
+      {
+        "acceptedScientificName": "Quercus robur L.",
+        "acceptedTaxonKey": 2878688,
+        "basisOfRecord": "HUMAN_OBSERVATION",
+        "catalogNumber": "316975571",
+        "class": "Magnoliopsida",
+        "classKey": 220,
+        "classifications": {
+          "7ddf754f-d193-4cc9-b351-99906754a03b": {
+            "acceptedUsage": {
+              "authorship": "L.",
+              "code": "BOTANICAL",
+              "formattedName": "<i>Quercus</i> <i>robur</i> L.",
+              "genericName": "Quercus",
+              "key": "4R5YN",
+              "name": "Quercus robur L.",
+              "rank": "SPECIES",
+              "specificEpithet": "robur"
+            },
+            "classification": [
+              {
+                "key": "CS5HF",
+                "name": "Eukaryota",
+                "rank": "DOMAIN"
+              },
+              {
+                "key": "P",
+                "name": "Plantae",
+                "rank": "KINGDOM"
+              },
+              {
+                "key": "CMQ8S",
+                "name": "Pteridobiotina",
+                "rank": "SUBKINGDOM"
+              },
+              {
+                "key": "TP",
+                "name": "Tracheophyta",
+                "rank": "PHYLUM"
+              },
+              {
+                "key": "MG",
+                "name": "Magnoliopsida",
+                "rank": "CLASS"
+              },
+              {
+                "key": "384",
+                "name": "Fagales",
+                "rank": "ORDER"
+              },
+              {
+                "key": "NPBN9",
+                "name": "Fagaceae",
+                "rank": "FAMILY"
+              },
+              {
+                "key": "V58RW",
+                "name": "Quercoideae",
+                "rank": "SUBFAMILY"
+              },
+              {
+                "key": "8W2YL",
+                "name": "Quercus",
+                "rank": "GENUS"
+              },
+              {
+                "key": "4R5YN",
+                "name": "Quercus robur",
+                "rank": "SPECIES"
+              }
+            ],
+            "issues": [
+              "TAXON_ID_NOT_FOUND"
+            ],
+            "iucnRedListCategoryCode": "LC",
+            "taxonomicStatus": "ACCEPTED",
+            "usage": {
+              "authorship": "L.",
+              "code": "BOTANICAL",
+              "formattedName": "<i>Quercus</i> <i>robur</i> L.",
+              "genericName": "Quercus",
+              "key": "4R5YN",
+              "name": "Quercus robur L.",
+              "rank": "SPECIES",
+              "specificEpithet": "robur"
+            }
+          },
+          "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+            "acceptedUsage": {
+              "authorship": "L.",
+              "formattedName": "<i>Quercus</i> <i>robur</i> L.",
+              "genericName": "Quercus",
+              "key": "2878688",
+              "name": "Quercus robur L.",
+              "rank": "SPECIES",
+              "specificEpithet": "robur"
+            },
+            "classification": [
+              {
+                "key": "6",
+                "name": "Plantae",
+                "rank": "KINGDOM"
+              },
+              {
+                "key": "7707728",
+                "name": "Tracheophyta",
+                "rank": "PHYLUM"
+              },
+              {
+                "key": "220",
+                "name": "Magnoliopsida",
+                "rank": "CLASS"
+              },
+              {
+                "key": "1354",
+                "name": "Fagales",
+                "rank": "ORDER"
+              },
+              {
+                "key": "4689",
+                "name": "Fagaceae",
+                "rank": "FAMILY"
+              },
+              {
+                "key": "2877951",
+                "name": "Quercus",
+                "rank": "GENUS"
+              },
+              {
+                "key": "2878688",
+                "name": "Quercus robur",
+                "rank": "SPECIES"
+              }
+            ],
+            "issues": [
+              "TAXON_ID_NOT_FOUND"
+            ],
+            "iucnRedListCategoryCode": "LC",
+            "taxonomicStatus": "ACCEPTED",
+            "usage": {
+              "authorship": "L.",
+              "formattedName": "<i>Quercus</i> <i>robur</i> L.",
+              "genericName": "Quercus",
+              "key": "2878688",
+              "name": "Quercus robur L.",
+              "rank": "SPECIES",
+              "specificEpithet": "robur"
+            }
+          }
+        },
+        "collectionCode": "Observations",
+        "continent": "ASIA",
+        "country": "Türkiye",
+        "countryCode": "TR",
+        "crawlId": 601,
+        "datasetKey": "50c9509d-22c7-4a22-a47d-8c48425ef4a7",
+        "datasetName": "iNaturalist research-grade observations",
+        "dateIdentified": "2025-09-28T20:23:54",
+        "day": 17,
+        "decimalLatitude": 39.832417,
+        "decimalLongitude": 32.832675,
+        "dnaSequenceID": [],
+        "dynamicProperties": "{\"leaves\":\"green leaves\"}",
+        "endDayOfYear": 260,
+        "eventDate": "2025-09-17T17:06",
+        "eventTime": "17:06:00+03:00",
+        "extensions": {
+          "http://rs.gbif.org/terms/1.0/Multimedia": [
+            {
+              "http://purl.org/dc/terms/created": "2025-09-17T17:06:21-07:00",
+              "http://purl.org/dc/terms/creator": "Mehmet Baran",
+              "http://purl.org/dc/terms/format": "image/jpeg",
+              "http://purl.org/dc/terms/identifier": "https://inaturalist-open-data.s3.amazonaws.com/photos/572720620/original.jpg",
+              "http://purl.org/dc/terms/license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+              "http://purl.org/dc/terms/publisher": "iNaturalist",
+              "http://purl.org/dc/terms/references": "https://www.inaturalist.org/photos/572720620",
+              "http://purl.org/dc/terms/rightsHolder": "Mehmet Baran",
+              "http://purl.org/dc/terms/type": "StillImage",
+              "http://rs.tdwg.org/dwc/terms/catalogNumber": "572720620"
+            }
+          ]
+        },
+        "facts": [],
+        "family": "Fagaceae",
+        "familyKey": 4689,
+        "gadm": {
+          "level0": {
+            "gid": "TUR",
+            "name": "Turkey"
+          },
+          "level1": {
+            "gid": "TUR.7_1",
+            "name": "Ankara"
+          },
+          "level2": {
+            "gid": "TUR.7.7_1",
+            "name": "Çankaya"
+          }
+        },
+        "gbifID": "5908746304",
+        "gbifRegion": "EUROPE",
+        "genericName": "Quercus",
+        "genus": "Quercus",
+        "genusKey": 2877951,
+        "geodeticDatum": "WGS84",
+        "hostingOrganizationKey": "28eb1a3f-1c15-4a95-931a-4af90ecb574d",
+        "http://unknown.org/captive_cultivated": "wild",
+        "http://unknown.org/crawl_attempt": "601",
+        "http://unknown.org/nick": "salix-babylonica",
+        "http://unknown.org/status": "not_reviewed",
+        "identificationID": "704763142",
+        "identifiedBy": "mustafa gökmen",
+        "identifiedByIDs": [],
+        "identifier": "316975571",
+        "identifiers": [
+          {
+            "identifier": "316975571"
+          }
+        ],
+        "installationKey": "997448a8-f762-11e1-a439-00145eb45e9a",
+        "institutionCode": "iNaturalist",
+        "isInCluster": false,
+        "isSequenced": false,
+        "issues": [
+          "COORDINATE_ROUNDED",
+          "CONTINENT_DERIVED_FROM_COORDINATES",
+          "TAXON_ID_NOT_FOUND"
+        ],
+        "iucnRedListCategory": "LC",
+        "key": 5908746304,
+        "kingdom": "Plantae",
+        "kingdomKey": 6,
+        "lastCrawled": "2026-07-23T01:15:24.946+00:00",
+        "lastInterpreted": "2026-07-23T15:53:44.600+00:00",
+        "lastParsed": "2026-07-23T15:53:44.600+00:00",
+        "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+        "media": [
+          {
+            "created": "2025-09-18T00:06:21.000+00:00",
+            "creator": "Mehmet Baran",
+            "format": "image/jpeg",
+            "identifier": "https://inaturalist-open-data.s3.amazonaws.com/photos/572720620/original.jpg",
+            "license": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+            "publisher": "iNaturalist",
+            "references": "https://www.inaturalist.org/photos/572720620",
+            "rightsHolder": "Mehmet Baran",
+            "type": "StillImage"
+          }
+        ],
+        "modified": "2025-12-02T10:04:01.000+00:00",
+        "month": 9,
+        "nucleotideSequence": [],
+        "occurrenceID": "https://www.inaturalist.org/observations/316975571",
+        "occurrenceRemarks": "Location: Ankara, Türkiye Elevation (m): 999 Notes: Observed with <a href=\"https://www.inaturalist.org/projects/239910\">care</a>. During the observation period, no harm was inflicted upon the observed organism. Observational measures were conducted with minimal disturbance to the surrounding habitat. Media Usage Rights: CC BY-NC-ND 4.0 — Non-commercial use. Attribution required.",
+        "occurrenceStatus": "PRESENT",
+        "order": "Fagales",
+        "orderKey": 1354,
+        "phylum": "Tracheophyta",
+        "phylumKey": 7707728,
+        "projectId": "https://www.inaturalist.org/projects/naturalists-of-turkey-turkiye-nin-doga-gozlemcileri",
+        "protocol": "DWC_ARCHIVE",
+        "publishedByGbifRegion": "NORTH_AMERICA",
+        "publishingCountry": "US",
+        "publishingOrgKey": "28eb1a3f-1c15-4a95-931a-4af90ecb574d",
+        "recordedBy": "Mehmet Baran",
+        "recordedByIDs": [],
+        "references": "https://www.inaturalist.org/observations/316975571",
+        "relations": [],
+        "reproductiveCondition": "no flowers or fruits",
+        "rightsHolder": "Mehmet Baran",
+        "scientificName": "Quercus robur L.",
+        "scientificNameAuthorship": "L.",
+        "species": "Quercus robur",
+        "speciesKey": 2878688,
+        "specificEpithet": "robur",
+        "startDayOfYear": 260,
+        "stateProvince": "Ankara",
+        "taxonID": "56133",
+        "taxonKey": 2878688,
+        "taxonRank": "SPECIES",
+        "taxonomicStatus": "ACCEPTED",
+        "verbatimEventDate": "2025/09/17 17:06",
+        "verbatimLocality": "Çankaya/Ankara, Türkiye",
+        "year": 2025
+      },
+      {
+        "acceptedScientificName": "Quercus robur L.",
+        "acceptedTaxonKey": 2878688,
+        "basisOfRecord": "HUMAN_OBSERVATION",
+        "catalogNumber": "317256719",
+        "class": "Magnoliopsida",
+        "classKey": 220,
+        "classifications": {
+          "7ddf754f-d193-4cc9-b351-99906754a03b": {
+            "acceptedUsage": {
+              "authorship": "L.",
+              "code": "BOTANICAL",
+              "formattedName": "<i>Quercus</i> <i>robur</i> L.",
+              "genericName": "Quercus",
+              "key": "4R5YN",
+              "name": "Quercus robur L.",
+              "rank": "SPECIES",
+              "specificEpithet": "robur"
+            },
+            "classification": [
+              {
+                "key": "CS5HF",
+                "name": "Eukaryota",
+                "rank": "DOMAIN"
+              },
+              {
+                "key": "P",
+                "name": "Plantae",
+                "rank": "KINGDOM"
+              },
+              {
+                "key": "CMQ8S",
+                "name": "Pteridobiotina",
+                "rank": "SUBKINGDOM"
+              },
+              {
+                "key": "TP",
+                "name": "Tracheophyta",
+                "rank": "PHYLUM"
+              },
+              {
+                "key": "MG",
+                "name": "Magnoliopsida",
+                "rank": "CLASS"
+              },
+              {
+                "key": "384",
+                "name": "Fagales",
+                "rank": "ORDER"
+              },
+              {
+                "key": "NPBN9",
+                "name": "Fagaceae",
+                "rank": "FAMILY"
+              },
+              {
+                "key": "V58RW",
+                "name": "Quercoideae",
+                "rank": "SUBFAMILY"
+              },
+              {
+                "key": "8W2YL",
+                "name": "Quercus",
+                "rank": "GENUS"
+              },
+              {
+                "key": "4R5YN",
+                "name": "Quercus robur",
+                "rank": "SPECIES"
+              }
+            ],
+            "issues": [
+              "TAXON_ID_NOT_FOUND"
+            ],
+            "iucnRedListCategoryCode": "LC",
+            "taxonomicStatus": "ACCEPTED",
+            "usage": {
+              "authorship": "L.",
+              "code": "BOTANICAL",
+              "formattedName": "<i>Quercus</i> <i>robur</i> L.",
+              "genericName": "Quercus",
+              "key": "4R5YN",
+              "name": "Quercus robur L.",
+              "rank": "SPECIES",
+              "specificEpithet": "robur"
+            }
+          },
+          "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+            "acceptedUsage": {
+              "authorship": "L.",
+              "formattedName": "<i>Quercus</i> <i>robur</i> L.",
+              "genericName": "Quercus",
+              "key": "2878688",
+              "name": "Quercus robur L.",
+              "rank": "SPECIES",
+              "specificEpithet": "robur"
+            },
+            "classification": [
+              {
+                "key": "6",
+                "name": "Plantae",
+                "rank": "KINGDOM"
+              },
+              {
+                "key": "7707728",
+                "name": "Tracheophyta",
+                "rank": "PHYLUM"
+              },
+              {
+                "key": "220",
+                "name": "Magnoliopsida",
+                "rank": "CLASS"
+              },
+              {
+                "key": "1354",
+                "name": "Fagales",
+                "rank": "ORDER"
+              },
+              {
+                "key": "4689",
+                "name": "Fagaceae",
+                "rank": "FAMILY"
+              },
+              {
+                "key": "2877951",
+                "name": "Quercus",
+                "rank": "GENUS"
+              },
+              {
+                "key": "2878688",
+                "name": "Quercus robur",
+                "rank": "SPECIES"
+              }
+            ],
+            "issues": [
+              "TAXON_ID_NOT_FOUND"
+            ],
+            "iucnRedListCategoryCode": "LC",
+            "taxonomicStatus": "ACCEPTED",
+            "usage": {
+              "authorship": "L.",
+              "formattedName": "<i>Quercus</i> <i>robur</i> L.",
+              "genericName": "Quercus",
+              "key": "2878688",
+              "name": "Quercus robur L.",
+              "rank": "SPECIES",
+              "specificEpithet": "robur"
+            }
+          }
+        },
+        "collectionCode": "Observations",
+        "continent": "ASIA",
+        "country": "Türkiye",
+        "countryCode": "TR",
+        "crawlId": 601,
+        "datasetKey": "50c9509d-22c7-4a22-a47d-8c48425ef4a7",
+        "datasetName": "iNaturalist research-grade observations",
+        "dateIdentified": "2025-12-10T17:03:58",
+        "day": 18,
+        "decimalLatitude": 39.827208,
+        "decimalLongitude": 32.828786,
+        "dnaSequenceID": [],
+        "dynamicProperties": "{\"leaves\":\"green leaves\"}",
+        "endDayOfYear": 261,
+        "eventDate": "2025-09-18T09:47",
+        "eventTime": "09:47:00+03:00",
+        "extensions": {
+          "http://rs.gbif.org/terms/1.0/Multimedia": [
+            {
+              "http://purl.org/dc/terms/created": "2025-09-18T09:47:20-07:00",
+              "http://purl.org/dc/terms/creator": "Mehmet Baran",
+              "http://purl.org/dc/terms/format": "image/jpeg",
+              "http://purl.org/dc/terms/identifier": "https://inaturalist-open-data.s3.amazonaws.com/photos/573184418/original.jpg",
+              "http://purl.org/dc/terms/license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+              "http://purl.org/dc/terms/publisher": "iNaturalist",
+              "http://purl.org/dc/terms/references": "https://www.inaturalist.org/photos/573184418",
+              "http://purl.org/dc/terms/rightsHolder": "Mehmet Baran",
+              "http://purl.org/dc/terms/type": "StillImage",
+              "http://rs.tdwg.org/dwc/terms/catalogNumber": "573184418"
+            },
+            {
+              "http://purl.org/dc/terms/created": "2025-09-18T09:47:20-07:00",
+              "http://purl.org/dc/terms/creator": "Mehmet Baran",
+              "http://purl.org/dc/terms/format": "image/jpeg",
+              "http://purl.org/dc/terms/identifier": "https://inaturalist-open-data.s3.amazonaws.com/photos/573184926/original.jpg",
+              "http://purl.org/dc/terms/license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+              "http://purl.org/dc/terms/publisher": "iNaturalist",
+              "http://purl.org/dc/terms/references": "https://www.inaturalist.org/photos/573184926",
+              "http://purl.org/dc/terms/rightsHolder": "Mehmet Baran",
+              "http://purl.org/dc/terms/type": "StillImage",
+              "http://rs.tdwg.org/dwc/terms/catalogNumber": "573184926"
+            }
+          ]
+        },
+        "facts": [],
+        "family": "Fagaceae",
+        "familyKey": 4689,
+        "gadm": {
+          "level0": {
+            "gid": "TUR",
+            "name": "Turkey"
+          },
+          "level1": {
+            "gid": "TUR.7_1",
+            "name": "Ankara"
+          },
+          "level2": {
+            "gid": "TUR.7.7_1",
+            "name": "Çankaya"
+          }
+        },
+        "gbifID": "5932473216",
+        "gbifRegion": "EUROPE",
+        "genericName": "Quercus",
+        "genus": "Quercus",
+        "genusKey": 2877951,
+        "geodeticDatum": "WGS84",
+        "hostingOrganizationKey": "28eb1a3f-1c15-4a95-931a-4af90ecb574d",
+        "http://unknown.org/captive_cultivated": "wild",
+        "http://unknown.org/crawl_attempt": "601",
+        "http://unknown.org/nick": "salix-babylonica",
+        "http://unknown.org/status": "not_reviewed",
+        "identificationID": "736629741",
+        "identifiedBy": "mustafa gökmen",
+        "identifiedByIDs": [],
+        "identifier": "317256719",
+        "identifiers": [
+          {
+            "identifier": "317256719"
+          }
+        ],
+        "installationKey": "997448a8-f762-11e1-a439-00145eb45e9a",
+        "institutionCode": "iNaturalist",
+        "isInCluster": false,
+        "isSequenced": false,
+        "issues": [
+          "COORDINATE_ROUNDED",
+          "CONTINENT_DERIVED_FROM_COORDINATES",
+          "TAXON_ID_NOT_FOUND"
+        ],
+        "iucnRedListCategory": "LC",
+        "key": 5932473216,
+        "kingdom": "Plantae",
+        "kingdomKey": 6,
+        "lastCrawled": "2026-07-23T01:15:24.946+00:00",
+        "lastInterpreted": "2026-07-23T15:22:28.492+00:00",
+        "lastParsed": "2026-07-23T15:22:28.492+00:00",
+        "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+        "media": [
+          {
+            "created": "2025-09-18T16:47:20.000+00:00",
+            "creator": "Mehmet Baran",
+            "format": "image/jpeg",
+            "identifier": "https://inaturalist-open-data.s3.amazonaws.com/photos/573184418/original.jpg",
+            "license": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+            "publisher": "iNaturalist",
+            "references": "https://www.inaturalist.org/photos/573184418",
+            "rightsHolder": "Mehmet Baran",
+            "type": "StillImage"
+          },
+          {
+            "created": "2025-09-18T16:47:20.000+00:00",
+            "creator": "Mehmet Baran",
+            "format": "image/jpeg",
+            "identifier": "https://inaturalist-open-data.s3.amazonaws.com/photos/573184926/original.jpg",
+            "license": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+            "publisher": "iNaturalist",
+            "references": "https://www.inaturalist.org/photos/573184926",
+            "rightsHolder": "Mehmet Baran",
+            "type": "StillImage"
+          }
+        ],
+        "modified": "2025-12-10T17:22:50.000+00:00",
+        "month": 9,
+        "nucleotideSequence": [],
+        "occurrenceID": "https://www.inaturalist.org/observations/317256719",
+        "occurrenceRemarks": "Location: Ankara, Türkiye Elevation (m): 1036 Notes: Observed with <a href=\"https://www.inaturalist.org/projects/239910\">care</a>. During the observation period, no harm was inflicted upon the observed organism. Observational measures were conducted with minimal disturbance to the surrounding habitat. Media Usage Rights: CC BY-NC-ND 4.0 — Non-commercial use. Attribution required.",
+        "occurrenceStatus": "PRESENT",
+        "order": "Fagales",
+        "orderKey": 1354,
+        "phylum": "Tracheophyta",
+        "phylumKey": 7707728,
+        "projectId": "https://www.inaturalist.org/projects/naturalists-of-turkey-turkiye-nin-doga-gozlemcileri",
+        "protocol": "DWC_ARCHIVE",
+        "publishedByGbifRegion": "NORTH_AMERICA",
+        "publishingCountry": "US",
+        "publishingOrgKey": "28eb1a3f-1c15-4a95-931a-4af90ecb574d",
+        "recordedBy": "Mehmet Baran",
+        "recordedByIDs": [],
+        "references": "https://www.inaturalist.org/observations/317256719",
+        "relations": [],
+        "reproductiveCondition": "no flowers or fruits",
+        "rightsHolder": "Mehmet Baran",
+        "scientificName": "Quercus robur L.",
+        "scientificNameAuthorship": "L.",
+        "species": "Quercus robur",
+        "speciesKey": 2878688,
+        "specificEpithet": "robur",
+        "startDayOfYear": 261,
+        "stateProvince": "Ankara",
+        "taxonID": "56133",
+        "taxonKey": 2878688,
+        "taxonRank": "SPECIES",
+        "taxonomicStatus": "ACCEPTED",
+        "verbatimEventDate": "2025/09/18 09:47",
+        "verbatimLocality": "Çankaya/Ankara, Türkiye",
+        "year": 2025
+      }
+    ]
+  },
+  "body_encoding": "json",
+  "headers": {
+    "content-type": "application/json",
+    "expires": "0"
+  },
+  "status": 200
+}

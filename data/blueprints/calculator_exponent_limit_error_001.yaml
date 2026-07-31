@@ -1,0 +1,19 @@
+blueprint_id: calculator_exponent_limit_error_001
+family_id: calculator_exponent_limit_error
+split: validation
+domain: calculation
+kind: expected_error
+difficulty: medium
+provider: general_local
+user_goal: İzin verilen üslü işlem sınırını aşan hesabın güvenli biçimde reddedildiğini görmek
+known_information: { expression: "2 ** 13" }
+available_tools: [calculator.evaluate, time.get_local_time]
+utterances:
+  - "2 ** 13 işlemini hesaplamayı dene."
+  - "2 ** 13 sonucunu hesaplayabilir misin?"
+expected_behavior: { decision: tool_call }
+expected_actions:
+  - tool: calculator.evaluate
+    arguments:
+      expression: { value: "2 ** 13", origin: user_message }
+    expect: { outcome: error, status_code: 422 }

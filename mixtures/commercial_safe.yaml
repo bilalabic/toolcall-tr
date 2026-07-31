@@ -1,0 +1,27 @@
+# Ticari kullanıma uygun veri karışımı.
+#
+# KURAL: CC BY-NC veya lisansı belirsiz hiçbir kaynak bu dosyada yer alamaz.
+# Bkz. NOTICE.md § 2 ve legal/THIRD_PARTY_LICENSES.csv.
+
+name: toolcall-tr-commercial-safe
+license: CC-BY-4.0
+commercial_use: allowed
+
+include:
+  - source: toolcall-tr/sft
+    license: CC-BY-4.0
+    enabled: false
+    blocked_by: "Release profili + insan incelemesi geçmiş bir manifest henüz yok"
+    provider_filter: []
+    attribution_required: true
+
+exclude:
+  # Lisans durumu belirsiz -- LICENSE-DATA § 3'teki açık madde çözülene dek dışarıda.
+  - provider: izmir_realtime
+    reason: "Lisans UNDETERMINED (openapi.izmir.bel.tr ayrı host, beyan yok)"
+
+  # Harici veri setleri: hiçbiri karıştırılmıyor, ama gerekçe kayıt altında.
+  - source: Salesforce/APIGen-MT-5k
+    reason: "CC BY-NC-4.0 -- ticari kullanım yasak"
+  - source: Salesforce/xlam-function-calling-60k
+    reason: "Çelişkili lisans (kart CC BY 4.0, GitHub README CC BY-NC-4.0)"

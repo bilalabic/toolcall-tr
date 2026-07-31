@@ -1,0 +1,35 @@
+# Yerel konum çözümleme -> MET Norway tahmini.
+blueprint_id: weather_location_then_forecast_001
+family_id: weather_location_then_forecast
+split: train
+domain: weather
+kind: sequential_tool_call
+difficulty: medium
+provider: met_norway
+
+user_goal: Elazığ için hava tahminini şehir adından başlayarak getirmek
+known_information:
+  query: Elazığ
+
+available_tools:
+  - geo.search_places
+  - weather.get_current_weather
+  - weather.get_weather_forecast
+
+utterances:
+  - "Elazığ için hava tahminini getir."
+  - "Elazığ'da hava nasıl olacak?"
+  - "Önümüzdeki günlerde Elazığ'ın havasına bakar mısın?"
+
+expected_behavior:
+  decision: tool_call
+
+expected_actions:
+  - tool: geo.search_places
+    arguments:
+      query: { value: Elazığ, origin: user_message }
+
+  - tool: weather.get_weather_forecast
+    arguments:
+      latitude: "$actions[0].results[0].latitude"
+      longitude: "$actions[0].results[0].longitude"

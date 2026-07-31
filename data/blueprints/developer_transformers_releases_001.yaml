@@ -1,0 +1,33 @@
+blueprint_id: developer_transformers_releases_001
+family_id: developer_repository_releases
+split: train
+domain: developer
+kind: successful_tool_call
+difficulty: easy
+provider: github_metadata
+
+user_goal: huggingface/transformers deposunun son beş sürüm etiketini ve yayımlanma tarihini görmek
+known_information:
+  owner: huggingface
+  repository: transformers
+  limit: 5
+
+available_tools:
+  - developer.search_repositories
+  - developer.list_releases_metadata
+  - developer.get_repository_metadata
+  - currency.list_supported_currencies
+
+utterances:
+  - "huggingface/transformers deposunun son 5 sürüm etiketini ve yayımlanma tarihini göster."
+  - "GitHub'daki huggingface/transformers deposunun en son 5 sürümü ne zaman yayımlandı?"
+
+expected_behavior:
+  decision: tool_call
+
+expected_actions:
+  - tool: developer.list_releases_metadata
+    arguments:
+      owner: { value: huggingface, origin: user_message_derived }
+      repository: { value: transformers, origin: user_message_derived }
+      limit: { value: 5, origin: user_message }

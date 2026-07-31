@@ -1,0 +1,27 @@
+blueprint_id: calculator_percentage_001
+family_id: calculator_percentage
+split: train
+domain: calculation
+kind: successful_tool_call
+difficulty: easy
+provider: general_local
+
+user_goal: 1250 sayısının yüzde yirmisini hesaplamak
+known_information:
+  expression: "1250 * 0.20"
+
+available_tools:
+  - calculator.evaluate
+  - time.get_local_time
+
+utterances:
+  - "1250 * 0.20 işleminin sonucunu hesapla."
+  - "1250 * 0.20 kaç eder?"
+
+expected_behavior:
+  decision: tool_call
+
+expected_actions:
+  - tool: calculator.evaluate
+    arguments:
+      expression: { value: "1250 * 0.20", origin: user_message }

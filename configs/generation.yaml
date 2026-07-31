@@ -1,0 +1,83 @@
+# Türkçe kullanıcı ifadesi üretimi.
+#
+# Güvenli varsayılan çevrimdışıdır: `template` ağ erişimi ve API anahtarı istemez.
+# OpenAI üretimini açmak için yalnızca `llm.provider: openai` yapın ve anahtarı
+# OPENAI_API_KEY ortam değişkeninde sağlayın. Secret değerleri bu dosyaya yazmayın.
+llm:
+  provider: template
+  api: responses
+
+  models:
+    # Yüksek hacimli Türkçe soru + kısa karar gerekçesi üretimi. Ground truth üretmez.
+    generator:
+      model: gpt-4.1-mini
+      reasoning_effort: none
+      temperature: 1.0
+      max_output_tokens: 512
+      verbosity: low
+
+    # Üreticiden farklı model: yapısal/semantik kalite değerlendirmesi.
+    judge:
+      model: gpt-5-mini
+      reasoning_effort: medium
+      temperature: null
+      max_output_tokens: 2048
+      verbosity: low
+
+  # Prompt/model/örnek aynıysa yeniden API ücreti oluşmasını önler.
+  cache:
+    enabled: true
+    path: data/llm_cache
+    key_fields: [prompt_version, blueprint_id, variant_index, model]
+
+  concurrency:
+    max_in_flight: 8
+
+  retry:
+    max_attempts: 4
+    initial_delay_seconds: 1.0
+    max_delay_seconds: 30.0
+    backoff_multiplier: 2.0
+    jitter: true
+
+  # Tek bir komut çalıştırması için sert kullanım sınırları.
+  budget:
+    max_requests: 1200
+    max_input_tokens: 3000000
+    max_output_tokens: 600000
+
+  fallback:
+    # Sessiz kalite düşüşü yok: OpenAI/judge hatası koşuyu görünür biçimde durdurur.
+    on_generation_error: fail
+    on_budget_exceeded: stop
+    on_judge_error: fail
+
+prompts:
+  # Sürüm her örneğin provenance alanına yazılır.
+  user_query: toolcall-tr-user-v6
+  path: prompts/
+  file: user_query_v6.md
+  # synthesize: blueprint'ten yeni soru; paraphrase: incelenmiş ifadeyi yeniden yaz.
+  mode: synthesize
+
+styles:
+  - resmi
+  - gunluk
+  - eksiltili
+  - yazim_hatali
+  - dolayli
+  - uzun_baglam
+  - karisik_dil
+
+# LLM yalnızca doğal ifadeyi yazar; bu kurallar üretim sonrasında da doğrulanır.
+constraints:
+  no_new_ground_truth: true
+  no_tool_names_in_message: true
+  no_leaking_missing_params: true
+  no_unsupported_tasks: true
+  no_real_personal_data: true
+
+normalization:
+  money: true
+  dates: true
+  phone: true

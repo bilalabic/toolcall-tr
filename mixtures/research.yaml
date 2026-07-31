@@ -1,0 +1,30 @@
+# Araştırma amaçlı veri karışımı.
+#
+# commercial_safe'e göre daha geniştir, ancak lisansı BELİRSİZ kaynaklar
+# burada da yer almaz -- "araştırma" belirsiz lisansı meşrulaştırmaz.
+# Fark, ticari-olmayan ama lisansı NET kaynakların dâhil edilebilmesidir.
+
+name: toolcall-tr-research
+license: CC-BY-4.0
+commercial_use: not_permitted
+
+include:
+  - source: toolcall-tr/sft
+    license: CC-BY-4.0
+    enabled: false
+    blocked_by: "Release profili + insan incelemesi geçmiş bir manifest henüz yok"
+    provider_filter: []
+    attribution_required: true
+
+  # Lisans maddesi çözülürse buraya taşınacak; şu an devre dışı.
+  - source: toolcall-tr/sft
+    provider_filter:
+      - izmir_realtime
+    enabled: false
+    blocked_by: "LICENSE-DATA § 3 -- açık lisans maddesi"
+
+exclude:
+  - source: Salesforce/APIGen-MT-5k
+    reason: "CC BY-NC-4.0 + OpenAI rekabet şartı; bu projede hiç kullanılmıyor"
+  - source: Salesforce/xlam-function-calling-60k
+    reason: "Çelişkili lisans; çözülene dek dışarıda"

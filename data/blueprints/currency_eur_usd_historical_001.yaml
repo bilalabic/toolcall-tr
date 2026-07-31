@@ -1,0 +1,23 @@
+blueprint_id: currency_eur_usd_historical_001
+family_id: currency_eur_usd_historical
+split: validation
+domain: currency
+kind: successful_tool_call
+difficulty: easy
+provider: frankfurter_ecb
+
+user_goal: 30 Haziran 2025 tarihindeki EUR/USD ECB referans kurunu öğrenmek
+known_information: {base: EUR, quote: USD, date: "2025-06-30"}
+available_tools:
+  - currency.get_historical_exchange_rate
+  - currency.get_exchange_rate
+utterances:
+  - "2025-06-30 tarihinde EUR/USD ECB referans kuru neydi?"
+  - "2025-06-30 tarihli EUR/USD ECB referans kurunu getir."
+expected_behavior: {decision: tool_call}
+expected_actions:
+  - tool: currency.get_historical_exchange_rate
+    arguments:
+      base: {value: EUR, origin: user_message}
+      quote: {value: USD, origin: user_message}
+      date: {value: "2025-06-30", origin: user_message_derived}

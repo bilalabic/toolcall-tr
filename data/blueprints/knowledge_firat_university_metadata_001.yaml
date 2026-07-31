@@ -1,0 +1,34 @@
+blueprint_id: knowledge_firat_university_metadata_001
+family_id: knowledge_page_metadata
+split: train
+domain: knowledge
+kind: sequential_tool_call
+difficulty: medium
+provider: wikimedia_metadata
+
+user_goal: Fırat Üniversitesi'nin Türkçe Vikipedi sayfa kimliğini, son sürüm kimliğini ve kalıcı bağlantısını görmek
+known_information:
+  query: Fırat Üniversitesi
+
+available_tools:
+  - knowledge.search_pages
+  - knowledge.get_page_metadata
+  - knowledge.list_page_categories
+  - biodiversity.match_species_name
+
+utterances:
+  - "Fırat Üniversitesi'nin Türkçe Vikipedi sayfa kimliğini, son sürüm kimliğini ve kalıcı bağlantısını göster."
+  - "Fırat Üniversitesi'nin Türkçe Vikipedi sayfasına ait kimlik ve kalıcı bağlantı bilgilerini getir."
+
+expected_behavior:
+  decision: tool_call
+
+expected_actions:
+  - tool: knowledge.search_pages
+    arguments:
+      query: { value: Fırat Üniversitesi, origin: user_message }
+      limit: { value: 5, origin: pinned_fixture }
+
+  - tool: knowledge.get_page_metadata
+    arguments:
+      page_id: "$actions[0].results[0].page_id"

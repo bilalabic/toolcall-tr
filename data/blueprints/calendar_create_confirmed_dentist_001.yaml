@@ -1,0 +1,29 @@
+blueprint_id: calendar_create_confirmed_dentist_001
+family_id: calendar_create_confirmed_dentist
+split: test
+domain: calendar
+kind: confirmation_required
+difficulty: medium
+provider: calendar_mock
+user_goal: Diş hekimi randevusunu açık onayla kişisel takvime eklemek
+known_information:
+  title: Diş hekimi randevusu
+context:
+  target_calendar_id: personal
+  normalized_start_at: "2026-08-05T16:00:00+03:00"
+  normalized_end_at: "2026-08-05T16:45:00+03:00"
+  normalized_timezone: Europe/Istanbul
+available_tools: [calendar.search_events, calendar.create_event]
+utterances:
+  - "5 Ağustos 2026 saat 16.00'ya 45 dakikalık Diş hekimi randevusu eklemeni açıkça onaylıyorum."
+  - "5 Ağustos 2026 16.00'da kişisel takvimime Diş hekimi randevusu eklemene onay veriyorum; 45 dakika sürsün."
+expected_behavior: { decision: tool_call }
+expected_actions:
+  - tool: calendar.create_event
+    arguments:
+      calendar_id: { value: personal, origin: system_state }
+      title: { value: Diş hekimi randevusu, origin: user_message }
+      start_at: { value: "2026-08-05T16:00:00+03:00", origin: system_state }
+      end_at: { value: "2026-08-05T16:45:00+03:00", origin: system_state }
+      timezone: { value: Europe/Istanbul, origin: system_state }
+      confirmed: { value: true, origin: user_message }

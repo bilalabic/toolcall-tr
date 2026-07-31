@@ -1,0 +1,21 @@
+blueprint_id: parallel_time_london_tokyo_001
+family_id: parallel_time_london_tokyo
+split: test
+domain: time
+kind: parallel_tool_call
+difficulty: medium
+provider: general_local
+user_goal: Londra ve Tokyo yerel saatlerini karşılaştırmak
+known_information: {}
+available_tools: [time.get_local_time, calculator.evaluate]
+utterances:
+  - "Europe/London ve Asia/Tokyo yerel saatlerini birlikte göster."
+  - "Europe/London ile Asia/Tokyo saatlerini karşılaştırmak için ikisini de getir."
+expected_behavior: { decision: tool_call }
+expected_actions:
+  - tool: time.get_local_time
+    arguments:
+      timezone: { value: Europe/London, origin: user_message }
+  - tool: time.get_local_time
+    arguments:
+      timezone: { value: Asia/Tokyo, origin: user_message }

@@ -1,0 +1,21 @@
+blueprint_id: biodiversity_panthera_leo_match_001
+family_id: biodiversity_panthera_leo_match
+split: validation
+domain: biodiversity
+kind: successful_tool_call
+difficulty: easy
+provider: gbif
+
+user_goal: Panthera leo bilimsel adının GBIF takson eşleşmesini öğrenmek
+known_information: {scientific_name: Panthera leo}
+available_tools:
+  - biodiversity.match_species_name
+  - biodiversity.get_species
+utterances:
+  - "Panthera leo bilimsel adının GBIF'teki kabul edilen takson eşleşmesini göster."
+  - "GBIF'te Panthera leo adı hangi taksona eşleşiyor?"
+expected_behavior: {decision: tool_call}
+expected_actions:
+  - tool: biodiversity.match_species_name
+    arguments:
+      scientific_name: {value: Panthera leo, origin: user_message}

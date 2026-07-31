@@ -1,0 +1,17 @@
+blueprint_id: direct_answer_triangle_sides_001
+family_id: direct_answer_triangle_sides
+split: validation
+domain: general_knowledge
+kind: should_answer_directly
+difficulty: easy
+provider: no_tool
+user_goal: Üçgenin kenar sayısını öğrenmek
+known_information: {}
+available_tools: [calculator.evaluate, knowledge.search_pages]
+utterances:
+  - "Bir üçgenin kaç kenarı vardır?"
+  - "Üçgen kaç kenarlıdır?"
+expected_behavior:
+  decision: direct_answer
+  response_intent_tr: Araç çağırmadan üçgenin üç kenarı olduğunu söyle.
+  assistant_response_tr: "Bir üçgenin üç kenarı vardır."

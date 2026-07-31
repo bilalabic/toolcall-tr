@@ -1,0 +1,27 @@
+{
+  "attribution": "İzmir Büyükşehir Belediyesi Açık Veri Portalı, CC BY 4.0. Dondurulmuş ve değiştirilmiş alt küme.",
+  "content_hash": "sha256:e78934fae9b3b9ac70c51291ff703f9f2887d05129126204f91dc7434c85918e",
+  "fields": [
+    "BOYLAM",
+    "DURAKTAN_GECEN_HATLAR",
+    "DURAK_ADI",
+    "DURAK_ID",
+    "ENLEM"
+  ],
+  "license": "CC-BY-4.0",
+  "license_url": "https://acikveri.bizizmir.com/tr/license",
+  "modifications": [
+    "CKAN iç `_id` alanı çıkarıldı.",
+    "Satırlar DURAK_ID'ye göre deterministik olarak sıralandı.",
+    "ENLEM/BOYLAM float'a, DURAK_ID int'e çevrildi."
+  ],
+  "name": "eshot_stops",
+  "retrieved_at": "2026-07-28",
+  "row_count": 11783,
+  "source": {
+    "dataset": "eshot-otobus-duraklari",
+    "endpoint": "datastore_search",
+    "portal": "https://acikveri.bizizmir.com",
+    "resource_id": "0c791266-a2e4-4f14-82b8-9a9b102fbf94"
+  }
+}

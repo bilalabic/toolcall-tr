@@ -1,0 +1,148 @@
+[project]
+name = "toolcall-tr"
+version = "0.1.0"
+description = "Türkiye'ye özgü API'lerden execution-verified Türkçe tool-calling veri seti üreten açık kaynak pipeline"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Apache-2.0" }
+authors = [{ name = "ToolCall-TR katkıcıları" }]
+keywords = [
+    "tool-calling",
+    "function-calling",
+    "turkish",
+    "synthetic-data",
+    "llm-evaluation",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Natural Language :: Turkish",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+
+dependencies = [
+    "pydantic>=2.7",
+    "pydantic-settings>=2.2",
+    "httpx>=0.27",
+    "typer>=0.12",
+    "pyyaml>=6.0",
+    "jsonschema>=4.21",
+    "rich>=13.7",
+    # Windows Python dağıtımlarında IANA saat dilimi verisi sistemden gelmez.
+    "tzdata>=2025.2",
+]
+
+[project.optional-dependencies]
+# Gerçek LLM üretimi için. CI ve testler şablon üreticiyle çalışır; bunlar gerekmez.
+anthropic = ["anthropic>=0.40"]
+openai = ["openai>=2.0"]
+# Parquet dışa aktarımı.
+parquet = ["pyarrow>=16.0"]
+
+[project.scripts]
+toolcall-tr = "toolcall_tr.cli.main:app"
+
+[project.urls]
+Homepage = "https://github.com/toolcall-tr/toolcall-tr"
+Issues = "https://github.com/toolcall-tr/toolcall-tr/issues"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.2",
+    "pytest-cov>=5.0",
+    "ruff>=0.6",
+    "mypy>=1.11",
+    "import-linter>=2.0",
+    "types-PyYAML>=6.0",
+    "types-jsonschema>=4.21",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/toolcall_tr"]
+
+
+# --------------------------------------------------------------------------
+# Ruff
+# --------------------------------------------------------------------------
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle
+    "W",    # pycodestyle warnings
+    "F",    # pyflakes
+    "I",    # isort
+    "N",    # pep8-naming
+    "UP",   # pyupgrade
+    "B",    # flake8-bugbear
+    "C4",   # flake8-comprehensions
+    "SIM",  # flake8-simplify
+    "TID",  # flake8-tidy-imports
+    "PTH",  # flake8-use-pathlib
+    "RUF",  # ruff-specific
+    "DTZ",  # flake8-datetimez -- donmuş saat disiplini için kritik
+]
+ignore = [
+    "E501",   # satır uzunluğu formatter'a bırakılır
+    "RUF001", # Türkçe metinlerde "belirsiz" unicode karakterler kasıtlı
+    "RUF002",
+    "RUF003",
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Testlerde donmuş saat zorunluluğu ve naming kuralları gevşetilir.
+"tests/**" = ["DTZ", "N802", "N806"]
+
+[tool.ruff.lint.flake8-tidy-imports]
+ban-relative-imports = "all"
+
+[tool.ruff.lint.isort]
+known-first-party = ["toolcall_tr", "tests"]
+
+
+# --------------------------------------------------------------------------
+# mypy
+# --------------------------------------------------------------------------
+[tool.mypy]
+python_version = "3.11"
+files = ["src"]
+strict = true
+warn_unreachable = true
+warn_unused_configs = true
+show_error_codes = true
+plugins = ["pydantic.mypy"]
+
+# LLM SDK'ları isteğe bağlı bağımlılıktır; kurulu olmadan da kod tip
+# denetiminden geçmelidir (boru hattı onlarsız çalışır).
+[[tool.mypy.overrides]]
+module = ["openai.*", "anthropic.*"]
+ignore_missing_imports = true
+
+[tool.pydantic-mypy]
+init_forbid_extra = true
+init_typed = true
+warn_required_dynamic_aliases = true
+
+
+# --------------------------------------------------------------------------
+# pytest
+# --------------------------------------------------------------------------
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+addopts = "-ra --strict-markers --strict-config"
+markers = [
+    "network: ağa gerçekten çıkan testler (varsayılan olarak deselect edilir; cassette kaydı için)",
+    "conformance: dondurulmuş yerel implementasyonu canlı upstream ile karşılaştırır",
+]
+filterwarnings = ["error"]

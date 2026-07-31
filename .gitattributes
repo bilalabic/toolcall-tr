@@ -1,0 +1,14 @@
+# Cassette içerik hash'leri byte'a duyarlıdır. Bir katkıcının git'i cassette
+# JSON'unu CRLF'e çevirirse MANIFEST.json'daki her hash değişir ve replay bozulur.
+# Bu dosya ilk cassette repoya inmeden ÖNCE var olmalıdır.
+
+* text=auto eol=lf
+
+# Cassette ve snapshot verisi: satır sonu dönüşümü kesinlikle yapılmaz.
+data/cassettes/**    -text
+data/snapshots/**    -text
+*.jsonl              -text
+tests/fixtures/**    -text
+
+# Üretilen veri artefaktları.
+*.parquet            binary

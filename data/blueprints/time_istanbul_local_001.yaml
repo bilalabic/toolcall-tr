@@ -1,0 +1,18 @@
+blueprint_id: time_istanbul_local_001
+family_id: time_istanbul_local
+split: train
+domain: time
+kind: successful_tool_call
+difficulty: easy
+provider: general_local
+user_goal: İstanbul yerel saatini öğrenmek
+known_information: { timezone: Europe/Istanbul }
+available_tools: [time.get_local_time, weather.get_current_weather]
+utterances:
+  - "Europe/Istanbul saat diliminde yerel saat nedir?"
+  - "Europe/Istanbul için yerel saati göster."
+expected_behavior: { decision: tool_call }
+expected_actions:
+  - tool: time.get_local_time
+    arguments:
+      timezone: { value: Europe/Istanbul, origin: user_message }

@@ -1,0 +1,61 @@
+{
+  "canonical_json_version": 1,
+  "manifest_hash": "sha256:11cdee409de7341043975652d590624c0c3da45343bb832edfbc6ebd39ed877f",
+  "providers": {
+    "crossref": {
+      "count": 2,
+      "index_hash": "sha256:bfa921c28b21a63637f74175c66ec6b605a93eff8443fd78884e5f5e998a14a7",
+      "license": "CROSSREF-METADATA"
+    },
+    "frankfurter_ecb": {
+      "count": 5,
+      "index_hash": "sha256:3db167f2dd1baf1012c2582f6ae5ae71a990f53cad524b7ecd943bb6fa220086",
+      "license": "UNDETERMINED"
+    },
+    "gbif": {
+      "count": 5,
+      "index_hash": "sha256:8bb6fa9801d19d732b163cc4a08659041cc2a04527a38d3caafa72fd80671440",
+      "license": "UNDETERMINED"
+    },
+    "github_metadata": {
+      "count": 5,
+      "index_hash": "sha256:627d46255552b406255d7d735fff91c6fff28e62069b8023da251c9ef3b7f3ce",
+      "license": "UNDETERMINED"
+    },
+    "izmir": {
+      "count": 17,
+      "index_hash": "sha256:4e9b699c1cd4a9c0ae949314bb63a072eb9ad316f3a28909f751b5304826f66a",
+      "license": "UNDETERMINED"
+    },
+    "izmir_realtime": {
+      "count": 2,
+      "index_hash": "sha256:3092c18bce01c4da8ac1aca5d3df25a04a8b53de98e7dd5231f28b1d82947fc5",
+      "license": "UNDETERMINED"
+    },
+    "met_norway": {
+      "count": 2,
+      "index_hash": "sha256:543d95594944c280ece2a0a6818f040cad296d9dbd9e6ac2867367a4e44d6342",
+      "license": "UNDETERMINED"
+    },
+    "usgs_earthquake": {
+      "count": 1,
+      "index_hash": "sha256:e925c43fce5479f14a4cca96fc69f76cf50d5178f54565a048d657a78d8e3da5",
+      "license": "UNDETERMINED"
+    },
+    "wikidata": {
+      "count": 3,
+      "index_hash": "sha256:30f373f77d87cff1523a4986de3c00a6462cce1ff6cd33ee5ee88b85ad19279a",
+      "license": "CC0-1.0"
+    },
+    "wikimedia_metadata": {
+      "count": 4,
+      "index_hash": "sha256:9e608fe43f09e7c687f46ad578dd8fbd54ef32409c3342df4e4c268a7473c1d5",
+      "license": "UNDETERMINED"
+    },
+    "worldbank_wdi": {
+      "count": 1,
+      "index_hash": "sha256:89f69e83c2527763deb08d6ff53dd810b0dbdfd079dd05c737d66850d2ecae0c",
+      "license": "UNDETERMINED"
+    }
+  }
+}

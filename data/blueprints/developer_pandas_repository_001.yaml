@@ -1,0 +1,22 @@
+blueprint_id: developer_pandas_repository_001
+family_id: developer_pandas_repository
+split: train
+domain: developer_tools
+kind: successful_tool_call
+difficulty: easy
+provider: github_metadata
+
+user_goal: pandas-dev/pandas deposunun temel herkese açık bilgilerini öğrenmek
+known_information: {owner: pandas-dev, repository: pandas}
+available_tools:
+  - developer.get_repository_metadata
+  - developer.list_releases_metadata
+utterances:
+  - "GitHub'daki pandas-dev/pandas deposunun açıklamasını, yıldız sayısını ve ana programlama dilini göster."
+  - "pandas-dev/pandas projesinin herkese açık depo bilgilerini getir."
+expected_behavior: {decision: tool_call}
+expected_actions:
+  - tool: developer.get_repository_metadata
+    arguments:
+      owner: {value: pandas-dev, origin: user_message}
+      repository: {value: pandas, origin: user_message}

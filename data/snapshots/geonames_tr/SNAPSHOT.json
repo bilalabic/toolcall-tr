@@ -1,0 +1,28 @@
+{
+  "attribution": "GeoNames geographical database, CC BY 4.0",
+  "files": {
+    "places.jsonl": {
+      "content_hash": "sha256:d852444850a5b9a7fcedb1b52983b368643707e2f39e9b408ed2513d6a58693f",
+      "row_count": 81
+    },
+    "postal_codes.jsonl": {
+      "content_hash": "sha256:308e550639a07d36468a375bbd369b0aeb73739794140f11870702f6ab96381e",
+      "row_count": 2960
+    }
+  },
+  "license": "CC-BY-4.0",
+  "license_url": "https://www.geonames.org/about.html",
+  "modifications": [
+    "Ana dump'tan PPLA/PPLC türündeki 81 il merkezi seçildi.",
+    "Posta kodu kayıtları posta kodu, il ve ilçe seviyesinde gruplandı.",
+    "Koordinatlar grup içindeki geçerli kayıtların aritmetik ortalamasıdır.",
+    "Alanlar araçların ihtiyaç duyduğu metadata ile sınırlandı."
+  ],
+  "name": "geonames_tr",
+  "retrieved_at": "2026-07-29",
+  "source": {
+    "places": "https://download.geonames.org/export/dump/TR.zip",
+    "postal_codes": "https://download.geonames.org/export/zip/TR.zip"
+  },
+  "status": "production snapshot"
+}

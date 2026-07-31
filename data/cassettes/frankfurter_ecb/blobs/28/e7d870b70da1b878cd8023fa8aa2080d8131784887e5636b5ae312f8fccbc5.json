@@ -1,0 +1,22 @@
+{
+  "attribution": {
+    "attribution": "European Central Bank euro foreign exchange reference rates via Frankfurter",
+    "license": "ECB-TERMS",
+    "modified": "Canonical JSON'a normalize edildi; başlıklar beyaz listeye göre budandı.",
+    "upstream_url": "https://api.frankfurter.dev/v2/rates?base=EUR&quotes=USD&providers=ECB&from=2025-06-30&to=2025-06-30"
+  },
+  "body": [
+    {
+      "base": "EUR",
+      "date": "2025-06-30",
+      "quote": "USD",
+      "rate": 1.172
+    }
+  ],
+  "body_encoding": "json",
+  "headers": {
+    "content-type": "application/json; charset=utf-8",
+    "etag": "\"16af6b2eed5561b21254d6fe98e10deb\""
+  },
+  "status": 200
+}

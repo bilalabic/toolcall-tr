@@ -1,0 +1,28 @@
+blueprint_id: parallel_calendar_two_days_001
+family_id: parallel_calendar_two_days
+split: test
+domain: calendar
+kind: parallel_tool_call
+difficulty: medium
+provider: calendar_mock
+user_goal: 29 ve 30 Temmuz takvim yoğunluğunu karşılaştırmak
+known_information: {}
+context:
+  first_start_at: "2026-07-29T00:00:00+03:00"
+  first_end_at: "2026-07-30T00:00:00+03:00"
+  second_start_at: "2026-07-30T00:00:00+03:00"
+  second_end_at: "2026-07-31T00:00:00+03:00"
+available_tools: [calendar.search_events, calculator.evaluate]
+utterances:
+  - "29 ve 30 Temmuz 2026 günlerindeki takvim kayıtlarımı ayrı ayrı göster."
+  - "29 Temmuz ile 30 Temmuz takvim yoğunluğumu karşılaştırmak için iki günü de getir."
+expected_behavior: { decision: tool_call }
+expected_actions:
+  - tool: calendar.search_events
+    arguments:
+      start_at: { value: "2026-07-29T00:00:00+03:00", origin: system_state }
+      end_at: { value: "2026-07-30T00:00:00+03:00", origin: system_state }
+  - tool: calendar.search_events
+    arguments:
+      start_at: { value: "2026-07-30T00:00:00+03:00", origin: system_state }
+      end_at: { value: "2026-07-31T00:00:00+03:00", origin: system_state }

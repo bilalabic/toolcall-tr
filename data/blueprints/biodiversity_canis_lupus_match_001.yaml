@@ -1,0 +1,21 @@
+blueprint_id: biodiversity_canis_lupus_match_001
+family_id: biodiversity_canis_lupus_match
+split: test
+domain: biodiversity
+kind: successful_tool_call
+difficulty: easy
+provider: gbif
+
+user_goal: Canis lupus bilimsel adının GBIF takson eşleşmesini öğrenmek
+known_information: {scientific_name: Canis lupus}
+available_tools:
+  - biodiversity.match_species_name
+  - biodiversity.get_species
+utterances:
+  - "Canis lupus bilimsel adının GBIF'teki kabul edilen takson eşleşmesini göster."
+  - "GBIF'te Canis lupus adı hangi taksona eşleşiyor?"
+expected_behavior: {decision: tool_call}
+expected_actions:
+  - tool: biodiversity.match_species_name
+    arguments:
+      scientific_name: {value: Canis lupus, origin: user_message}

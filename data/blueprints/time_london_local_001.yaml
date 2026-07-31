@@ -1,0 +1,18 @@
+blueprint_id: time_london_local_001
+family_id: time_london_local
+split: train
+domain: time
+kind: successful_tool_call
+difficulty: easy
+provider: general_local
+user_goal: Londra yerel saatini öğrenmek
+known_information: { timezone: Europe/London }
+available_tools: [time.get_local_time, weather.get_current_weather]
+utterances:
+  - "Europe/London saat diliminde yerel saat nedir?"
+  - "Europe/London için yerel saati göster."
+expected_behavior: { decision: tool_call }
+expected_actions:
+  - tool: time.get_local_time
+    arguments:
+      timezone: { value: Europe/London, origin: user_message }

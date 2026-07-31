@@ -1,0 +1,67 @@
+{
+  "attribution": {
+    "attribution": "Türkçe Vikipedi katkıcıları; yalnızca sayfa metadata alanları",
+    "license": "WIKIMEDIA-METADATA-ONLY",
+    "modified": "Canonical JSON'a normalize edildi; başlıklar beyaz listeye göre budandı.",
+    "upstream_url": "https://tr.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&list=search&srsearch=%C4%B0stanbul&srnamespace=0&srlimit=5&srprop=size%7Cwordcount%7Ctimestamp"
+  },
+  "body": {
+    "batchcomplete": true,
+    "continue": {
+      "continue": "-||",
+      "sroffset": 5
+    },
+    "query": {
+      "search": [
+        {
+          "ns": 0,
+          "pageid": 13855,
+          "size": 236303,
+          "timestamp": "2026-07-27T15:08:26Z",
+          "title": "İstanbul",
+          "wordcount": 18042
+        },
+        {
+          "ns": 0,
+          "pageid": 282716,
+          "size": 37619,
+          "timestamp": "2026-07-21T18:08:33Z",
+          "title": "İstanbul Büyükşehir Belediyesi",
+          "wordcount": 1783
+        },
+        {
+          "ns": 0,
+          "pageid": 6000,
+          "size": 67876,
+          "timestamp": "2026-07-20T14:12:55Z",
+          "title": "İstanbul Üniversitesi",
+          "wordcount": 4854
+        },
+        {
+          "ns": 0,
+          "pageid": 1313405,
+          "size": 9043,
+          "timestamp": "2025-12-13T08:23:15Z",
+          "title": "İstanbul Ulaşım",
+          "wordcount": 481
+        },
+        {
+          "ns": 0,
+          "pageid": 27149,
+          "size": 23769,
+          "timestamp": "2026-07-24T14:49:01Z",
+          "title": "İstanbul Erkek Lisesi",
+          "wordcount": 1963
+        }
+      ],
+      "searchinfo": {
+        "totalhits": 52098
+      }
+    }
+  },
+  "body_encoding": "json",
+  "headers": {
+    "content-type": "application/json; charset=utf-8"
+  },
+  "status": 200
+}

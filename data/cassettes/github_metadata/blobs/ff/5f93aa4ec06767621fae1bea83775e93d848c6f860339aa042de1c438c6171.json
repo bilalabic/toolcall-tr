@@ -1,0 +1,37 @@
+{
+  "attribution": {
+    "attribution": "GitHub public repository metadata; kullanıcı metni ve profilleri hariç",
+    "license": "GITHUB-METADATA-ONLY",
+    "modified": "Canonical JSON'a normalize edildi; başlıklar beyaz listeye göre budandı.",
+    "upstream_url": "https://api.github.com/repos/openai/openai-python"
+  },
+  "body": {
+    "archived": false,
+    "created_at": "2020-10-25T23:23:54Z",
+    "default_branch": "main",
+    "fork": false,
+    "forks_count": 5028,
+    "full_name": "openai/openai-python",
+    "html_url": "https://github.com/openai/openai-python",
+    "id": 307213173,
+    "license": {
+      "spdx_id": "Apache-2.0"
+    },
+    "name": "openai-python",
+    "open_issues_count": 600,
+    "owner": {
+      "login": "openai",
+      "type": "Organization"
+    },
+    "pushed_at": "2026-07-28T22:16:08Z",
+    "stargazers_count": 31258,
+    "updated_at": "2026-07-29T15:04:24Z"
+  },
+  "body_encoding": "json",
+  "headers": {
+    "content-type": "application/json; charset=utf-8",
+    "etag": "W/\"844672407d3b72146d6540ea0ccbb8b571750fe1f370ba92d86b93a280ff2c74\"",
+    "last-modified": "Wed, 29 Jul 2026 15:04:24 GMT"
+  },
+  "status": 200
+}

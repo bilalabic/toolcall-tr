@@ -1,0 +1,18 @@
+blueprint_id: time_tokyo_local_001
+family_id: time_tokyo_local
+split: test
+domain: time
+kind: successful_tool_call
+difficulty: easy
+provider: general_local
+user_goal: Tokyo yerel saatini öğrenmek
+known_information: { timezone: Asia/Tokyo }
+available_tools: [time.get_local_time, weather.get_current_weather]
+utterances:
+  - "Asia/Tokyo saat diliminde yerel saat nedir?"
+  - "Asia/Tokyo için yerel saati göster."
+expected_behavior: { decision: tool_call }
+expected_actions:
+  - tool: time.get_local_time
+    arguments:
+      timezone: { value: Asia/Tokyo, origin: user_message }

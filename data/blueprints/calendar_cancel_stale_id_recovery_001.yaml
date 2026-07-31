@@ -1,0 +1,40 @@
+blueprint_id: calendar_cancel_stale_id_recovery_001
+family_id: calendar_cancel_stale_id_recovery
+split: train
+domain: calendar
+kind: error_recovery
+difficulty: hard
+interaction_type: multi_turn
+provider: calendar_mock
+user_goal: Eski seçili kayıt bulunamazsa ürün planlama toplantısını bulup iptal etmek
+known_information:
+  query: Ürün planlama
+context:
+  stale_event_id: EVT-2026-9999
+  normalized_start_at: "2026-07-29T00:00:00+03:00"
+  normalized_end_at: "2026-07-30T00:00:00+03:00"
+conversation_prefix:
+  - role: user
+    content: "29 Temmuz'daki ürün planlama toplantısını iptal etmek istiyorum."
+  - role: assistant
+    content: "Seçili kayıt eskiyse toplantıyı başlığıyla bulup doğru kaydı iptal etmemi onaylıyor musunuz?"
+available_tools: [calendar.search_events, calendar.cancel_event]
+utterances:
+  - "Evet, Ürün planlama toplantısını bulup iptal etmeni açıkça onaylıyorum."
+  - "Onay veriyorum; Ürün planlama toplantısını bul ve iptal et."
+expected_behavior: { decision: tool_call }
+expected_actions:
+  - tool: calendar.cancel_event
+    arguments:
+      event_id: { value: EVT-2026-9999, origin: system_state }
+      confirmed: { value: true, origin: user_message }
+    expect: { outcome: error, status_code: 404 }
+  - tool: calendar.search_events
+    arguments:
+      start_at: { value: "2026-07-29T00:00:00+03:00", origin: system_state }
+      end_at: { value: "2026-07-30T00:00:00+03:00", origin: system_state }
+      query: { value: Ürün planlama, origin: user_message }
+  - tool: calendar.cancel_event
+    arguments:
+      event_id: "$actions[1].events[0].event_id"
+      confirmed: { value: true, origin: user_message }

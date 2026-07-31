@@ -1,0 +1,39 @@
+{
+  "blueprint_count": 6,
+  "blueprint_hashes": {
+    "synth_currency_try_eur": "sha256:5b43a688829c403704ef80390ad934fafc8fde1e13b6175a7bb04bbbb8649e80",
+    "synth_currency_try_gbp": "sha256:a97bf5f8e280cf2d3a3a46428083e8019bb56ccbdc79da7c40226ee45629a776",
+    "synth_currency_try_usd": "sha256:2a32e9f1f789ad2898aeb68e27ad276a2a0ee916a80749fc11d7014a03b471bc",
+    "synth_weather_location_elazig": "sha256:9dfaeeaf3985001ad3048540c42e28efb938f5c9d0b299bd027ffe61cbee0ba7",
+    "synth_weather_location_istanbul": "sha256:a2e933689e1bd529c7db9e5fab88f984ddb48ea26c15cc9aed9c12dca42ddca5",
+    "synth_weather_location_izmir": "sha256:9c03d0a6af740f5906ed44732f953181f31f570d0aff7411408a963d366bb820"
+  },
+  "catalog": "synthesis",
+  "catalog_blueprint_count": 6,
+  "inputs": {
+    "currency_latest.template.yaml": "sha256:1675664e065e1cb69da3ccac7625e69c15b239d7f1889f5194d835393b8b2677",
+    "currency_pairs.json": "sha256:ef573a882b5a6c044ac127dc0ab7cba983d22bbe5bc5902c962bf939b107e65b",
+    "weather_location_search.template.yaml": "sha256:e3e153284616993d22c805ffebc5a1c93003e7f7186bf32ef4ab4b32753879cc",
+    "weather_locations.json": "sha256:0f8cac91c36c5cbe7f764b15ed64e45a8aa7e0e4c4dedd4fb703bd2a8191421a"
+  },
+  "limit": null,
+  "lock_hash": "sha256:3e1d98ee806e504a5ac5c23651aae0357279a687b6e91db5f96e89bf963d887d",
+  "template_count": 2,
+  "templates": [
+    {
+      "axis_hash": "sha256:ef573a882b5a6c044ac127dc0ab7cba983d22bbe5bc5902c962bf939b107e65b",
+      "axis_snapshot": "currency_pairs.json",
+      "blueprint_count": 3,
+      "template": "currency_latest.template.yaml",
+      "template_hash": "sha256:1675664e065e1cb69da3ccac7625e69c15b239d7f1889f5194d835393b8b2677"
+    },
+    {
+      "axis_hash": "sha256:0f8cac91c36c5cbe7f764b15ed64e45a8aa7e0e4c4dedd4fb703bd2a8191421a",
+      "axis_snapshot": "weather_locations.json",
+      "blueprint_count": 3,
+      "template": "weather_location_search.template.yaml",
+      "template_hash": "sha256:e3e153284616993d22c805ffebc5a1c93003e7f7186bf32ef4ab4b32753879cc"
+    }
+  ],
+  "version": 2
+}

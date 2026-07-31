@@ -1,0 +1,18 @@
+blueprint_id: geo_search_igdir_001
+family_id: geo_search_igdir
+split: train
+domain: geography
+kind: successful_tool_call
+difficulty: easy
+provider: geonames_tr
+user_goal: Iğdır il merkezinin coğrafi kaydını bulmak
+known_information: { query: Iğdır }
+available_tools: [geo.search_places, geo.get_place, geo.find_nearby_places]
+utterances:
+  - "Iğdır il merkezinin coğrafi kaydını bul."
+  - "Iğdır için şehir konumu sonucunu getir."
+expected_behavior: { decision: tool_call }
+expected_actions:
+  - tool: geo.search_places
+    arguments:
+      query: { value: Iğdır, origin: user_message }

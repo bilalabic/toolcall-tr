@@ -1,0 +1,24 @@
+blueprint_id: direct_answer_turkey_capital_001
+family_id: direct_answer_turkey_capital
+split: validation
+domain: general_knowledge
+kind: should_answer_directly
+difficulty: easy
+provider: no_tool
+
+user_goal: Türkiye'nin başkentini öğrenmek
+known_information: {}
+
+available_tools:
+  - knowledge.search_pages
+  - geo.search_places
+
+utterances:
+  - "Türkiye'nin başkenti neresidir?"
+  - "Türkiye'nin başkenti hangi şehirdir?"
+
+expected_behavior:
+  decision: direct_answer
+  response_intent_tr: >-
+    Araç çağırmadan Türkiye'nin başkentinin Ankara olduğunu söyle.
+  assistant_response_tr: "Türkiye'nin başkenti Ankara'dır."

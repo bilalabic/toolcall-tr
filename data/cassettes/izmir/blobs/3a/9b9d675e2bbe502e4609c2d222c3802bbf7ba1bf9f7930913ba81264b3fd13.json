@@ -1,0 +1,380 @@
+{
+  "attribution": {
+    "attribution": "Atıf 4.0 Uluslararası (CC BY 4.0) kapsamında lisanslanan kamu sektörü bilgilerini içerir. Kaynak: İzmir Büyükşehir Belediyesi Açık Veri Portalı.",
+    "license": "CC-BY-4.0",
+    "modified": "Canonical JSON'a normalize edildi; başlıklar beyaz listeye göre budandı.",
+    "upstream_url": "https://acikveri.bizizmir.com/api/3/action/package_search?q=hava+kalitesi&rows=5&start=0"
+  },
+  "body": {
+    "help": "https://acikveri.bizizmir.com/api/3/action/help_show?name=package_search",
+    "result": {
+      "count": 2,
+      "facets": {},
+      "results": [
+        {
+          "author": "İzBB Çevre Koruma ve Kontrol Şube Müdürlüğü",
+          "author_email": "acikveri@bizizmir.com",
+          "creator_user_id": "ddfba975-498b-41d2-9e04-2dd9b70a5c9a",
+          "extras": [
+            {
+              "key": "Coğrafi veri içeriyor mu?",
+              "value": "evet"
+            },
+            {
+              "key": "Dil",
+              "value": "tr-TR"
+            },
+            {
+              "key": "Veri Tarih Aralığı",
+              "value": "1996 -"
+            },
+            {
+              "key": "Veri güncelleme sıklığı",
+              "value": "günlük"
+            },
+            {
+              "key": "Yayıncı",
+              "value": "İzmir Büyükşehir Belediyesi"
+            }
+          ],
+          "groups": [
+            {
+              "description": "It can be defined as ensuring the sustainability of the environment and nature by protecting the natural assets of the city with the management of waste, mitigating air, water and soil pollutions and fighting against climate change with the support of Information and Communication Technologies and managing the environment by taking into account the green city planning.",
+              "display_name": "Environment",
+              "id": "68c5c206-8a9d-4483-9af5-e7ec2f11127c",
+              "image_display_url": "https://acikveri.bizizmir.com/uploads/group/2020-12-22-182630.419902cevre-icon.svg",
+              "name": "cevre",
+              "title": "Environment"
+            },
+            {
+              "description": "Yaşam kalitesini arttırmayı hedefleyen, sağlık hizmetlerini iyileştiren, bireylerin sağlıkları ile ilgili farkındalıklarını arttıran, sağlık verisini akıllı bir şekilde analiz edilmesini sağlayan uygulama ve hizmetlerdir. ",
+              "display_name": "Sağlık",
+              "id": "6f63247a-66e2-4fdd-aa9b-5d46832e2967",
+              "image_display_url": "https://acikveri.bizizmir.com/uploads/group/2024-03-21-061249.394021Saglik.svg",
+              "name": "saglik",
+              "title": "Sağlık"
+            }
+          ],
+          "id": "9e4105fa-858f-4435-ae1f-fedca6be07dc",
+          "isopen": false,
+          "license_id": "Izmir-Metropolitan-Municipality-License",
+          "license_title": "Izmir Metropolitan Municipality Open Data License",
+          "license_url": "http://acikveri.bizizmir.com/tr/license",
+          "maintainer": "İzBB Çevre Koruma ve Kontrol Şube Müdürlüğü",
+          "maintainer_email": "acikveri@bizizmir.com",
+          "metadata_created": "2020-10-05T08:15:41.270968",
+          "metadata_modified": "2026-04-14T09:21:59.978352",
+          "name": "hava-kalitesi-olcum-degerleri",
+          "notes": "Hava kalitesi ölçüm değerleri",
+          "num_resources": 5,
+          "num_tags": 4,
+          "organization": {
+            "approval_status": "approved",
+            "created": "2020-12-11T10:33:09.758821",
+            "description": "",
+            "id": "088a4797-a229-4b21-9719-ed1ec433ff4d",
+            "image_url": "2023-04-27-110541.820820Portal-ibb-logo.png",
+            "is_organization": true,
+            "name": "iklim-degisikligi-ve-sifir-atik-dairesi-baskanligi",
+            "revision_id": "26ae51af-0a92-4c4e-a9f5-ae950f545cb9",
+            "state": "active",
+            "title": "İklim Değişikliği Ve Sıfır Atık Dairesi Başkanlığı",
+            "type": "organization"
+          },
+          "owner_org": "088a4797-a229-4b21-9719-ed1ec433ff4d",
+          "private": false,
+          "relationships_as_object": [],
+          "relationships_as_subject": [],
+          "resources": [
+            {
+              "cache_last_updated": null,
+              "cache_url": null,
+              "created": "2020-12-27T09:09:04.724204",
+              "datastore_active": false,
+              "description": "Belirtilen tarihe göre hava kalitesi ölçüm değerlerini içeren web servisi",
+              "format": "API",
+              "hash": "",
+              "id": "6504d871-441f-4402-9279-975fe87fe5dc",
+              "last_modified": null,
+              "mimetype": null,
+              "mimetype_inner": null,
+              "name": "Tarihe Göre Hava Kalitesi Ölçüm Değerleri",
+              "package_id": "9e4105fa-858f-4435-ae1f-fedca6be07dc",
+              "position": 0,
+              "resource_type": null,
+              "revision_id": "7e40d93c-cfed-4e76-85e2-db4197304f98",
+              "size": null,
+              "state": "active",
+              "url": "https://openapi.izmir.bel.tr/api/ibb/cevre/havadegerleri/{yyyy-MM-dd}",
+              "url_type": null
+            },
+            {
+              "cache_last_updated": null,
+              "cache_url": null,
+              "created": "2021-01-17T13:03:43.020738",
+              "datastore_active": false,
+              "description": "Web servislerin kullanım dokümanını içeren PDF dosya.",
+              "format": "PDF",
+              "hash": "",
+              "id": "60fbca32-5363-41da-9720-dfa5d69a564e",
+              "last_modified": null,
+              "mimetype": "application/pdf",
+              "mimetype_inner": null,
+              "name": "Web Servis Kullanım Dokümanı",
+              "package_id": "9e4105fa-858f-4435-ae1f-fedca6be07dc",
+              "position": 1,
+              "resource_type": null,
+              "revision_id": "7e40d93c-cfed-4e76-85e2-db4197304f98",
+              "size": null,
+              "state": "active",
+              "url": "https://openfiles.izmir.bel.tr/111324/docs/ibbapi-WebServisKullanimDokumani_1.0.pdf",
+              "url_type": null
+            },
+            {
+              "cache_last_updated": null,
+              "cache_url": null,
+              "created": "2021-02-15T11:25:28.988872",
+              "datastore_active": true,
+              "description": "Hava kalitesi ölçüm değerlerini içeren CSV dosyası.",
+              "format": "CSV",
+              "hash": "",
+              "id": "fd7dbd83-9142-476e-9c07-0347b97c6271",
+              "last_modified": "2026-04-14T12:21:59.271802",
+              "mimetype": "text/csv",
+              "mimetype_inner": null,
+              "name": "Hava Kalitesi Ölçüm Değerleri",
+              "package_id": "9e4105fa-858f-4435-ae1f-fedca6be07dc",
+              "position": 2,
+              "resource_type": null,
+              "revision_id": "312ed687-0801-49f0-8c4d-446aa67224f1",
+              "size": 1930897,
+              "state": "active",
+              "url": "https://openfiles.izmir.bel.tr/100187/docs/izbb-hava-kalitesi-olcum-degerleri.csv",
+              "url_type": ""
+            },
+            {
+              "cache_last_updated": null,
+              "cache_url": null,
+              "created": "2022-01-20T07:07:45.987829",
+              "datastore_active": true,
+              "description": "1996 - 2005 Hava kalitesi ölçüm değerlerini içeren CSV dosyası",
+              "format": "CSV",
+              "hash": "",
+              "id": "5bf29b2d-06ca-4fa1-95a9-5fdd3bd81ffb",
+              "last_modified": "2022-03-03T05:53:43.234533",
+              "mimetype": "text/csv",
+              "mimetype_inner": null,
+              "name": "1996 - 2005 Hava Kalitesi Ölçüm Değerleri",
+              "package_id": "9e4105fa-858f-4435-ae1f-fedca6be07dc",
+              "position": 3,
+              "resource_type": null,
+              "revision_id": "82fbf7e1-a3c3-45c8-9ee1-0a8f284df736",
+              "size": 1442174,
+              "state": "active",
+              "url": "https://acikveri.bizizmir.com/dataset/9e4105fa-858f-4435-ae1f-fedca6be07dc/resource/5bf29b2d-06ca-4fa1-95a9-5fdd3bd81ffb/download/hava-kalitesi-olcum-degerleri_1996-2005.csv",
+              "url_type": "upload"
+            },
+            {
+              "cache_last_updated": null,
+              "cache_url": null,
+              "created": "2022-01-20T07:09:22.431831",
+              "datastore_active": true,
+              "description": "2006 - 2015 Hava kalitesi ölçüm değerlerini içeren CSV dosyası",
+              "format": "CSV",
+              "hash": "",
+              "id": "76e68790-d650-4928-9d33-a01eb6525d83",
+              "last_modified": "2022-03-03T05:58:20.494570",
+              "mimetype": "text/csv",
+              "mimetype_inner": null,
+              "name": "2006 - 2015 Hava Kalitesi Ölçüm Değerleri",
+              "package_id": "9e4105fa-858f-4435-ae1f-fedca6be07dc",
+              "position": 4,
+              "resource_type": null,
+              "revision_id": "82fbf7e1-a3c3-45c8-9ee1-0a8f284df736",
+              "size": 2288622,
+              "state": "active",
+              "url": "https://acikveri.bizizmir.com/dataset/9e4105fa-858f-4435-ae1f-fedca6be07dc/resource/76e68790-d650-4928-9d33-a01eb6525d83/download/hava-kalitesi-olcum-degerleri_2006-2015.csv",
+              "url_type": "upload"
+            }
+          ],
+          "revision_id": "a94402ac-1054-49b8-8128-ed1f17da7cf3",
+          "state": "active",
+          "tags": [
+            {
+              "display_name": "gaz",
+              "id": "19c309a0-b6d0-4727-90bb-ff3aaeb0701c",
+              "name": "gaz",
+              "state": "active",
+              "vocabulary_id": null
+            },
+            {
+              "display_name": "hava",
+              "id": "7a6bcd15-817d-4650-8212-96a85ac6d764",
+              "name": "hava",
+              "state": "active",
+              "vocabulary_id": null
+            },
+            {
+              "display_name": "çevre",
+              "id": "55a6b54a-497f-40b9-b4bb-dd6522eb844a",
+              "name": "çevre",
+              "state": "active",
+              "vocabulary_id": null
+            },
+            {
+              "display_name": "ölçüm",
+              "id": "77db87bc-2a27-4233-9372-9eaf85bbefec",
+              "name": "ölçüm",
+              "state": "active",
+              "vocabulary_id": null
+            }
+          ],
+          "title": "Hava Kalitesi Ölçüm Değerleri",
+          "tracking_summary": {
+            "recent": 15,
+            "total": 2280
+          },
+          "type": "dataset",
+          "url": "https://acikveri.bizizmir.com/tr/dataset/hava-kalitesi-olcum-degerleri",
+          "version": ""
+        },
+        {
+          "author": "İzBB Çevre Koruma Ve Kontrol Şube Müdürlüğü",
+          "author_email": "acikveri@bizizmir.com",
+          "creator_user_id": "ddfba975-498b-41d2-9e04-2dd9b70a5c9a",
+          "extras": [
+            {
+              "key": "Coğrafi Veri İçeriyor mu?",
+              "value": "evet"
+            },
+            {
+              "key": "Dil",
+              "value": "tr-TR"
+            },
+            {
+              "key": "Veri Güncelleme Sıklığı",
+              "value": "düzensiz"
+            },
+            {
+              "key": "Yayıncı",
+              "value": "İzmir Büyükşehir Belediyesi"
+            }
+          ],
+          "groups": [
+            {
+              "description": "Birçok sektörle mekânsal etkileşimi olan coğrafi verinin; üretilmesi, temini, depolanması, işlenmesi, yönetilmesi, kıymetlendirilmesi, analiz edilmesi, paylaşılması, görselleştirilmesi, sunulması ve güncel tutulması için gerekli olan donanım, yazılım, insan kaynağı, standartlar ve yöntemler bütünüdür. ",
+              "display_name": "Coğrafi Bilgi Sistemleri",
+              "id": "b4543a00-478e-4f50-b1cb-3e755c6e640f",
+              "image_display_url": "https://acikveri.bizizmir.com/uploads/group/2024-03-20-072609.145856Cografi.svg",
+              "name": "cografi-bilgi-sistemleri",
+              "title": "Coğrafi Bilgi Sistemleri"
+            },
+            {
+              "description": "It can be defined as ensuring the sustainability of the environment and nature by protecting the natural assets of the city with the management of waste, mitigating air, water and soil pollutions and fighting against climate change with the support of Information and Communication Technologies and managing the environment by taking into account the green city planning.",
+              "display_name": "Environment",
+              "id": "68c5c206-8a9d-4483-9af5-e7ec2f11127c",
+              "image_display_url": "https://acikveri.bizizmir.com/uploads/group/2020-12-22-182630.419902cevre-icon.svg",
+              "name": "cevre",
+              "title": "Environment"
+            }
+          ],
+          "id": "3712094a-ded4-40cf-ac94-2102eeb73cbc",
+          "isopen": false,
+          "license_id": "Izmir-Metropolitan-Municipality-License",
+          "license_title": "Izmir Metropolitan Municipality Open Data License",
+          "license_url": "http://acikveri.bizizmir.com/tr/license",
+          "maintainer": "İzBB Çevre Koruma Ve Kontrol Şube Müdürlüğü",
+          "maintainer_email": "acikveri@bizizmir.com",
+          "metadata_created": "2021-10-27T14:16:38.180971",
+          "metadata_modified": "2024-03-20T06:10:57.545604",
+          "name": "hava-kalitesi-olcum-istasyonlari-konum-verisi",
+          "notes": "İzmir Büyükşehir Belediyesine ait hava kalitesi ölçüm istasyonlarının konum verisi",
+          "num_resources": 1,
+          "num_tags": 3,
+          "organization": {
+            "approval_status": "approved",
+            "created": "2020-08-30T14:20:43.479044",
+            "description": "",
+            "id": "d4f1d3e2-dbe7-4d72-b6c9-1e5849d6da71",
+            "image_url": "2023-04-27-110149.990571Portal-ibb-logo.png",
+            "is_organization": true,
+            "name": "cevre-koruma-kontrol-dairesi-baskanligi",
+            "revision_id": "ecb8669d-8b51-4227-b472-3e7225d606af",
+            "state": "active",
+            "title": "Çevre Koruma Ve Kontrol Dairesi Başkanlığı",
+            "type": "organization"
+          },
+          "owner_org": "d4f1d3e2-dbe7-4d72-b6c9-1e5849d6da71",
+          "private": false,
+          "relationships_as_object": [],
+          "relationships_as_subject": [],
+          "resources": [
+            {
+              "cache_last_updated": null,
+              "cache_url": null,
+              "created": "2021-10-27T14:20:24.107896",
+              "datastore_active": true,
+              "description": "Hava kalitesi ölçüm istastonları konum verisini içeren CSV dosyası\r\n",
+              "format": "CSV",
+              "hash": "",
+              "id": "7b0edbda-350a-4240-b2c5-a4deb1b4bdfc",
+              "last_modified": "2023-01-12T10:55:04.494442",
+              "mimetype": "text/csv",
+              "mimetype_inner": null,
+              "name": "Hava Kalitesi Ölçüm İstasyonları Konum Verisi",
+              "package_id": "3712094a-ded4-40cf-ac94-2102eeb73cbc",
+              "position": 0,
+              "resource_type": null,
+              "revision_id": "dbdcebd8-c7c1-41e8-907e-aeae3276ca87",
+              "size": 409,
+              "state": "active",
+              "url": "https://acikveri.bizizmir.com/dataset/3712094a-ded4-40cf-ac94-2102eeb73cbc/resource/7b0edbda-350a-4240-b2c5-a4deb1b4bdfc/download/hava-kalitesi-olcum-istasyonlari.csv",
+              "url_type": "upload"
+            }
+          ],
+          "revision_id": "640398cc-9127-47e8-a6ae-1279a5aebbab",
+          "state": "active",
+          "tags": [
+            {
+              "display_name": "hava",
+              "id": "7a6bcd15-817d-4650-8212-96a85ac6d764",
+              "name": "hava",
+              "state": "active",
+              "vocabulary_id": null
+            },
+            {
+              "display_name": "istasyon",
+              "id": "ac884553-4a59-46d7-ada2-bc4a161de4a9",
+              "name": "istasyon",
+              "state": "active",
+              "vocabulary_id": null
+            },
+            {
+              "display_name": "ölçüm",
+              "id": "77db87bc-2a27-4233-9372-9eaf85bbefec",
+              "name": "ölçüm",
+              "state": "active",
+              "vocabulary_id": null
+            }
+          ],
+          "title": "Hava Kalitesi Ölçüm İstasyonları Konum Verisi",
+          "tracking_summary": {
+            "recent": 7,
+            "total": 608
+          },
+          "type": "dataset",
+          "url": "https://acikveri.bizizmir.com/dataset/hava-kalitesi-olcum-istasyonlari-konum-verisi",
+          "version": ""
+        }
+      ],
+      "search_facets": {},
+      "sort": "score desc, metadata_modified desc"
+    },
+    "success": true
+  },
+  "body_encoding": "json",
+  "headers": {
+    "content-type": "application/json;charset=utf-8"
+  },
+  "status": 200
+}

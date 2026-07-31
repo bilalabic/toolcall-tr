@@ -1,0 +1,22 @@
+{
+  "attribution": {
+    "attribution": "European Central Bank euro foreign exchange reference rates via Frankfurter",
+    "license": "ECB-TERMS",
+    "modified": "Canonical JSON'a normalize edildi; başlıklar beyaz listeye göre budandı.",
+    "upstream_url": "https://api.frankfurter.dev/v2/rates?base=TRY&quotes=EUR&providers=ECB&from=2025-01-02&to=2025-01-02"
+  },
+  "body": [
+    {
+      "base": "TRY",
+      "date": "2025-01-02",
+      "quote": "EUR",
+      "rate": 0.02743
+    }
+  ],
+  "body_encoding": "json",
+  "headers": {
+    "content-type": "application/json; charset=utf-8",
+    "etag": "W/\"d5f6ab4a53792ad68ae3abcc916458e4\""
+  },
+  "status": 200
+}

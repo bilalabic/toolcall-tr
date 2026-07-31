@@ -1,0 +1,21 @@
+blueprint_id: geo_elazig_place_details_001
+family_id: geo_elazig_place_details
+split: test
+domain: geography
+kind: sequential_tool_call
+difficulty: medium
+provider: geonames_tr
+user_goal: Elazığ il merkezini bulup saat dilimi ve nüfus ayrıntılarını görmek
+known_information: { query: Elazığ }
+available_tools: [geo.search_places, geo.get_place, geo.find_nearby_places]
+utterances:
+  - "Elazığ il merkezini bulup saat dilimi ve nüfus ayrıntılarını getir."
+  - "Elazığ şehir kaydını ara, ardından ayrıntılarını göster."
+expected_behavior: { decision: tool_call }
+expected_actions:
+  - tool: geo.search_places
+    arguments:
+      query: { value: Elazığ, origin: user_message }
+  - tool: geo.get_place
+    arguments:
+      geoname_id: "$actions[0].results[0].geoname_id"

@@ -1,0 +1,26 @@
+axis_snapshot: currency_pairs.json
+template:
+  blueprint_id: "synth_currency_{base}_{quote}"
+  family_id: "synth_currency_latest_{base}_{quote}"
+  domain: currency
+  kind: successful_tool_call
+  difficulty: easy
+  provider: frankfurter_ecb
+  user_goal: "{base}/{quote} referans kurunu öğrenmek"
+  known_information:
+    base: "{base}"
+    quote: "{quote}"
+  available_tools:
+    - currency.get_exchange_rate
+    - currency.get_historical_exchange_rate
+    - currency.list_supported_currencies
+  utterances:
+    - "{base}/{quote} referans kurunu getir."
+    - "Bir {base} kaç {quote} ediyor?"
+  expected_behavior:
+    decision: tool_call
+  expected_actions:
+    - tool: currency.get_exchange_rate
+      arguments:
+        base: { value: "{base}", origin: user_message }
+        quote: { value: "{quote}", origin: user_message }

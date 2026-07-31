@@ -1,0 +1,36 @@
+blueprint_id: clarification_weather_missing_city_001
+family_id: clarification_weather_missing_city
+split: train
+domain: weather
+kind: should_ask_clarification
+difficulty: easy
+interaction_type: multi_turn
+provider: met_norway
+
+user_goal: Yarınki hava tahminini öğrenmek, ancak şehir bilinmiyor
+known_information: {}
+missing_information:
+  - query
+conversation_prefix:
+  - role: user
+    content: "Yarının hava durumuna bakmak istiyorum."
+  - role: assistant
+    content: "Elbette, nasıl yardımcı olayım?"
+
+available_tools:
+  - geo.search_places
+  - weather.get_current_weather
+  - weather.get_weather_forecast
+
+utterances:
+  - "Yarın hava nasıl olacak?"
+  - "Yarının hava tahminine bakar mısın?"
+
+expected_behavior:
+  decision: clarification
+  missing_parameters:
+    - query
+  response_intent_tr: >-
+    Hava tahminine bakılacak şehri veya konumu sor.
+  assistant_response_tr: >-
+    Hangi şehir veya konum için yarının hava tahminine bakmamı istersiniz?

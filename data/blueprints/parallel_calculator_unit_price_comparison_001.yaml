@@ -1,0 +1,21 @@
+blueprint_id: parallel_calculator_unit_price_comparison_001
+family_id: parallel_calculator_unit_price_comparison
+split: train
+domain: calculation
+kind: parallel_tool_call
+difficulty: medium
+provider: general_local
+user_goal: İki paketin birim fiyatını ayrı ayrı hesaplayıp karşılaştırmak
+known_information: {}
+available_tools: [calculator.evaluate, time.get_local_time]
+utterances:
+  - "240 / 6 ile 350 / 10 işlemlerini ayrı ayrı hesaplayıp birim fiyatları karşılaştır."
+  - "İki paketi kıyaslamak için 240 / 6 ve 350 / 10 sonuçlarını ayrı ayrı bul."
+expected_behavior: { decision: tool_call }
+expected_actions:
+  - tool: calculator.evaluate
+    arguments:
+      expression: { value: "240 / 6", origin: user_message }
+  - tool: calculator.evaluate
+    arguments:
+      expression: { value: "350 / 10", origin: user_message }

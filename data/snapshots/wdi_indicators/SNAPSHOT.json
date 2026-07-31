@@ -1,0 +1,19 @@
+{
+  "attribution": "World Bank, World Development Indicators, CC BY 4.0 with additional terms.",
+  "content_hash": "sha256:d9cf3d330f319387010051bbe33e13089d8d0fd9fe4bed32a9bef357ba2a419d",
+  "license": "CC-BY-4.0-WORLD-BANK-TERMS",
+  "license_url": "https://data.worldbank.org/summary-terms-of-use",
+  "modifications": [
+    "Yalnızca World Development Indicators source=2 serileri seçildi.",
+    "İlk pilot için üç yeniden dağıtılabilir gösterge allowlist'e alındı.",
+    "Türkçe görüntüleme adları ToolCall-TR tarafından eklendi."
+  ],
+  "name": "wdi_indicators",
+  "retrieved_at": "2026-07-29",
+  "row_count": 3,
+  "source": {
+    "api": "https://api.worldbank.org/v2",
+    "source_id": 2,
+    "source_name": "World Development Indicators"
+  }
+}

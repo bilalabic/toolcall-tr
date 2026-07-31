@@ -1,0 +1,21 @@
+{
+  "attribution": "Türkiye Cumhuriyeti mevzuatı ve Diyanet İşleri Başkanlığı 2026 dinî günler listesi",
+  "content_hash": "sha256:6567684277c8c24cf2a842ed356656b2995d20c2a3897a0e5ed8212b96e343ee",
+  "license": "PUBLIC-LAW-AND-OFFICIAL-CALENDAR-METADATA",
+  "modifications": [
+    "Yalnızca 2026 resmî tatil günleri normalize edildi.",
+    "Arefe ve 28 Ekim yarım günleri 13:00 başlangıcıyla açıkça işaretlendi.",
+    "Kandiller ve resmî tatil olmayan dinî günler dışarıda bırakıldı."
+  ],
+  "name": "tr_public_holidays",
+  "retrieved_at": "2026-07-29",
+  "row_count": 17,
+  "sources": [
+    "https://vakithesaplama.diyanet.gov.tr/icerik.php?icerik=153",
+    "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.2429.pdf"
+  ],
+  "status": "production snapshot",
+  "supported_years": [
+    2026
+  ]
+}

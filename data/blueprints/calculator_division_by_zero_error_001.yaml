@@ -1,0 +1,19 @@
+blueprint_id: calculator_division_by_zero_error_001
+family_id: calculator_division_by_zero_error
+split: train
+domain: calculation
+kind: expected_error
+difficulty: medium
+provider: general_local
+user_goal: Sıfıra bölme işleminin hesaplanıp hesaplanamayacağını görmek
+known_information: { expression: "10 / 0" }
+available_tools: [calculator.evaluate, time.get_local_time]
+utterances:
+  - "10 / 0 işlemini hesaplamayı dene."
+  - "10 / 0 sonucunu bulabilir misin?"
+expected_behavior: { decision: tool_call }
+expected_actions:
+  - tool: calculator.evaluate
+    arguments:
+      expression: { value: "10 / 0", origin: user_message }
+    expect: { outcome: error, status_code: 422 }

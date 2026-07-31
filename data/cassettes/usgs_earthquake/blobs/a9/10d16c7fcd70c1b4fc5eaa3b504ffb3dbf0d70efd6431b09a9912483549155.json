@@ -1,0 +1,28 @@
+{
+  "attribution": {
+    "attribution": "U.S. Geological Survey",
+    "license": "PUBLIC-DOMAIN-US",
+    "modified": "Canonical JSON'a normalize edildi; başlıklar beyaz listeye göre budandı.",
+    "upstream_url": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2026-07-20&endtime=2026-07-28&minmagnitude=3.0&limit=20&orderby=time&latitude=38.6743&longitude=39.2232&maxradiuskm=300.0"
+  },
+  "body": {
+    "features": [],
+    "metadata": {
+      "api": "2.7.0",
+      "generated": 1785310111000,
+      "limit": 20,
+      "offset": 1,
+      "status": 200,
+      "title": "USGS Earthquakes",
+      "url": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2026-07-20&endtime=2026-07-28&minmagnitude=3.0&limit=20&orderby=time&latitude=38.6743&longitude=39.2232&maxradiuskm=300.0"
+    },
+    "type": "FeatureCollection"
+  },
+  "body_encoding": "json",
+  "headers": {
+    "content-type": "application/json; charset=utf-8",
+    "expires": "Wed, 29 Jul 2026 07:29:31 GMT",
+    "last-modified": "Wed, 29 Jul 2026 07:28:31 GMT"
+  },
+  "status": 200
+}

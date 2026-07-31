@@ -1,0 +1,31 @@
+{
+  "attribution": {
+    "attribution": "Türkçe Vikipedi katkıcıları; yalnızca sayfa metadata alanları",
+    "license": "WIKIMEDIA-METADATA-ONLY",
+    "modified": "Canonical JSON'a normalize edildi; başlıklar beyaz listeye göre budandı.",
+    "upstream_url": "https://tr.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&prop=categories&pageids=28800&clshow=%21hidden&cllimit=20"
+  },
+  "body": {
+    "batchcomplete": true,
+    "query": {
+      "pages": [
+        {
+          "categories": [
+            {
+              "ns": 14,
+              "title": "Kategori:Fırat Üniversitesi"
+            }
+          ],
+          "ns": 0,
+          "pageid": 28800,
+          "title": "Fırat Üniversitesi"
+        }
+      ]
+    }
+  },
+  "body_encoding": "json",
+  "headers": {
+    "content-type": "application/json; charset=utf-8"
+  },
+  "status": 200
+}

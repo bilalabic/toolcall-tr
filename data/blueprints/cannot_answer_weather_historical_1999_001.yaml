@@ -1,0 +1,32 @@
+blueprint_id: cannot_answer_weather_historical_1999_001
+family_id: cannot_answer_weather_historical
+split: validation
+domain: weather
+kind: should_refuse
+difficulty: medium
+provider: met_norway
+
+user_goal: İstanbul'un 1 Ocak 1999 tarihindeki hava durumunu öğrenmek
+known_information:
+  query: İstanbul
+  date: "1999-01-01"
+
+available_tools:
+  - geo.search_places
+  - weather.get_current_weather
+  - weather.get_weather_forecast
+
+utterances:
+  - "1999-01-01 tarihinde İstanbul'da hava nasıldı?"
+  - "İstanbul'un 1 Ocak 1999'daki hava durumunu göster."
+
+expected_behavior:
+  decision: cannot_answer
+  unsupported_reason_tr: >-
+    Sunulan hava araçları yalnızca güncel ölçüm ve ileriye dönük tahmin
+    sağlar; geçmiş hava arşivine erişmez.
+  response_intent_tr: >-
+    Geçmiş tarihli hava verisine erişemediğini açıkla.
+  assistant_response_tr: >-
+    Kullanabildiğim hava araçları geçmiş hava arşivine erişmiyor; yalnızca
+    güncel durumu ve ileriye dönük tahmini sağlayabiliyorum.

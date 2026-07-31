@@ -1,0 +1,28 @@
+blueprint_id: currency_list_supported_001
+family_id: currency_supported_codes
+split: validation
+domain: currency
+kind: successful_tool_call
+difficulty: easy
+provider: frankfurter_ecb
+
+user_goal: Desteklenen para birimlerini listelemek
+known_information: {}
+
+available_tools:
+  - currency.get_exchange_rate
+  - currency.get_historical_exchange_rate
+  - currency.list_supported_currencies
+  - geo.search_places
+
+utterances:
+  - "Hangi para birimlerini destekliyorsun?"
+  - "Kullanılabilen döviz kodlarını listele."
+  - "Kur sorgusunda hangi para birimlerini seçebilirim?"
+
+expected_behavior:
+  decision: tool_call
+
+expected_actions:
+  - tool: currency.list_supported_currencies
+    arguments: {}

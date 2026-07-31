@@ -1,0 +1,21 @@
+blueprint_id: calculator_installment_001
+family_id: calculator_installment
+split: test
+domain: calculation
+kind: successful_tool_call
+difficulty: easy
+provider: general_local
+
+user_goal: 2400'den 350 çıkarıldıktan sonra kalanı beşe bölmek
+known_information:
+  expression: "(2400 - 350) / 5"
+available_tools: [calculator.evaluate, currency.get_exchange_rate]
+utterances:
+  - "(2400 - 350) / 5 işlemini hesapla."
+  - "(2400 - 350) / 5 kaç eder?"
+expected_behavior:
+  decision: tool_call
+expected_actions:
+  - tool: calculator.evaluate
+    arguments:
+      expression: { value: "(2400 - 350) / 5", origin: user_message }

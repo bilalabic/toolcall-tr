@@ -1,0 +1,31 @@
+blueprint_id: cannot_answer_knowledge_article_summary_001
+family_id: cannot_answer_knowledge_article_summary
+split: test
+domain: knowledge
+kind: should_refuse
+difficulty: medium
+provider: wikimedia_metadata
+
+user_goal: Fırat Üniversitesi'nin Vikipedi makalesini özetlemek
+known_information:
+  query: Fırat Üniversitesi
+
+available_tools:
+  - knowledge.search_pages
+  - knowledge.get_page_metadata
+  - knowledge.list_page_categories
+
+utterances:
+  - "Fırat Üniversitesi'nin Türkçe Vikipedi makalesini özetle."
+  - "Vikipedi'deki Fırat Üniversitesi yazısının kısa bir özetini çıkar."
+
+expected_behavior:
+  decision: cannot_answer
+  unsupported_reason_tr: >-
+    Sunulan bilgi araçları yalnızca sayfa kimliği, bağlantı ve kategori
+    bilgilerini getirir; makale metnini sağlamaz.
+  response_intent_tr: >-
+    Makale metnine erişemediği için özet çıkaramayacağını açıkla.
+  assistant_response_tr: >-
+    Kullanabildiğim araçlar makale metnini değil, yalnızca sayfa ve kategori
+    bilgilerini getiriyor; bu nedenle makalenin özetini çıkaramıyorum.

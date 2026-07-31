@@ -1,0 +1,26 @@
+blueprint_id: web_cumhuriyet_holiday_metadata_001
+family_id: web_cumhuriyet_holiday_metadata
+split: train
+domain: web_metadata
+kind: sequential_tool_call
+difficulty: medium
+provider: federated_web_metadata
+user_goal: Cumhuriyet Bayramı için güvenli kaynak metadata kaydını bulup ayrıntılarını görmek
+known_information: { query: Cumhuriyet Bayramı }
+context:
+  source_filter: [official_calendar]
+  result_type_filter: public_holiday
+available_tools: [web.search, web.get_result_metadata]
+utterances:
+  - "Cumhuriyet Bayramı için resmî takvim kaynak metadata kaydını bulup ayrıntılarını getir."
+  - "Cumhuriyet Bayramı kaynağını yalnız metadata olarak ara ve kayıt ayrıntısını göster."
+expected_behavior: { decision: tool_call }
+expected_actions:
+  - tool: web.search
+    arguments:
+      query: { value: Cumhuriyet Bayramı, origin: user_message }
+      sources: { value: [official_calendar], origin: system_state }
+      result_type: { value: public_holiday, origin: system_state }
+  - tool: web.get_result_metadata
+    arguments:
+      result_id: "$actions[0].results[0].result_id"

@@ -1,0 +1,39 @@
+{
+  "attribution": {
+    "attribution": "Crossref open scholarly metadata; abstracts and full text excluded",
+    "license": "CROSSREF-METADATA",
+    "modified": "Canonical JSON'a normalize edildi; başlıklar beyaz listeye göre budandı.",
+    "upstream_url": "https://api.crossref.org/works/10.59617%2Fefepub2024211"
+  },
+  "body": {
+    "message": {
+      "DOI": "10.59617/efepub2024211",
+      "URL": "https://doi.org/10.59617/efepub2024211",
+      "container-title": [
+        ""
+      ],
+      "is-referenced-by-count": 0,
+      "license": [],
+      "published": {
+        "date-parts": [
+          [
+            2024,
+            5,
+            17
+          ]
+        ]
+      },
+      "publisher": "efe akademik yayıncılık",
+      "reference-count": 0,
+      "title": [
+        "6 Şubat 2023 Kahramanmaraş Depremleri Hasar Nedenleri ve Alınan Dersler"
+      ],
+      "type": "edited-book"
+    }
+  },
+  "body_encoding": "json",
+  "headers": {
+    "content-type": "application/json"
+  },
+  "status": 200
+}

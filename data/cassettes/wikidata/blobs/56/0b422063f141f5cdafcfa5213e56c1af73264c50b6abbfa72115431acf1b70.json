@@ -1,0 +1,68 @@
+{
+  "attribution": {
+    "attribution": "Wikidata contributors, structured data under CC0 1.0",
+    "license": "CC0-1.0",
+    "modified": "Canonical JSON'a normalize edildi; başlıklar beyaz listeye göre budandı.",
+    "upstream_url": "https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&formatversion=2&search=An%C4%B1tkabir&language=tr&uselang=tr&type=item&limit=5"
+  },
+  "body": {
+    "search": [
+      {
+        "concepturi": "http://www.wikidata.org/entity/Q615404",
+        "description": "Ankara'da Türkiye Cumhuriyeti'nin kurucusu Atatürk'ün anıt mezarı",
+        "id": "Q615404",
+        "label": "Anıtkabir",
+        "match": {
+          "language": "tr"
+        },
+        "repository": "wikidata"
+      },
+      {
+        "concepturi": "http://www.wikidata.org/entity/Q6027786",
+        "description": "Ankara'daki ünlü bir anıt mezar ve müzenin tarihçesi",
+        "id": "Q6027786",
+        "label": "Anıtkabir tarihi",
+        "match": {
+          "language": "tr"
+        },
+        "repository": "wikidata"
+      },
+      {
+        "concepturi": "http://www.wikidata.org/entity/Q12808534",
+        "description": "",
+        "id": "Q12808534",
+        "label": "Anıtkabir Komutanlığı",
+        "match": {
+          "language": "tr"
+        },
+        "repository": "wikidata"
+      },
+      {
+        "concepturi": "http://www.wikidata.org/entity/Q61072230",
+        "description": "Anıtkabir'in tasarımı ve özellikleri için başlatılan uluslararası proje yarışması",
+        "id": "Q61072230",
+        "label": "Anıtkabir Proje Yarışması",
+        "match": {
+          "language": "tr"
+        },
+        "repository": "wikidata"
+      },
+      {
+        "concepturi": "http://www.wikidata.org/entity/Q19611617",
+        "description": "Vikimedya liste maddesi",
+        "id": "Q19611617",
+        "label": "Anıtkabir ziyaretçileri listesi",
+        "match": {
+          "language": "tr"
+        },
+        "repository": "wikidata"
+      }
+    ],
+    "search-continue": 1
+  },
+  "body_encoding": "json",
+  "headers": {
+    "content-type": "application/json; charset=utf-8"
+  },
+  "status": 200
+}

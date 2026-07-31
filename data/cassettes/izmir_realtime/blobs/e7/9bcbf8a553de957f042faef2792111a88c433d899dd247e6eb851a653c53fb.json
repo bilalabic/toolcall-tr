@@ -1,0 +1,14 @@
+{
+  "attribution": {
+    "attribution": "İzmir Büyükşehir Belediyesi / ESHOT",
+    "license": "UNDETERMINED",
+    "modified": "Canonical JSON'a normalize edildi; başlıklar beyaz listeye göre budandı.",
+    "upstream_url": "https://openapi.izmir.bel.tr/api/iztek/duragayaklasanotobusler/15532"
+  },
+  "body": [],
+  "body_encoding": "json",
+  "headers": {
+    "content-type": "application/json; charset=utf-8"
+  },
+  "status": 200
+}

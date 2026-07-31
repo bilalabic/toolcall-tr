@@ -1,0 +1,18 @@
+blueprint_id: cannot_answer_future_clock_001
+family_id: cannot_answer_future_clock
+split: validation
+domain: time
+kind: should_refuse
+difficulty: medium
+provider: general_local
+user_goal: Gelecekteki belirli bir anda Londra yerel saatini öğrenmek
+known_information: {}
+available_tools: [time.get_local_time, weather.get_weather_forecast]
+utterances:
+  - "1 Ocak 2030 saat 12.00 UTC iken Londra'da saat kaç olacak?"
+  - "2030-01-01 12.00 UTC için Londra yerel saatini hesapla."
+expected_behavior:
+  decision: cannot_answer
+  unsupported_reason_tr: Sunulan saat aracı yalnızca ortamın dondurulmuş referans anını dönüştürür; kullanıcı tarafından verilen gelecek zamanı dönüştürmez.
+  response_intent_tr: Belirtilen gelecek anı dönüştürebilecek bir aracın bulunmadığını açıkla.
+  assistant_response_tr: "Kullanabildiğim saat aracı yalnızca sistemin dondurulmuş referans anını dönüştürüyor; 1 Ocak 2030 için saat dönüşümü yapamıyorum."

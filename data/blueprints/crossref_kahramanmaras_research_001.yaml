@@ -1,0 +1,31 @@
+blueprint_id: crossref_kahramanmaras_research_001
+family_id: crossref_kahramanmaras_research
+split: train
+domain: research
+kind: sequential_tool_call
+difficulty: medium
+provider: crossref
+
+user_goal: 2023 Kahramanmaraş depremleri hakkında akademik çalışma bulup ilk sonucun bibliyografik metadata'sını görmek
+known_information:
+  query: 2023 Kahramanmaraş depremleri Türkiye
+
+available_tools:
+  - research.search_works
+  - research.get_work_metadata
+
+utterances:
+  - "Crossref'te 2023 Kahramanmaraş depremleri Türkiye konulu akademik çalışmaları ara ve ilk sonucun bibliyografik metadata'sını getir."
+  - "2023 Kahramanmaraş depremleri Türkiye hakkında bir çalışma bulup ilk kaydın DOI ve yayın metadata'sını göster."
+
+expected_behavior:
+  decision: tool_call
+
+expected_actions:
+  - tool: research.search_works
+    arguments:
+      query: { value: 2023 Kahramanmaraş depremleri Türkiye, origin: user_message }
+
+  - tool: research.get_work_metadata
+    arguments:
+      doi: "$actions[0].results[0].doi"

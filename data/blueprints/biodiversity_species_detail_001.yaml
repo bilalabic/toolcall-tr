@@ -1,0 +1,33 @@
+blueprint_id: biodiversity_species_detail_001
+family_id: biodiversity_species_detail
+split: train
+domain: biodiversity
+kind: sequential_tool_call
+difficulty: easy
+provider: gbif
+
+user_goal: Quercus robur türünün taksonomik sınıflandırmasını öğrenmek
+known_information:
+  scientific_name: Quercus robur
+
+available_tools:
+  - biodiversity.match_species_name
+  - biodiversity.get_species
+  - biodiversity.search_occurrences
+  - statistics.search_indicator
+
+utterances:
+  - "Quercus robur türünün taksonomik sınıflandırmasını göster."
+  - "Quercus robur hangi familya ve cinse ait?"
+
+expected_behavior:
+  decision: tool_call
+
+expected_actions:
+  - tool: biodiversity.match_species_name
+    arguments:
+      scientific_name: { value: Quercus robur, origin: user_message }
+
+  - tool: biodiversity.get_species
+    arguments:
+      taxon_key: "$actions[0].usage_key"

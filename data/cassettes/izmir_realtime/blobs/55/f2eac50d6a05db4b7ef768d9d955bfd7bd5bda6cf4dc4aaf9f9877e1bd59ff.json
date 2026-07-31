@@ -1,0 +1,81 @@
+{
+  "attribution": {
+    "attribution": "İzmir Büyükşehir Belediyesi / ESHOT",
+    "license": "UNDETERMINED",
+    "modified": "Canonical JSON'a normalize edildi; başlıklar beyaz listeye göre budandı.",
+    "upstream_url": "https://openapi.izmir.bel.tr/api/iztek/duragayaklasanotobusler/10102"
+  },
+  "body": [
+    {
+      "BisikletAparatliMi": false,
+      "EngelliMi": false,
+      "HatAdi": "CUMHURİYET MEYDANI - HAVA ALAN",
+      "HatNumarasi": 202,
+      "HattinYonu": 1,
+      "KalanDurakSayisi": 5,
+      "KoorX": "38,42708167",
+      "KoorY": "27,13553833",
+      "OtobusId": 2291
+    },
+    {
+      "BisikletAparatliMi": false,
+      "EngelliMi": true,
+      "HatAdi": "ŞİRİNYER AKT. MERKEZİ - KONAK",
+      "HatNumarasi": 466,
+      "HattinYonu": 1,
+      "KalanDurakSayisi": 6,
+      "KoorX": "38,41816167",
+      "KoorY": "27,158015",
+      "OtobusId": 10235
+    },
+    {
+      "BisikletAparatliMi": false,
+      "EngelliMi": false,
+      "HatAdi": "BALLIKUYU - KONAK",
+      "HatNumarasi": 35,
+      "HattinYonu": 1,
+      "KalanDurakSayisi": 10,
+      "KoorX": "38,41291667",
+      "KoorY": "27,15450333",
+      "OtobusId": 3070
+    },
+    {
+      "BisikletAparatliMi": false,
+      "EngelliMi": true,
+      "HatAdi": "ŞİRİNYER AKT. - GÜMRÜK",
+      "HatNumarasi": 838,
+      "HattinYonu": 1,
+      "KalanDurakSayisi": 23,
+      "KoorX": "38,459735",
+      "KoorY": "27,24435167",
+      "OtobusId": 10356
+    },
+    {
+      "BisikletAparatliMi": false,
+      "EngelliMi": false,
+      "HatAdi": "BUCA - KONAK",
+      "HatNumarasi": 940,
+      "HattinYonu": 1,
+      "KalanDurakSayisi": 31,
+      "KoorX": "38,38535",
+      "KoorY": "27,18698667",
+      "OtobusId": 2293
+    },
+    {
+      "BisikletAparatliMi": false,
+      "EngelliMi": false,
+      "HatAdi": "ÇİĞLİ - KONAK",
+      "HatNumarasi": 920,
+      "HattinYonu": 1,
+      "KalanDurakSayisi": 40,
+      "KoorX": "38,511335",
+      "KoorY": "27,03758",
+      "OtobusId": 2177
+    }
+  ],
+  "body_encoding": "json",
+  "headers": {
+    "content-type": "application/json; charset=utf-8"
+  },
+  "status": 200
+}

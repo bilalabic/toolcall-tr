@@ -1,0 +1,35 @@
+{
+  "attribution": {
+    "attribution": "Türkçe Vikipedi katkıcıları; yalnızca sayfa metadata alanları",
+    "license": "WIKIMEDIA-METADATA-ONLY",
+    "modified": "Canonical JSON'a normalize edildi; başlıklar beyaz listeye göre budandı.",
+    "upstream_url": "https://tr.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&prop=info&pageids=28800&inprop=url"
+  },
+  "body": {
+    "batchcomplete": true,
+    "query": {
+      "pages": [
+        {
+          "canonicalurl": "https://tr.wikipedia.org/wiki/F%C4%B1rat_%C3%9Cniversitesi",
+          "contentmodel": "wikitext",
+          "editurl": "https://tr.wikipedia.org/w/index.php?title=F%C4%B1rat_%C3%9Cniversitesi&action=edit",
+          "fullurl": "https://tr.wikipedia.org/wiki/F%C4%B1rat_%C3%9Cniversitesi",
+          "lastrevid": 37415606,
+          "length": 10030,
+          "ns": 0,
+          "pageid": 28800,
+          "pagelanguage": "tr",
+          "pagelanguagedir": "ltr",
+          "pagelanguagehtmlcode": "tr",
+          "title": "Fırat Üniversitesi",
+          "touched": "2026-07-27T21:02:30Z"
+        }
+      ]
+    }
+  },
+  "body_encoding": "json",
+  "headers": {
+    "content-type": "application/json; charset=utf-8"
+  },
+  "status": 200
+}

@@ -1,0 +1,67 @@
+{
+  "attribution": {
+    "attribution": "Türkçe Vikipedi katkıcıları; yalnızca sayfa metadata alanları",
+    "license": "WIKIMEDIA-METADATA-ONLY",
+    "modified": "Canonical JSON'a normalize edildi; başlıklar beyaz listeye göre budandı.",
+    "upstream_url": "https://tr.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&list=search&srsearch=F%C4%B1rat+%C3%9Cniversitesi&srnamespace=0&srlimit=5&srprop=size%7Cwordcount%7Ctimestamp"
+  },
+  "body": {
+    "batchcomplete": true,
+    "continue": {
+      "continue": "-||",
+      "sroffset": 5
+    },
+    "query": {
+      "search": [
+        {
+          "ns": 0,
+          "pageid": 28800,
+          "size": 10030,
+          "timestamp": "2026-07-01T08:48:45Z",
+          "title": "Fırat Üniversitesi",
+          "wordcount": 585
+        },
+        {
+          "ns": 0,
+          "pageid": 1422530,
+          "size": 4009,
+          "timestamp": "2025-03-21T06:28:24Z",
+          "title": "Fırat Üniversitesi Veteriner Fakültesi",
+          "wordcount": 286
+        },
+        {
+          "ns": 0,
+          "pageid": 1948995,
+          "size": 3830,
+          "timestamp": "2026-05-15T18:00:05Z",
+          "title": "Fırat Üniversitesi SK",
+          "wordcount": 219
+        },
+        {
+          "ns": 0,
+          "pageid": 1513783,
+          "size": 855,
+          "timestamp": "2026-05-27T08:44:06Z",
+          "title": "Fırat Üniversitesi Tıp Fakültesi",
+          "wordcount": 72
+        },
+        {
+          "ns": 0,
+          "pageid": 15340,
+          "size": 13159,
+          "timestamp": "2026-07-13T16:54:44Z",
+          "title": "Fırat",
+          "wordcount": 1003
+        }
+      ],
+      "searchinfo": {
+        "totalhits": 2063
+      }
+    }
+  },
+  "body_encoding": "json",
+  "headers": {
+    "content-type": "application/json; charset=utf-8"
+  },
+  "status": 200
+}

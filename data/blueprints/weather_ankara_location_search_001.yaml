@@ -1,0 +1,21 @@
+blueprint_id: weather_ankara_location_search_001
+family_id: weather_ankara_location_search
+split: validation
+domain: weather
+kind: successful_tool_call
+difficulty: easy
+provider: geonames_tr
+
+user_goal: Ankara şehir adının koordinat eşleşmesini bulmak
+known_information: {query: Ankara}
+available_tools:
+  - geo.search_places
+  - weather.get_current_weather
+utterances:
+  - "Ankara şehir adının koordinat eşleşmesini bul."
+  - "Hava sorgusunda kullanmak üzere Ankara'nın konumunu göster."
+expected_behavior: {decision: tool_call}
+expected_actions:
+  - tool: geo.search_places
+    arguments:
+      query: {value: Ankara, origin: user_message}

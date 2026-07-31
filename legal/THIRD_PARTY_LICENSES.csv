@@ -1,0 +1,32 @@
+component,type,source,license,usage,commercial_allowed,attribution,last_checked
+izmir_ckan_portal,data_source,https://acikveri.bizizmir.com,CC BY 4.0,"CKAN package_search / package_show / datastore_search yanıtları cassette olarak kaydedilir",yes,"İzmir Büyükşehir Belediyesi Açık Veri Portalı, CC BY 4.0",2026-07-28
+izmir_eshot_stops,data_source,https://acikveri.bizizmir.com (datastore resource 0c791266-a2e4-4f14-82b8-9a9b102fbf94),CC BY 4.0,"11.783 satırlık durak tablosu dondurulmuş snapshot olarak saklanır; find_nearby_stops bunun üzerinde çalışır",yes,"İzmir Büyükşehir Belediyesi Açık Veri Portalı, CC BY 4.0",2026-07-28
+izmir_iztek_realtime,data_source,https://openapi.izmir.bel.tr/api/iztek/,UNDETERMINED,"duragayaklasanotobusler yanıtları; YALNIZCA test ve conformance için minimum sayıda kayıt",unknown,"İzmir Büyükşehir Belediyesi / ESHOT",2026-07-28
+izmir_cbs_nearby,data_source,https://openapi.izmir.bel.tr/api/ibb/cbs/noktayayakinduraklar,UNDETERMINED,"Yalnızca conformance karşılaştırma fixture'ı (20-50 kayıt); veri setine girmez",unknown,"İzmir Büyükşehir Belediyesi / CBS",2026-07-28
+apigen,methodology,https://arxiv.org/abs/2406.18518,N/A (paper),"Pipeline tasarımı için metodolojik referans; hiçbir artefakt kopyalanmadı",n/a,"Liu et al., APIGen (2024)",2026-07-28
+apigen_mt,methodology,https://arxiv.org/abs/2504.03601,N/A (paper),"İki aşamalı blueprint->diyalog yaklaşımı için referans (M2)",n/a,"Prabhakar et al., APIGen-MT (2025)",2026-07-28
+when2call,methodology,https://huggingface.co/datasets/nvidia/When2Call,CC BY 4.0,"Karar taksonomisi fikri (tool_call/clarification/direct_answer/cannot_answer); veri kullanılmadı",yes,"NVIDIA, When2Call",2026-07-28
+toolace,methodology,https://huggingface.co/datasets/Team-ACE/ToolACE,Apache-2.0,"Eksik parametre / gereksiz tool kontrolü fikirleri; veri kullanılmadı",yes,"Team-ACE, ToolACE",2026-07-28
+toolmind,methodology,https://arxiv.org/abs/2511.15718,Apache-2.0,"Function graph ve turn-level filtreleme fikirleri; veri kullanılmadı",yes,"Nanbeige, ToolMind",2026-07-28
+bfcl,methodology,https://github.com/ShishirPatil/gorilla,Apache-2.0,"Benchmark metrik tasarımı için referans",yes,"Patil et al., Gorilla / BFCL",2026-07-28
+tau_bench,methodology,https://github.com/sierra-research/tau-bench,MIT,"State-diff tabanlı değerlendirme fikri için referans",yes,"Sierra Research, tau-bench",2026-07-28
+apigen_mt_5k_dataset,excluded_dataset,https://huggingface.co/datasets/Salesforce/APIGen-MT-5k,CC BY-NC-4.0,"KULLANILMIYOR -- ticari kullanım yasak ve OpenAI rekabet şartı içeriyor",no,n/a,2026-07-28
+xlam_60k_dataset,excluded_dataset,https://huggingface.co/datasets/Salesforce/xlam-function-calling-60k,CONFLICTING,"KULLANILMIYOR -- HF kartı CC BY 4.0 derken GitHub README CC BY-NC-4.0 diyor; çelişki çözülene dek dışarıda",unknown,n/a,2026-07-28
+pydantic,dependency,https://github.com/pydantic/pydantic,MIT,"Canonical veri modelleri",yes,"Pydantic katkıcıları",2026-07-28
+httpx,dependency,https://github.com/encode/httpx,BSD-3-Clause,"HTTP istemcisi ve cassette transport tabanı",yes,"Encode OSS",2026-07-28
+typer,dependency,https://github.com/fastapi/typer,MIT,"CLI",yes,"Sebastián Ramírez",2026-07-28
+jsonschema,dependency,https://github.com/python-jsonschema/jsonschema,MIT,"Tool parametre şeması doğrulaması",yes,"Julian Berman",2026-07-28
+pyyaml,dependency,https://github.com/yaml/pyyaml,MIT,"Yapılandırma dosyaları",yes,"PyYAML katkıcıları",2026-07-28
+rich,dependency,https://github.com/Textualize/rich,MIT,"CLI çıktısı",yes,"Textualize",2026-07-28
+geonames_tr_places,data_source,https://download.geonames.org/export/dump/TR.zip,CC BY 4.0,"81 Türkiye il merkezinden oluşan sürümlenmiş snapshot",yes,"GeoNames geographical database, CC BY 4.0",2026-07-29
+geonames_tr_postal_codes,data_source,https://download.geonames.org/export/zip/TR.zip,CC BY 4.0,"Türkiye posta kodlarının il ve ilçe düzeyinde gruplanmış snapshot'ı",yes,"GeoNames geographical database, CC BY 4.0",2026-07-29
+tr_public_holidays_2026,data_source,https://vakithesaplama.diyanet.gov.tr/icerik.php?icerik=153,PUBLIC-LAW-AND-OFFICIAL-CALENDAR-METADATA,"2429 sayılı kanun ile birlikte 2026 dinî gün tarihlerini doğrulamak için kullanılır",yes,"Türkiye Cumhuriyeti mevzuatı ve Diyanet İşleri Başkanlığı",2026-07-29
+wikidata_metadata,data_source,https://www.wikidata.org/wiki/Wikidata:Data_access,CC0 1.0,"Yalnız yapılandırılmış entity ve ilişki metadata'sı; sayfa metni alınmaz",yes,"Wikidata contributors, CC0",2026-07-29
+crossref_metadata,data_source,https://api.crossref.org,CROSSREF-METADATA,"Yalnız bibliyografik metadata; abstract ve tam metin alınmaz",yes,"Crossref open scholarly metadata",2026-07-29
+met_norway,data_source,https://api.met.no,CC BY 4.0,"Türkiye koordinatları için güncel hava ve tahmin metadata'sı",yes,"Norwegian Meteorological Institute, CC BY 4.0",2026-07-29
+frankfurter_ecb,data_source,https://api.frankfurter.dev,ECB-TERMS,"ECB referans döviz kuru metadata'sı",yes,"European Central Bank via Frankfurter",2026-07-29
+usgs_earthquake,data_source,https://earthquake.usgs.gov,US-GOVERNMENT-WORK,"Deprem olayı metadata'sı",yes,"U.S. Geological Survey",2026-07-29
+worldbank_wdi,data_source,https://api.worldbank.org,CC BY 4.0 + WORLD-BANK-TERMS,"İncelenmiş WDI gösterge metadata'sı ve değerleri",yes,"World Bank, World Development Indicators",2026-07-29
+gbif_filtered,data_source,https://api.gbif.org,CC0/CC BY 4.0 FILTERED,"Yalnız izin verilen lisanslara sahip occurrence metadata'sı",yes,"GBIF.org ve kayıt sağlayıcıları",2026-07-29
+wikimedia_metadata,data_source,https://tr.wikipedia.org,WIKIMEDIA-METADATA-ONLY,"Sayfa kimliği, başlık, URL, sürüm ve kategori metadata'sı; içerik alınmaz",yes,"Türkçe Vikipedi katkıcıları",2026-07-29
+github_metadata,data_source,https://api.github.com,GITHUB-METADATA-ONLY,"Herkese açık repository ve release metadata'sı; kullanıcı metni/profili alınmaz",yes,"GitHub public repository metadata",2026-07-29

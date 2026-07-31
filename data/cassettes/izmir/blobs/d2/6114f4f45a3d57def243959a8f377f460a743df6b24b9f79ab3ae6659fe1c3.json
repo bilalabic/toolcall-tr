@@ -1,0 +1,129 @@
+{
+  "attribution": {
+    "attribution": "Atıf 4.0 Uluslararası (CC BY 4.0) kapsamında lisanslanan kamu sektörü bilgilerini içerir. Kaynak: İzmir Büyükşehir Belediyesi Açık Veri Portalı.",
+    "license": "CC-BY-4.0",
+    "modified": "Canonical JSON'a normalize edildi; başlıklar beyaz listeye göre budandı.",
+    "upstream_url": "https://acikveri.bizizmir.com/api/3/action/datastore_search?resource_id=0c791266-a2e4-4f14-82b8-9a9b102fbf94&limit=5&offset=0&sort=_id+asc&q=KONAK"
+  },
+  "body": {
+    "help": "https://acikveri.bizizmir.com/api/3/action/help_show?name=datastore_search",
+    "result": {
+      "_links": {
+        "next": "/api/3/action/datastore_search?sort=_id+asc&q=KONAK&resource_id=0c791266-a2e4-4f14-82b8-9a9b102fbf94&limit=5&offset=5",
+        "start": "/api/3/action/datastore_search?sort=_id+asc&q=KONAK&resource_id=0c791266-a2e4-4f14-82b8-9a9b102fbf94&limit=5"
+      },
+      "fields": [
+        {
+          "id": "_id",
+          "type": "int"
+        },
+        {
+          "id": "DURAK_ID",
+          "info": {
+            "label": "",
+            "notes": "Benzersiz durak benzersiz numarası veya kimliği\r\n",
+            "type_override": ""
+          },
+          "type": "numeric"
+        },
+        {
+          "id": "DURAK_ADI",
+          "info": {
+            "label": "",
+            "notes": "Durak adı bilgisi\r\n",
+            "type_override": ""
+          },
+          "type": "text"
+        },
+        {
+          "id": "ENLEM",
+          "info": {
+            "label": "",
+            "notes": "Durağın enlem Bilgisi\r\n",
+            "type_override": ""
+          },
+          "type": "numeric"
+        },
+        {
+          "id": "BOYLAM",
+          "info": {
+            "label": "",
+            "notes": "Durağın boylam Bilgisi\r\n",
+            "type_override": ""
+          },
+          "type": "numeric"
+        },
+        {
+          "id": "DURAKTAN_GECEN_HATLAR",
+          "info": {
+            "label": "",
+            "notes": "Duraktan geçen otobüs hat numaraları\r\n",
+            "type_override": ""
+          },
+          "type": "text"
+        }
+      ],
+      "include_total": true,
+      "limit": 5,
+      "offset": 0,
+      "q": "KONAK",
+      "records": [
+        {
+          "BOYLAM": 27.1263209374252,
+          "DURAKTAN_GECEN_HATLAR": "303-304",
+          "DURAK_ADI": "Konak",
+          "DURAK_ID": 10030,
+          "ENLEM": 38.4162181137466,
+          "_id": 15,
+          "rank": 0.0573088
+        },
+        {
+          "BOYLAM": 27.127236,
+          "DURAKTAN_GECEN_HATLAR": "104-171-465-471",
+          "DURAK_ADI": "Konak",
+          "DURAK_ID": 10036,
+          "ENLEM": 38.416466,
+          "_id": 18,
+          "rank": 0.0573088
+        },
+        {
+          "BOYLAM": 27.126987,
+          "DURAKTAN_GECEN_HATLAR": "484-485",
+          "DURAK_ADI": "Konak",
+          "DURAK_ID": 10037,
+          "ENLEM": 38.416633,
+          "_id": 19,
+          "rank": 0.0573088
+        },
+        {
+          "BOYLAM": 27.126432,
+          "DURAKTAN_GECEN_HATLAR": "152-887",
+          "DURAK_ADI": "Konak",
+          "DURAK_ID": 10038,
+          "ENLEM": 38.415688,
+          "_id": 20,
+          "rank": 0.0573088
+        },
+        {
+          "BOYLAM": 27.126331,
+          "DURAKTAN_GECEN_HATLAR": "508",
+          "DURAK_ADI": "Konak",
+          "DURAK_ID": 10039,
+          "ENLEM": 38.415883,
+          "_id": 21,
+          "rank": 0.0573088
+        }
+      ],
+      "records_format": "objects",
+      "resource_id": "0c791266-a2e4-4f14-82b8-9a9b102fbf94",
+      "sort": "_id asc",
+      "total": 20
+    },
+    "success": true
+  },
+  "body_encoding": "json",
+  "headers": {
+    "content-type": "application/json;charset=utf-8"
+  },
+  "status": 200
+}

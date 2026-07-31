@@ -1,0 +1,37 @@
+blueprint_id: clarification_currency_missing_quote_001
+family_id: clarification_currency_missing_quote
+split: validation
+domain: currency
+kind: should_ask_clarification
+difficulty: easy
+interaction_type: multi_turn
+provider: frankfurter_ecb
+
+user_goal: Türk lirasının kurunu öğrenmek, ancak hedef para birimi bilinmiyor
+known_information:
+  base: TRY
+missing_information:
+  - quote
+conversation_prefix:
+  - role: user
+    content: "Türk lirasının güncel kurunu öğrenmek istiyorum."
+  - role: assistant
+    content: "Elbette, kurla ilgili sorunuzu yazın."
+
+available_tools:
+  - currency.get_exchange_rate
+  - currency.get_historical_exchange_rate
+  - currency.list_supported_currencies
+
+utterances:
+  - "1 Türk lirası şu anda kaç ediyor?"
+  - "TL'nin güncel karşılığını söyler misin?"
+
+expected_behavior:
+  decision: clarification
+  missing_parameters:
+    - quote
+  response_intent_tr: >-
+    Türk lirasının hangi para birimi karşısındaki kurunun istendiğini sor.
+  assistant_response_tr: >-
+    Türk lirasının hangi para birimi karşısındaki kurunu öğrenmek istiyorsunuz?

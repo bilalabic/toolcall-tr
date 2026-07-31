@@ -1,0 +1,61 @@
+{
+  "attribution": {
+    "attribution": "GitHub public repository metadata; kullanıcı metni ve profilleri hariç",
+    "license": "GITHUB-METADATA-ONLY",
+    "modified": "Canonical JSON'a normalize edildi; başlıklar beyaz listeye göre budandı.",
+    "upstream_url": "https://api.github.com/repos/huggingface/transformers/releases?per_page=5&page=1"
+  },
+  "body": [
+    {
+      "created_at": "2026-07-16T09:33:37Z",
+      "draft": false,
+      "html_url": "https://github.com/huggingface/transformers/releases/tag/v5.14.1",
+      "id": 354986224,
+      "prerelease": false,
+      "published_at": "2026-07-16T09:41:36Z",
+      "tag_name": "v5.14.1"
+    },
+    {
+      "created_at": "2026-07-15T18:57:45Z",
+      "draft": false,
+      "html_url": "https://github.com/huggingface/transformers/releases/tag/v5.14.0",
+      "id": 354605689,
+      "prerelease": false,
+      "published_at": "2026-07-15T19:02:19Z",
+      "tag_name": "v5.14.0"
+    },
+    {
+      "created_at": "2026-07-11T08:27:29Z",
+      "draft": false,
+      "html_url": "https://github.com/huggingface/transformers/releases/tag/v5.13.1",
+      "id": 352469293,
+      "prerelease": false,
+      "published_at": "2026-07-11T09:15:36Z",
+      "tag_name": "v5.13.1"
+    },
+    {
+      "created_at": "2026-07-03T15:57:12Z",
+      "draft": false,
+      "html_url": "https://github.com/huggingface/transformers/releases/tag/v5.13.0",
+      "id": 348702649,
+      "prerelease": false,
+      "published_at": "2026-07-03T16:06:27Z",
+      "tag_name": "v5.13.0"
+    },
+    {
+      "created_at": "2026-06-15T16:30:26Z",
+      "draft": false,
+      "html_url": "https://github.com/huggingface/transformers/releases/tag/v5.12.1",
+      "id": 339672105,
+      "prerelease": false,
+      "published_at": "2026-06-15T17:29:59Z",
+      "tag_name": "v5.12.1"
+    }
+  ],
+  "body_encoding": "json",
+  "headers": {
+    "content-type": "application/json; charset=utf-8",
+    "etag": "W/\"24812fcfa95c5090428ffabbf38e9d019819ff5363331fafd6102c212ef980b9\""
+  },
+  "status": 200
+}

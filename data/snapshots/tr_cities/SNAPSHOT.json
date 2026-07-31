@@ -1,0 +1,20 @@
+{
+  "attribution": "GeoNames geographical database, CC BY 4.0; ToolCall-TR tarafından seçilmiş pilot alt küme.",
+  "content_hash": "sha256:6814d310cc83b94052b7504e0a8b995ceff80b52c41850c79913b1c96bfc4df8",
+  "license": "CC-BY-4.0",
+  "license_url": "https://www.geonames.org/about.html",
+  "modifications": [
+    "Yalnızca ilk MET Norway pilot senaryolarında kullanılan Türkiye şehirleri seçildi.",
+    "Alanlar name, country_code, latitude, longitude ve population ile sınırlandı.",
+    "Kayıtlar şehir adına göre arama için yerel snapshot olarak paketlendi."
+  ],
+  "name": "tr_cities",
+  "retrieved_at": "2026-07-29",
+  "row_count": 10,
+  "source": {
+    "dataset": "GeoNames geographical database",
+    "homepage": "https://www.geonames.org/",
+    "download": "https://download.geonames.org/export/dump/"
+  },
+  "status": "pilot; yayın öncesi otomatik yeniden üretim script'i ve GeoNames ID alanı eklenecek"
+}

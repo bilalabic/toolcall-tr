@@ -1,0 +1,17 @@
+blueprint_id: direct_answer_half_of_hundred_001
+family_id: direct_answer_half_of_hundred
+split: train
+domain: arithmetic
+kind: should_answer_directly
+difficulty: easy
+provider: no_tool
+user_goal: Yüzün yarısını öğrenmek
+known_information: {}
+available_tools: [calculator.evaluate, currency.get_exchange_rate]
+utterances:
+  - "100'ün yarısı kaçtır?"
+  - "Yüzün yarısı nedir?"
+expected_behavior:
+  decision: direct_answer
+  response_intent_tr: Basit işlemi araç çağırmadan yanıtla.
+  assistant_response_tr: "100'ün yarısı 50'dir."

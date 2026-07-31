@@ -1,0 +1,22 @@
+blueprint_id: developer_openai_python_repository_001
+family_id: developer_openai_python_repository
+split: test
+domain: developer_tools
+kind: successful_tool_call
+difficulty: easy
+provider: github_metadata
+
+user_goal: openai/openai-python deposunun temel herkese açık bilgilerini öğrenmek
+known_information: {owner: openai, repository: openai-python}
+available_tools:
+  - developer.get_repository_metadata
+  - developer.list_releases_metadata
+utterances:
+  - "GitHub'daki openai/openai-python deposunun açıklamasını, yıldız sayısını ve son güncellenme tarihini göster."
+  - "openai/openai-python projesinin herkese açık depo bilgilerini getir."
+expected_behavior: {decision: tool_call}
+expected_actions:
+  - tool: developer.get_repository_metadata
+    arguments:
+      owner: {value: openai, origin: user_message}
+      repository: {value: openai-python, origin: user_message}

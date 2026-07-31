@@ -1,0 +1,284 @@
+# Sağlayıcı tanımları. Tuzakların gerekçeleri legal/DATA_SOURCES.md'de.
+
+providers:
+  general_local:
+    display_name: Deterministik genel yerel araçlar
+    base_url: null
+    execution_class: derived_local
+    auth: none
+    license: Apache-2.0
+    attribution: ToolCall-TR katkıcıları; deterministik yerel uygulama
+    cassette_namespace: null
+    enabled: true
+    notes:
+      - "Güvenli hesaplama ve dondurulmuş saat işlemleri ağ erişimi olmadan yürütülür."
+      - "Saat dilimleri sürümlenmiş allowlist ile sınırlıdır."
+
+  calendar_mock:
+    display_name: Durum tutan sentetik takvim
+    base_url: https://calendar-api.toolcall-tr.test
+    execution_class: simulated
+    auth: none
+    license: Apache-2.0
+    attribution: ToolCall-TR katkıcıları; tamamen kurgusal takvim verisi ve servisi
+    cassette_namespace: null
+    enabled: true
+    stateful: true
+    state_validation: true
+    notes:
+      - "Rezerve .test TLD'si kullanır; gerçek kişi, takvim veya servisle ilişkisi yoktur."
+      - "Yazma çağrılarında state hash, state_delta ve assertion doğrulanır."
+
+  geonames_tr:
+    display_name: GeoNames Türkiye yer ve posta kodu snapshot'ı
+    base_url: null
+    execution_class: derived_local
+    auth: none
+    license: CC-BY-4.0
+    license_url: https://www.geonames.org/about.html
+    attribution: GeoNames geographical database, CC BY 4.0
+    cassette_namespace: null
+    enabled: true
+    notes:
+      - "Resmî GeoNames TR dump'ından 81 il merkezi seçilir."
+      - "Posta kodu dump'ı posta kodu, il ve ilçe seviyesinde gruplanır."
+      - "Çalışma zamanında ağ erişimi yapılmaz."
+
+  tr_public_holidays:
+    display_name: Türkiye 2026 resmî tatil metadata'sı
+    base_url: null
+    execution_class: derived_local
+    auth: none
+    license: PUBLIC-LAW-AND-OFFICIAL-CALENDAR-METADATA
+    attribution: Türkiye Cumhuriyeti mevzuatı ve Diyanet İşleri Başkanlığı
+    cassette_namespace: null
+    enabled: true
+    notes:
+      - "Yalnızca 2026 desteklenir; başka yıl sessizce tahmin edilmez."
+      - "Arefeler ve 28 Ekim yarım gün olarak 13:00 başlangıcıyla işaretlenir."
+
+  wikidata:
+    display_name: Wikidata CC0 entity metadata
+    base_url: https://www.wikidata.org
+    execution_class: live_recorded
+    auth: none
+    license: CC0-1.0
+    license_url: https://www.wikidata.org/wiki/Wikidata:Licensing
+    attribution: Wikidata contributors
+    cassette_namespace: wikidata
+    max_requests_per_second: 1
+    timeout_seconds: 30
+    enabled: true
+    notes:
+      - "Yalnızca entity etiketi, kısa açıklama, sitelink ve yapılandırılmış item ilişkileri tutulur."
+      - "Sayfa metni veya Commons içeriği alınmaz."
+
+  crossref:
+    display_name: Crossref açık bibliyografik metadata
+    base_url: https://api.crossref.org
+    execution_class: live_recorded
+    auth: none
+    license: CROSSREF-METADATA
+    license_url: https://www.crossref.org/documentation/retrieve-metadata/
+    attribution: Crossref open scholarly metadata
+    cassette_namespace: crossref
+    max_requests_per_second: 1
+    timeout_seconds: 30
+    enabled: true
+    notes:
+      - "Abstract, tam metin ve kullanıcı içeriği seçilmez veya cassette'e yazılmaz."
+      - "Yalnızca bibliyografik olgular ve lisans URL'leri tutulur."
+
+  federated_web_metadata:
+    display_name: Güvenli allowlist web metadata araması
+    base_url: null
+    execution_class: derived_local
+    auth: none
+    license: SOURCE-SPECIFIC-METADATA-ONLY
+    attribution: GeoNames, World Bank WDI ve resmî tatil metadata kaynakları
+    cassette_namespace: null
+    enabled: true
+    notes:
+      - "Snippet, özet, sayfa gövdesi veya serbest URL fetch yoktur."
+      - "Kaynaklar GeoNames, World Bank WDI ve resmî tatil allowlist'iyle sınırlıdır."
+
+  frankfurter_ecb:
+    display_name: Frankfurter (ECB provider)
+    base_url: https://api.frankfurter.dev
+    execution_class: live_recorded
+    auth: none
+    license: ECB-TERMS
+    license_url: https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html
+    attribution: European Central Bank euro foreign exchange reference rates via Frankfurter
+    cassette_namespace: frankfurter_ecb
+    max_requests_per_second: 2
+    timeout_seconds: 15
+    notes:
+      - "Her kur isteği providers=ECB ile sabitlenir."
+      - "Harmanlanmış varsayılan sağlayıcı sonuçları kullanılmaz."
+
+  met_norway:
+    display_name: Norwegian Meteorological Institute Locationforecast
+    base_url: https://api.met.no
+    execution_class: live_recorded
+    auth: none
+    license: CC-BY-4.0
+    license_url: https://docs.api.met.no/doc/Licensing.html
+    attribution: Norwegian Meteorological Institute (MET Norway), CC BY 4.0
+    cassette_namespace: met_norway
+    max_requests_per_second: 5
+    timeout_seconds: 15
+    notes:
+      - "Kimlik ve iletişim bilgisi içeren User-Agent zorunludur."
+      - "Koordinatlar en çok dört ondalıkla gönderilir."
+      - "Expires ve Last-Modified başlıklarına göre cache yapılmalıdır."
+      - "20 istek/saniye üzeri trafik özel anlaşma gerektirir."
+
+  wdi_allowlist:
+    display_name: World Development Indicators incelenmiş gösterge listesi
+    base_url: null
+    execution_class: derived_local
+    auth: none
+    license: CC-BY-4.0-WORLD-BANK-TERMS
+    license_url: https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets
+    attribution: World Bank, World Development Indicators
+    cassette_namespace: null
+    notes:
+      - "Yalnızca sürümlenmiş ve lisans açısından incelenmiş gösterge allowlist'i aranır."
+      - "Genel World Bank gösterge kataloğu çalışma zamanında sorgulanmaz."
+
+  worldbank_wdi:
+    display_name: World Bank Indicators API (WDI source=2)
+    base_url: https://api.worldbank.org
+    execution_class: live_recorded
+    auth: none
+    license: CC-BY-4.0-WORLD-BANK-TERMS
+    license_url: https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets
+    attribution: World Bank, World Development Indicators
+    cassette_namespace: worldbank_wdi
+    max_requests_per_second: 2
+    timeout_seconds: 15
+    notes:
+      - "Her istek source=2 ile World Development Indicators'a sabitlenir."
+      - "Gösterge kodları yalnızca wdi_allowlist sağlayıcısından seçilir."
+
+  gbif:
+    display_name: Global Biodiversity Information Facility
+    base_url: https://api.gbif.org
+    execution_class: live_recorded
+    auth: none
+    license: GBIF-FILTERED-CC0-CC-BY-4.0
+    license_url: https://www.gbif.org/terms
+    attribution: GBIF.org ve occurrence kayıtlarını yayımlayan veri sağlayıcıları
+    cassette_namespace: gbif
+    max_requests_per_second: 2
+    timeout_seconds: 30
+    notes:
+      - "Occurrence istekleri hem CC0_1_0 hem CC_BY_4_0 lisans filtrelerini tekrarlar."
+      - "Normalleştirme katmanı CC BY-NC, belirtilmemiş ve desteklenmeyen lisansları ayrıca eler."
+      - "Her kayıtta license, datasetKey, key ve publishingOrgKey korunur."
+      - "Sayfa boyutu en fazla 50 ile sınırlandırılır; toplu indirme yapılmaz."
+
+  wikimedia_metadata:
+    display_name: Türkçe Vikipedi metadata-only
+    base_url: https://tr.wikipedia.org
+    execution_class: live_recorded
+    auth: none
+    license: WIKIMEDIA-METADATA-ONLY
+    license_url: https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use
+    attribution: Türkçe Vikipedi katkıcıları; yalnızca sayfa metadata alanları
+    cassette_namespace: wikimedia_metadata
+    max_requests_per_second: 2
+    timeout_seconds: 30
+    notes:
+      - "Makale metni, extract, snippet ve açıklama alanları kaydedilmez."
+      - "Arama srprop alanı size|wordcount|timestamp ile sabitlenir."
+      - "Yalnızca sayfa kimliği, başlık, URL, sürüm ve kategori metadata'sı kullanılır."
+
+  github_metadata:
+    display_name: GitHub public repository metadata-only
+    base_url: https://api.github.com
+    execution_class: live_recorded
+    auth: none
+    license: GITHUB-METADATA-ONLY
+    license_url: https://docs.github.com/en/site-policy/github-terms/github-terms-of-service
+    attribution: GitHub public repository metadata; kullanıcı metni ve profilleri hariç
+    cassette_namespace: github_metadata
+    max_requests_per_second: 1
+    timeout_seconds: 30
+    notes:
+      - "Kimliksiz kullanım 60 istek/saat sınırına tabidir; pilot isteklerin tamamı kasetlenir."
+      - "Description, README, issue/release body, contributor ve kullanıcı profil alanları tutulmaz."
+      - "Yalnızca repository ve release kimliği, ad, URL, sayaç, zaman ve SPDX metadata'sı kullanılır."
+
+  izmir_ckan:
+    display_name: İzmir Büyükşehir Belediyesi Açık Veri Portalı
+    base_url: https://acikveri.bizizmir.com
+    execution_class: live_recorded
+    auth: none
+    license: CC-BY-4.0
+    license_url: https://acikveri.bizizmir.com/tr/license
+    attribution: >-
+      Atıf 4.0 Uluslararası (CC BY 4.0) kapsamında lisanslanan kamu sektörü
+      bilgilerini içerir. Kaynak: İzmir Büyükşehir Belediyesi Açık Veri Portalı.
+    cassette_namespace: izmir
+    enabled: false
+    # Nazik davranma: portal sınır beyan etmiyor ama yüklenmesin.
+    max_requests_per_second: 2
+    timeout_seconds: 15
+    notes:
+      - "datastore_search_sql bu portalda YOKTUR -- yalnızca datastore_search."
+      - "datastore_search her zaman sort=_id asc ile çağrılır."
+      - "package_search sort=metadata_modified desc ile sabitlenir."
+
+  izmir_realtime:
+    display_name: ESHOT / İztek gerçek zamanlı servisleri
+    base_url: https://openapi.izmir.bel.tr
+    execution_class: live_recorded
+    auth: none
+    # AYRI HOST -- CC BY 4.0 teyidi bu host'u KAPSAMAZ.
+    license: UNDETERMINED
+    license_url: null
+    attribution: İzmir Büyükşehir Belediyesi / ESHOT
+    cassette_namespace: izmir_realtime
+    max_requests_per_second: 1
+    timeout_seconds: 10
+    # Lisans belirsiz olduğu için kayıt sayısı sınırlıdır.
+    max_cassettes: 60
+    unresolved_license: true
+    enabled: false
+    notes:
+      - "KoorX = ENLEM, KoorY = BOYLAM (kaynakta isimler ters)."
+      - "Koordinatlar virgüllü ondalık ayraçlı string."
+      - "Boş dizi [] geçerli bir sonuçtur, hata değil."
+      - "LİSANS AÇIK MADDE: yayın öncesi çözülmeli (LICENSE-DATA § 3)."
+
+  izmir_snapshot:
+    display_name: İzmir dondurulmuş tablolar
+    base_url: null
+    execution_class: derived_local
+    auth: none
+    license: CC-BY-4.0
+    license_url: https://acikveri.bizizmir.com/tr/license
+    attribution: >-
+      İzmir Büyükşehir Belediyesi Açık Veri Portalı, CC BY 4.0.
+      Dondurulmuş ve değiştirilmiş alt küme.
+    cassette_namespace: null
+    enabled: false
+    notes:
+      - "Ağ çağrısı yoktur; dondurulmuş snapshot üzerinde yerel hesaplama."
+      - "cbs/noktayayakinduraklar EPSG tuzağı nedeniyle canlı çağrı yerine tercih edildi."
+
+  # Tamamen kurgusal; hiçbir ticari sağlayıcı ile bağlantısı yoktur.
+  onmuhasebe_mock:
+    display_name: Örnek Ön Muhasebe (kurgusal)
+    base_url: https://api.ornek-onmuhasebe.test
+    execution_class: simulated
+    auth: none
+    license: Apache-2.0
+    attribution: ToolCall-TR katkıcıları (kurgusal servis)
+    cassette_namespace: null
+    enabled: false
+    notes:
+      - "Rezerve .test TLD'si -- tescil edilebilir alan adı kullanılmaz."
+      - "Cassette KULLANILMAZ: mock zaten (seed, sıralı çağrılar) altında deterministik."

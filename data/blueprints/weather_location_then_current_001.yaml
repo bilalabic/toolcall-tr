@@ -1,0 +1,35 @@
+# Yerel konum çözümleme -> MET Norway güncel hava.
+blueprint_id: weather_location_then_current_001
+family_id: weather_location_then_current
+split: train
+domain: weather
+kind: sequential_tool_call
+difficulty: medium
+provider: met_norway
+
+user_goal: İstanbul'un güncel hava durumunu şehir adından başlayarak getirmek
+known_information:
+  query: İstanbul
+
+available_tools:
+  - geo.search_places
+  - weather.get_current_weather
+  - weather.get_weather_forecast
+
+utterances:
+  - "İstanbul'da hava şu an nasıl?"
+  - "İstanbul'un güncel hava durumunu getir."
+  - "Şu anda İstanbul kaç derece?"
+
+expected_behavior:
+  decision: tool_call
+
+expected_actions:
+  - tool: geo.search_places
+    arguments:
+      query: { value: İstanbul, origin: user_message }
+
+  - tool: weather.get_current_weather
+    arguments:
+      latitude: "$actions[0].results[0].latitude"
+      longitude: "$actions[0].results[0].longitude"

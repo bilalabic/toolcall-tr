@@ -1,0 +1,248 @@
+{
+  "attribution": {
+    "attribution": "Atıf 4.0 Uluslararası (CC BY 4.0) kapsamında lisanslanan kamu sektörü bilgilerini içerir. Kaynak: İzmir Büyükşehir Belediyesi Açık Veri Portalı.",
+    "license": "CC-BY-4.0",
+    "modified": "Canonical JSON'a normalize edildi; başlıklar beyaz listeye göre budandı.",
+    "upstream_url": "https://acikveri.bizizmir.com/api/3/action/package_show?id=taksi-durak-bilgileri"
+  },
+  "body": {
+    "help": "https://acikveri.bizizmir.com/api/3/action/help_show?name=package_show",
+    "result": {
+      "author": "İzBB Coğrafi Bilgi Sistemleri Şube Müdürlüğü",
+      "author_email": "acikveri@bizizmir.com",
+      "creator_user_id": "ddfba975-498b-41d2-9e04-2dd9b70a5c9a",
+      "extras": [
+        {
+          "key": "Coğrafi veri içeriyor mu?",
+          "value": "evet"
+        },
+        {
+          "key": "Dil",
+          "value": "tr-TR"
+        },
+        {
+          "key": "Veri güncelleme sıklığı",
+          "value": "düzensiz"
+        },
+        {
+          "key": "Yayıncı",
+          "value": "İzmir Büyükşehir Belediyesi"
+        }
+      ],
+      "groups": [
+        {
+          "description": "Birçok sektörle mekânsal etkileşimi olan coğrafi verinin; üretilmesi, temini, depolanması, işlenmesi, yönetilmesi, kıymetlendirilmesi, analiz edilmesi, paylaşılması, görselleştirilmesi, sunulması ve güncel tutulması için gerekli olan donanım, yazılım, insan kaynağı, standartlar ve yöntemler bütünüdür. ",
+          "display_name": "Coğrafi Bilgi Sistemleri",
+          "id": "b4543a00-478e-4f50-b1cb-3e755c6e640f",
+          "image_display_url": "https://acikveri.bizizmir.com/uploads/group/2024-03-20-072609.145856Cografi.svg",
+          "name": "cografi-bilgi-sistemleri",
+          "title": "Coğrafi Bilgi Sistemleri"
+        },
+        {
+          "description": "It involves sustainable, safe, integrated and interconnected transportation systems supported by Information Technologies, which includes the usage of one or more modes of transportation such as tram, bus, train, metro, car, sea and air transport, bicycle and pedestrians.",
+          "display_name": "Mobility",
+          "id": "91f70f5e-bbc6-4deb-a5e7-7d410f0a97e0",
+          "image_display_url": "https://acikveri.bizizmir.com/uploads/group/2020-12-22-182733.608136hareketlilik-icon.svg",
+          "name": "hareketlilik",
+          "title": "Mobility"
+        }
+      ],
+      "id": "05a570b5-ff3c-4547-b02f-292f6308398d",
+      "isopen": false,
+      "license_id": "Izmir-Metropolitan-Municipality-License",
+      "license_title": "Izmir Metropolitan Municipality Open Data License",
+      "license_url": "http://acikveri.bizizmir.com/tr/license",
+      "maintainer": "İzBB Coğrafi Bilgi Sistemleri Şube Müdürlüğü",
+      "maintainer_email": "acikveri@bizizmir.com",
+      "metadata_created": "2020-11-05T11:27:35.412962",
+      "metadata_modified": "2026-04-14T09:22:31.598986",
+      "name": "taksi-durak-bilgileri",
+      "notes": "İzmir Taksi duraklarına ait durak adı, ilçe, mahalle, yol ve konumları hakkında bilgiler",
+      "num_resources": 4,
+      "num_tags": 6,
+      "organization": {
+        "approval_status": "approved",
+        "created": "2020-08-21T06:49:57.289698",
+        "description": "",
+        "id": "f71ef64a-6566-4fcd-89b6-ad322c93464c",
+        "image_url": "2023-04-27-110134.536483Portal-ibb-logo.png",
+        "is_organization": true,
+        "name": "bilgi-islem-dairesi-baskanligi",
+        "revision_id": "bd2d1d5d-925f-415d-ba2e-b744b9998076",
+        "state": "active",
+        "title": "Bilgi İşlem Dairesi Başkanlığı",
+        "type": "organization"
+      },
+      "owner_org": "f71ef64a-6566-4fcd-89b6-ad322c93464c",
+      "private": false,
+      "relationships_as_object": [],
+      "relationships_as_subject": [],
+      "resources": [
+        {
+          "cache_last_updated": null,
+          "cache_url": null,
+          "created": "2020-11-05T11:28:25.109106",
+          "datastore_active": false,
+          "description": "Taksi durak bilgilerini içeren web servisi",
+          "format": "API",
+          "hash": "",
+          "id": "264061d3-ca30-440e-ba92-7f14865188e8",
+          "last_modified": null,
+          "mimetype": null,
+          "mimetype_inner": null,
+          "name": "Taksi Durak Bilgileri",
+          "package_id": "05a570b5-ff3c-4547-b02f-292f6308398d",
+          "position": 0,
+          "resource_type": null,
+          "revision_id": "228e1926-e573-4b70-8c08-60e3d8927c5f",
+          "size": null,
+          "state": "active",
+          "tracking_summary": {
+            "recent": 5,
+            "total": 326
+          },
+          "url": "https://openapi.izmir.bel.tr/api/ibb/cbs/taksiduraklari",
+          "url_type": null
+        },
+        {
+          "cache_last_updated": null,
+          "cache_url": null,
+          "created": "2020-12-15T22:41:59.381523",
+          "datastore_active": true,
+          "description": "Taksi duraklarının konum bilgilerini içeren CSV dosyası.",
+          "format": "CSV",
+          "hash": "",
+          "id": "64a72577-5f4c-404c-8842-780d88f351df",
+          "last_modified": "2026-04-14T12:21:59.271802",
+          "mimetype": "text/csv",
+          "mimetype_inner": null,
+          "name": "Taksi Durak Bilgileri",
+          "package_id": "05a570b5-ff3c-4547-b02f-292f6308398d",
+          "position": 1,
+          "resource_type": null,
+          "revision_id": "eebbeb5b-05fe-4d4b-93d6-f8d3c9d6a328",
+          "size": 25258,
+          "state": "active",
+          "tracking_summary": {
+            "recent": 3,
+            "total": 48
+          },
+          "url": "https://openfiles.izmir.bel.tr/100104/docs/izbb-taksi-durak-bilgileri.csv",
+          "url_type": ""
+        },
+        {
+          "cache_last_updated": null,
+          "cache_url": null,
+          "created": "2020-12-15T22:45:11.997234",
+          "datastore_active": true,
+          "description": "Taksi duraklarının konum bilgilerini içeren XLSX dosyası",
+          "format": "XLSX",
+          "hash": "",
+          "id": "54ef9e93-939d-4f27-96fc-fe082b018a7a",
+          "last_modified": "2026-04-14T12:21:59.271802",
+          "mimetype": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "mimetype_inner": null,
+          "name": "Taksi Durak Bilgileri",
+          "package_id": "05a570b5-ff3c-4547-b02f-292f6308398d",
+          "position": 2,
+          "resource_type": null,
+          "revision_id": "e7358921-692d-4d09-9fc5-6d69912e16e0",
+          "size": 31580,
+          "state": "active",
+          "tracking_summary": {
+            "recent": 3,
+            "total": 168
+          },
+          "url": "https://openfiles.izmir.bel.tr/100104/docs/izbb-taksi-durak-bilgileri.xlsx",
+          "url_type": ""
+        },
+        {
+          "cache_last_updated": null,
+          "cache_url": null,
+          "created": "2021-01-10T12:44:26.358741",
+          "datastore_active": false,
+          "description": "Önemli yerler web servis kullanım dokümanı içeren PDF dosyası.",
+          "format": "PDF",
+          "hash": "",
+          "id": "60d17cc0-019e-4078-9a37-4e0e1dfc1f45",
+          "last_modified": null,
+          "mimetype": "application/pdf",
+          "mimetype_inner": null,
+          "name": "Önemli Yerler Web Servis Kullanımı Dokümanı",
+          "package_id": "05a570b5-ff3c-4547-b02f-292f6308398d",
+          "position": 3,
+          "resource_type": null,
+          "revision_id": "79248bf1-70eb-43e9-9719-28b3cc1393b6",
+          "size": null,
+          "state": "active",
+          "tracking_summary": {
+            "recent": 14,
+            "total": 1201
+          },
+          "url": "https://openfiles.izmir.bel.tr/100104/docs/cbs-WebServisKullanimDokumani-1.1.pdf",
+          "url_type": null
+        }
+      ],
+      "revision_id": "6bd51224-eb73-4f4b-b995-c10f43cbce48",
+      "state": "active",
+      "tags": [
+        {
+          "display_name": "durak",
+          "id": "2c758e13-0a2b-4344-9cd7-fb020bbc22c6",
+          "name": "durak",
+          "state": "active",
+          "vocabulary_id": null
+        },
+        {
+          "display_name": "hareketlilik",
+          "id": "a23a1c15-16f4-4aee-83ad-05615477ef74",
+          "name": "hareketlilik",
+          "state": "active",
+          "vocabulary_id": null
+        },
+        {
+          "display_name": "konum",
+          "id": "72412b60-2310-44de-81bf-ed7c20950853",
+          "name": "konum",
+          "state": "active",
+          "vocabulary_id": null
+        },
+        {
+          "display_name": "taksi",
+          "id": "af71bf19-b07e-448b-bd4b-1da9408daf7a",
+          "name": "taksi",
+          "state": "active",
+          "vocabulary_id": null
+        },
+        {
+          "display_name": "taxi",
+          "id": "c2763495-4e56-431c-9ed1-4c26b8b8cc66",
+          "name": "taxi",
+          "state": "active",
+          "vocabulary_id": null
+        },
+        {
+          "display_name": "ulaşım",
+          "id": "c08ffd50-c662-41b4-a099-2aedac9f3d3b",
+          "name": "ulaşım",
+          "state": "active",
+          "vocabulary_id": null
+        }
+      ],
+      "title": "Taksi Durak Bilgileri",
+      "tracking_summary": {
+        "recent": 9,
+        "total": 1726
+      },
+      "type": "dataset",
+      "url": "https://acikveri.bizizmir.com/dataset/taksi-durak-bilgileri",
+      "version": ""
+    },
+    "success": true
+  },
+  "body_encoding": "json",
+  "headers": {
+    "content-type": "application/json;charset=utf-8"
+  },
+  "status": 200
+}

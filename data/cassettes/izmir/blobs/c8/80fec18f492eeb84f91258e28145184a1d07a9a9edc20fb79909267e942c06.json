@@ -1,0 +1,976 @@
+{
+  "attribution": {
+    "attribution": "Atıf 4.0 Uluslararası (CC BY 4.0) kapsamında lisanslanan kamu sektörü bilgilerini içerir. Kaynak: İzmir Büyükşehir Belediyesi Açık Veri Portalı.",
+    "license": "CC-BY-4.0",
+    "modified": "Canonical JSON'a normalize edildi; başlıklar beyaz listeye göre budandı.",
+    "upstream_url": "https://acikveri.bizizmir.com/api/3/action/package_search?q=otob%C3%BCs+durak&rows=5&start=0"
+  },
+  "body": {
+    "help": "https://acikveri.bizizmir.com/api/3/action/help_show?name=package_search",
+    "result": {
+      "count": 5,
+      "facets": {},
+      "results": [
+        {
+          "author": "Eshot Yazılım Şube Müdürlüğü",
+          "author_email": "acikveri@bizizmir.com",
+          "creator_user_id": "ddfba975-498b-41d2-9e04-2dd9b70a5c9a",
+          "extras": [
+            {
+              "key": "Coğrafi Veri İçeriyor mu?",
+              "value": "evet"
+            },
+            {
+              "key": "Dil",
+              "value": "tr-TR"
+            },
+            {
+              "key": "Veri Güncelleme Sıklığı",
+              "value": "günde iki kez"
+            },
+            {
+              "key": "Yayıncı",
+              "value": "İzmir Büyükşehir Belediyesi"
+            }
+          ],
+          "groups": [
+            {
+              "description": "Akıllı çevre, akıllı ulaşım ve iletişim teknolojileri bileşenleri kapsamında kullanılan sensörlerle toplanan veriyi ileten, analiz eden, ölçen, izleyen ve daha gelişmiş performans ve kullanıcı deneyimi için kullanıcı talepleri ve çevredeki değişikliklere akıllı şekilde yanıt verebilen ve kamusal değer oluşturan sistemlerdir. ",
+              "display_name": "Altyapı",
+              "id": "f88cded6-e714-450f-8573-4995535c3355",
+              "image_display_url": "https://acikveri.bizizmir.com/uploads/group/2024-03-19-123720.466651Altyapi.svg",
+              "name": "altyapi",
+              "title": "Altyapı"
+            },
+            {
+              "description": "Birçok sektörle mekânsal etkileşimi olan coğrafi verinin; üretilmesi, temini, depolanması, işlenmesi, yönetilmesi, kıymetlendirilmesi, analiz edilmesi, paylaşılması, görselleştirilmesi, sunulması ve güncel tutulması için gerekli olan donanım, yazılım, insan kaynağı, standartlar ve yöntemler bütünüdür. ",
+              "display_name": "Coğrafi Bilgi Sistemleri",
+              "id": "b4543a00-478e-4f50-b1cb-3e755c6e640f",
+              "image_display_url": "https://acikveri.bizizmir.com/uploads/group/2024-03-20-072609.145856Cografi.svg",
+              "name": "cografi-bilgi-sistemleri",
+              "title": "Coğrafi Bilgi Sistemleri"
+            },
+            {
+              "description": "It involves sustainable, safe, integrated and interconnected transportation systems supported by Information Technologies, which includes the usage of one or more modes of transportation such as tram, bus, train, metro, car, sea and air transport, bicycle and pedestrians.",
+              "display_name": "Mobility",
+              "id": "91f70f5e-bbc6-4deb-a5e7-7d410f0a97e0",
+              "image_display_url": "https://acikveri.bizizmir.com/uploads/group/2020-12-22-182733.608136hareketlilik-icon.svg",
+              "name": "hareketlilik",
+              "title": "Mobility"
+            }
+          ],
+          "id": "297ae894-3318-418b-ab1a-4825f959b72d",
+          "isopen": false,
+          "license_id": "Izmir-Metropolitan-Municipality-License",
+          "license_title": "Izmir Metropolitan Municipality Open Data License",
+          "license_url": "http://acikveri.bizizmir.com/tr/license",
+          "maintainer": "Eshot Yazılım Şube Müdürlüğü",
+          "maintainer_email": "acikveri@bizizmir.com",
+          "metadata_created": "2020-11-26T08:00:09.191554",
+          "metadata_modified": "2026-04-14T09:22:53.400789",
+          "name": "eshot-otobus-duraklari",
+          "notes": "Bu veri seti, otobüs duraklarına ait detaylı bilgileri içermektedir. Her bir durak için benzersiz durak kimlik numarası, durak adı, durakların enlem ve boylam koordinatları ile duraktan geçen otobüs hat numaralarını içerir.\r\n",
+          "num_resources": 1,
+          "num_tags": 4,
+          "organization": {
+            "approval_status": "approved",
+            "created": "2020-08-21T07:22:49.610063",
+            "description": "ESHOT Genel Müdürlüğü, Elektrik, Su, Havagazı ve Toplu Ulaşım gibi geniş bir yelpazede, İzmir kentine hizmet vermek üzere kurulmuş, İzmir Büyükşehir Belediyesine bağlı, mülhak bütçeli, bünyesinden TEK ve İZSU gibi iki ayrı kurum çıkarmış, deneyimli, bilgi birikimli, köklü bir kuruluştur.\r\n\r\nESHOT Genel Müdürlüğü bugün, mevcut filosu ve yeni otobüs alımları ile de, nitelik olarak çevreci, yeni, gençleşmiş ve nicelik olarak sayısı arttırılmış bir otobüs filosu ile İzmir metropolünün toplu ulaşım ağındaki etkin rolünü ve görevini, hedeflenen çağdaş ölçülere ulaştırmak için çalışmalarını sürdürmektedir",
+            "id": "133a0e62-aa1b-4d1c-9ffc-7b1e4f203111",
+            "image_url": "2020-08-21-072249.571688eshot-logo.png",
+            "is_organization": true,
+            "name": "eshot",
+            "revision_id": "a4a16f31-0926-457c-9077-f2cccf04aaeb",
+            "state": "active",
+            "title": "ESHOT",
+            "type": "organization"
+          },
+          "owner_org": "133a0e62-aa1b-4d1c-9ffc-7b1e4f203111",
+          "private": false,
+          "relationships_as_object": [],
+          "relationships_as_subject": [],
+          "resources": [
+            {
+              "cache_last_updated": null,
+              "cache_url": null,
+              "created": "2023-10-03T13:16:33.690605",
+              "datastore_active": true,
+              "description": "Otobüs durak isimleri, konumları ve duraktan geçen otobüs hatları içeren CSV dosya",
+              "format": "CSV",
+              "hash": "",
+              "id": "0c791266-a2e4-4f14-82b8-9a9b102fbf94",
+              "last_modified": "2026-04-14T12:21:59.271802",
+              "mimetype": "text/csv",
+              "mimetype_inner": null,
+              "name": "Otobüs Durak Listesi",
+              "package_id": "297ae894-3318-418b-ab1a-4825f959b72d",
+              "position": 0,
+              "resource_type": null,
+              "revision_id": "cb45b757-4561-49f6-a868-82a11d0a2e67",
+              "size": 593044,
+              "state": "active",
+              "url": "https://openfiles.izmir.bel.tr/211488/docs/eshot-otobus-duraklari.csv",
+              "url_type": ""
+            }
+          ],
+          "revision_id": "01eba988-ad0a-47e6-893d-28bcfe7c5d35",
+          "state": "active",
+          "tags": [
+            {
+              "display_name": "durak",
+              "id": "2c758e13-0a2b-4344-9cd7-fb020bbc22c6",
+              "name": "durak",
+              "state": "active",
+              "vocabulary_id": null
+            },
+            {
+              "display_name": "hareketlilik",
+              "id": "a23a1c15-16f4-4aee-83ad-05615477ef74",
+              "name": "hareketlilik",
+              "state": "active",
+              "vocabulary_id": null
+            },
+            {
+              "display_name": "otobüs",
+              "id": "7e62b4b2-3238-4070-b028-436a5547b70d",
+              "name": "otobüs",
+              "state": "active",
+              "vocabulary_id": null
+            },
+            {
+              "display_name": "ulaşım",
+              "id": "c08ffd50-c662-41b4-a099-2aedac9f3d3b",
+              "name": "ulaşım",
+              "state": "active",
+              "vocabulary_id": null
+            }
+          ],
+          "title": "Otobüs Durakları",
+          "tracking_summary": {
+            "recent": 56,
+            "total": 4920
+          },
+          "type": "dataset",
+          "url": "https://acikveri.bizizmir.com/dataset/eshot-otobus-duraklari",
+          "version": ""
+        },
+        {
+          "author": "İzBB Coğrafi Bilgi Sistemleri Şube Müdürlüğü",
+          "author_email": "acikveri@eshot.gov.tr",
+          "creator_user_id": "ddfba975-498b-41d2-9e04-2dd9b70a5c9a",
+          "extras": [
+            {
+              "key": "Coğrafi Veri İçeriyor mu?",
+              "value": "evet"
+            },
+            {
+              "key": "Dil",
+              "value": "tr-TR"
+            },
+            {
+              "key": "Veri Güncelleme Sıklığı",
+              "value": "sürekli"
+            },
+            {
+              "key": "Yayıncı",
+              "value": "İzmir Büyükşehir Belediyesi"
+            }
+          ],
+          "groups": [
+            {
+              "description": "Birçok sektörle mekânsal etkileşimi olan coğrafi verinin; üretilmesi, temini, depolanması, işlenmesi, yönetilmesi, kıymetlendirilmesi, analiz edilmesi, paylaşılması, görselleştirilmesi, sunulması ve güncel tutulması için gerekli olan donanım, yazılım, insan kaynağı, standartlar ve yöntemler bütünüdür. ",
+              "display_name": "Coğrafi Bilgi Sistemleri",
+              "id": "b4543a00-478e-4f50-b1cb-3e755c6e640f",
+              "image_display_url": "https://acikveri.bizizmir.com/uploads/group/2024-03-20-072609.145856Cografi.svg",
+              "name": "cografi-bilgi-sistemleri",
+              "title": "Coğrafi Bilgi Sistemleri"
+            },
+            {
+              "description": "It involves sustainable, safe, integrated and interconnected transportation systems supported by Information Technologies, which includes the usage of one or more modes of transportation such as tram, bus, train, metro, car, sea and air transport, bicycle and pedestrians.",
+              "display_name": "Mobility",
+              "id": "91f70f5e-bbc6-4deb-a5e7-7d410f0a97e0",
+              "image_display_url": "https://acikveri.bizizmir.com/uploads/group/2020-12-22-182733.608136hareketlilik-icon.svg",
+              "name": "hareketlilik",
+              "title": "Mobility"
+            }
+          ],
+          "id": "4974d3ca-cac3-4c14-85f1-8fc8fa900ce9",
+          "isopen": false,
+          "license_id": "Izmir-Metropolitan-Municipality-License",
+          "license_title": "Izmir Metropolitan Municipality Open Data License",
+          "license_url": "http://acikveri.bizizmir.com/tr/license",
+          "maintainer": "İzBB Coğrafi Bilgi Sistemleri Şube Müdürlüğü",
+          "maintainer_email": "acikveri@eshot.gov.tr",
+          "metadata_created": "2020-08-27T18:33:27.110291",
+          "metadata_modified": "2024-10-21T12:30:33.347987",
+          "name": "noktaya-yakin-duraklar",
+          "notes": "Girilen koordinat bilgisine göre yakın durak bilgisi veri seti",
+          "num_resources": 2,
+          "num_tags": 7,
+          "organization": {
+            "approval_status": "approved",
+            "created": "2020-08-21T06:49:57.289698",
+            "description": "",
+            "id": "f71ef64a-6566-4fcd-89b6-ad322c93464c",
+            "image_url": "2023-04-27-110134.536483Portal-ibb-logo.png",
+            "is_organization": true,
+            "name": "bilgi-islem-dairesi-baskanligi",
+            "revision_id": "bd2d1d5d-925f-415d-ba2e-b744b9998076",
+            "state": "active",
+            "title": "Bilgi İşlem Dairesi Başkanlığı",
+            "type": "organization"
+          },
+          "owner_org": "f71ef64a-6566-4fcd-89b6-ad322c93464c",
+          "private": false,
+          "relationships_as_object": [],
+          "relationships_as_subject": [],
+          "resources": [
+            {
+              "cache_last_updated": null,
+              "cache_url": null,
+              "created": "2020-08-27T18:34:10.747472",
+              "datastore_active": false,
+              "description": "Girilen koordinat bilgisine göre yakın durakların bilgisini döndüren web servisi.",
+              "format": "API",
+              "hash": "",
+              "id": "c85730f0-b28b-4b59-a9c5-a4a30ae80b43",
+              "last_modified": null,
+              "mimetype": null,
+              "mimetype_inner": null,
+              "name": "Noktaya Yakın Otobüs Durakları",
+              "package_id": "4974d3ca-cac3-4c14-85f1-8fc8fa900ce9",
+              "position": 0,
+              "resource_type": null,
+              "revision_id": "7a66226b-5da0-4cdf-ab39-79ae9da66363",
+              "size": null,
+              "state": "active",
+              "url": "https://openapi.izmir.bel.tr/api/ibb/cbs/noktayayakinduraklar?x=&y=&inCoordSys=&outCoordSys=",
+              "url_type": null
+            },
+            {
+              "cache_last_updated": null,
+              "cache_url": null,
+              "created": "2020-12-22T19:24:00.793715",
+              "datastore_active": false,
+              "description": "CBS web servislerinin kullanım dokümanını içeren PDF dosyası.",
+              "format": "PDF",
+              "hash": "",
+              "id": "29aa8c83-8a0c-4cf7-b37d-d4b280ec6805",
+              "last_modified": null,
+              "mimetype": "application/pdf",
+              "mimetype_inner": null,
+              "name": "Önemli Yerler Web Servis Kullanımı Dokümanı",
+              "package_id": "4974d3ca-cac3-4c14-85f1-8fc8fa900ce9",
+              "position": 1,
+              "resource_type": null,
+              "revision_id": "caa47313-7d30-45e8-a753-242ed52b2648",
+              "size": null,
+              "state": "active",
+              "url": "https://openfiles.izmir.bel.tr/100104/docs/cbs-WebServisKullanimDokumani-1.1.pdf",
+              "url_type": null
+            }
+          ],
+          "revision_id": "e11fbbd0-8140-44d8-a53c-1c75b6580d23",
+          "state": "active",
+          "tags": [
+            {
+              "display_name": "durak",
+              "id": "2c758e13-0a2b-4344-9cd7-fb020bbc22c6",
+              "name": "durak",
+              "state": "active",
+              "vocabulary_id": null
+            },
+            {
+              "display_name": "eshot",
+              "id": "e401a425-78f5-46c8-b39f-f9451edac68c",
+              "name": "eshot",
+              "state": "active",
+              "vocabulary_id": null
+            },
+            {
+              "display_name": "hareketlilik",
+              "id": "a23a1c15-16f4-4aee-83ad-05615477ef74",
+              "name": "hareketlilik",
+              "state": "active",
+              "vocabulary_id": null
+            },
+            {
+              "display_name": "konum",
+              "id": "72412b60-2310-44de-81bf-ed7c20950853",
+              "name": "konum",
+              "state": "active",
+              "vocabulary_id": null
+            },
+            {
+              "display_name": "koordinat",
+              "id": "4312ee92-ac3a-482c-bcdb-fa8524382147",
+              "name": "koordinat",
+              "state": "active",
+              "vocabulary_id": null
+            },
+            {
+              "display_name": "otobüs",
+              "id": "7e62b4b2-3238-4070-b028-436a5547b70d",
+              "name": "otobüs",
+              "state": "active",
+              "vocabulary_id": null
+            },
+            {
+              "display_name": "ulaşım",
+              "id": "c08ffd50-c662-41b4-a099-2aedac9f3d3b",
+              "name": "ulaşım",
+              "state": "active",
+              "vocabulary_id": null
+            }
+          ],
+          "title": "Noktaya Yakın Otobüs Durakları",
+          "tracking_summary": {
+            "recent": 15,
+            "total": 984
+          },
+          "type": "dataset",
+          "url": "https://acikveri.bizizmir.com/tr/dataset/noktaya-yakin-duraklar",
+          "version": ""
+        },
+        {
+          "author": "Eshot Yazılım Şube Müdürlüğü",
+          "author_email": "acikveri@bizizmir.com",
+          "creator_user_id": "ddfba975-498b-41d2-9e04-2dd9b70a5c9a",
+          "extras": [
+            {
+              "key": "Coğrafik Veri İçeriyor mu?",
+              "value": "evet"
+            },
+            {
+              "key": "Dil",
+              "value": "tr-TR"
+            },
+            {
+              "key": "Veri Güncelleme Sıklığı",
+              "value": "sürekli"
+            },
+            {
+              "key": "Yayıncı",
+              "value": "İzmir Büyükşehir Belediyesi"
+            }
+          ],
+          "groups": [
+            {
+              "description": "Akıllı çevre, akıllı ulaşım ve iletişim teknolojileri bileşenleri kapsamında kullanılan sensörlerle toplanan veriyi ileten, analiz eden, ölçen, izleyen ve daha gelişmiş performans ve kullanıcı deneyimi için kullanıcı talepleri ve çevredeki değişikliklere akıllı şekilde yanıt verebilen ve kamusal değer oluşturan sistemlerdir. ",
+              "display_name": "Altyapı",
+              "id": "f88cded6-e714-450f-8573-4995535c3355",
+              "image_display_url": "https://acikveri.bizizmir.com/uploads/group/2024-03-19-123720.466651Altyapi.svg",
+              "name": "altyapi",
+              "title": "Altyapı"
+            },
+            {
+              "description": "Birçok sektörle mekânsal etkileşimi olan coğrafi verinin; üretilmesi, temini, depolanması, işlenmesi, yönetilmesi, kıymetlendirilmesi, analiz edilmesi, paylaşılması, görselleştirilmesi, sunulması ve güncel tutulması için gerekli olan donanım, yazılım, insan kaynağı, standartlar ve yöntemler bütünüdür. ",
+              "display_name": "Coğrafi Bilgi Sistemleri",
+              "id": "b4543a00-478e-4f50-b1cb-3e755c6e640f",
+              "image_display_url": "https://acikveri.bizizmir.com/uploads/group/2024-03-20-072609.145856Cografi.svg",
+              "name": "cografi-bilgi-sistemleri",
+              "title": "Coğrafi Bilgi Sistemleri"
+            },
+            {
+              "description": "It involves sustainable, safe, integrated and interconnected transportation systems supported by Information Technologies, which includes the usage of one or more modes of transportation such as tram, bus, train, metro, car, sea and air transport, bicycle and pedestrians.",
+              "display_name": "Mobility",
+              "id": "91f70f5e-bbc6-4deb-a5e7-7d410f0a97e0",
+              "image_display_url": "https://acikveri.bizizmir.com/uploads/group/2020-12-22-182733.608136hareketlilik-icon.svg",
+              "name": "hareketlilik",
+              "title": "Mobility"
+            }
+          ],
+          "id": "2025ccd6-e7da-4a35-a391-8d1492c331c9",
+          "isopen": false,
+          "license_id": "Izmir-Metropolitan-Municipality-License",
+          "license_title": "Izmir Metropolitan Municipality Open Data License",
+          "license_url": "http://acikveri.bizizmir.com/tr/license",
+          "maintainer": "İzmir İnovasyon ve Teknoloji A.Ş. Yazılım Müdürlüğü",
+          "maintainer_email": "acikveri@bizizmir.com",
+          "metadata_created": "2023-07-19T06:45:19.630916",
+          "metadata_modified": "2023-07-19T11:42:39.286157",
+          "name": "hattin-duraga-yaklasan-otobusleri",
+          "notes": "Hattın durağa yaklaşan otobüslerinin konumu hakkında bilgi sağlayan veri seti",
+          "num_resources": 2,
+          "num_tags": 4,
+          "organization": {
+            "approval_status": "approved",
+            "created": "2020-08-21T07:22:49.610063",
+            "description": "ESHOT Genel Müdürlüğü, Elektrik, Su, Havagazı ve Toplu Ulaşım gibi geniş bir yelpazede, İzmir kentine hizmet vermek üzere kurulmuş, İzmir Büyükşehir Belediyesine bağlı, mülhak bütçeli, bünyesinden TEK ve İZSU gibi iki ayrı kurum çıkarmış, deneyimli, bilgi birikimli, köklü bir kuruluştur.\r\n\r\nESHOT Genel Müdürlüğü bugün, mevcut filosu ve yeni otobüs alımları ile de, nitelik olarak çevreci, yeni, gençleşmiş ve nicelik olarak sayısı arttırılmış bir otobüs filosu ile İzmir metropolünün toplu ulaşım ağındaki etkin rolünü ve görevini, hedeflenen çağdaş ölçülere ulaştırmak için çalışmalarını sürdürmektedir",
+            "id": "133a0e62-aa1b-4d1c-9ffc-7b1e4f203111",
+            "image_url": "2020-08-21-072249.571688eshot-logo.png",
+            "is_organization": true,
+            "name": "eshot",
+            "revision_id": "a4a16f31-0926-457c-9077-f2cccf04aaeb",
+            "state": "active",
+            "title": "ESHOT",
+            "type": "organization"
+          },
+          "owner_org": "133a0e62-aa1b-4d1c-9ffc-7b1e4f203111",
+          "private": false,
+          "relationships_as_object": [],
+          "relationships_as_subject": [],
+          "resources": [
+            {
+              "cache_last_updated": null,
+              "cache_url": null,
+              "created": "2023-07-19T06:48:58.913379",
+              "datastore_active": false,
+              "description": "Hattın durağa yaklaşan otobüslerinin, hat ve durak numarasına göre konum bilgilerini içeren web servisi",
+              "format": "API",
+              "hash": "",
+              "id": "bf197dda-636e-4c3b-a392-98eba72dd2af",
+              "last_modified": null,
+              "mimetype": null,
+              "mimetype_inner": null,
+              "name": "Hattın Durağa Yaklaşan Otobüsleri",
+              "package_id": "2025ccd6-e7da-4a35-a391-8d1492c331c9",
+              "position": 0,
+              "resource_type": null,
+              "revision_id": "5ca43880-d763-4f37-869d-3bd1063f56f3",
+              "size": null,
+              "state": "active",
+              "url": "https://openapi.izmir.bel.tr/api/iztek/hattinyaklasanotobusleri/{hatNo}/{durakId}",
+              "url_type": null
+            },
+            {
+              "cache_last_updated": null,
+              "cache_url": null,
+              "created": "2023-07-19T06:52:48.085574",
+              "datastore_active": false,
+              "description": "İzmir İnovasyon ve Teknoloji A.Ş. web servislerinin kullanım dokümanını içeren PDF dosyası.",
+              "format": "PDF",
+              "hash": "",
+              "id": "7ad81a8d-a37c-4bd0-85f0-a7da1b411d7c",
+              "last_modified": null,
+              "mimetype": "application/pdf",
+              "mimetype_inner": null,
+              "name": "İztek Web Servis Kullanım Dokümanı",
+              "package_id": "2025ccd6-e7da-4a35-a391-8d1492c331c9",
+              "position": 1,
+              "resource_type": null,
+              "revision_id": "5ca43880-d763-4f37-869d-3bd1063f56f3",
+              "size": null,
+              "state": "active",
+              "url": "https://openfiles.izmir.bel.tr/471231/docs/iztek-WebServisKullanimDokumani_1.0.pdf",
+              "url_type": null
+            }
+          ],
+          "revision_id": "5a0a0c89-15c3-4f7a-a821-a725e6b5506d",
+          "state": "active",
+          "tags": [
+            {
+              "display_name": "durak",
+              "id": "2c758e13-0a2b-4344-9cd7-fb020bbc22c6",
+              "name": "durak",
+              "state": "active",
+              "vocabulary_id": null
+            },
+            {
+              "display_name": "hat",
+              "id": "44755f91-aca5-46a5-9a1f-34fd34be24fc",
+              "name": "hat",
+              "state": "active",
+              "vocabulary_id": null
+            },
+            {
+              "display_name": "konum",
+              "id": "72412b60-2310-44de-81bf-ed7c20950853",
+              "name": "konum",
+              "state": "active",
+              "vocabulary_id": null
+            },
+            {
+              "display_name": "otobüs",
+              "id": "7e62b4b2-3238-4070-b028-436a5547b70d",
+              "name": "otobüs",
+              "state": "active",
+              "vocabulary_id": null
+            }
+          ],
+          "title": "Hattın Durağa Yaklaşan Otobüsleri",
+          "tracking_summary": {
+            "recent": 12,
+            "total": 1227
+          },
+          "type": "dataset",
+          "url": "https://acikveri.bizizmir.com/dataset/hattin-duraga-yaklasan-otobusleri",
+          "version": ""
+        },
+        {
+          "author": "Eshot Yazılım Şube Müdürlüğü",
+          "author_email": "acikveri@bizizmir.com",
+          "creator_user_id": "ddfba975-498b-41d2-9e04-2dd9b70a5c9a",
+          "extras": [
+            {
+              "key": "Coğrafik Veri İçeriyor mu?",
+              "value": "evet"
+            },
+            {
+              "key": "Dil",
+              "value": "tr-TR"
+            },
+            {
+              "key": "Veri Güncelleme Sıklığı",
+              "value": "sürekli"
+            },
+            {
+              "key": "Yayıncı",
+              "value": "İzmir Büyükşehir Belediyesi"
+            }
+          ],
+          "groups": [
+            {
+              "description": "Akıllı çevre, akıllı ulaşım ve iletişim teknolojileri bileşenleri kapsamında kullanılan sensörlerle toplanan veriyi ileten, analiz eden, ölçen, izleyen ve daha gelişmiş performans ve kullanıcı deneyimi için kullanıcı talepleri ve çevredeki değişikliklere akıllı şekilde yanıt verebilen ve kamusal değer oluşturan sistemlerdir. ",
+              "display_name": "Altyapı",
+              "id": "f88cded6-e714-450f-8573-4995535c3355",
+              "image_display_url": "https://acikveri.bizizmir.com/uploads/group/2024-03-19-123720.466651Altyapi.svg",
+              "name": "altyapi",
+              "title": "Altyapı"
+            },
+            {
+              "description": "Birçok sektörle mekânsal etkileşimi olan coğrafi verinin; üretilmesi, temini, depolanması, işlenmesi, yönetilmesi, kıymetlendirilmesi, analiz edilmesi, paylaşılması, görselleştirilmesi, sunulması ve güncel tutulması için gerekli olan donanım, yazılım, insan kaynağı, standartlar ve yöntemler bütünüdür. ",
+              "display_name": "Coğrafi Bilgi Sistemleri",
+              "id": "b4543a00-478e-4f50-b1cb-3e755c6e640f",
+              "image_display_url": "https://acikveri.bizizmir.com/uploads/group/2024-03-20-072609.145856Cografi.svg",
+              "name": "cografi-bilgi-sistemleri",
+              "title": "Coğrafi Bilgi Sistemleri"
+            },
+            {
+              "description": "It involves sustainable, safe, integrated and interconnected transportation systems supported by Information Technologies, which includes the usage of one or more modes of transportation such as tram, bus, train, metro, car, sea and air transport, bicycle and pedestrians.",
+              "display_name": "Mobility",
+              "id": "91f70f5e-bbc6-4deb-a5e7-7d410f0a97e0",
+              "image_display_url": "https://acikveri.bizizmir.com/uploads/group/2020-12-22-182733.608136hareketlilik-icon.svg",
+              "name": "hareketlilik",
+              "title": "Mobility"
+            }
+          ],
+          "id": "e44a41e6-13e9-4f81-b821-ccbdeb43b88f",
+          "isopen": false,
+          "license_id": "Izmir-Metropolitan-Municipality-License",
+          "license_title": "Izmir Metropolitan Municipality Open Data License",
+          "license_url": "http://acikveri.bizizmir.com/tr/license",
+          "maintainer": "İzmir İnovasyon ve Teknoloji A.Ş. Yazılım Müdürlüğü",
+          "maintainer_email": "acikveri@bizizmir.com",
+          "metadata_created": "2023-07-19T06:36:30.522584",
+          "metadata_modified": "2023-07-19T11:42:37.136277",
+          "name": "duraga-yaklasan-otobusler",
+          "notes": "Durağa yaklaşan otobüslerin konum verisi hakkında bilgi sağlayan veri seti",
+          "num_resources": 2,
+          "num_tags": 6,
+          "organization": {
+            "approval_status": "approved",
+            "created": "2020-08-21T07:22:49.610063",
+            "description": "ESHOT Genel Müdürlüğü, Elektrik, Su, Havagazı ve Toplu Ulaşım gibi geniş bir yelpazede, İzmir kentine hizmet vermek üzere kurulmuş, İzmir Büyükşehir Belediyesine bağlı, mülhak bütçeli, bünyesinden TEK ve İZSU gibi iki ayrı kurum çıkarmış, deneyimli, bilgi birikimli, köklü bir kuruluştur.\r\n\r\nESHOT Genel Müdürlüğü bugün, mevcut filosu ve yeni otobüs alımları ile de, nitelik olarak çevreci, yeni, gençleşmiş ve nicelik olarak sayısı arttırılmış bir otobüs filosu ile İzmir metropolünün toplu ulaşım ağındaki etkin rolünü ve görevini, hedeflenen çağdaş ölçülere ulaştırmak için çalışmalarını sürdürmektedir",
+            "id": "133a0e62-aa1b-4d1c-9ffc-7b1e4f203111",
+            "image_url": "2020-08-21-072249.571688eshot-logo.png",
+            "is_organization": true,
+            "name": "eshot",
+            "revision_id": "a4a16f31-0926-457c-9077-f2cccf04aaeb",
+            "state": "active",
+            "title": "ESHOT",
+            "type": "organization"
+          },
+          "owner_org": "133a0e62-aa1b-4d1c-9ffc-7b1e4f203111",
+          "private": false,
+          "relationships_as_object": [],
+          "relationships_as_subject": [],
+          "resources": [
+            {
+              "cache_last_updated": null,
+              "cache_url": null,
+              "created": "2023-07-19T06:38:29.250177",
+              "datastore_active": false,
+              "description": "Durak numarasına(Id) göre durağa yaklaşan otobüslerin konum bilgilerini içeren  içeren web servisi",
+              "format": "API",
+              "hash": "",
+              "id": "0f26d368-0ba3-493c-a7dc-d56bfd17d5ec",
+              "last_modified": null,
+              "mimetype": null,
+              "mimetype_inner": null,
+              "name": "Durağa Yaklaşan Otobüsler",
+              "package_id": "e44a41e6-13e9-4f81-b821-ccbdeb43b88f",
+              "position": 0,
+              "resource_type": null,
+              "revision_id": "c87fb1c5-e28a-4514-8a88-eeda47280e42",
+              "size": null,
+              "state": "active",
+              "url": "https://openapi.izmir.bel.tr/api/iztek/duragayaklasanotobusler/{durakId}",
+              "url_type": null
+            },
+            {
+              "cache_last_updated": null,
+              "cache_url": null,
+              "created": "2023-07-19T06:42:11.753480",
+              "datastore_active": false,
+              "description": "İzmir İnovasyon ve Teknoloji A.Ş. web servislerinin kullanım dokümanını içeren PDF dosyası.",
+              "format": "PDF",
+              "hash": "",
+              "id": "51ef1ca3-ab6a-400f-9644-4f4c01dc95a9",
+              "last_modified": null,
+              "mimetype": "application/pdf",
+              "mimetype_inner": null,
+              "name": "İztek Web Servis Kullanım Dokümanı",
+              "package_id": "e44a41e6-13e9-4f81-b821-ccbdeb43b88f",
+              "position": 1,
+              "resource_type": null,
+              "revision_id": "c87fb1c5-e28a-4514-8a88-eeda47280e42",
+              "size": null,
+              "state": "active",
+              "url": "https://openfiles.izmir.bel.tr/471231/docs/iztek-WebServisKullanimDokumani_1.0.pdf",
+              "url_type": null
+            }
+          ],
+          "revision_id": "77c5bc1d-a170-4bbd-af6d-6b4f3c259828",
+          "state": "active",
+          "tags": [
+            {
+              "display_name": "durak",
+              "id": "2c758e13-0a2b-4344-9cd7-fb020bbc22c6",
+              "name": "durak",
+              "state": "active",
+              "vocabulary_id": null
+            },
+            {
+              "display_name": "hareketlilik",
+              "id": "a23a1c15-16f4-4aee-83ad-05615477ef74",
+              "name": "hareketlilik",
+              "state": "active",
+              "vocabulary_id": null
+            },
+            {
+              "display_name": "hat",
+              "id": "44755f91-aca5-46a5-9a1f-34fd34be24fc",
+              "name": "hat",
+              "state": "active",
+              "vocabulary_id": null
+            },
+            {
+              "display_name": "konum",
+              "id": "72412b60-2310-44de-81bf-ed7c20950853",
+              "name": "konum",
+              "state": "active",
+              "vocabulary_id": null
+            },
+            {
+              "display_name": "otobüs",
+              "id": "7e62b4b2-3238-4070-b028-436a5547b70d",
+              "name": "otobüs",
+              "state": "active",
+              "vocabulary_id": null
+            },
+            {
+              "display_name": "ulaşım",
+              "id": "c08ffd50-c662-41b4-a099-2aedac9f3d3b",
+              "name": "ulaşım",
+              "state": "active",
+              "vocabulary_id": null
+            }
+          ],
+          "title": "Durağa Yaklaşan Otobüsler",
+          "tracking_summary": {
+            "recent": 89,
+            "total": 3051
+          },
+          "type": "dataset",
+          "url": "https://acikveri.bizizmir.com/dataset/duraga-yaklasan-otobusler",
+          "version": ""
+        },
+        {
+          "author": "İzBB Toplu Ulaşım Hizmetleri Şube Müdürlüğü",
+          "author_email": "acikveri@bizizmir.com",
+          "creator_user_id": "ddfba975-498b-41d2-9e04-2dd9b70a5c9a",
+          "extras": [
+            {
+              "key": "Coğrafi Veri İçeriyor mu?",
+              "value": "hayır"
+            },
+            {
+              "key": "Dil",
+              "value": "tr-TR"
+            },
+            {
+              "key": "Veri Güncelleme Sıklığı",
+              "value": "düzensiz"
+            },
+            {
+              "key": "Yayıncı",
+              "value": "İzmir Büyükşehir Belediyesi"
+            }
+          ],
+          "groups": [
+            {
+              "description": "Birçok sektörle mekânsal etkileşimi olan coğrafi verinin; üretilmesi, temini, depolanması, işlenmesi, yönetilmesi, kıymetlendirilmesi, analiz edilmesi, paylaşılması, görselleştirilmesi, sunulması ve güncel tutulması için gerekli olan donanım, yazılım, insan kaynağı, standartlar ve yöntemler bütünüdür. ",
+              "display_name": "Coğrafi Bilgi Sistemleri",
+              "id": "b4543a00-478e-4f50-b1cb-3e755c6e640f",
+              "image_display_url": "https://acikveri.bizizmir.com/uploads/group/2024-03-20-072609.145856Cografi.svg",
+              "name": "cografi-bilgi-sistemleri",
+              "title": "Coğrafi Bilgi Sistemleri"
+            },
+            {
+              "description": "It involves sustainable, safe, integrated and interconnected transportation systems supported by Information Technologies, which includes the usage of one or more modes of transportation such as tram, bus, train, metro, car, sea and air transport, bicycle and pedestrians.",
+              "display_name": "Mobility",
+              "id": "91f70f5e-bbc6-4deb-a5e7-7d410f0a97e0",
+              "image_display_url": "https://acikveri.bizizmir.com/uploads/group/2020-12-22-182733.608136hareketlilik-icon.svg",
+              "name": "hareketlilik",
+              "title": "Mobility"
+            }
+          ],
+          "id": "c9516345-5599-41b7-b54e-f523ead9d110",
+          "isopen": false,
+          "license_id": "Izmir-Metropolitan-Municipality-License",
+          "license_title": "Izmir Metropolitan Municipality Open Data License",
+          "license_url": "http://acikveri.bizizmir.com/tr/license",
+          "maintainer": "İzBB Toplu Ulaşım Hizmetleri Şube Müdürlüğü",
+          "maintainer_email": "acikveri@bizizmir.com",
+          "metadata_created": "2022-02-04T10:03:59.410010",
+          "metadata_modified": "2026-04-03T12:23:58.044995",
+          "name": "toplu-ulasim-gtfs-verileri",
+          "notes": "İzmir Büyükşehir Belediyesi toplu ulaşım araçlarına ait GTFS veri seti",
+          "num_resources": 5,
+          "num_tags": 13,
+          "organization": {
+            "approval_status": "approved",
+            "created": "2020-08-21T06:37:53.176122",
+            "description": "",
+            "id": "755a47e5-937b-4b5c-9f2c-6b9c7377d6bf",
+            "image_url": "2023-04-27-111432.500616Portal-ibb-logo.png",
+            "is_organization": true,
+            "name": "ulasim-dairesi-baskanligi",
+            "revision_id": "8acfda77-fbb8-4518-a0e1-1e866d7ff506",
+            "state": "active",
+            "title": "Ulaşım Dairesi Başkanlığı",
+            "type": "organization"
+          },
+          "owner_org": "755a47e5-937b-4b5c-9f2c-6b9c7377d6bf",
+          "private": false,
+          "relationships_as_object": [],
+          "relationships_as_subject": [],
+          "resources": [
+            {
+              "cache_last_updated": null,
+              "cache_url": null,
+              "created": "2022-02-04T10:05:21.623378",
+              "datastore_active": false,
+              "description": "Otobüs ulaşım verilerini içeren GTFS dosyası ",
+              "format": "ZIP",
+              "hash": "",
+              "id": "822f89be-48bf-4b36-8ed8-1912511032c4",
+              "last_modified": null,
+              "mimetype": "application/zip",
+              "mimetype_inner": null,
+              "name": "Otobüs GTFS verileri",
+              "package_id": "c9516345-5599-41b7-b54e-f523ead9d110",
+              "position": 0,
+              "resource_type": null,
+              "revision_id": "21221ebe-9d92-4a6a-a794-c3b5a2fb2356",
+              "size": 19827670,
+              "state": "active",
+              "url": "https://www.eshot.gov.tr/gtfs/bus-eshot-gtfs.zip",
+              "url_type": null
+            },
+            {
+              "cache_last_updated": null,
+              "cache_url": null,
+              "created": "2022-02-08T13:30:06.806439",
+              "datastore_active": false,
+              "description": "Vapur hareket saatleri, zaman çizelgesi iskele konum bilgilerini içeren GTFS formatında veri.",
+              "format": "ZIP",
+              "hash": "",
+              "id": "89394f9a-635f-42fb-92eb-7f93019e28e4",
+              "last_modified": null,
+              "mimetype": "application/zip",
+              "mimetype_inner": null,
+              "name": "İzdeniz Vapur GTFS verileri",
+              "package_id": "c9516345-5599-41b7-b54e-f523ead9d110",
+              "position": 1,
+              "resource_type": null,
+              "revision_id": "7b9f2272-f374-4261-b058-85fda0dafa04",
+              "size": 32658,
+              "state": "active",
+              "url": "https://www.izdeniz.com.tr/gtfs/ship-izdeniz-gtfs.zip",
+              "url_type": null
+            },
+            {
+              "cache_last_updated": null,
+              "cache_url": null,
+              "created": "2022-02-08T13:32:27.254044",
+              "datastore_active": false,
+              "description": "Metro hareket saatleri, zaman çizelgesi ve istasyon konum bilgilerini içeren GTFS formatında veri.",
+              "format": "ZIP",
+              "hash": "",
+              "id": "c2995cbe-2e89-451b-86e7-2cc2a4f4a94a",
+              "last_modified": null,
+              "mimetype": "application/zip",
+              "mimetype_inner": null,
+              "name": "İzmir Metrosu GTFS Verileri",
+              "package_id": "c9516345-5599-41b7-b54e-f523ead9d110",
+              "position": 2,
+              "resource_type": null,
+              "revision_id": "3c1a40b4-b69d-4cfa-964f-717fa96b04cb",
+              "size": 130206,
+              "state": "active",
+              "url": "https://www.izmirmetro.com.tr/gtfs/rail-metro-gtfs.zip",
+              "url_type": null
+            },
+            {
+              "cache_last_updated": null,
+              "cache_url": null,
+              "created": "2022-02-08T13:33:49.228366",
+              "datastore_active": false,
+              "description": "Tramvay hareket saatleri, zaman çizelgesi ve istasyon konum bilgilerini içeren GTFS formatında veri.",
+              "format": "ZIP",
+              "hash": "",
+              "id": "87cf8842-8d4b-4b09-b34f-5c8a4c9478e1",
+              "last_modified": null,
+              "mimetype": "application/zip",
+              "mimetype_inner": null,
+              "name": "İzmir Tramvayı GTFS Verileri",
+              "package_id": "c9516345-5599-41b7-b54e-f523ead9d110",
+              "position": 3,
+              "resource_type": null,
+              "revision_id": "4314e13d-6caf-465b-822d-7b5a645e9b8c",
+              "size": 172624,
+              "state": "active",
+              "url": "https://www.tramizmir.com/gtfs/rail-tramizmir-gtfs.zip",
+              "url_type": null
+            },
+            {
+              "cache_last_updated": null,
+              "cache_url": null,
+              "created": "2022-02-08T13:35:27.309940",
+              "datastore_active": false,
+              "description": "Banliyö(İzban) hareket saatleri, zaman çizelgesi ve istasyon konum bilgilerini içeren GTFS formatında veri.",
+              "format": "ZIP",
+              "hash": "",
+              "id": "0809d6dc-ab87-4690-9aee-28abf64f484c",
+              "last_modified": null,
+              "mimetype": "application/zip",
+              "mimetype_inner": null,
+              "name": "İzmir Banliyö(İzban) GTFS Verileri",
+              "package_id": "c9516345-5599-41b7-b54e-f523ead9d110",
+              "position": 4,
+              "resource_type": null,
+              "revision_id": "68242e04-3116-4d09-980a-ec2455840d2a",
+              "size": 40841,
+              "state": "active",
+              "url": "https://www.izban.com.tr/gtfs/rail-izban-gtfs.zip",
+              "url_type": null
+            }
+          ],
+          "revision_id": "a7852185-dfa6-4d1a-b7a5-97958b8a0eea",
+          "state": "active",
+          "tags": [
+            {
+              "display_name": "durak",
+              "id": "2c758e13-0a2b-4344-9cd7-fb020bbc22c6",
+              "name": "durak",
+              "state": "active",
+              "vocabulary_id": null
+            },
+            {
+              "display_name": "gtfs",
+              "id": "9f766377-8d89-47d8-a1b0-e9ab6811b2ac",
+              "name": "gtfs",
+              "state": "active",
+              "vocabulary_id": null
+            },
+            {
+              "display_name": "hareket saati",
+              "id": "eab25bd7-214a-4849-b9ce-32daf239ff1a",
+              "name": "hareket saati",
+              "state": "active",
+              "vocabulary_id": null
+            },
+            {
+              "display_name": "hareket saatleri",
+              "id": "569b0d9b-a7ae-425e-9e0d-04e39b9e5301",
+              "name": "hareket saatleri",
+              "state": "active",
+              "vocabulary_id": null
+            },
+            {
+              "display_name": "iskele",
+              "id": "e16f99b0-cb38-448b-8fbb-2391caabf868",
+              "name": "iskele",
+              "state": "active",
+              "vocabulary_id": null
+            },
+            {
+              "display_name": "istasyon",
+              "id": "ac884553-4a59-46d7-ada2-bc4a161de4a9",
+              "name": "istasyon",
+              "state": "active",
+              "vocabulary_id": null
+            },
+            {
+              "display_name": "izban",
+              "id": "4ad4483a-459b-4e8c-907e-352f0f189c09",
+              "name": "izban",
+              "state": "active",
+              "vocabulary_id": null
+            },
+            {
+              "display_name": "metro",
+              "id": "7accba59-9682-408c-b069-b448013f539f",
+              "name": "metro",
+              "state": "active",
+              "vocabulary_id": null
+            },
+            {
+              "display_name": "otobüs",
+              "id": "7e62b4b2-3238-4070-b028-436a5547b70d",
+              "name": "otobüs",
+              "state": "active",
+              "vocabulary_id": null
+            },
+            {
+              "display_name": "saat",
+              "id": "fa83e446-c23e-4214-992a-87e2fd256c34",
+              "name": "saat",
+              "state": "active",
+              "vocabulary_id": null
+            },
+            {
+              "display_name": "tramvay",
+              "id": "6a71a22d-d00b-4ed4-996e-ff910c8d00ea",
+              "name": "tramvay",
+              "state": "active",
+              "vocabulary_id": null
+            },
+            {
+              "display_name": "ulaşım",
+              "id": "c08ffd50-c662-41b4-a099-2aedac9f3d3b",
+              "name": "ulaşım",
+              "state": "active",
+              "vocabulary_id": null
+            },
+            {
+              "display_name": "vapur",
+              "id": "0011482c-cbf3-4b7e-af1b-c14eeee0740c",
+              "name": "vapur",
+              "state": "active",
+              "vocabulary_id": null
+            }
+          ],
+          "title": "Toplu Ulaşım GTFS Verileri",
+          "tracking_summary": {
+            "recent": 50,
+            "total": 2210
+          },
+          "type": "dataset",
+          "url": "https://acikveri.bizizmir.com/dataset/toplu-ulasim-gtfs-verileri",
+          "version": ""
+        }
+      ],
+      "search_facets": {},
+      "sort": "score desc, metadata_modified desc"
+    },
+    "success": true
+  },
+  "body_encoding": "json",
+  "headers": {
+    "content-type": "application/json;charset=utf-8"
+  },
+  "status": 200
+}

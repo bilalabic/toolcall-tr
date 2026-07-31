@@ -1,0 +1,27 @@
+blueprint_id: calculator_kilometres_to_metres_001
+family_id: calculator_kilometres_to_metres
+split: validation
+domain: calculation
+kind: successful_tool_call
+difficulty: easy
+provider: general_local
+
+user_goal: Üç buçuk kilometrenin metre karşılığını hesaplamak
+known_information:
+  expression: "3.5 * 1000"
+
+available_tools:
+  - calculator.evaluate
+  - geo.find_nearby_places
+
+utterances:
+  - "3.5 * 1000 işlemini hesapla."
+  - "3.5 * 1000 kaç eder?"
+
+expected_behavior:
+  decision: tool_call
+
+expected_actions:
+  - tool: calculator.evaluate
+    arguments:
+      expression: { value: "3.5 * 1000", origin: user_message }

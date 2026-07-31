@@ -1,0 +1,23 @@
+blueprint_id: geo_near_device_ankara_001
+family_id: geo_near_device_ankara
+split: train
+domain: geography
+kind: successful_tool_call
+difficulty: medium
+provider: geonames_tr
+user_goal: Cihaz konumuna 150 kilometre içindeki il merkezlerini bulmak
+known_information: { radius_km: 150 }
+context:
+  device_latitude: 39.9334
+  device_longitude: 32.8597
+available_tools: [geo.search_places, geo.find_nearby_places]
+utterances:
+  - "Cihaz konumuma 150 kilometre içindeki il merkezlerini bul."
+  - "Bulunduğum yere en fazla 150 kilometre uzaktaki il merkezlerini göster."
+expected_behavior: { decision: tool_call }
+expected_actions:
+  - tool: geo.find_nearby_places
+    arguments:
+      latitude: { value: 39.9334, origin: system_state }
+      longitude: { value: 32.8597, origin: system_state }
+      radius_km: { value: 150, origin: user_message }

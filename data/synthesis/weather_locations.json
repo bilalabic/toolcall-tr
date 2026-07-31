@@ -1,0 +1,16 @@
+{
+  "location": [
+    {
+      "name": "Elazığ",
+      "slug": "elazig"
+    },
+    {
+      "name": "İstanbul",
+      "slug": "istanbul"
+    },
+    {
+      "name": "İzmir",
+      "slug": "izmir"
+    }
+  ]
+}

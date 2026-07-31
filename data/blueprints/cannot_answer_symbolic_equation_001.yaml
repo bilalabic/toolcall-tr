@@ -1,0 +1,18 @@
+blueprint_id: cannot_answer_symbolic_equation_001
+family_id: cannot_answer_symbolic_equation
+split: train
+domain: calculation
+kind: should_refuse
+difficulty: medium
+provider: general_local
+user_goal: Sembolik bir denklemin bilinmeyenini çözmek
+known_information: {}
+available_tools: [calculator.evaluate, statistics.search_indicator]
+utterances:
+  - "2x + 4 = 10 denkleminde x'i çöz."
+  - "x bilinmeyenini 2x + 4 = 10 denkleminden bul."
+expected_behavior:
+  decision: cannot_answer
+  unsupported_reason_tr: Sunulan hesaplama aracı yalnızca sayısal aritmetik ifadeleri değerlendirir; sembolik denklem çözmez.
+  response_intent_tr: Sembolik denklem çözme aracının bulunmadığını açıkla.
+  assistant_response_tr: "Kullanabildiğim hesaplama aracı sembolik denklem çözemiyor; yalnızca tamamen sayısal aritmetik ifadeleri değerlendirebiliyor."

@@ -1,0 +1,27 @@
+blueprint_id: calculator_vat_total_001
+family_id: calculator_vat_total
+split: train
+domain: calculation
+kind: successful_tool_call
+difficulty: easy
+provider: general_local
+
+user_goal: 850 sayısına yüzde yirmi eklenmiş sonucu hesaplamak
+known_information:
+  expression: "850 * 1.20"
+
+available_tools:
+  - calculator.evaluate
+  - currency.get_exchange_rate
+
+utterances:
+  - "850 * 1.20 işlemini hesapla."
+  - "850 * 1.20 kaç eder?"
+
+expected_behavior:
+  decision: tool_call
+
+expected_actions:
+  - tool: calculator.evaluate
+    arguments:
+      expression: { value: "850 * 1.20", origin: user_message }

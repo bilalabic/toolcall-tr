@@ -1,0 +1,17 @@
+blueprint_id: direct_answer_turkey_currency_001
+family_id: direct_answer_turkey_currency
+split: test
+domain: general_knowledge
+kind: should_answer_directly
+difficulty: easy
+provider: no_tool
+user_goal: Türkiye'nin para birimini öğrenmek
+known_information: {}
+available_tools: [currency.get_exchange_rate, currency.list_supported_currencies]
+utterances:
+  - "Türkiye'nin para birimi nedir?"
+  - "Türkiye'de hangi para birimi kullanılır?"
+expected_behavior:
+  decision: direct_answer
+  response_intent_tr: Araç çağırmadan Türkiye'nin para biriminin Türk lirası olduğunu söyle.
+  assistant_response_tr: "Türkiye'nin para birimi Türk lirasıdır."

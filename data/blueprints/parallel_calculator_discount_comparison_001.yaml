@@ -1,0 +1,21 @@
+blueprint_id: parallel_calculator_discount_comparison_001
+family_id: parallel_calculator_discount_comparison
+split: validation
+domain: calculation
+kind: parallel_tool_call
+difficulty: medium
+provider: general_local
+user_goal: İki indirimli seçeneğin tutarını karşılaştırmak
+known_information: {}
+available_tools: [calculator.evaluate, currency.get_exchange_rate]
+utterances:
+  - "1250 * 0.80 ve 980 * 0.90 işlemlerini ayrı ayrı hesapla."
+  - "İki seçeneği karşılaştırmak için 1250 * 0.80 ile 980 * 0.90 sonuçlarını bul."
+expected_behavior: { decision: tool_call }
+expected_actions:
+  - tool: calculator.evaluate
+    arguments:
+      expression: { value: "1250 * 0.80", origin: user_message }
+  - tool: calculator.evaluate
+    arguments:
+      expression: { value: "980 * 0.90", origin: user_message }

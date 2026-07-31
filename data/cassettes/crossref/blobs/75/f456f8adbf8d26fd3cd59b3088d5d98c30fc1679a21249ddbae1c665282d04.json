@@ -1,0 +1,138 @@
+{
+  "attribution": {
+    "attribution": "Crossref open scholarly metadata; abstracts and full text excluded",
+    "license": "CROSSREF-METADATA",
+    "modified": "Canonical JSON'a normalize edildi; başlıklar beyaz listeye göre budandı.",
+    "upstream_url": "https://api.crossref.org/works?query.bibliographic=2023+Kahramanmara%C5%9F+depremleri+T%C3%BCrkiye&rows=5&select=DOI%2Ctitle%2Ctype%2CURL%2Cpublished%2Ccontainer-title%2Cpublisher%2Creferences-count%2Cis-referenced-by-count"
+  },
+  "body": {
+    "message": {
+      "items": [
+        {
+          "DOI": "10.59617/efepub2024211",
+          "URL": "https://doi.org/10.59617/efepub2024211",
+          "container-title": [
+            ""
+          ],
+          "is-referenced-by-count": 0,
+          "license": [],
+          "published": {
+            "date-parts": [
+              [
+                2024,
+                5,
+                17
+              ]
+            ]
+          },
+          "publisher": "efe akademik yayıncılık",
+          "reference-count": 0,
+          "title": [
+            "6 Şubat 2023 Kahramanmaraş Depremleri Hasar Nedenleri ve Alınan Dersler"
+          ],
+          "type": "edited-book"
+        },
+        {
+          "DOI": "10.56130/tucbis.1311693",
+          "URL": "https://doi.org/10.56130/tucbis.1311693",
+          "container-title": [
+            "Türkiye Coğrafi Bilgi Sistemleri Dergisi"
+          ],
+          "is-referenced-by-count": 5,
+          "license": [],
+          "published": {
+            "date-parts": [
+              [
+                2023,
+                12,
+                25
+              ]
+            ]
+          },
+          "publisher": "Turkiye Cografi Bilgi Sistemleri Dergisi",
+          "reference-count": 22,
+          "title": [
+            "6 Şubat 2023 Kahramanmaraş depremleri (Mw 7.7 ve Mw 7.6) sonrasında Türkiye’de meydana gelen depremlerin (Mw≥4) coğrafi bilgi sistemleri ile mekânsal analizi"
+          ],
+          "type": "journal-article"
+        },
+        {
+          "DOI": "10.59287/myc.645",
+          "URL": "https://doi.org/10.59287/myc.645",
+          "container-title": [
+            "MÜHENDİSLİKTE YENİLİKÇİ ÇALIŞMALAR"
+          ],
+          "is-referenced-by-count": 0,
+          "license": [],
+          "published": {
+            "date-parts": [
+              [
+                2023
+              ]
+            ]
+          },
+          "publisher": "DUVAR PUBLISHING",
+          "reference-count": 0,
+          "title": [
+            "6 Şubat 2023 Kahramanmaraş Depremleri Sonrası Yığma Yapılarda Yapısal Hasar Değerlendirmesi"
+          ],
+          "type": "book-chapter"
+        },
+        {
+          "DOI": "10.70054/geosound.1566666",
+          "URL": "https://doi.org/10.70054/geosound.1566666",
+          "container-title": [
+            "Geosound"
+          ],
+          "is-referenced-by-count": 0,
+          "license": [],
+          "published": {
+            "date-parts": [
+              [
+                2024,
+                12,
+                27
+              ]
+            ]
+          },
+          "publisher": "Çukurova University",
+          "reference-count": 6,
+          "title": [
+            "2023 Kahramanmaraş Depremleri ve Yapılara Etkisinin İncelenmesi"
+          ],
+          "type": "journal-article"
+        },
+        {
+          "DOI": "10.26677/tr1010.2023.1337",
+          "URL": "https://doi.org/10.26677/tr1010.2023.1337",
+          "container-title": [
+            "Turk Turizm Arastirmalari Dergisi"
+          ],
+          "is-referenced-by-count": 7,
+          "license": [],
+          "published": {
+            "date-parts": [
+              [
+                2023,
+                12,
+                8
+              ]
+            ]
+          },
+          "publisher": "TR1010 Dergiler Birligi",
+          "reference-count": 0,
+          "title": [
+            "Eğitim ve Çocuk Özelinde Kahramanmaraş Depremleri (The Kahramanmaraş Earthquakes Specifically on Education and Children)"
+          ],
+          "type": "journal-article"
+        }
+      ],
+      "total-results": 10958387
+    }
+  },
+  "body_encoding": "json",
+  "headers": {
+    "content-type": "application/json"
+  },
+  "status": 200
+}

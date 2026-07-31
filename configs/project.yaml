@@ -1,0 +1,64 @@
+# Proje hedefleri için referans yapılandırma. Çalışma zamanı bu dosyayı henüz
+# yüklemez; yürütme sabitleri `pipeline/environment.py` içinde testlerle
+# kilitlidir. Bu dosya tek doğruluk kaynağıymış gibi kullanılmamalıdır.
+
+project:
+  name: ToolCall-TR
+  version: "0.1.0"
+  locale: tr-TR
+  milestone: 3
+  scope: turkey_general
+
+catalog:
+  registered_tools: 35
+  active_families: 74
+  archived_blueprints: 8
+  archived_scope: izmir
+
+paths:
+  data: data
+  cassettes: data/cassettes
+  snapshots: data/snapshots
+  blueprints: data/blueprints
+  plans: data/plans
+  traces: data/traces
+  accepted: data/accepted
+  rejected: data/rejected
+  reports: reports
+  registry: registry
+
+determinism:
+  # Donmuş saat. Göreli tarih ifadeleri ("önümüzdeki cuma") bu ana göre
+  # çözülür. Değiştirilirse tüm tarih içeren ground-truth yeniden üretilmelidir.
+  frozen_now: "2026-07-28T09:00:00+03:00"
+  timezone: Europe/Istanbul
+  # Kök seed. episode_seed = sha256(root_seed + blueprint_id + variant_index)
+  root_seed: 42891
+
+split:
+  # Bölme fan-out'tan ÖNCE, family seviyesinde yapılır.
+  train_ratio: 0.70
+  validation_ratio: 0.10
+  test_ratio: 0.20
+  heldout_compositions: []
+  # Varsayılan profil mevcut family-disjoint davranışı korur. Diğer profiller
+  # seçildiğinde train/test kesişimi ilgili eksende sıfır olmak zorundadır.
+  default_holdout_profile: standard
+  holdout_profiles:
+    standard:
+      family_disjoint: true
+      tool_disjoint: false
+      provider_disjoint: false
+    unseen_tool:
+      family_disjoint: true
+      tool_disjoint: true
+      provider_disjoint: false
+    unseen_provider:
+      family_disjoint: true
+      tool_disjoint: false
+      provider_disjoint: true
+
+paraphrase:
+  variants_per_blueprint: 5
+  # Kabul edilmiş bir kardeşine bundan daha benzer paraphrase reddedilir.
+  max_similarity: 0.95

@@ -1,0 +1,17 @@
+blueprint_id: direct_answer_hours_in_day_001
+family_id: direct_answer_hours_in_day
+split: train
+domain: general_knowledge
+kind: should_answer_directly
+difficulty: easy
+provider: no_tool
+user_goal: Bir gündeki saat sayısını öğrenmek
+known_information: {}
+available_tools: [time.get_local_time, calculator.evaluate]
+utterances:
+  - "Bir gün kaç saattir?"
+  - "1 günde kaç saat var?"
+expected_behavior:
+  decision: direct_answer
+  response_intent_tr: Araç çağırmadan bir günün 24 saat olduğunu söyle.
+  assistant_response_tr: "Bir gün 24 saattir."

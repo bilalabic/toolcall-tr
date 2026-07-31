@@ -1,0 +1,37 @@
+blueprint_id: wikidata_anitkabir_facts_relations_001
+family_id: wikidata_anitkabir_facts_relations
+split: test
+domain: knowledge
+kind: sequential_tool_call
+difficulty: hard
+provider: wikidata
+
+user_goal: Anıtkabir'in Wikidata kaydını bulup temel entity metadata'sı ile yapılandırılmış ilişkilerini görmek
+known_information:
+  query: Anıtkabir
+
+available_tools:
+  - knowledge.search_entities
+  - knowledge.get_entity_facts
+  - knowledge.list_entity_relations
+
+utterances:
+  - "Anıtkabir'in Wikidata kaydını bul; temel bilgilerini ve diğer varlıklarla yapılandırılmış ilişkilerini getir."
+  - "Wikidata'da Anıtkabir'i ara, entity metadata'sını ve item ilişkilerini göster."
+
+expected_behavior:
+  decision: tool_call
+
+expected_actions:
+  - tool: knowledge.search_entities
+    arguments:
+      query: { value: Anıtkabir, origin: user_message }
+
+  - tool: knowledge.get_entity_facts
+    arguments:
+      entity_id: "$actions[0].results[0].entity_id"
+
+  - tool: knowledge.list_entity_relations
+    arguments:
+      entity_id: "$actions[0].results[0].entity_id"
+

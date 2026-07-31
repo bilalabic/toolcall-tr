@@ -1,0 +1,34 @@
+blueprint_id: developer_transformers_repository_001
+family_id: developer_repository_metadata
+split: test
+domain: developer
+kind: sequential_tool_call
+difficulty: medium
+provider: github_metadata
+
+user_goal: huggingface/transformers deposunun bağlantısını, yıldız sayısını ve lisansını görmek
+known_information:
+  query: transformers org:huggingface
+
+available_tools:
+  - developer.search_repositories
+  - developer.get_repository_metadata
+  - developer.list_releases_metadata
+  - knowledge.search_pages
+
+utterances:
+  - "GitHub'da transformers org:huggingface sorgusuyla depoyu bul; ilk sonucun bağlantısını, yıldız sayısını ve lisansını getir."
+  - "transformers org:huggingface sorgusunu çalıştırıp ilk deponun kimliğini, yıldız sayısını ve lisans bilgisini göster."
+
+expected_behavior:
+  decision: tool_call
+
+expected_actions:
+  - tool: developer.search_repositories
+    arguments:
+      query: { value: transformers org:huggingface, origin: user_message }
+
+  - tool: developer.get_repository_metadata
+    arguments:
+      owner: "$actions[0].results[0].owner_login"
+      repository: "$actions[0].results[0].name"

@@ -1,0 +1,129 @@
+{
+  "attribution": {
+    "attribution": "GitHub public repository metadata; kullanıcı metni ve profilleri hariç",
+    "license": "GITHUB-METADATA-ONLY",
+    "modified": "Canonical JSON'a normalize edildi; başlıklar beyaz listeye göre budandı.",
+    "upstream_url": "https://api.github.com/search/repositories?q=transformers+org%3Ahuggingface&sort=stars&order=desc&per_page=5&page=1"
+  },
+  "body": {
+    "incomplete_results": false,
+    "items": [
+      {
+        "archived": false,
+        "created_at": "2018-10-29T13:56:00Z",
+        "default_branch": "main",
+        "fork": false,
+        "forks_count": 34065,
+        "full_name": "huggingface/transformers",
+        "html_url": "https://github.com/huggingface/transformers",
+        "id": 155220641,
+        "license": {
+          "spdx_id": "Apache-2.0"
+        },
+        "name": "transformers",
+        "open_issues_count": 2323,
+        "owner": {
+          "login": "huggingface",
+          "type": "Organization"
+        },
+        "pushed_at": "2026-07-29T16:43:21Z",
+        "stargazers_count": 163128,
+        "updated_at": "2026-07-29T20:28:29Z"
+      },
+      {
+        "archived": false,
+        "created_at": "2019-02-02T05:51:12Z",
+        "default_branch": "main",
+        "fork": false,
+        "forks_count": 5180,
+        "full_name": "huggingface/pytorch-image-models",
+        "html_url": "https://github.com/huggingface/pytorch-image-models",
+        "id": 168799526,
+        "license": {
+          "spdx_id": "Apache-2.0"
+        },
+        "name": "pytorch-image-models",
+        "open_issues_count": 62,
+        "owner": {
+          "login": "huggingface",
+          "type": "Organization"
+        },
+        "pushed_at": "2026-07-27T21:10:58Z",
+        "stargazers_count": 37025,
+        "updated_at": "2026-07-29T17:06:56Z"
+      },
+      {
+        "archived": false,
+        "created_at": "2022-11-25T03:51:09Z",
+        "default_branch": "main",
+        "fork": false,
+        "forks_count": 2406,
+        "full_name": "huggingface/peft",
+        "html_url": "https://github.com/huggingface/peft",
+        "id": 570384908,
+        "license": {
+          "spdx_id": "Apache-2.0"
+        },
+        "name": "peft",
+        "open_issues_count": 60,
+        "owner": {
+          "login": "huggingface",
+          "type": "Organization"
+        },
+        "pushed_at": "2026-07-28T13:35:09Z",
+        "stargazers_count": 21461,
+        "updated_at": "2026-07-29T20:03:52Z"
+      },
+      {
+        "archived": false,
+        "created_at": "2020-03-27T10:54:55Z",
+        "default_branch": "main",
+        "fork": false,
+        "forks_count": 2877,
+        "full_name": "huggingface/trl",
+        "html_url": "https://github.com/huggingface/trl",
+        "id": 250510075,
+        "license": {
+          "spdx_id": "Apache-2.0"
+        },
+        "name": "trl",
+        "open_issues_count": 241,
+        "owner": {
+          "login": "huggingface",
+          "type": "Organization"
+        },
+        "pushed_at": "2026-07-29T16:16:13Z",
+        "stargazers_count": 18959,
+        "updated_at": "2026-07-29T16:19:16Z"
+      },
+      {
+        "archived": false,
+        "created_at": "2019-07-24T10:53:51Z",
+        "default_branch": "main",
+        "fork": false,
+        "forks_count": 2842,
+        "full_name": "huggingface/sentence-transformers",
+        "html_url": "https://github.com/huggingface/sentence-transformers",
+        "id": 198616978,
+        "license": {
+          "spdx_id": "Apache-2.0"
+        },
+        "name": "sentence-transformers",
+        "open_issues_count": 1306,
+        "owner": {
+          "login": "huggingface",
+          "type": "Organization"
+        },
+        "pushed_at": "2026-07-27T08:05:10Z",
+        "stargazers_count": 18954,
+        "updated_at": "2026-07-29T20:28:41Z"
+      }
+    ],
+    "total_count": 43
+  },
+  "body_encoding": "json",
+  "headers": {
+    "content-type": "application/json; charset=utf-8"
+  },
+  "status": 200
+}

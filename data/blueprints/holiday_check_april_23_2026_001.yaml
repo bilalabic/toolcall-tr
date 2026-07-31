@@ -1,0 +1,20 @@
+blueprint_id: holiday_check_april_23_2026_001
+family_id: holiday_check_april_23_2026
+split: test
+domain: calendar
+kind: successful_tool_call
+difficulty: easy
+provider: tr_public_holidays
+user_goal: 23 Nisan 2026'nın Türkiye'de resmî tatil olup olmadığını öğrenmek
+known_information: {}
+context:
+  normalized_date: "2026-04-23"
+available_tools: [calendar.list_public_holidays, calendar.is_public_holiday]
+utterances:
+  - "23 Nisan 2026 Türkiye'de resmî tatil mi?"
+  - "Türkiye'de 23 Nisan 2026 günü resmî tatil sayılıyor mu?"
+expected_behavior: { decision: tool_call }
+expected_actions:
+  - tool: calendar.is_public_holiday
+    arguments:
+      date: { value: "2026-04-23", origin: system_state }

@@ -1,0 +1,538 @@
+{
+  "_note": "Bu graph ELLE YAZILMAZ; tool parametre ve output alanlarındaki `semantic_type` eşleşmesinden türetilir.",
+  "edges": [
+    {
+      "semantic_type": "scientific_name",
+      "source_path": "scientific_name",
+      "source_tool": "biodiversity.get_species",
+      "target_parameter": "scientific_name",
+      "target_tool": "biodiversity.match_species_name"
+    },
+    {
+      "semantic_type": "taxon_key",
+      "source_path": "taxon_key",
+      "source_tool": "biodiversity.get_species",
+      "target_parameter": "taxon_key",
+      "target_tool": "biodiversity.search_occurrences"
+    },
+    {
+      "semantic_type": "taxon_key",
+      "source_path": "usage_key",
+      "source_tool": "biodiversity.match_species_name",
+      "target_parameter": "taxon_key",
+      "target_tool": "biodiversity.get_species"
+    },
+    {
+      "semantic_type": "taxon_key",
+      "source_path": "usage_key",
+      "source_tool": "biodiversity.match_species_name",
+      "target_parameter": "taxon_key",
+      "target_tool": "biodiversity.search_occurrences"
+    },
+    {
+      "semantic_type": "scientific_name",
+      "source_path": "results[*].scientific_name",
+      "source_tool": "biodiversity.search_occurrences",
+      "target_parameter": "scientific_name",
+      "target_tool": "biodiversity.match_species_name"
+    },
+    {
+      "semantic_type": "event_id",
+      "source_path": "event.event_id",
+      "source_tool": "calendar.create_event",
+      "target_parameter": "event_id",
+      "target_tool": "calendar.cancel_event"
+    },
+    {
+      "semantic_type": "calendar_id",
+      "source_path": "event.calendar_id",
+      "source_tool": "calendar.create_event",
+      "target_parameter": "calendar_ids",
+      "target_tool": "calendar.search_events"
+    },
+    {
+      "semantic_type": "datetime",
+      "source_path": "event.end_at",
+      "source_tool": "calendar.create_event",
+      "target_parameter": "end_at",
+      "target_tool": "calendar.search_events"
+    },
+    {
+      "semantic_type": "datetime",
+      "source_path": "event.start_at",
+      "source_tool": "calendar.create_event",
+      "target_parameter": "end_at",
+      "target_tool": "calendar.search_events"
+    },
+    {
+      "semantic_type": "datetime",
+      "source_path": "event.end_at",
+      "source_tool": "calendar.create_event",
+      "target_parameter": "start_at",
+      "target_tool": "calendar.search_events"
+    },
+    {
+      "semantic_type": "datetime",
+      "source_path": "event.start_at",
+      "source_tool": "calendar.create_event",
+      "target_parameter": "start_at",
+      "target_tool": "calendar.search_events"
+    },
+    {
+      "semantic_type": "timezone",
+      "source_path": "event.timezone",
+      "source_tool": "calendar.create_event",
+      "target_parameter": "timezone",
+      "target_tool": "time.get_local_time"
+    },
+    {
+      "semantic_type": "date",
+      "source_path": "date",
+      "source_tool": "calendar.is_public_holiday",
+      "target_parameter": "date",
+      "target_tool": "currency.get_historical_exchange_rate"
+    },
+    {
+      "semantic_type": "date",
+      "source_path": "holidays[*].date",
+      "source_tool": "calendar.list_public_holidays",
+      "target_parameter": "date",
+      "target_tool": "calendar.is_public_holiday"
+    },
+    {
+      "semantic_type": "date",
+      "source_path": "holidays[*].date",
+      "source_tool": "calendar.list_public_holidays",
+      "target_parameter": "date",
+      "target_tool": "currency.get_historical_exchange_rate"
+    },
+    {
+      "semantic_type": "event_id",
+      "source_path": "events[*].event_id",
+      "source_tool": "calendar.search_events",
+      "target_parameter": "event_id",
+      "target_tool": "calendar.cancel_event"
+    },
+    {
+      "semantic_type": "calendar_id",
+      "source_path": "events[*].calendar_id",
+      "source_tool": "calendar.search_events",
+      "target_parameter": "calendar_id",
+      "target_tool": "calendar.create_event"
+    },
+    {
+      "semantic_type": "datetime",
+      "source_path": "events[*].end_at",
+      "source_tool": "calendar.search_events",
+      "target_parameter": "end_at",
+      "target_tool": "calendar.create_event"
+    },
+    {
+      "semantic_type": "datetime",
+      "source_path": "events[*].start_at",
+      "source_tool": "calendar.search_events",
+      "target_parameter": "end_at",
+      "target_tool": "calendar.create_event"
+    },
+    {
+      "semantic_type": "datetime",
+      "source_path": "events[*].end_at",
+      "source_tool": "calendar.search_events",
+      "target_parameter": "start_at",
+      "target_tool": "calendar.create_event"
+    },
+    {
+      "semantic_type": "datetime",
+      "source_path": "events[*].start_at",
+      "source_tool": "calendar.search_events",
+      "target_parameter": "start_at",
+      "target_tool": "calendar.create_event"
+    },
+    {
+      "semantic_type": "timezone",
+      "source_path": "events[*].timezone",
+      "source_tool": "calendar.search_events",
+      "target_parameter": "timezone",
+      "target_tool": "calendar.create_event"
+    },
+    {
+      "semantic_type": "timezone",
+      "source_path": "events[*].timezone",
+      "source_tool": "calendar.search_events",
+      "target_parameter": "timezone",
+      "target_tool": "time.get_local_time"
+    },
+    {
+      "semantic_type": "currency_code",
+      "source_path": "results[*].base",
+      "source_tool": "currency.get_exchange_rate",
+      "target_parameter": "base",
+      "target_tool": "currency.get_historical_exchange_rate"
+    },
+    {
+      "semantic_type": "currency_code",
+      "source_path": "results[*].quote",
+      "source_tool": "currency.get_exchange_rate",
+      "target_parameter": "base",
+      "target_tool": "currency.get_historical_exchange_rate"
+    },
+    {
+      "semantic_type": "currency_code",
+      "source_path": "results[*].base",
+      "source_tool": "currency.get_exchange_rate",
+      "target_parameter": "quote",
+      "target_tool": "currency.get_historical_exchange_rate"
+    },
+    {
+      "semantic_type": "currency_code",
+      "source_path": "results[*].quote",
+      "source_tool": "currency.get_exchange_rate",
+      "target_parameter": "quote",
+      "target_tool": "currency.get_historical_exchange_rate"
+    },
+    {
+      "semantic_type": "currency_code",
+      "source_path": "results[*].base",
+      "source_tool": "currency.get_historical_exchange_rate",
+      "target_parameter": "base",
+      "target_tool": "currency.get_exchange_rate"
+    },
+    {
+      "semantic_type": "currency_code",
+      "source_path": "results[*].quote",
+      "source_tool": "currency.get_historical_exchange_rate",
+      "target_parameter": "base",
+      "target_tool": "currency.get_exchange_rate"
+    },
+    {
+      "semantic_type": "currency_code",
+      "source_path": "results[*].base",
+      "source_tool": "currency.get_historical_exchange_rate",
+      "target_parameter": "quote",
+      "target_tool": "currency.get_exchange_rate"
+    },
+    {
+      "semantic_type": "currency_code",
+      "source_path": "results[*].quote",
+      "source_tool": "currency.get_historical_exchange_rate",
+      "target_parameter": "quote",
+      "target_tool": "currency.get_exchange_rate"
+    },
+    {
+      "semantic_type": "currency_code",
+      "source_path": "results[*].code",
+      "source_tool": "currency.list_supported_currencies",
+      "target_parameter": "base",
+      "target_tool": "currency.get_exchange_rate"
+    },
+    {
+      "semantic_type": "currency_code",
+      "source_path": "results[*].code",
+      "source_tool": "currency.list_supported_currencies",
+      "target_parameter": "quote",
+      "target_tool": "currency.get_exchange_rate"
+    },
+    {
+      "semantic_type": "currency_code",
+      "source_path": "results[*].code",
+      "source_tool": "currency.list_supported_currencies",
+      "target_parameter": "base",
+      "target_tool": "currency.get_historical_exchange_rate"
+    },
+    {
+      "semantic_type": "currency_code",
+      "source_path": "results[*].code",
+      "source_tool": "currency.list_supported_currencies",
+      "target_parameter": "quote",
+      "target_tool": "currency.get_historical_exchange_rate"
+    },
+    {
+      "semantic_type": "repository_owner",
+      "source_path": "results[*].owner_login",
+      "source_tool": "developer.search_repositories",
+      "target_parameter": "owner",
+      "target_tool": "developer.get_repository_metadata"
+    },
+    {
+      "semantic_type": "repository_name",
+      "source_path": "results[*].name",
+      "source_tool": "developer.search_repositories",
+      "target_parameter": "repository",
+      "target_tool": "developer.get_repository_metadata"
+    },
+    {
+      "semantic_type": "repository_owner",
+      "source_path": "results[*].owner_login",
+      "source_tool": "developer.search_repositories",
+      "target_parameter": "owner",
+      "target_tool": "developer.list_releases_metadata"
+    },
+    {
+      "semantic_type": "repository_name",
+      "source_path": "results[*].name",
+      "source_tool": "developer.search_repositories",
+      "target_parameter": "repository",
+      "target_tool": "developer.list_releases_metadata"
+    },
+    {
+      "semantic_type": "place_id",
+      "source_path": "results[*].geoname_id",
+      "source_tool": "geo.find_nearby_places",
+      "target_parameter": "geoname_id",
+      "target_tool": "geo.get_place"
+    },
+    {
+      "semantic_type": "timezone",
+      "source_path": "timezone",
+      "source_tool": "geo.get_place",
+      "target_parameter": "timezone",
+      "target_tool": "calendar.create_event"
+    },
+    {
+      "semantic_type": "timezone",
+      "source_path": "timezone",
+      "source_tool": "geo.get_place",
+      "target_parameter": "timezone",
+      "target_tool": "time.get_local_time"
+    },
+    {
+      "semantic_type": "latitude",
+      "source_path": "results[*].latitude",
+      "source_tool": "geo.search_places",
+      "target_parameter": "latitude",
+      "target_tool": "geo.find_nearby_places"
+    },
+    {
+      "semantic_type": "longitude",
+      "source_path": "results[*].longitude",
+      "source_tool": "geo.search_places",
+      "target_parameter": "longitude",
+      "target_tool": "geo.find_nearby_places"
+    },
+    {
+      "semantic_type": "place_id",
+      "source_path": "results[*].geoname_id",
+      "source_tool": "geo.search_places",
+      "target_parameter": "geoname_id",
+      "target_tool": "geo.get_place"
+    },
+    {
+      "semantic_type": "latitude",
+      "source_path": "results[*].latitude",
+      "source_tool": "geo.search_places",
+      "target_parameter": "latitude",
+      "target_tool": "weather.get_current_weather"
+    },
+    {
+      "semantic_type": "longitude",
+      "source_path": "results[*].longitude",
+      "source_tool": "geo.search_places",
+      "target_parameter": "longitude",
+      "target_tool": "weather.get_current_weather"
+    },
+    {
+      "semantic_type": "latitude",
+      "source_path": "results[*].latitude",
+      "source_tool": "geo.search_places",
+      "target_parameter": "latitude",
+      "target_tool": "weather.get_weather_forecast"
+    },
+    {
+      "semantic_type": "longitude",
+      "source_path": "results[*].longitude",
+      "source_tool": "geo.search_places",
+      "target_parameter": "longitude",
+      "target_tool": "weather.get_weather_forecast"
+    },
+    {
+      "semantic_type": "entity_id",
+      "source_path": "entity_id",
+      "source_tool": "knowledge.get_entity_facts",
+      "target_parameter": "entity_id",
+      "target_tool": "knowledge.list_entity_relations"
+    },
+    {
+      "semantic_type": "page_id",
+      "source_path": "page_id",
+      "source_tool": "knowledge.get_page_metadata",
+      "target_parameter": "page_id",
+      "target_tool": "knowledge.list_page_categories"
+    },
+    {
+      "semantic_type": "entity_id",
+      "source_path": "entity_id",
+      "source_tool": "knowledge.list_entity_relations",
+      "target_parameter": "entity_id",
+      "target_tool": "knowledge.get_entity_facts"
+    },
+    {
+      "semantic_type": "entity_id",
+      "source_path": "relations[*].target_entity_id",
+      "source_tool": "knowledge.list_entity_relations",
+      "target_parameter": "entity_id",
+      "target_tool": "knowledge.get_entity_facts"
+    },
+    {
+      "semantic_type": "page_id",
+      "source_path": "page_id",
+      "source_tool": "knowledge.list_page_categories",
+      "target_parameter": "page_id",
+      "target_tool": "knowledge.get_page_metadata"
+    },
+    {
+      "semantic_type": "entity_id",
+      "source_path": "results[*].entity_id",
+      "source_tool": "knowledge.search_entities",
+      "target_parameter": "entity_id",
+      "target_tool": "knowledge.get_entity_facts"
+    },
+    {
+      "semantic_type": "entity_id",
+      "source_path": "results[*].entity_id",
+      "source_tool": "knowledge.search_entities",
+      "target_parameter": "entity_id",
+      "target_tool": "knowledge.list_entity_relations"
+    },
+    {
+      "semantic_type": "page_id",
+      "source_path": "results[*].page_id",
+      "source_tool": "knowledge.search_pages",
+      "target_parameter": "page_id",
+      "target_tool": "knowledge.get_page_metadata"
+    },
+    {
+      "semantic_type": "page_id",
+      "source_path": "results[*].page_id",
+      "source_tool": "knowledge.search_pages",
+      "target_parameter": "page_id",
+      "target_tool": "knowledge.list_page_categories"
+    },
+    {
+      "semantic_type": "doi",
+      "source_path": "results[*].doi",
+      "source_tool": "research.search_works",
+      "target_parameter": "doi",
+      "target_tool": "research.get_work_metadata"
+    },
+    {
+      "semantic_type": "country_code",
+      "source_path": "results[*].country_code",
+      "source_tool": "statistics.get_indicator_time_series",
+      "target_parameter": "country_code",
+      "target_tool": "biodiversity.search_occurrences"
+    },
+    {
+      "semantic_type": "indicator_code",
+      "source_path": "results[*].code",
+      "source_tool": "statistics.search_indicator",
+      "target_parameter": "indicator_code",
+      "target_tool": "statistics.get_indicator_time_series"
+    },
+    {
+      "semantic_type": "datetime",
+      "source_path": "frozen_utc_time",
+      "source_tool": "time.get_local_time",
+      "target_parameter": "end_at",
+      "target_tool": "calendar.create_event"
+    },
+    {
+      "semantic_type": "datetime",
+      "source_path": "local_time",
+      "source_tool": "time.get_local_time",
+      "target_parameter": "end_at",
+      "target_tool": "calendar.create_event"
+    },
+    {
+      "semantic_type": "datetime",
+      "source_path": "frozen_utc_time",
+      "source_tool": "time.get_local_time",
+      "target_parameter": "start_at",
+      "target_tool": "calendar.create_event"
+    },
+    {
+      "semantic_type": "datetime",
+      "source_path": "local_time",
+      "source_tool": "time.get_local_time",
+      "target_parameter": "start_at",
+      "target_tool": "calendar.create_event"
+    },
+    {
+      "semantic_type": "timezone",
+      "source_path": "timezone",
+      "source_tool": "time.get_local_time",
+      "target_parameter": "timezone",
+      "target_tool": "calendar.create_event"
+    },
+    {
+      "semantic_type": "datetime",
+      "source_path": "frozen_utc_time",
+      "source_tool": "time.get_local_time",
+      "target_parameter": "end_at",
+      "target_tool": "calendar.search_events"
+    },
+    {
+      "semantic_type": "datetime",
+      "source_path": "local_time",
+      "source_tool": "time.get_local_time",
+      "target_parameter": "end_at",
+      "target_tool": "calendar.search_events"
+    },
+    {
+      "semantic_type": "datetime",
+      "source_path": "frozen_utc_time",
+      "source_tool": "time.get_local_time",
+      "target_parameter": "start_at",
+      "target_tool": "calendar.search_events"
+    },
+    {
+      "semantic_type": "datetime",
+      "source_path": "local_time",
+      "source_tool": "time.get_local_time",
+      "target_parameter": "start_at",
+      "target_tool": "calendar.search_events"
+    },
+    {
+      "semantic_type": "web_result_id",
+      "source_path": "results[*].result_id",
+      "source_tool": "web.search",
+      "target_parameter": "result_id",
+      "target_tool": "web.get_result_metadata"
+    }
+  ],
+  "semantic_types": [
+    "calculation_result",
+    "calendar_id",
+    "country_code",
+    "currency_code",
+    "dataset_key",
+    "date",
+    "datetime",
+    "doi",
+    "earthquake_id",
+    "entity_id",
+    "entity_query",
+    "event_id",
+    "indicator_code",
+    "latitude",
+    "location_name",
+    "location_query",
+    "longitude",
+    "occurrence_id",
+    "page_id",
+    "page_title",
+    "place_id",
+    "postal_code",
+    "property_id",
+    "province_code",
+    "repository_name",
+    "repository_owner",
+    "research_query",
+    "result_count",
+    "scientific_name",
+    "search_query",
+    "taxon_key",
+    "time",
+    "timezone",
+    "web_result_id"
+  ]
+}

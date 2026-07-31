@@ -1,0 +1,116 @@
+; Katman ihlallerini CI'da yakalar. `uv run lint-imports` ile çalışır.
+;
+; Buradaki kurallar plan dokümanındaki katmanlama kararının makine tarafından
+; zorlanan hâlidir. Özellikle "validation, execution'ı import etmez" kuralı
+; kritik: validator'lar kaydedilmiş bir Trace'i doğrular, hiçbir şeyi yeniden
+; çalıştırmaz. Aksi hâlde validation <-> execution döngüsü anında oluşur.
+
+[importlinter]
+root_package = toolcall_tr
+include_external_packages = False
+
+[importlinter:contract:ana-katmanlar]
+name = Ana katman zinciri (üst katman alttakini import edebilir, tersi olamaz)
+type = layers
+layers =
+    toolcall_tr.cli
+    toolcall_tr.pipeline
+    toolcall_tr.groundtruth
+    toolcall_tr.execution
+    toolcall_tr.providers
+    toolcall_tr.registry
+    toolcall_tr.models
+
+[importlinter:contract:validation-bagimsiz]
+name = Validator'lar execution/providers/groundtruth import etmez
+type = forbidden
+source_modules =
+    toolcall_tr.validation
+forbidden_modules =
+    toolcall_tr.execution
+    toolcall_tr.providers
+    toolcall_tr.groundtruth
+    toolcall_tr.pipeline
+    toolcall_tr.generation
+    toolcall_tr.llm
+    toolcall_tr.cli
+
+[importlinter:contract:models-saf]
+name = models hiçbir iç modülü import etmez
+type = forbidden
+source_modules =
+    toolcall_tr.models
+forbidden_modules =
+    toolcall_tr.registry
+    toolcall_tr.providers
+    toolcall_tr.execution
+    toolcall_tr.groundtruth
+    toolcall_tr.validation
+    toolcall_tr.generation
+    toolcall_tr.serialize
+    toolcall_tr.pipeline
+    toolcall_tr.llm
+    toolcall_tr.turkish
+    toolcall_tr.cli
+
+[importlinter:contract:turkish-saf]
+name = turkish hiçbir iç modülü import etmez
+type = forbidden
+source_modules =
+    toolcall_tr.turkish
+forbidden_modules =
+    toolcall_tr.models
+    toolcall_tr.registry
+    toolcall_tr.providers
+    toolcall_tr.execution
+    toolcall_tr.groundtruth
+    toolcall_tr.validation
+    toolcall_tr.generation
+    toolcall_tr.serialize
+    toolcall_tr.pipeline
+    toolcall_tr.llm
+    toolcall_tr.cli
+
+[importlinter:contract:serialize-sadece-models]
+name = serialize yalnızca models'a bağlıdır
+type = forbidden
+source_modules =
+    toolcall_tr.serialize
+forbidden_modules =
+    toolcall_tr.registry
+    toolcall_tr.providers
+    toolcall_tr.execution
+    toolcall_tr.groundtruth
+    toolcall_tr.validation
+    toolcall_tr.generation
+    toolcall_tr.llm
+    toolcall_tr.cli
+
+[importlinter:contract:generation-execution-import-etmez]
+name = generation execution'ı import etmez
+type = forbidden
+source_modules =
+    toolcall_tr.generation
+forbidden_modules =
+    toolcall_tr.execution
+    toolcall_tr.providers
+    toolcall_tr.groundtruth
+    toolcall_tr.cli
+
+[importlinter:contract:cli-import-edilmez]
+name = cli'yi hiçbir modül import etmez
+type = forbidden
+source_modules =
+    toolcall_tr.models
+    toolcall_tr.turkish
+    toolcall_tr.registry
+    toolcall_tr.providers
+    toolcall_tr.execution
+    toolcall_tr.groundtruth
+    toolcall_tr.validation
+    toolcall_tr.generation
+    toolcall_tr.serialize
+    toolcall_tr.pipeline
+    toolcall_tr.llm
+forbidden_modules =
+    toolcall_tr.cli

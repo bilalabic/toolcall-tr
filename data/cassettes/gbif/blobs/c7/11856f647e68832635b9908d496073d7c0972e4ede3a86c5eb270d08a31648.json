@@ -1,0 +1,36 @@
+{
+  "attribution": {
+    "attribution": "GBIF.org ve occurrence kayıtlarını yayımlayan veri sağlayıcıları",
+    "license": "GBIF-FILTERED-CC0-CC-BY-4.0",
+    "modified": "Canonical JSON'a normalize edildi; başlıklar beyaz listeye göre budandı.",
+    "upstream_url": "https://api.gbif.org/v1/species/match?name=Quercus+robur&verbose=false"
+  },
+  "body": {
+    "canonicalName": "Quercus robur",
+    "class": "Magnoliopsida",
+    "classKey": 220,
+    "confidence": 97,
+    "family": "Fagaceae",
+    "familyKey": 4689,
+    "genus": "Quercus",
+    "genusKey": 2877951,
+    "kingdom": "Plantae",
+    "kingdomKey": 6,
+    "matchType": "EXACT",
+    "order": "Fagales",
+    "orderKey": 1354,
+    "phylum": "Tracheophyta",
+    "phylumKey": 7707728,
+    "rank": "SPECIES",
+    "scientificName": "Quercus robur L.",
+    "species": "Quercus robur",
+    "speciesKey": 2878688,
+    "status": "ACCEPTED",
+    "usageKey": 2878688
+  },
+  "body_encoding": "json",
+  "headers": {
+    "content-type": "application/json"
+  },
+  "status": 200
+}

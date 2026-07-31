@@ -1,0 +1,40 @@
+blueprint_id: accounting_create_invoice_test_fixture
+family_id: accounting_create_invoice_test_fixture
+domain: accounting_test_fixture
+kind: sequential_tool_call
+difficulty: medium
+provider: onmuhasebe_mock
+
+user_goal: Test ortamında açık onayla taslak fatura oluşturup state'ten geri okumak
+known_information:
+  customer_ref: CUST-042
+  amount_try: 2750
+  note: Temmuz danışmanlık
+
+available_tools:
+  - accounting.create_invoice
+  - accounting.get_invoice
+
+utterances:
+  - "CUST-042 için 2750 TL tutarında 'Temmuz danışmanlık' notlu test taslağını oluşturmayı onaylıyorum."
+
+expected_behavior:
+  decision: tool_call
+
+expected_actions:
+  - tool: accounting.create_invoice
+    arguments:
+      customer_ref: { value: CUST-042, origin: user_message }
+      amount_try: { value: 2750, origin: user_message }
+      note: { value: Temmuz danışmanlık, origin: user_message }
+      confirmed: { value: true, origin: user_message }
+
+  - tool: accounting.get_invoice
+    arguments:
+      invoice_id: "$actions[0].invoice.invoice_id"
+
+assertions:
+  - path: invoices.#1.status
+    op: eq
+    value: draft
+    description_tr: Oluşturulan test faturasının durumu taslak olmalı.

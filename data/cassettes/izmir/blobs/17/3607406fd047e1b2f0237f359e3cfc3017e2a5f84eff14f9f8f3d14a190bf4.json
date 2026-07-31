@@ -1,0 +1,83 @@
+{
+  "attribution": {
+    "attribution": "Atıf 4.0 Uluslararası (CC BY 4.0) kapsamında lisanslanan kamu sektörü bilgilerini içerir. Kaynak: İzmir Büyükşehir Belediyesi Açık Veri Portalı.",
+    "license": "CC-BY-4.0",
+    "modified": "Canonical JSON'a normalize edildi; başlıklar beyaz listeye göre budandı.",
+    "upstream_url": "https://acikveri.bizizmir.com/api/3/action/datastore_search?resource_id=0c791266-a2e4-4f14-82b8-9a9b102fbf94&limit=5&offset=0&sort=_id+asc&q=Be%C5%9Fikta%C5%9F"
+  },
+  "body": {
+    "help": "https://acikveri.bizizmir.com/api/3/action/help_show?name=datastore_search",
+    "result": {
+      "_links": {
+        "next": "/api/3/action/datastore_search?sort=_id+asc&q=Be%C5%9Fikta%C5%9F&resource_id=0c791266-a2e4-4f14-82b8-9a9b102fbf94&limit=5&offset=5",
+        "start": "/api/3/action/datastore_search?sort=_id+asc&q=Be%C5%9Fikta%C5%9F&resource_id=0c791266-a2e4-4f14-82b8-9a9b102fbf94&limit=5"
+      },
+      "fields": [
+        {
+          "id": "_id",
+          "type": "int"
+        },
+        {
+          "id": "DURAK_ID",
+          "info": {
+            "label": "",
+            "notes": "Benzersiz durak benzersiz numarası veya kimliği\r\n",
+            "type_override": ""
+          },
+          "type": "numeric"
+        },
+        {
+          "id": "DURAK_ADI",
+          "info": {
+            "label": "",
+            "notes": "Durak adı bilgisi\r\n",
+            "type_override": ""
+          },
+          "type": "text"
+        },
+        {
+          "id": "ENLEM",
+          "info": {
+            "label": "",
+            "notes": "Durağın enlem Bilgisi\r\n",
+            "type_override": ""
+          },
+          "type": "numeric"
+        },
+        {
+          "id": "BOYLAM",
+          "info": {
+            "label": "",
+            "notes": "Durağın boylam Bilgisi\r\n",
+            "type_override": ""
+          },
+          "type": "numeric"
+        },
+        {
+          "id": "DURAKTAN_GECEN_HATLAR",
+          "info": {
+            "label": "",
+            "notes": "Duraktan geçen otobüs hat numaraları\r\n",
+            "type_override": ""
+          },
+          "type": "text"
+        }
+      ],
+      "include_total": true,
+      "limit": 5,
+      "offset": 0,
+      "q": "Beşiktaş",
+      "records": [],
+      "records_format": "objects",
+      "resource_id": "0c791266-a2e4-4f14-82b8-9a9b102fbf94",
+      "sort": "_id asc",
+      "total": 0
+    },
+    "success": true
+  },
+  "body_encoding": "json",
+  "headers": {
+    "content-type": "application/json;charset=utf-8"
+  },
+  "status": 200
+}

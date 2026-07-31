@@ -1,0 +1,22 @@
+blueprint_id: knowledge_istanbul_page_search_001
+family_id: knowledge_istanbul_page_search
+split: train
+domain: knowledge
+kind: successful_tool_call
+difficulty: easy
+provider: wikimedia_metadata
+
+user_goal: Türkçe Vikipedi'de İstanbul başlığıyla eşleşen sayfaları bulmak
+known_information: {query: İstanbul, limit: 5}
+available_tools:
+  - knowledge.search_pages
+  - knowledge.get_page_metadata
+utterances:
+  - "Türkçe Vikipedi'de İstanbul başlığıyla eşleşen ilk 5 sayfayı bul."
+  - "İstanbul için Türkçe Vikipedi'deki en iyi 5 sayfa eşleşmesini göster."
+expected_behavior: {decision: tool_call}
+expected_actions:
+  - tool: knowledge.search_pages
+    arguments:
+      query: {value: İstanbul, origin: user_message}
+      limit: {value: 5, origin: user_message}

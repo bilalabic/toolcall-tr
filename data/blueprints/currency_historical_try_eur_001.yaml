@@ -1,0 +1,34 @@
+blueprint_id: currency_historical_try_eur_001
+family_id: currency_historical_rate
+split: train
+domain: currency
+kind: successful_tool_call
+difficulty: medium
+provider: frankfurter_ecb
+
+user_goal: 2 Ocak 2025 tarihindeki bir Türk lirasının avro karşılığını öğrenmek
+known_information:
+  base: TRY
+  quote: EUR
+  date: "2025-01-02"
+
+available_tools:
+  - currency.get_exchange_rate
+  - currency.get_historical_exchange_rate
+  - currency.list_supported_currencies
+  - weather.get_weather_forecast
+
+utterances:
+  - "2025-01-02 tarihinde 1 Türk lirası (TRY) kaç avro (EUR) ediyordu?"
+  - "2025-01-02 tarihindeki TRY-EUR referans kurunu getir."
+  - "2025-01-02 için 1 TL'nin (TRY) avro (EUR) karşılığı neydi?"
+
+expected_behavior:
+  decision: tool_call
+
+expected_actions:
+  - tool: currency.get_historical_exchange_rate
+    arguments:
+      base: { value: TRY, origin: user_message }
+      quote: { value: EUR, origin: user_message }
+      date: { value: "2025-01-02", origin: user_message }

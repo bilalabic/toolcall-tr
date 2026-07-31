@@ -1,0 +1,34 @@
+blueprint_id: calendar_cancel_confirmed_product_meeting_001
+family_id: calendar_cancel_confirmed_product_meeting
+split: test
+domain: calendar
+kind: confirmation_required
+difficulty: hard
+interaction_type: multi_turn
+provider: calendar_mock
+user_goal: Ürün planlama toplantısını açık onayla bulup iptal etmek
+known_information:
+  query: Ürün planlama
+context:
+  normalized_start_at: "2026-07-29T00:00:00+03:00"
+  normalized_end_at: "2026-07-30T00:00:00+03:00"
+conversation_prefix:
+  - role: user
+    content: "29 Temmuz'daki ürün planlama toplantısını iptal etmek istiyorum."
+  - role: assistant
+    content: "Toplantıyı bulup iptal etmemi açıkça onaylıyor musunuz?"
+available_tools: [calendar.search_events, calendar.cancel_event]
+utterances:
+  - "Evet, Ürün planlama toplantısını bulup iptal etmeni açıkça onaylıyorum."
+  - "Ürün planlama toplantısını iptal etmen için onay veriyorum."
+expected_behavior: { decision: tool_call }
+expected_actions:
+  - tool: calendar.search_events
+    arguments:
+      start_at: { value: "2026-07-29T00:00:00+03:00", origin: system_state }
+      end_at: { value: "2026-07-30T00:00:00+03:00", origin: system_state }
+      query: { value: Ürün planlama, origin: user_message }
+  - tool: calendar.cancel_event
+    arguments:
+      event_id: "$actions[0].events[0].event_id"
+      confirmed: { value: true, origin: user_message }

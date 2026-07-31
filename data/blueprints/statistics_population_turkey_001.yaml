@@ -1,0 +1,42 @@
+blueprint_id: statistics_population_turkey_001
+family_id: statistics_indicator_time_series
+split: train
+domain: statistics
+kind: sequential_tool_call
+difficulty: medium
+provider: worldbank_wdi
+
+user_goal: Türkiye'nin 2010–2024 arasındaki toplam nüfus zaman serisini bulmak
+known_information:
+  query: nüfus
+  start_year: 2010
+  end_year: 2024
+context:
+  normalized_country_codes:
+    - TUR
+
+available_tools:
+  - statistics.search_indicator
+  - statistics.get_indicator_time_series
+  - currency.get_historical_exchange_rate
+  - earthquake.search_earthquakes
+
+utterances:
+  - "Türkiye'nin 2010 ile 2024 arasındaki toplam nüfus verilerini getir."
+  - "Türkiye için 2010–2024 toplam nüfus zaman serisini bul."
+  - "2010'dan 2024'e kadar Türkiye'nin nüfusu nasıl değişmiş?"
+
+expected_behavior:
+  decision: tool_call
+
+expected_actions:
+  - tool: statistics.search_indicator
+    arguments:
+      query: { value: nüfus, origin: user_message_derived }
+
+  - tool: statistics.get_indicator_time_series
+    arguments:
+      country_codes: { value: [TUR], origin: system_state }
+      indicator_code: "$actions[0].results[0].code"
+      start_year: { value: 2010, origin: user_message }
+      end_year: { value: 2024, origin: user_message }
