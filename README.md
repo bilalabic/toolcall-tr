@@ -200,10 +200,18 @@ uv run python scripts/record_met_cassettes.py
 |---|---|
 | `openai_call_only` | İlk tool seçim kararında durur; observation ve final yanıt yok |
 | `openai_trajectory` | Tool çağrıları + observation + son observation'dan türetilmiş final yanıt |
+| `hf_chat` | HF sohbet şeması; mesaj başına **sabit** alan kümesi |
 | `openai` / `sharegpt` / `xlam` | Standart sohbet ve function-calling biçimleri |
 
+`hf_chat` görünümünde her mesaj `content`, `images`, `role`, `thinking`,
+`tool_calls` alanlarının tamamını taşır ve kullanılmayanlar `None` kalır; sabit
+alan kümesi Arrow/`datasets` tarafında sütun tipinin kaymasını engeller. `tool`
+mesajlarına ayrıca `name` yazılır — HF şemasında tool adı alanı yoktur ve
+`parallel_tool_call` örneklerinde eşleşme aksi hâlde kaybolurdu.
+
 `reasoning_summary_tr` yalnız kısa ve denetlenebilir bir karar özetidir; ham veya
-gizli düşünce zinciri hiçbir görünüme eklenmez.
+gizli düşünce zinciri hiçbir görünüme eklenmez. `hf_chat`'teki `thinking` alanı
+bu özetten beslenir ve özet üretilmemişse `None` kalır — uydurulmaz.
 
 ### Genelleme holdout profilleri
 

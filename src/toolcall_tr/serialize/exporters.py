@@ -20,6 +20,7 @@ from toolcall_tr.models import Decision, Example, MessageRole, ToolSpec
 __all__ = [
     "EXPORTERS",
     "to_canonical_jsonl",
+    "to_hf_chat",
     "to_openai",
     "to_openai_call_only",
     "to_openai_trajectory",
@@ -179,9 +180,7 @@ def to_openai_trajectory(example: Example) -> dict[str, Any]:
         example.scenario.decision is Decision.TOOL_CALL
         and example.ground_truth.final_response_tr is None
     ):
-        raise ValueError(
-            f"{example.id}: tam trajectory exportu final_response_tr gerektirir"
-        )
+        raise ValueError(f"{example.id}: tam trajectory exportu final_response_tr gerektirir")
     return _openai_payload(
         example,
         messages=_openai_messages(example.messages),
@@ -270,6 +269,69 @@ def to_sharegpt(example: Example) -> dict[str, Any]:
     }
 
 
+def to_hf_chat(example: Example) -> dict[str, Any]:
+    """Hugging Face sohbet şeması: her mesajda sabit bir alan kümesi.
+
+    OpenAI görünümünden farkı, alanların **mesaj başına sabit** olmasıdır:
+    ``content``, ``images``, ``role``, ``thinking``, ``tool_calls`` her
+    mesajda bulunur ve kullanılmayanlar ``None`` kalır. Bu, sütun tipi sabit
+    olduğu için Arrow/`datasets` tarafında şema çıkarımını basitleştirir.
+
+    ``thinking`` **ham düşünce zinciri değildir**; `reasoning_summary_tr`
+    yani kısa ve denetlenebilir karar özetidir ve yalnızca ilk tool-call
+    kararını taşıyan assistant mesajına yazılır. Özet üretilmemişse ``None``
+    kalır -- uydurulmaz.
+
+    ``tool`` mesajlarına ayrıca ``name`` yazılır: HF şemasında tool adı için
+    ayrı bir alan yoktur ve `parallel_tool_call` örneklerinde hangi sonucun
+    hangi çağrıya ait olduğu aksi hâlde kaybolurdu.
+    """
+    reasoning_written = False
+    messages: list[dict[str, Any]] = []
+
+    for message in example.messages:
+        entry: dict[str, Any] = {
+            "content": message.content,
+            "images": None,
+            "role": message.role.value,
+            "thinking": None,
+            "tool_calls": None,
+        }
+        if message.tool_calls:
+            entry["tool_calls"] = [
+                {
+                    "type": "function",
+                    "function": {
+                        "name": call.name,
+                        "arguments": canonical_json(call.arguments),
+                    },
+                }
+                for call in message.tool_calls
+            ]
+            if not reasoning_written:
+                entry["thinking"] = example.reasoning_summary_tr
+                reasoning_written = True
+        if message.role is MessageRole.TOOL:
+            entry["name"] = message.tool_name
+        messages.append(entry)
+
+    return {
+        "id": example.id,
+        "messages": messages,
+        "tools": [_tool_schema(tool) for tool in example.tools],
+        "toolcall_tr": {
+            "view": "hf_chat",
+            "split": example.split.value,
+            "family_id": example.family_id,
+            "decision": example.scenario.decision.value,
+            "interaction_type": example.scenario.interaction_type,
+            "execution_classes": [c.value for c in example.execution.execution_classes],
+            **_supervision_sidecar(example),
+            "provenance": _provenance(example),
+        },
+    }
+
+
 def to_canonical_jsonl(examples: Iterable[Example]) -> str:
     """Canonical biçim — kayıpsız, yeniden yüklenebilir.
 
@@ -289,6 +351,7 @@ EXPORTERS = {
     "openai_trajectory": to_openai_trajectory,
     "xlam": to_xlam,
     "sharegpt": to_sharegpt,
+    "hf_chat": to_hf_chat,
 }
 
 

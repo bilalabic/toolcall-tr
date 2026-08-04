@@ -23,6 +23,7 @@ from toolcall_tr.models import (
 from toolcall_tr.serialize import (
     EXPORTERS,
     to_canonical_jsonl,
+    to_hf_chat,
     to_openai,
     to_openai_call_only,
     to_openai_trajectory,
@@ -261,3 +262,93 @@ def test_sharegpt_tool_cagrisi_serilestirilir() -> None:
     assert json.loads(gpt_turn["value"]) == [
         {"name": "search_datasets", "arguments": {"q": "otobüs"}}
     ]
+
+
+# ---------------------------------------------------------------------------
+# Hugging Face sohbet şeması
+# ---------------------------------------------------------------------------
+
+_HF_CHAT_KEYS = {"content", "images", "role", "thinking", "tool_calls"}
+
+
+def test_hf_chat_alan_kumesi_her_mesajda_sabit() -> None:
+    """Sütun tipinin sabit kalması bu şemanın tek varlık sebebi."""
+    payload = to_hf_chat(make_example())
+
+    for message in payload["messages"]:
+        # `tool` mesajı ayrıca `name` taşır; ötesi tam olarak sabit küme.
+        assert set(message) >= _HF_CHAT_KEYS
+        assert set(message) - _HF_CHAT_KEYS <= {"name"}
+
+
+def test_hf_chat_kullanilmayan_alanlar_none_kalir() -> None:
+    payload = to_hf_chat(make_example())
+    user_message = payload["messages"][0]
+
+    assert user_message["images"] is None
+    assert user_message["thinking"] is None
+    assert user_message["tool_calls"] is None
+
+
+def test_hf_chat_tool_mesaji_arac_adini_tasir() -> None:
+    """HF şemasında tool adı alanı yok; paralel çağrıda eşleşme kaybolurdu."""
+    payload = to_hf_chat(make_example())
+    tool_messages = [m for m in payload["messages"] if m["role"] == "tool"]
+
+    assert tool_messages
+    assert all(m["name"] for m in tool_messages)
+
+
+def test_hf_chat_tool_cagrisi_arguman_string_olarak_tasir() -> None:
+    payload = to_hf_chat(make_example())
+    assistant = next(m for m in payload["messages"] if m["tool_calls"])
+    call = assistant["tool_calls"][0]
+
+    assert call["type"] == "function"
+    assert call["function"]["name"] == "search_datasets"
+    assert json.loads(call["function"]["arguments"]) == {"q": "otobüs"}
+
+
+def test_hf_chat_thinking_uretilmemisse_uydurulmaz() -> None:
+    """Ham düşünce zinciri yok; özet üretilmediyse alan None kalmalı."""
+    payload = to_hf_chat(make_example())
+
+    assert all(m["thinking"] is None for m in payload["messages"])
+
+
+def test_hf_chat_thinking_yalniz_ilk_tool_call_mesajina_yazilir() -> None:
+    example = make_example(reasoning_summary_tr="Kullanıcı veri seti arıyor; arama aracı uygundur.")
+    payload = to_hf_chat(example)
+    with_thinking = [m for m in payload["messages"] if m["thinking"] is not None]
+
+    assert len(with_thinking) == 1
+    assert with_thinking[0]["role"] == "assistant"
+    assert with_thinking[0]["tool_calls"]
+
+
+def test_hf_chat_no_call_kararinda_thinking_yazilmaz() -> None:
+    """Tool çağrısı yoksa özetin tutunacağı bir mesaj yoktur."""
+    example = make_example(
+        reasoning_summary_tr="Araç gerekmiyor.",
+        scenario=Scenario(
+            decision=Decision.DIRECT_ANSWER,
+            kind=BlueprintKind.SHOULD_ANSWER_DIRECTLY,
+            interaction_type="single_turn",
+            difficulty="easy",
+            expected_result="no_call",
+        ),
+        messages=(
+            Message(role=MessageRole.USER, content="Bir yılda kaç ay var?"),
+            Message(role=MessageRole.ASSISTANT, content="Bir yılda 12 ay vardır."),
+        ),
+        ground_truth=GroundTruth(
+            calls=(),
+            response_intent_tr="Doğrudan cevapla.",
+            assistant_response_tr="Bir yılda 12 ay vardır.",
+        ),
+    )
+    payload = to_hf_chat(example)
+
+    assert all(m["thinking"] is None for m in payload["messages"])
+    # Kayıpsızlık: özet yan alanda hâlâ duruyor.
+    assert payload["toolcall_tr"]["reasoning_summary_tr"] == "Araç gerekmiyor."

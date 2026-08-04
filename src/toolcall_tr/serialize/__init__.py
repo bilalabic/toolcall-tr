@@ -7,6 +7,7 @@ canonical veriyi değiştirmez — her biri için round-trip testi vardır.
 from toolcall_tr.serialize.exporters import (
     EXPORTERS,
     to_canonical_jsonl,
+    to_hf_chat,
     to_openai,
     to_openai_call_only,
     to_openai_trajectory,
@@ -17,6 +18,7 @@ from toolcall_tr.serialize.exporters import (
 __all__ = [
     "EXPORTERS",
     "to_canonical_jsonl",
+    "to_hf_chat",
     "to_openai",
     "to_openai_call_only",
     "to_openai_trajectory",
