@@ -2,129 +2,137 @@
 
 **A Verifiable Tool-Calling Data Generation Framework for Turkish and Turkey-Specific APIs**
 
-Gerçek API şemalarından **execution-verified**, **observation-grounded** ve
-**yeniden üretilebilir** Türkçe tool-calling veri setleri üreten açık kaynak bir
-veri mühendisliği hattı.
+Türkçe soru–araç çağrısı veri setleri üreten açık kaynak bir hat. Üretilen her
+araç çağrısı **gerçekten çalıştırılır**, dönen sonuç kaydedilir ve ayrıca
+denetlenir. Aynı girdi her zaman aynı sonucu verir.
 
-> **Durum: Pilot v0.1 yayımlandı.** 200 doğrulanmış örnek (`turkey-200-v3`),
-> 74 family, 15 sağlayıcı, 35 tool, 11 senaryo türünün hepsi, sıfır split
-> sızıntısı. **Bu bir pilottur, benchmark değildir** — hedeflenen
-> 10.000–15.000 örneklik tam sürüm henüz üretilmemiştir.
+> **Durum: ilk sürüm (v0.1) yayımlandı.** 200 doğrulanmış örnek
+> (`turkey-200-v3`): 74 farklı görev, 15 veri kaynağı, 35 araç, 11 senaryo
+> türünün hepsi. Eğitim ve test setleri arasında geçiş yok.
+>
+> **Bu küçük bir ilk sürümdür.** 200 örnek bir modeli eğitmeye yetmez; yöntemi
+> ve veri biçimini incelemek için yayımlanmıştır. Hedeflenen 10.000–15.000
+> örneklik sürüm henüz üretilmedi.
 >
 > 📦 **Veri seti:** [`bilalabic/toolcall-tr-pilot`](https://huggingface.co/datasets/bilalabic/toolcall-tr-pilot)
 
 ---
 
-## Ayırt edici iddia
+## Farkı ne
 
-> Veri setindeki **her tool çağrısı gerçek bir implementasyon tarafından
-> çalıştırıldı ve çıktısı doğrulandı. Hiçbir tool çıktısı bir LLM tarafından
-> yazılmadı.**
+> **Veri setindeki her araç çağrısı gerçekten çalıştırıldı ve dönen sonuç
+> kaydedildi. Hiçbir araç çıktısını bir yapay zekâ yazmadı.**
 
-Bu, "geçerli JSON üreten" bir sistem değildir. LLM yalnızca doğal Türkçe
-kullanıcı ifadesini yazar; ground-truth tool çağrıları kod tarafından
-deterministik olarak derlenir, gerçekten çalıştırılır ve bağımsız validator'lar
-tarafından denetlenir.
+Benzer veri setlerinin çoğunda araçtan dönen cevap da yapay zekâya yazdırılır.
+O zaman veri "biçim olarak doğru" olur ama içeriği uydurmadır. Burada yapay
+zekâ yalnızca Türkçe kullanıcı cümlesini yazar; hangi aracın hangi
+parametrelerle çağrılacağı koddan üretilir, gerçekten çalıştırılır ve ayrıca
+denetlenir.
 
 | | Mevcut TR veri setleri | ToolCall-TR |
 |---|---|---|
-| Kaynak | Çeviri veya İngilizce tool kataloğu | Gerçek API şemaları |
-| Tool çıktısı | LLM tarafından yazılmış | Gerçek çalıştırma ile üretilmiş |
-| Doğrulama | Şema geçerliliği | Şema + execution + observation grounding |
-| Yeniden üretilebilirlik | — | Cassette + donmuş saat + seed |
+| Kaynak | Çeviri veya İngilizce araç listesi | Gerçek API'ler |
+| Araç çıktısı | Yapay zekâ yazmış | Gerçekten çalıştırılmış |
+| Doğrulama | Biçim doğru mu | Biçim + çalıştırma + cevabın sonuca dayanması |
+| Tekrarlanabilirlik | — | Aynı girdi hep aynı sonucu verir |
 
 ---
 
 ## Nasıl çalışır
 
-Üç faz **asla tek adımda birleşmez.** Ayrım tasarımın merkezindedir: planlama
-saftır ve ağa çıkmaz, çalıştırma deterministiktir, doğrulama yalnızca
-kaydedilmiş çıktıyı okur.
+Üretim üç aşamadan geçer ve bu aşamalar **hiçbir zaman tek adımda
+birleştirilmez.** Planlama internete çıkmaz, çalıştırma her seferinde aynı
+sonucu verir, denetim ise yalnızca kaydedilmiş çıktıyı okur.
 
 ```mermaid
 flowchart TD
-    BP["📋 Blueprint<br/><i>elle yazılmış görev tanımı</i>"]
+    BP["📋 Görev tanımı<br/><i>elle yazılır</i>"]
     BP --> P
 
-    subgraph A["A · Planner — SAF, I/O yok"]
-        P["Derleyici:<br/>tool/parametre varlığı, tip uyumu,<br/>adımlar arası referans geçerliliği"]
+    subgraph A["1 · Plan — internete çıkmaz"]
+        P["Derleyici gibi kontrol eder:<br/>araç var mı, parametre tipleri uyuyor mu,<br/>adımlar birbirine doğru bağlanmış mı"]
     end
 
-    P -->|CallPlan| R
+    P -->|Çağrı planı| R
 
-    subgraph B["B · Runner — I/O, seed altında deterministik"]
-        R["Environment içinde çalıştır"]
-        R --- CAS[("🎞️ Cassette<br/>replay")]
-        R --- SNAP[("❄️ Snapshot")]
-        R --- MOCK[("🔄 Stateful mock")]
+    subgraph B["2 · Çalıştırma — hep aynı sonucu verir"]
+        R["Araçlar gerçekten çalıştırılır"]
+        R --- CAS[("🎞️ Kaydedilmiş<br/>API yanıtları")]
+        R --- SNAP[("❄️ Dondurulmuş<br/>veri tabloları")]
+        R --- MOCK[("🔄 Durum tutan<br/>taklit servis")]
     end
 
-    R -->|Trace| V
+    R -->|Çalıştırma kaydı| V
 
-    subgraph C["C · Validation — SAF"]
-        V["Grounding · PII · duplicate ·<br/>politika · split · lisans"]
+    subgraph C["3 · Denetim — yeniden çalıştırmaz"]
+        V["Cevap sonuca dayanıyor mu · kişisel veri var mı ·<br/>tekrar var mı · kurallara uygun mu ·<br/>bölüm ayrımı bozulmuş mu · lisans uygun mu"]
     end
 
-    V -->|geçti| OK["✅ Example"]
-    V -->|kaldı| NO["📁 data/rejected/<br/><i>gerekçesiyle saklanır</i>"]
+    V -->|geçti| OK["✅ Örnek veriye girer"]
+    V -->|kaldı| NO["📁 Elenenler<br/><i>gerekçesiyle saklanır</i>"]
 
-    LLM(["🗣️ LLM<br/><i>yalnızca Türkçe ifade</i>"]) -.-> OK
-    OK --> EXP["📦 openai · trajectory ·<br/>call_only · sharegpt · xlam"]
+    LLM(["🗣️ Yapay zekâ<br/><i>yalnızca Türkçe cümleyi yazar</i>"]) -.-> OK
+    OK --> EXP["📦 Eğitim biçimleri"]
 ```
 
-**Neden bu ayrım:** validator'lar execution katmanını **import edemez** — böyle
-bir bağımlılık `validation ↔ execution` döngüsü kurar ve CI'da `lint-imports`
-ile patlar. Yeniden çalıştırma gerekiyorsa o bir runner adımıdır, validator
-değil.
+**Neden bu kadar ayrı:** denetim aşaması, çalıştırma aşamasına erişemez. Erişse
+"denetim sırasında sonucu yeniden üretme" kapısı açılırdı ve o an veri
+doğrulanabilir olmaktan çıkardı. Bu kural kodda zorunlu tutulur; ihlal edilirse
+otomatik kontroller hata verir.
 
-**LLM'in yeri kritik:** ok kesikli çizgidir çünkü LLM ground-truth üretmez.
-Yalnızca doğal Türkçe kullanıcı cümlesini yazar. Üretici model tahminle değil
-ölçülerek seçildi (`gpt-4.1-mini`); ayrıntı [`CLAUDE.md`](CLAUDE.md).
+**Yapay zekânın oku neden kesikli:** çünkü doğru cevabı o üretmiyor. Yalnızca
+kullanıcının soracağı Türkçe cümleyi yazıyor. Hangi aracın çağrılacağı ve
+sonucun ne olduğu tamamen koddan ve gerçek çalıştırmadan geliyor. Cümleyi yazan
+model de tahminle değil ölçülerek seçildi; ayrıntı [`CLAUDE.md`](CLAUDE.md).
 
-### Yeniden üretilebilirlik
+### Aynı girdi hep aynı sonucu verir
 
-Gerçek zamanlı bir API her çağrıda farklı veri döndürür — bu, doğrulanabilir bir
-veri seti ile doğrudan çelişir. Çözüm bir **cassette (record/replay)**
-katmanıdır: her HTTP yanıtı içerik-adresli kaydedilir, pipeline replay modunda
-çalışır ve **CI ağa hiç çıkmaz**. Cassette anahtarı tool argümanından değil
-**HTTP isteğinden** türetilir; tool şeması repodaki en oynak artefakt olduğu için
-anahtarı ona bağlamak her şema değişikliğinde tüm kayıtları yetim bırakırdı.
+Canlı bir API her çağrıda farklı veri döndürür. Bu, doğrulanabilir bir veri
+setiyle bağdaşmaz: bugün ürettiğiniz örneği yarın kimse aynı şekilde
+üretemezse, "doğrulanmış" demenin anlamı kalmaz.
 
-Buna donmuş saat ve sıradan bağımsız seed türetimi eklendiğinde aynı girdi
-birebir aynı `trace_id`'yi üretir.
+Çözüm, API yanıtlarını **bir kez kaydedip sonra hep o kayıttan okumaktır.**
+Üretim ve testler internete hiç çıkmaz. Kayıtlar araç adına değil, gönderilen
+HTTP isteğine göre saklanır — çünkü araç tanımları projede en sık değişen
+şeydir; kayıtları onlara bağlasaydık her küçük değişiklikte tüm kayıtlar
+kullanılamaz hâle gelirdi.
+
+Buna dondurulmuş saat ve sabit tohumlu rastgelelik eklenince, üretimi ikinci
+kez çalıştırdığınızda birebir aynı sonucu alırsınız.
 
 ---
 
-## Sağlayıcılar
+## Veri kaynakları
 
-15 sağlayıcı, 35 tool — hepsi pilot korpusta gerçekten çağrılmıştır.
+15 kaynak, 35 araç — hepsi ilk sürümde gerçekten çağrıldı, katalogda durup
+kullanılmayan araç yok.
 
-| Sağlayıcı | Mod | Lisans |
+| Kaynak | Sonuç nereden geliyor | Lisans |
 |---|---|---|
-| MET Norway hava durumu | `live_recorded` | CC BY 4.0 |
-| GeoNames Türkiye | `derived_local` | CC BY 4.0 |
-| Frankfurter (`providers=ECB`) | `live_recorded` | ECB koşulları |
-| USGS Earthquake | `live_recorded` | ABD kamu malı |
-| World Bank WDI (`source=2`) | `live_recorded` + allowlist | CC BY 4.0 + WB koşulları |
-| GBIF (CC0 / CC BY filtreli) | `live_recorded` | CC0 1.0 + CC BY 4.0 |
-| Wikidata | `live_recorded` | CC0 1.0 |
-| Wikimedia / Crossref / GitHub metadata | `live_recorded` | Yalnızca metadata |
-| Resmî tatil snapshot'ı | `derived_local` | Kamu hukuku / resmî takvim |
-| Hesaplama ve saat | `derived_local` | Apache-2.0 |
-| `calendar_mock` sentetik takvim | `simulated` + **stateful** | Apache-2.0 |
+| MET Norway hava durumu | Kaydedilmiş API yanıtı | CC BY 4.0 |
+| GeoNames Türkiye | Dondurulmuş tablo | CC BY 4.0 |
+| Frankfurter döviz kuru (`providers=ECB`) | Kaydedilmiş API yanıtı | ECB koşulları |
+| USGS deprem | Kaydedilmiş API yanıtı | ABD kamu malı |
+| Dünya Bankası göstergeleri (`source=2`) | Kaydedilmiş yanıt + alan filtresi | CC BY 4.0 + WB koşulları |
+| GBIF biyoçeşitlilik | Kaydedilmiş yanıt (lisans filtreli) | CC0 1.0 + CC BY 4.0 |
+| Wikidata | Kaydedilmiş API yanıtı | CC0 1.0 |
+| Wikimedia / Crossref / GitHub | Kaydedilmiş yanıt, yalnızca künye alanları | Kaynağa özgü |
+| Resmî tatiller | Dondurulmuş tablo | Kamu hukuku / resmî takvim |
+| Hesaplama ve saat | Yerel hesap | Apache-2.0 |
+| Sentetik takvim | Yerel taklit servis, **durum tutar** | Apache-2.0 |
 
-**"Yalnızca metadata" bir cümle değil, bir mekanizmadır.** Normalizasyon
-alanları beyaz listeler ve bir test hiçbir `extract`/`description`/`snippet`
-anahtarının hayatta kalmadığını iddia eder. Wikipedia `extracts` ve REST
-`summary` **CC BY-SA** (viral) olduğu için alınmaz; GitHub'dan yalnızca repo
-istatistikleri alınır — `description`, README, issue/PR gövdeleri ve kullanıcı
-login'leri **alınmaz**. Upstream bir şema değişikliği lisanslı metni sessizce
-geri sokamaz.
+**"Yalnızca künye alanları" sözde kalmıyor.** Hangi alanların alınacağı tek tek
+listelenmiştir; listede olmayan hiçbir alan veriye giremez. Wikipedia'nın madde
+özetleri farklı bir lisansa (CC BY-SA) tabi olduğu için alınmaz. GitHub'dan
+yalnızca depo istatistikleri alınır; açıklama metni, README, issue/PR içerikleri
+ve kullanıcı adları **alınmaz**. Bir test bunu sürekli denetler, böylece kaynak
+taraftaki bir değişiklik lisanslı metni fark ettirmeden geri sokamaz.
 
-**State gerçekten doğrulanır.** `calendar_mock/1.0.0` üzerinde 31 örnek
-`initial_state_hash`/`final_state_hash` taşır ve 17'sinde state fiilen değişir.
-Bu, onay→kabul→çağrı akışlarının (`confirmation_required`, `user_cancellation`)
-gerçek bir durum makinesine karşı doğrulandığı anlamına gelir.
+**Durum takibi gerçekten çalışıyor.** Sentetik takvim üzerinde 31 örnek,
+işlemin öncesindeki ve sonrasındaki durumu ayrı ayrı kaydeder; 17'sinde durum
+fiilen değişir. Yani "önce onay iste, sonra kaydet" ve "kullanıcı vazgeçti"
+akışları yalnızca anlatılmıyor — gerçek bir takvim üzerinde çalıştırılıp
+sonucu doğrulanıyor.
 
 ---
 
@@ -138,24 +146,23 @@ uv sync --all-extras
 uv run pytest -q
 ```
 
-Testler ve varsayılan pipeline **API anahtarı olmadan** çalışır: HTTP çağrıları
-cassette'lerden gelir, doğal dil üretimi deterministik template kullanır. OpenAI
-kullanımı isteğe bağlıdır; model rolleri, ücretli çağrı onayı, bütçe/cache ve
-ground-truth güven sınırları için
+Testler ve varsayılan üretim **API anahtarı olmadan** çalışır: API yanıtları
+kayıttan okunur, Türkçe cümleler ise sabit şablonlardan üretilir. OpenAI
+kullanmak isteğe bağlıdır — ayrıntı için
 [`docs/OPENAI_INTEGRATION.md`](docs/OPENAI_INTEGRATION.md).
 
-Yeni bir API/provider ekleme kontrol listesi:
+Yeni bir API kaynağı eklemek isterseniz kontrol listesi:
 [`docs/ADDING_API_PROVIDER.md`](docs/ADDING_API_PROVIDER.md).
 
 ## Kullanım
 
-Uçtan uca üretim (ağ gerekmez):
+Baştan sona üretim (internet gerekmez):
 
 ```bash
 uv run toolcall-tr generate
 ```
 
-Fazları ayrı ayrı çalıştırmak için:
+Aşamaları ayrı ayrı çalıştırmak için:
 
 ```bash
 uv run toolcall-tr build-registry && uv run toolcall-tr plan && uv run toolcall-tr run && uv run toolcall-tr validate
@@ -167,129 +174,139 @@ Rapor ve denetim:
 uv run toolcall-tr quality-report && uv run toolcall-tr stats && uv run toolcall-tr cassette verify
 ```
 
-Dengeli bütçeyle canary korpusu:
+Dengeli dağılım hedefiyle deneme üretimi:
 
 ```bash
 uv run toolcall-tr generate-canary --profile smoke --target 100
 ```
 
-Smoke profili yapısal pipeline'ı sınar; çıktısı tek başına eğitim/yayın onayı
-değildir. Release profili tekrarları bloklar ve `semantic_valid`, `policy_valid`,
-`language_valid` alanlarının tüm kayıtlarda `true` olmasını zorunlu tutar. Kota
-planı karar, senaryo türü, zorluk ve split oranlarını API çağrısından **önce**
-dengeler; hakem bir adayı reddederse ret nedeni aynı family'nin sonraki
-üretimine onarım geri bildirimi olarak verilir.
+`smoke` profili yalnızca hattın çalışıp çalışmadığını sınar; çıktısı tek başına
+yayına hazır sayılmaz. `release` profili ise tekrarları engeller ve her kaydın
+anlam, kural ve dil denetimlerinden geçmiş olmasını zorunlu tutar.
 
-Cassette kaydı **kasıtlı ve açık** bir eylemdir; hiçbir CLI komutu ağa çıkmaz:
+Hangi karardan, hangi senaryo türünden ve hangi zorluktan kaç örnek üretileceği
+**API'ye hiç gidilmeden önce** planlanır. Bir örnek denetimden geçemezse, ret
+gerekçesi aynı görevin bir sonraki denemesine düzeltme notu olarak verilir.
+
+API yanıtlarını kaydetmek **ayrı ve bilinçli bir işlemdir**; normal komutların
+hiçbiri internete çıkmaz:
 
 ```bash
 uv run python scripts/record_met_cassettes.py
 ```
 
-### Eğitim görünümleri
+### Eğitim biçimleri
 
-| Görünüm | İçerik |
+| Biçim | İçerik |
 |---|---|
-| `openai_call_only` | İlk tool seçim kararında durur; observation yok |
-| `openai_trajectory` | Tool çağrıları + observation + son observation'dan türetilmiş final yanıt |
-| `openai` / `sharegpt` / `xlam` | Standart sohbet ve function-calling biçimleri |
+| `openai_call_only` | Yalnızca araç seçimi; sonuç ve final cevap yok |
+| `openai_trajectory` | Baştan sona: çağrılar, dönen sonuçlar ve final cevap |
+| `openai` / `sharegpt` / `xlam` | Yaygın kullanılan standart biçimler |
 
-`reasoning_summary_tr` yalnız kısa ve denetlenebilir bir karar özetidir; ham veya
-gizli düşünce zinciri hiçbir görünüme eklenmez.
+Her örnekte kısa bir karar gerekçesi bulunur. Bu, denetlenebilir birkaç
+cümledir; modelin ham veya gizli düşünce zinciri hiçbir biçime eklenmez.
 
-### Genelleme holdout profilleri
+### Görülmemiş araç / kaynak üzerinde ölçüm
 
-Varsayılan `standard` split family-disjoint davranışını korur ve train/test tool
-ile sağlayıcı kesişimini raporlar. Canary komutunda ayrıca
-`--holdout-profile unseen_tool` veya `--holdout-profile unseen_provider`
-seçilebilir; seçilen eksende kesişim sıfır değilse kapı kapanır ve ölçüm
-`generalization_report.json` içinde yayınlanır.
+Varsayılan ayrım görev bazındadır: aynı görev hem eğitimde hem testte olamaz.
+Daha zorlu bir ölçüm isterseniz `--holdout-profile unseen_tool` veya
+`--holdout-profile unseen_provider` seçebilirsiniz — bu durumda test setindeki
+araçlar ya da kaynaklar eğitimde hiç görülmemiş olur. Kesişim sıfır değilse
+üretim durur ve sonuç ayrı bir raporda yayımlanır.
 
-### Eğitime kapalı güvenlik eval'leri
+### Eğitime kapalı güvenlik testleri
 
-Sentetik tool-output prompt-injection vakaları `data/evaluation/security/`
-altındadır. Kullanıcı amacı, güvenilmez araç çıktısı, çıktıya gömülü talimat ve
-beklenen davranış ayrı alanlardadır. Bu kayıtlarda `training_eligible=false`
-şema tarafından zorlanır ve release manifesti `evaluation` ağacındaki bir
-dosyanın eğitim girdisi olarak işaretlenmesini reddeder.
+`data/evaluation/security/` altında, araç çıktısına gizlice talimat gömülmüş
+sentetik saldırı örnekleri vardır. Kullanıcının asıl isteği, güvenilmez araç
+çıktısı, içine gömülen talimat ve beklenen doğru davranış ayrı alanlarda
+tutulur.
+
+Bu kayıtlar **eğitimde kullanılamaz** ve bu kural biçimin kendisi tarafından
+zorunlu tutulur; yayın paketi, bu klasördeki bir dosyayı eğitim verisi olarak
+işaretlemeyi reddeder.
 
 ---
 
-## Pilot v0.1 — `turkey-200-v3`
+## İlk sürüm (v0.1) — `turkey-200-v3`
 
-**200 doğrulanmış örnek · 74 family · 15 sağlayıcı · 35 tool · 0 reddedilen**
+**200 doğrulanmış örnek · 74 farklı görev · 15 kaynak · 35 araç · 0 elenen**
 
-| Karar | Örnek | | Split | Örnek |
+| Modelin kararı | | | Bölüm | Örnek |
 |---|---|---|---|---|
-| `tool_call` | 143 (%71,5) | | train | 140 |
-| `direct_answer` | 28 (%14,0) | | validation | 20 |
-| `cannot_answer` | 21 (%10,5) | | test | 40 |
-| `clarification` | 8 (%4,0) | | | |
+| Bir araç çağır | 143 (%71,5) | | train | 140 |
+| Doğrudan cevapla | 28 (%14,0) | | validation | 20 |
+| Yapılamaz, reddet | 21 (%10,5) | | test | 40 |
+| Eksik bilgiyi sor | 8 (%4,0) | | | |
 
-**%28,5'i tool çağrısı içermez.** Bir tool-calling veri setinin en zor kısmı
-modelin *ne zaman çağırmayacağını* öğretmektir.
+**Örneklerin %28,5'inde hiç araç çağrılmıyor.** Bu tür veri setlerinde asıl zor
+olan, modele aracı *ne zaman kullanmayacağını* öğretmektir.
 
-11 senaryo türünün hepsi temsil edilir: `successful` 68, `sequential` 30,
-`should_refuse` 21, `should_answer_directly` 17, `confirmation_required` 13,
-`expected_error` 13, `user_cancellation` 11, `parallel` 11, `clarification` 8,
-`empty_result` 4, `error_recovery` 4. 30 örnek çok turludur.
+11 senaryo türünün hepsi var: tek çağrı 68, zincirleme çağrı 30, reddetme 21,
+doğrudan cevap 17, onay isteme 13, beklenen hata 13, kullanıcının vazgeçmesi 11,
+paralel çağrı 11, soru sorma 8, boş sonuç 4, hatadan toparlanma 4. 30 örnek
+karşılıklı konuşma biçimindedir.
 
-Split family düzeyinde ve fan-out'tan **önce** atanır; `hash(family_id)`'den
-türetilir ve paraphrase'ler ait oldukları family'nin split'ini miras alır.
-Sızıntı denetimi 0 ihlal verir.
+Eğitim/test ayrımı **görev bazında** ve örnekler çoğaltılmadan **önce** yapılır.
+Aynı görevin farklı yazılışları hep aynı bölüme gider; biri eğitimde biri testte
+olamaz. Bu kurala uymayan tek görev yok.
 
 ### Neden 200'de duruldu
 
-Daha büyük bir koşu yapıldı ve **reddedildi.** 1.000 örneklik üretim tamamlandı
-ama yalnızca 20 family'den türetildiği için ~50× parametre fan-out gerekti ve
-kompozisyon çöktü: %94,3 mutlu yol, 11 senaryo türünün 6'sı sıfır örnekle.
-Kalite kapısı yeşil yandı çünkü bütçenin kendisi `tool_call` için
-`minimum_ratio: 0.90` istiyordu — kapı doğru çalıştı, yanlış hedefe bakıyordu.
+Daha büyük bir üretim denendi ve **elendi.** 1.000 örnek üretildi ama bunlar
+yalnızca 20 farklı görevden geliyordu — yani her görev ortalama 50 kez
+tekrarlanmıştı. Çeşitlilik çöktü: örneklerin %94,3'ü "sor, aracı çağır, cevabı
+al" biçiminde kolay durumlardı ve 11 senaryo türünden 6'sında hiç örnek yoktu.
 
-Darboğaz **ölçek değil fan-out oranıdır**: 20 family → 1.000 örnek (50×)
-kompozisyonu çökertti, 74 family → 200 örnek (2,7×) çökertmedi. Altyapı
-1.000 ölçeğinde çalıştığını kanıtladı.
+Kalite kontrolü buna "geçti" dedi. Sebebi şuydu: kontrolün kendi ayarı,
+örneklerin en az %90'ının araç çağrısı olmasını *istiyordu.* Kontrol doğru
+çalışıyordu, yanlış şeye bakıyordu.
+
+Ders şu: sorun hız değil, **farklı görev sayısı.** 20 görevden 1.000 örnek
+çeşitliliği bozdu; 74 görevden 200 örnek bozmadı. Hattın 1.000 ölçeğinde
+çalıştığı ise bu koşuda kanıtlanmış oldu.
 
 ### Sıradaki: 10.000–15.000 örnek
 
-Dengeli 10.000 örnek ~3.700 family gerektirir; bugün 74 elle yazılmış blueprint
-vardır. Bu, sentez motorunun (şablon + parametre ekseni + lockfile) çözmek için
-tasarlandığı problemdir ve henüz uygulanmamıştır. Ayrıntı:
-[kalite kurtarma planı](docs/QUALITY_RECOVERY_PLAN.md).
+Dengeli 10.000 örnek için yaklaşık 3.700 farklı görev gerekiyor; bugün elle
+yazılmış 74 görev var. Bunları tek tek yazmak gerçekçi değil, o yüzden
+görevleri şablonlardan otomatik türeten bir katman gerekiyor. Bu katman henüz
+yazılmadı. Ayrıntı: [kalite kurtarma planı](docs/QUALITY_RECOVERY_PLAN.md).
 
 ---
 
 ## Kişisel veri politikası
 
-Sentetik kimlik numaraları kasıtlı olarak **geçersiz** aralıklardan üretilir:
-TCKN'ler `0` ile başlar (gerçek bir TCKN başlayamaz), VKN'ler checksum-geçersiz,
-IBAN'lar mod-97-geçersizdir. `PIIValidator` üretilen örnekleri tarar; gerçek
-checksum'ı geçen herhangi bir tanımlayıcı CI'ı kırar.
+Kullanılan sahte numaralar **kanıtlanabilir şekilde geçersizdir.** Sahte kimlik
+numaraları `0` ile başlar, çünkü gerçek bir T.C. kimlik numarası `0` ile
+başlayamaz. Sahte vergi ve IBAN numaraları da bilerek hatalı üretilir. Yani
+hiçbiri gerçek bir kişiye veya hesaba denk gelemez. Üretilen her örnek taranır;
+gerçek bir numaraya benzeyen tek bir değer bile bulunursa üretim durur.
 
-> **Bilinen açık:** `ValidationContext.cassette_payloads` üretimde
-> doldurulmuyor, dolayısıyla cassette'ler örnek doğrulaması sırasında
-> **taranmıyor**. Planlanan yol çevrimdışı bir blob taramasıdır; blob başına bir
-> kez çalışır ve ölçekte örnek başına tekrar taramadan ucuzdur.
+> **Bilinen eksik:** kaydedilmiş API yanıtları bu tarama sırasında
+> **kontrol edilmiyor** — tarama yalnızca üretilen örnekler üzerinde çalışıyor.
+> Planlanan çözüm, kayıtları ayrı ve tek seferlik taramak; ölçek büyüdükçe her
+> örnekte baştan taramaktan çok daha ucuz.
 >
-> VKN checksum'ı zayıftır: rastgele 10 haneli sayıların ~%10'u geçer. Pilot v0.1
-> üzerinde tarayıcı 12 bulgu üretti ve **hepsi yanlış pozitiftir** (GBIF
-> occurrence ID'leri ve SHA-256 hash'lerinin içindeki hane dizileri). Gerçek
-> TCKN/VKN/IBAN sayısı sıfırdır.
+> Ayrıca vergi numarası kontrolü zayıftır: rastgele 10 haneli sayıların yaklaşık
+> %10'u ondan geçer. İlk sürümde 12 alarm çıktı ve **hepsi yanlış alarmdı** —
+> biyoçeşitlilik kayıt numaraları ve teknik özet kodlarının içindeki rakam
+> dizileri. Gerçek kimlik/vergi/IBAN numarası sıfır.
 
 ## Lisans
 
 - **Kod:** Apache-2.0 — [`LICENSE`](LICENSE)
-- **ToolCall-TR tarafından yazılan veri:** CC BY 4.0 — [`LICENSE-DATA`](LICENSE-DATA)
+- **Bizim yazdığımız veri:** CC BY 4.0 — [`LICENSE-DATA`](LICENSE-DATA)
 
-Tool gözlemleri kaynağının koşullarını taşır ve her `ToolSpec` kendi
-`source.license` alanını içinde tutar; **tek tip bir lisans iddia edilmez.**
-Kaynak bazlı atıf yükümlülükleri ve yapılan değişikliklerin listesi
-`LICENSE-DATA` ile `legal/DATA_SOURCES.md` belgelerindedir.
+Araçlardan dönen sonuçlar geldikleri kaynağın koşullarına tabidir; **veri
+setinin tamamı tek bir lisansa tabi değildir.** Her araç kendi lisans bilgisini
+veri içinde taşır. Kaynak bazlı atıf yükümlülükleri ve verilerde yapılan
+değişikliklerin listesi `LICENSE-DATA` ile `legal/DATA_SOURCES.md`
+belgelerindedir.
 
 ## Atıf ve bağımsızlık
 
 Bu proje Salesforce tarafından geliştirilmemiştir ve Salesforce ile bağlantısı
-yoktur. APIGen, APIGen-MT, When2Call, ToolACE, ToolMind, BFCL ve τ-bench açıkça
-atıf verilen metodolojik referanslardır; fikirleri yeniden uygulanmış,
-artefaktları kopyalanmamıştır. Bkz. [`NOTICE.md`](NOTICE.md) ve
-[`legal/CITATIONS.md`](legal/CITATIONS.md).
+yoktur. APIGen, APIGen-MT, When2Call, ToolACE, ToolMind, BFCL ve τ-bench,
+yöntem olarak yararlanılan ve açıkça atıf verilen çalışmalardır. Fikirleri
+yeniden uygulanmıştır; hiçbirinin verisi veya dosyası kopyalanmamıştır. Bkz.
+[`NOTICE.md`](NOTICE.md) ve [`legal/CITATIONS.md`](legal/CITATIONS.md).
