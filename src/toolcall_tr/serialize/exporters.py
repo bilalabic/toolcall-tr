@@ -282,9 +282,12 @@ def to_hf_chat(example: Example) -> dict[str, Any]:
     kararını taşıyan assistant mesajına yazılır. Özet üretilmemişse ``None``
     kalır -- uydurulmaz.
 
-    ``tool`` mesajlarına ayrıca ``name`` yazılır: HF şemasında tool adı için
-    ayrı bir alan yoktur ve `parallel_tool_call` örneklerinde hangi sonucun
-    hangi çağrıya ait olduğu aksi hâlde kaybolurdu.
+    ``name`` yalnız ``tool`` mesajlarında doludur ama **her mesajda bulunur**:
+    HF şemasında tool adı için ayrı bir alan yoktur ve `parallel_tool_call`
+    örneklerinde hangi observation'ın hangi çağrıya ait olduğu aksi hâlde
+    kaybolurdu. Alanı yalnız ``tool`` mesajlarına koymak alan kümesini
+    bozar ve `datasets` mesajları struct yerine opak JSON olarak çıkarır --
+    ölçüldü; bu görünümün varlık sebebini ortadan kaldırıyordu.
     """
     reasoning_written = False
     messages: list[dict[str, Any]] = []
@@ -293,6 +296,7 @@ def to_hf_chat(example: Example) -> dict[str, Any]:
         entry: dict[str, Any] = {
             "content": message.content,
             "images": None,
+            "name": message.tool_name if message.role is MessageRole.TOOL else None,
             "role": message.role.value,
             "thinking": None,
             "tool_calls": None,
@@ -311,8 +315,6 @@ def to_hf_chat(example: Example) -> dict[str, Any]:
             if not reasoning_written:
                 entry["thinking"] = example.reasoning_summary_tr
                 reasoning_written = True
-        if message.role is MessageRole.TOOL:
-            entry["name"] = message.tool_name
         messages.append(entry)
 
     return {

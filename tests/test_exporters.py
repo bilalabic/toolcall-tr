@@ -268,17 +268,20 @@ def test_sharegpt_tool_cagrisi_serilestirilir() -> None:
 # Hugging Face sohbet şeması
 # ---------------------------------------------------------------------------
 
-_HF_CHAT_KEYS = {"content", "images", "role", "thinking", "tool_calls"}
+_HF_CHAT_KEYS = {"content", "images", "name", "role", "thinking", "tool_calls"}
 
 
-def test_hf_chat_alan_kumesi_her_mesajda_sabit() -> None:
-    """Sütun tipinin sabit kalması bu şemanın tek varlık sebebi."""
+def test_hf_chat_alan_kumesi_her_mesajda_ayni() -> None:
+    """Sabit alan kümesi bu görünümün tek varlık sebebi.
+
+    Bir alanı yalnız bazı mesajlara koymak `datasets` tarafında struct
+    çıkarımını bozar ve mesajlar opak JSON'a düşer.
+    """
     payload = to_hf_chat(make_example())
 
-    for message in payload["messages"]:
-        # `tool` mesajı ayrıca `name` taşır; ötesi tam olarak sabit küme.
-        assert set(message) >= _HF_CHAT_KEYS
-        assert set(message) - _HF_CHAT_KEYS <= {"name"}
+    assert {frozenset(message) for message in payload["messages"]} == {
+        frozenset(_HF_CHAT_KEYS)
+    }
 
 
 def test_hf_chat_kullanilmayan_alanlar_none_kalir() -> None:
@@ -286,6 +289,7 @@ def test_hf_chat_kullanilmayan_alanlar_none_kalir() -> None:
     user_message = payload["messages"][0]
 
     assert user_message["images"] is None
+    assert user_message["name"] is None
     assert user_message["thinking"] is None
     assert user_message["tool_calls"] is None
 
