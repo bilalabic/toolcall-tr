@@ -46,8 +46,8 @@ parquet = ["pyarrow>=16.0"]
 toolcall-tr = "toolcall_tr.cli.main:app"
 
 [project.urls]
-Homepage = "https://github.com/toolcall-tr/toolcall-tr"
-Issues = "https://github.com/toolcall-tr/toolcall-tr/issues"
+Homepage = "https://github.com/bilalabic/toolcall-tr"
+Issues = "https://github.com/bilalabic/toolcall-tr/issues"
 
 [dependency-groups]
 dev = [

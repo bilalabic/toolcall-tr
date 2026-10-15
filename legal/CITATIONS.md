@@ -14,7 +14,7 @@ kopyalanmamıştır. Bkz. `NOTICE.md` § 2 temiz oda beyanı.
             for Turkish and Turkey-Specific APIs},
   author = {ToolCall-TR katkıcıları},
   year   = {2026},
-  url    = {https://github.com/toolcall-tr/toolcall-tr},
+  url    = {https://github.com/bilalabic/toolcall-tr},
   note   = {Kod Apache-2.0, veri CC BY 4.0}
 }
 ```
